@@ -1036,7 +1036,7 @@
     "source": "02-renovation/CONSTRUCTION_PLAN.md",
     "trackingSource": "02-renovation/CONSTRUCTION_PROGRESS.md",
     "actualStatus": "recorded",
-    "actualCount": 5,
+    "actualCount": 6,
     "phases": [
       {
         "name": "准备与拆除",
@@ -1100,7 +1100,11 @@
         "linkedItemIds": [
           "construction"
         ],
-        "actual": null,
+        "actual": {
+          "status": "completed",
+          "confirmedDate": "2026-08-30",
+          "note": "物业手续已确认，施工许可证已办理。"
+        },
         "ranges": [
           {
             "start": "2026-08-24",
