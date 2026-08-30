@@ -1,0 +1,1031 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-08-30T14:30:00+08:00",
+  "project": {
+    "title": "HomeOS 工程进度",
+    "phase": "装修执行与设备协调"
+  },
+  "stages": [
+    {
+      "id": "ordered",
+      "label": "已采购 / 待交付安装"
+    },
+    {
+      "id": "confirmed",
+      "label": "已确定 / 推进中"
+    },
+    {
+      "id": "selected",
+      "label": "型号或方向已定"
+    },
+    {
+      "id": "coordination",
+      "label": "施工方协调采购"
+    },
+    {
+      "id": "planning",
+      "label": "待选型"
+    }
+  ],
+  "items": [
+    {
+      "id": "entry-door",
+      "name": "入户门",
+      "category": "门窗",
+      "brand": "德盾",
+      "model": "待补充",
+      "stage": "ordered",
+      "stageLabel": "已采购 / 待交付安装",
+      "progress": "待确认到货与安装",
+      "nextAction": "补充具体型号、购买日期和安装安排",
+      "technical": [],
+      "assets": []
+    },
+    {
+      "id": "windows",
+      "name": "全屋窗户",
+      "category": "门窗",
+      "brand": "伊博莱门窗",
+      "model": "85ES 框扇平齐系列",
+      "stage": "ordered",
+      "stageLabel": "已采购 / 待交付安装",
+      "progress": "生产 / 到货状态待确认",
+      "nextAction": "确认生产进度、送货与安装日期",
+      "technical": [
+        {
+          "source": "02-renovation/WINDOWS.md",
+          "sections": [
+            {
+              "title": "Installation Notes From Drawing",
+              "points": [
+                "Installation gaps between frame and opening are expected for vertical and horizontal adjustment.",
+                "Glazing is treated as fragile and excluded from stated delay liability.",
+                "Drawing dimensions are in millimetres and should be verified before installation."
+              ]
+            }
+          ]
+        }
+      ],
+      "assets": []
+    },
+    {
+      "id": "water-system",
+      "name": "全屋净水系统",
+      "category": "水系统",
+      "brand": "SYR / 汉斯希尔",
+      "model": "套餐 6",
+      "stage": "confirmed",
+      "stageLabel": "已确定 / 推进中",
+      "progress": "已确定 / 推进中",
+      "nextAction": "具体安排由项目负责人另行确认",
+      "technical": [
+        {
+          "source": "03-systems/water-treatment.md",
+          "sections": [
+            {
+              "title": "Installation Requirements From Source",
+              "points": [
+                "Power must be within 1 m of the equipment.",
+                "The source describes both units as using a 2-hole power supply; voltage, connected load, plug type, socket count, and exact mounting position remain unconfirmed.",
+                "Provide a nearby drain point no more than 200 mm above finished floor; the source recommends PVC 50 drain pipe.",
+                "Bring water inlet/outlet points out at 300-500 mm above finished floor.",
+                "Arrange the water connections in the source's described 品字型 layout; an installer-approved dimensioned point-position drawing is still required because exact centre distances are not supplied.",
+                "Water inlet/outlet connection size: 6分 (3/4 inch).",
+                "Reserve more space than the machine's physical size for installation and servicing.",
+                "Do not place the machines directly under the sink."
+              ]
+            },
+            {
+              "title": "Cabinet and Utility Coordination",
+              "points": [
+                "Reserve a separate accessible bay with at least 800 mm clear width; target 1000 mm where the kitchen plan allows.",
+                "Confirm the clear internal depth after doors, back panel, pipework, skirting, and wall deviations; the machine reference depth alone is 383 mm.",
+                "Confirm clear internal height for lid/control access, salt loading, hose bends, and lifting/removal; the machine reference height alone is 535 mm.",
+                "Do not run the sink bowl, sink waste, or routine sink leakage risk directly above the machines.",
+                "Keep sockets and electrical connections away from drain discharge and leak-prone joints, with accessible isolation and suitable protection confirmed by the electrician.",
+                "Provide accessible isolation/bypass valves and unions so either unit can be removed without cutting fixed pipework.",
+                "Verify the drain's required air gap, trap, discharge capacity, and backflow protection with the equipment installer and plumber.",
+                "Record all pipe and drain positions from finished-floor and fixed-wall datums before cabinetry production."
+              ]
+            },
+            {
+              "title": "Pending Before Water/Electrical Freeze",
+              "points": [
+                "Itemised 套餐6 order/configuration sheet confirming the model of all four units; in particular, verify that the central units are WS-LU2L-07 and WS-LU2F-05 rather than relying only on the listing's parameter tables and reference dimensions.",
+                "Exact prefilter and point-of-use drinking-water filter models, included faucet, filter elements, adapters, and first replacement-consumable set.",
+                "Final installer schematic, flow direction, bypass and isolation valve set.",
+                "Final cabinet location and whether the 800-1000 mm width is clear internal width or module width.",
+                "Exact service clearances above, behind, beside, and in front of each unit.",
+                "Exact pipe centres for the 品字型 arrangement.",
+                "Electrical voltage, load, socket/plug specification, socket count, and installation height.",
+                "Drain flow, air-gap, trap, venting, and backflow requirements.",
+                "Whether a floor drain, leak tray, leak sensor, and automatic shutoff valve are required.",
+                "Water pressure, hardness, regeneration/salt requirements, filter replacement access, and maintenance frequency.",
+                "The purchased kitchen faucet is GROHE 31874, a standard hot/cold faucet without a dedicated filtered-water channel. Do not substitute it for the SYR package drinking-water faucet. Reserve a separate filtered-water faucet, separate opening, outlet connection, and service path; confirm exact interface and pressure characteristics with the SYR installer."
+              ]
+            }
+          ]
+        },
+        {
+          "source": "03-systems/plumbing.md",
+          "sections": [
+            {
+              "title": "Procurement and Site Acceptance",
+              "points": [
+                "Require a pre-purchase itemised list showing every pipe, elbow, tee, coupling, valve, adapter, clamp, sleeve, and other fitting.",
+                "On arrival, photograph labels, production/batch information, dimensions, condition, and counts before installation.",
+                "Keep pipe and fitting systems compatible; do not accept mixed or unidentified substitute materials without written owner approval.",
+                "Record the completed pipe routes and joints before concealment.",
+                "Perform and document the agreed pressure test, duration, pressure readings, leak inspection, acceptance signature, and any manufacturer/installer warranty service."
+              ]
+            }
+          ]
+        }
+      ],
+      "assets": [
+        {
+          "title": "central purifier softener installation requirements",
+          "href": "/technical/2026-08-26-central-purifier-softener-installation-requirements.jpeg",
+          "type": "image"
+        },
+        {
+          "title": "central water treatment cabinet clearance reference",
+          "href": "/technical/2026-08-26-central-water-treatment-cabinet-clearance-reference.jpeg",
+          "type": "image"
+        }
+      ]
+    },
+    {
+      "id": "tiles",
+      "name": "瓷砖",
+      "category": "饰面材料",
+      "brand": "待补充",
+      "model": "卫生间与厨房排砖方案",
+      "stage": "confirmed",
+      "stageLabel": "已确定 / 推进中",
+      "progress": "已确定 / 推进中",
+      "nextAction": "确认品牌、数量、损耗和订单总价",
+      "technical": [
+        {
+          "source": "02-renovation/TILE_LAYOUT.md",
+          "sections": [
+            {
+              "title": "Before Final Order / Delivery",
+              "points": [
+                "Confirm supplier, brand, exact tile product code, colour, finish, shade/batch, and calibre.",
+                "Confirm measured wall areas, net quantities, wastage percentage, and spare tiles retained after completion.",
+                "Confirm whether adhesive, grout, levelling pieces, transport, upstairs handling, returns, and replenishment are included.",
+                "Confirm the exact colour and material of grout and the fabrication responsibility for mitred corners.",
+                "Reconcile the layout against the final bathtub, vanity, kitchen cabinet, window, and door dimensions."
+              ]
+            }
+          ]
+        }
+      ],
+      "assets": []
+    },
+    {
+      "id": "gas-water-heater",
+      "name": "室外型燃气热水器",
+      "category": "厨房电器",
+      "brand": "Rinnai / 林内",
+      "model": "RUX-A1616W(A)-E / RUX-A1616W-E",
+      "stage": "ordered",
+      "stageLabel": "已采购 / 待交付安装",
+      "progress": "已采购 / 待交付安装",
+      "nextAction": "具体安排由项目负责人另行确认",
+      "technical": [
+        {
+          "source": "04-assets/appliances/rinnai-rux-a1616w-e-water-heater.md",
+          "sections": [
+            {
+              "title": "Installation Items Still Pending",
+              "points": [
+                "Exact gas type and Beijing pipeline-gas compatibility; do not infer from the model name alone",
+                "Whether gas conversion or adjustment has been performed, by whom, and with what combustion-test record",
+                "Electrical voltage and whether a transformer is required/included",
+                "Outdoor mounting position, wall load, weather exposure, service clearances, drainage, condensate applicability, and freeze protection",
+                "Water/gas valve and connector specifications",
+                "Flue/exhaust safety clearances from windows, openings, neighbours, and enclosed spaces",
+                "Commissioning record for inlet pressure, gas tightness, combustion, outlet temperature, and flow"
+              ]
+            }
+          ]
+        },
+        {
+          "source": "03-systems/gas.md",
+          "sections": [
+            {
+              "title": "Must Confirm Before Installation",
+              "points": [
+                "Delivered nameplate and exact model suffix",
+                "Gas type and compatibility with the actual household pipeline gas",
+                "Legal/local acceptance of the outdoor mounting location",
+                "Manufacturer/seller installation instructions and third-party warranty conditions",
+                "Combustion and gas-tightness commissioning record",
+                "Freeze-protection power and water-drain strategy for Beijing winter conditions"
+              ]
+            }
+          ]
+        }
+      ],
+      "assets": []
+    },
+    {
+      "id": "grohe-shower",
+      "name": "恒温花洒",
+      "category": "卫浴",
+      "brand": "GROHE / 高仪",
+      "model": "26810000",
+      "stage": "ordered",
+      "stageLabel": "已采购 / 待交付安装",
+      "progress": "已采购 / 待交付安装",
+      "nextAction": "具体安排由项目负责人另行确认",
+      "technical": [
+        {
+          "source": "04-assets/fixtures/grohe-26810000-thermostatic-shower.md",
+          "sections": [
+            {
+              "title": "Official Installation Data",
+              "points": [
+                "Official product description: exposed wall-mounted thermostatic shower system with lower outlet.",
+                "Supply centre spacing: 150 ± 15 mm; S-connectors are included/specified.",
+                "Connection: G 1/2.",
+                "Thermostat body projection from finished wall: approximately 169 mm.",
+                "Overall mixer width shown in plan: approximately 298 mm.",
+                "Riser/head-arm projection from finished wall: 404-412 mm.",
+                "Vertical dimension shown from mixer connection centreline to the upper wall-fixing datum: 1016 mm; final installed head height must still be set against the bathtub, ceiling and user height.",
+                "Overhead shower: round, Ø210 mm, with approximately 30° adjustment.",
+                "Hand shower: Ø100 mm; hose length 1750 mm.",
+                "Official product page lists 5 L/min at 3 bar for the overhead and hand-shower outlets."
+              ]
+            },
+            {
+              "title": "Installation Hold Points",
+              "points": [
+                "Keep hot supply on the left and cold supply on the right unless the delivered installation booklet explicitly states otherwise; flush both lines before fitting the thermostat.",
+                "Set the 150 ± 15 mm finished-wall centres and both outlet faces from the final tile datum, not the unfinished masonry datum.",
+                "Before drilling, confirm the upper wall-fixing position, the 404-412 mm head projection, the bathtub rim/curtain relationship and ceiling clearance.",
+                "Confirm the lower outlet operating mode, hose routing and whether any adapter is required at handover.",
+                "Verify real pressure/flow and temperature stability with the purchased 16 L Rinnai heater during commissioning."
+              ]
+            }
+          ]
+        }
+      ],
+      "assets": [
+        {
+          "title": "grohe 26810000 dimension",
+          "href": "/technical/grohe-26810000-dimension.jpg",
+          "type": "image"
+        },
+        {
+          "title": "grohe 26810000 installation",
+          "href": "/technical/grohe-26810000-installation.pdf",
+          "type": "pdf"
+        }
+      ]
+    },
+    {
+      "id": "grohe-kitchen-faucet",
+      "name": "厨房龙头",
+      "category": "卫浴",
+      "brand": "GROHE / 高仪",
+      "model": "31874 / 3187400C",
+      "stage": "ordered",
+      "stageLabel": "已采购 / 待交付安装",
+      "progress": "已采购 / 待交付安装",
+      "nextAction": "到货核对包装型号并预留独立净水龙头",
+      "technical": [
+        {
+          "source": "04-assets/fixtures/grohe-31874-kitchen-faucet.md",
+          "sections": [
+            {
+              "title": "Official Product and Installation Data",
+              "points": [
+                "Single-hole, deck-mounted hot/cold kitchen faucet with L-shaped pull-out spout.",
+                "Overall height: 328 mm; outlet height above deck: 292 mm.",
+                "Spout projection from body centreline: 223 mm; maximum pull-out reach shown: 415 mm.",
+                "Body/base diameter: Ø54 mm; required mounting hole: Ø34 mm.",
+                "Maximum deck/countertop thickness: 60 mm.",
+                "Supply hoses: G 3/8, with approximately 445 mm dimension shown from the deck underside.",
+                "Handle swing: approximately 50° to each side; the official drawing also shows a 73 mm handle/body envelope dimension.",
+                "Spout swivel: 360°; 46 mm cartridge; integrated backflow protection/check valve.",
+                "Official product page lists 5 L/min at 3 bar.",
+                "The seller previously indicated that two European-standard angle valves may need to be purchased separately."
+              ]
+            },
+            {
+              "title": "Installation Hold Points",
+              "points": [
+                "Confirm the delivered label is 3187400C, EAN 4005176686603, and check the accessory pack before countertop fabrication.",
+                "Reserve one Ø34 mm hole and reinforce the 5 mm stainless-steel countertop beneath the mounting kit; keep total clamping thickness within 60 mm.",
+                "Confirm G 3/8 hose compatibility with the selected angle valves and document any G 1/2 adapter before wall closure.",
+                "Pull-out hose and counterweight clearance below the sink",
+                "Keep the body centreline, 223 mm spout projection and 50° handle envelope clear of the sink rim, backsplash and window.",
+                "Coordinate a separate SYR drinking-water faucet opening; the official 31919SD0 sink drawing shows no factory faucet hole, so both faucet holes require an approved sink-deck/countertop strategy.",
+                "Warranty and seller after-sales coverage"
+              ]
+            }
+          ]
+        }
+      ],
+      "assets": [
+        {
+          "title": "grohe 3187400C dimension",
+          "href": "/technical/grohe-3187400C-dimension.jpg",
+          "type": "image"
+        },
+        {
+          "title": "grohe 3187400C installation",
+          "href": "/technical/grohe-3187400C-installation.pdf",
+          "type": "pdf"
+        }
+      ]
+    },
+    {
+      "id": "grohe-smart-toilet",
+      "name": "智能马桶",
+      "category": "卫浴",
+      "brand": "GROHE / 高仪",
+      "model": "IGINA 39947SH0，400 mm",
+      "stage": "ordered",
+      "stageLabel": "已采购 / 待交付安装",
+      "progress": "已采购 / 待交付安装",
+      "nextAction": "到货核对 39947SH0 与 400 mm 安装图",
+      "technical": [
+        {
+          "source": "04-assets/fixtures/grohe-39932sh0-smart-toilet.md",
+          "sections": [
+            {
+              "title": "39947SH0 Coordination Data",
+              "points": [
+                "Rough-in: 400 mm from finished wall to soil-pipe centreline",
+                "Product envelope: W384 × D710 × H462 mm",
+                "Side drawing also shows approximately 703 / 727 mm wall-to-front longitudinal references and 412 mm body/rim reference height; use the drawing itself when setting clearances.",
+                "Cold-water inlet: G 1/2; drawing reference height 200 mm above finished floor",
+                "Rated supply: AC 220 V, 50 Hz",
+                "Rated power: 920 W at 20°C ambient / 15°C inlet-water condition",
+                "Water-pressure range: 0.08-0.75 MPa; ambient range: 0-40°C",
+                "Power cable: effective length 1.0 m, plug with leakage protection",
+                "Flush: 5.0 / 3.5 L, jet-siphon, water-efficiency grade 2",
+                "Instantaneous warm-water supply, dual rear/feminine nozzles; seat and wash-water temperatures each have four selectable settings"
+              ]
+            },
+            {
+              "title": "Installation Hold Points",
+              "points": [
+                "Verify the carton/nameplate SKU 39947SH0, then verify floor-outlet centreline, flange/seal and soil-stack compatibility against the supplied 400 mm installation drawing and delivered unit.",
+                "Product width/depth/height and clearances to the corner pipe chase, wall radiator, vanity, door path, and bathtub circulation",
+                "Provide a dedicated grounded 220 V circuit/socket and coordinate residual-current protection and wet-zone placement with the electrician; IPX4 does not eliminate local electrical-zone requirements.",
+                "Keep the connection within the supplied 1.0 m cable route without an extension lead; coordinate the dedicated circuit/socket for the stated 920 W rating and still verify the delivered nameplate.",
+                "Provide accessible cold-water isolation and strainer service access; keep supply pressure within the official 0.08-0.75 MPa range.",
+                "Package accessories, remote control, and after-sales coverage"
+              ]
+            }
+          ]
+        }
+      ],
+      "assets": [
+        {
+          "title": "grohe igina light 39932 39947 dimension sheet",
+          "href": "/technical/2026-08-30-grohe-igina-light-39932-39947-dimension-sheet.png",
+          "type": "image"
+        },
+        {
+          "title": "grohe 39947SH0 product specification",
+          "href": "/technical/grohe-39947SH0-product-specification.pdf",
+          "type": "pdf"
+        },
+        {
+          "title": "grohe igina 39933 39948 user manual",
+          "href": "/technical/grohe-igina-39933-39948-user-manual.pdf",
+          "type": "pdf"
+        }
+      ]
+    },
+    {
+      "id": "wall-paint",
+      "name": "墙漆系统",
+      "category": "饰面材料",
+      "brand": "Tikkurila / 芬琳漆",
+      "model": null,
+      "stage": "confirmed",
+      "stageLabel": "已确定 / 推进中",
+      "progress": "已确定 / 推进中",
+      "nextAction": "取得清晰电子明细并确认颜色、数量和送货",
+      "technical": [],
+      "assets": []
+    },
+    {
+      "id": "kitchen-cabinetry",
+      "name": "厨房橱柜",
+      "category": "定制家具",
+      "brand": "待补充",
+      "model": "304 不锈钢 / 5 mm 台面方案",
+      "stage": "confirmed",
+      "stageLabel": "已确定 / 推进中",
+      "progress": "已确定 / 推进中",
+      "nextAction": "取得测量图、正式合同并核对水槽相关条目",
+      "technical": [],
+      "assets": []
+    },
+    {
+      "id": "terrazzo",
+      "name": "水磨石板",
+      "category": "饰面材料",
+      "brand": "待补充",
+      "model": "方案待出",
+      "stage": "confirmed",
+      "stageLabel": "已确定 / 推进中",
+      "progress": "已确定 / 推进中",
+      "nextAction": "具体安排由项目负责人另行确认",
+      "technical": [],
+      "assets": []
+    },
+    {
+      "id": "construction",
+      "name": "水电改造及墙面施工",
+      "category": "施工",
+      "brand": "施工方",
+      "model": "四期 30% / 30% / 30% / 10%",
+      "stage": "confirmed",
+      "stageLabel": "已确定 / 推进中",
+      "progress": "第一期已付，后续三期待付",
+      "nextAction": "具体安排由项目负责人另行确认",
+      "technical": [],
+      "assets": []
+    },
+    {
+      "id": "bathtub",
+      "name": "亚克力浴缸",
+      "category": "卫浴",
+      "brand": "TOTO / 东陶",
+      "model": "PAY1320P (08)",
+      "stage": "ordered",
+      "stageLabel": "已采购 / 待交付安装",
+      "progress": "已采购 / 待交付安装",
+      "nextAction": "到货核对排水配件兼容性并预约安装",
+      "technical": [
+        {
+          "source": "04-assets/fixtures/toto-pay1320p-bathtub.md",
+          "sections": [
+            {
+              "title": "Delivery Acceptance",
+              "points": [
+                "Photograph the unopened packaging, model label, colour code (08), batch/serial information, and all accessories.",
+                "Check for impact damage, cracks, deformation, scratches, colour variation, and damaged support feet before signing.",
+                "Confirm whether the order includes any drain fitting; the official specification treats the drain fitting as separate.",
+                "Verify that delivered drainage labels match the purchased package DB601S-1B + QCHRG and retain the packing list.",
+                "Keep protective film/covering in place during construction and prohibit using the tub for mixing, washing tools, or storing debris."
+              ]
+            },
+            {
+              "title": "Installation Hold Points",
+              "points": [
+                "Re-measure the narrowest finished opening and wall verticality before enclosing the bathtub.",
+                "Trial-fit the bathtub before surrounding wall/terrazzo closure.",
+                "Provide a flat, rigid base so all feet bear evenly; do not support the tub by its rim.",
+                "Do not backfill the bathtub shell with mortar.",
+                "Confirm direct or horizontal drainage and the exact DB505R-1A / DB505R-1B fitting before closing access.",
+                "Because the purchased package states DB601S-1B + QCHRG, do not substitute or install either drainage route until the seller and installer confirm compatibility against the delivered tub and site drain position.",
+                "Fill and leak-test the tub and drain before sealing the terrazzo face.",
+                "Retain a removable access panel near the waste connection.",
+                "Use a flexible joint and bathroom-compatible mould-resistant sealant at the rim/finish junction."
+              ]
+            }
+          ]
+        }
+      ],
+      "assets": []
+    },
+    {
+      "id": "flooring",
+      "name": "石晶地板",
+      "category": "饰面材料",
+      "brand": "芬特",
+      "model": "人字拼",
+      "stage": "confirmed",
+      "stageLabel": "已确定 / 推进中",
+      "progress": "已确定 / 推进中",
+      "nextAction": "具体安排由项目负责人另行确认",
+      "technical": [
+        {
+          "source": "02-renovation/FLOORING.md",
+          "sections": [
+            {
+              "title": "技术与现场要点",
+              "points": [
+                "Measure the net paved area room by room and identify excluded tiled/wet zones, cabinet footprints, thresholds and door tracks.",
+                "Quote base material, herringbone-pattern labour, pattern-specific loss allowance, underlay/adhesive, floor levelling, skirting, trims, thresholds, delivery, carrying and installation separately.",
+                "Confirm product series, colour, plank dimensions, thickness, wear layer, edge detail, batch/lot, environmental and fire-test documentation, warranty and spare-stock allowance.",
+                "Confirm substrate flatness and moisture acceptance criteria before delivery; record whether levelling is included or additional.",
+                "Freeze the herringbone centreline, starting point and direction in a marked-up plan before installation.",
+                "Confirm expansion-gap requirements at walls, fixed cabinetry, door openings and transitions, plus the treatment below door frames and the bathroom sliding-door threshold.",
+                "Re-measure finished floor build-up against entry door, bedroom doors, cabinet plinths and appliance openings before ordering."
+              ]
+            }
+          ]
+        }
+      ],
+      "assets": []
+    },
+    {
+      "id": "heating",
+      "name": "暖气片及改管",
+      "category": "暖通",
+      "brand": "Zehnder / 森德",
+      "model": "防腐型订单 1000934",
+      "stage": "confirmed",
+      "stageLabel": "已确定 / 推进中",
+      "progress": "已确定 / 推进中",
+      "nextAction": "确认改管、温控、安装及运输是否包含",
+      "technical": [],
+      "assets": []
+    },
+    {
+      "id": "kitchen-ceiling",
+      "name": "厨房吊顶",
+      "category": "待购买",
+      "brand": null,
+      "model": null,
+      "stage": "planning",
+      "stageLabel": "待选型",
+      "progress": "未购买",
+      "nextAction": "确定材质、颜色、检修口与安装范围",
+      "technical": [],
+      "assets": []
+    },
+    {
+      "id": "bathroom-ceiling",
+      "name": "浴室吊顶",
+      "category": "待购买",
+      "brand": null,
+      "model": null,
+      "stage": "planning",
+      "stageLabel": "待选型",
+      "progress": "未购买",
+      "nextAction": "确定防潮材质、开孔与完成面高度",
+      "technical": [],
+      "assets": []
+    },
+    {
+      "id": "air-conditioning",
+      "name": "空调",
+      "category": "家电",
+      "brand": null,
+      "model": null,
+      "stage": "planning",
+      "stageLabel": "待选型",
+      "progress": "未购买",
+      "nextAction": "确定房间机型、匹数、能效与安装范围",
+      "technical": [],
+      "assets": []
+    },
+    {
+      "id": "bathroom-vanity",
+      "name": "浴室柜",
+      "category": "定制家具",
+      "brand": null,
+      "model": null,
+      "stage": "planning",
+      "stageLabel": "待选型",
+      "progress": "未购买",
+      "nextAction": "复测空间并确定台盆、镜柜和材质",
+      "technical": [],
+      "assets": []
+    },
+    {
+      "id": "lighting",
+      "name": "全屋灯具",
+      "category": "电气",
+      "brand": null,
+      "model": null,
+      "stage": "planning",
+      "stageLabel": "待选型",
+      "progress": "均未购买",
+      "nextAction": "整理灯位、色温、显色和功率清单",
+      "technical": [],
+      "assets": []
+    },
+    {
+      "id": "switches",
+      "name": "插座与开关面板",
+      "category": "电气",
+      "brand": null,
+      "model": null,
+      "stage": "planning",
+      "stageLabel": "待选型",
+      "progress": "未购买",
+      "nextAction": "确认点位数量、系列颜色和开关逻辑",
+      "technical": [
+        {
+          "source": "03-systems/electrical.md",
+          "sections": [
+            {
+              "title": "Commercial Coordination",
+              "points": [
+                "This commercial confirmation does not freeze the circuit design, point positions, quantities, materials, testing, or acceptance requirements."
+              ]
+            }
+          ]
+        }
+      ],
+      "assets": []
+    },
+    {
+      "id": "washing-machine",
+      "name": "洗衣机",
+      "category": "家电",
+      "brand": null,
+      "model": null,
+      "stage": "planning",
+      "stageLabel": "待选型",
+      "progress": "未购买",
+      "nextAction": "确定类型、容量、尺寸和进排水",
+      "technical": [],
+      "assets": []
+    },
+    {
+      "id": "refrigerator",
+      "name": "冰箱",
+      "category": "厨房电器",
+      "brand": null,
+      "model": null,
+      "stage": "planning",
+      "stageLabel": "待选型",
+      "progress": "未购买",
+      "nextAction": "确定容量、尺寸、散热和开门空间",
+      "technical": [],
+      "assets": []
+    },
+    {
+      "id": "kitchen-sink",
+      "name": "厨房水槽",
+      "category": "厨房设备",
+      "brand": "GROHE / 高仪",
+      "model": "K500 31919SD0",
+      "stage": "selected",
+      "stageLabel": "型号或方向已定",
+      "progress": "已选定、未下单",
+      "nextAction": "具体安排由项目负责人另行确认",
+      "technical": [
+        {
+          "source": "04-assets/fixtures/grohe-k500-31919sd0-kitchen-sink.md",
+          "sections": [
+            {
+              "title": "Official Product and Installation Data",
+              "points": [
+                "External size: 760 × 450 mm; bowl depth: 212 mm.",
+                "Internal bowl plan size: approximately 720 × 410 mm.",
+                "Drain opening: Ø114 mm; official page describes a 3 1/2 inch waste.",
+                "Minimum cabinet size: 800 mm.",
+                "Official page lists the installation type as top-mount + flush-mount (台上式 + 平嵌式).",
+                "Official cut-out template additionally provides:",
+                "top-mount cut-out: 744 × 434 mm, corner radius R22;",
+                "under-mount cut-out: 724 × 414 mm, corner radius R12.",
+                "The official dimension drawing shows a maximum 25 mm countertop thickness at the alternate mounting detail.",
+                "The official drawing does not show a factory faucet hole."
+              ]
+            },
+            {
+              "title": "Cabinet and Countertop Coordination Before Ordering",
+              "points": [
+                "Select one installation method in writing before fabrication. The product page says top-mount + flush-mount, while the official cut-out sheet also labels an under-mount template; seller and cabinet fabricator must confirm which detail preserves warranty for the delivered unit.",
+                "Confirm whether welding or modifying this finished GROHE sink is permitted by the manufacturer/seller and does not affect finish, drainage, deformation, or warranty.",
+                "Freeze an 800 mm minimum cabinet, bowl clearance, drain centre, waste kit, dishwasher branch, water-treatment tubing, and maintenance access.",
+                "Coordinate the paid GROHE 3187400C pull-out hot/cold faucet and the separate SYR drinking-water faucet. The official sink drawing shows no factory holes; approve both hole positions and reinforcement in the countertop/sink deck before fabrication.",
+                "Maintain clearance below for the faucet pull-out hose/counterweight, drain/overflow components, purifier tubing, valves, and any dishwasher drain tee."
+              ]
+            }
+          ]
+        }
+      ],
+      "assets": [
+        {
+          "title": "grohe 31919SD0 dimension",
+          "href": "/technical/grohe-31919SD0-dimension.jpg",
+          "type": "image"
+        },
+        {
+          "title": "grohe 31919SD0 installation",
+          "href": "/technical/grohe-31919SD0-installation.pdf",
+          "type": "pdf"
+        }
+      ]
+    },
+    {
+      "id": "dishwasher",
+      "name": "洗碗机",
+      "category": "厨房电器",
+      "brand": "Siemens / 西门子",
+      "model": "SJ435S00JC / SJ435S01JC",
+      "stage": "selected",
+      "stageLabel": "型号或方向已定",
+      "progress": "型号系列已选、未下单",
+      "nextAction": "下单前锁定 S00JC 或 S01JC 后缀",
+      "technical": [
+        {
+          "source": "04-assets/appliances/built-in-dishwasher-598.md",
+          "sections": [
+            {
+              "title": "Water, Drain, and Electrical Coordination",
+              "points": [
+                "One 10 A three-pin power socket.",
+                "Dishwasher water-inlet connection / inlet hose.",
+                "Dishwasher drain hose.",
+                "Drain tee connection below the sink."
+              ]
+            },
+            {
+              "title": "Remaining Inputs Before Cabinet Freeze / Order",
+              "points": [
+                "Final order suffix: SJ435S00JC or SJ435S01JC.",
+                "Whether the unit is fully integrated, semi-integrated, or uses its own front panel.",
+                "Door-panel dimensions, weight, hinge system, and toe-kick clearance.",
+                "Required countertop steam/moisture protection strip.",
+                "For S01JC, confirm rated voltage and connected power; for either suffix, confirm cord length, plug exit and exact socket position.",
+                "Water-inlet thread size, permitted pressure range, hose length, and inlet-valve position.",
+                "Drain-hose length, permitted rise / high-loop height, and drain-tee connection size.",
+                "Required side, top, rear, and ventilation clearances.",
+                "Whether the adjustable-height range assumes the finished floor continues underneath the dishwasher.",
+                "Installer-approved cabinet elevation and service-hole position."
+              ]
+            },
+            {
+              "title": "Cabinet and Installation Checklist",
+              "points": [
+                "Reserve opening 600-608 W × at least 575 D × 780-835 H mm.",
+                "Keep the appliance immediately adjacent to the sink cabinet so inlet, drain, and power remain serviceable.",
+                "Provide a 10 A three-pin socket in the sink cabinet; the official S00JC rating is 10 A / 2400 W, and S01JC still requires suffix-specific confirmation.",
+                "Provide a dedicated accessible water shutoff valve.",
+                "Provide a dishwasher drain branch / tee and confirm backflow and high-loop requirements with the exact model installer.",
+                "Finish cabinet service holes with smooth edges or protective sleeves.",
+                "Confirm that the open appliance door clears the opposite cabinets and circulation aisle.",
+                "Do not close the cabinet or install the countertop until the final suffix's official model sheet is approved."
+              ]
+            }
+          ]
+        }
+      ],
+      "assets": [
+        {
+          "title": "built in dishwasher installation reference",
+          "href": "/technical/2026-08-24-built-in-dishwasher-installation-reference.jpg",
+          "type": "image"
+        }
+      ]
+    },
+    {
+      "id": "oven",
+      "name": "嵌入式微波烤箱",
+      "category": "厨房电器",
+      "brand": "Bosch / 博世",
+      "model": "HBC84H500W，45 L",
+      "stage": "selected",
+      "stageLabel": "型号或方向已定",
+      "progress": "型号已选、未下单",
+      "nextAction": "用官方手册复核开孔、电气与散热",
+      "technical": [
+        {
+          "source": "04-assets/appliances/built-in-oven-595x454.md",
+          "sections": [
+            {
+              "title": "Remaining Inputs Before Cabinet Freeze",
+              "points": [
+                "Cabinet opening width and permitted tolerance.",
+                "Exact cabinet opening height range and whether 450 mm is nominal or minimum.",
+                "Required rear, top, bottom, and side ventilation clearances.",
+                "Meaning and location of the printed minimum 9 mm clearance.",
+                "Whether a rear cabinet panel is prohibited or requires a ventilation opening.",
+                "Door swing depth and required aisle clearance when fully open.",
+                "Door/fascia alignment with adjacent drawers and cabinet fronts.",
+                "Rated voltage, connected load, maximum power, and circuit requirement.",
+                "Plug type versus hardwired connection, cord length, cord exit, and accessible connection location.",
+                "Whether a dedicated circuit and breaker are required.",
+                "Heat-protection requirements for adjacent cabinet panels and countertop.",
+                "Minimum separation from refrigerator, dishwasher, gas components, and combustible materials.",
+                "Installer-approved cabinet elevation and ventilation drawing."
+              ]
+            }
+          ]
+        }
+      ],
+      "assets": [
+        {
+          "title": "built in oven dimension reference",
+          "href": "/technical/2026-08-24-built-in-oven-dimension-reference.jpg",
+          "type": "image"
+        }
+      ]
+    },
+    {
+      "id": "range-hood",
+      "name": "油烟机",
+      "category": "厨房电器",
+      "brand": "六点半",
+      "model": "Y6 超薄全不锈钢",
+      "stage": "selected",
+      "stageLabel": "型号或方向已定",
+      "progress": "已有选型方向、未购买",
+      "nextAction": "确认精确型号、供电、排烟孔位和安装范围",
+      "technical": [
+        {
+          "source": "04-assets/appliances/liudianban-y6-range-hood.md",
+          "sections": [
+            {
+              "title": "Included and Excluded Installation Items",
+              "points": [
+                "One 1.5 m aluminum-foil exhaust duct.",
+                "One adjustable lifting hanger plate.",
+                "One fixed hanger plate.",
+                "Public-flue backdraft valve is not included.",
+                "The brand does not provide hole-drilling service; the owner must arrange the 180 mm public-flue opening.",
+                "If advance duct and backdraft-valve installation is required, the source says the brand can provide one measurement/pre-installation visit when its separate valve and pure-aluminum duct connection are purchased.",
+                "If site conditions prevent installation on the first visit, a second visit may incur owner-paid labor."
+              ]
+            },
+            {
+              "title": "Missing Inputs Before Cabinet Freeze",
+              "points": [
+                "Exact electrical power and rated voltage.",
+                "Plug type, cord exit direction, and required socket position.",
+                "Final backdraft-valve model and connection transition between the 185 mm product outlet and 180 mm flue opening.",
+                "Exact ceiling-hole center coordinates relative to finished wall/cabinet datum.",
+                "Confirmation of the 563 mm front-view datum versus the 888 mm side-view overall height.",
+                "Confirmation whether the recommended 10 mm cabinet allowance is total or per side.",
+                "Final installer-approved elevation and cabinet shop drawing."
+              ]
+            },
+            {
+              "title": "Acceptance Checklist",
+              "points": [
+                "Cabinet clear opening is at least 450 W × 330 D mm and does not interfere with service access.",
+                "Hood and cooktop centerlines align.",
+                "Cooktop-to-hood vertical distance is within 300-400 mm after finishes.",
+                "Gas-burner center is within 260 mm of the finished rear wall.",
+                "Exhaust duct route is short, smooth, sealed, and does not conflict with the cabinet or ceiling.",
+                "Backdraft valve is installed in the correct airflow direction and remains serviceable.",
+                "Socket is accessible for service and not placed directly in the hot exhaust path.",
+                "Final product and installation dimensions are photographed before the cabinet is closed."
+              ]
+            }
+          ]
+        }
+      ],
+      "assets": [
+        {
+          "title": "liudianban y6 range hood installation",
+          "href": "/technical/2026-08-24-liudianban-y6-range-hood-installation.jpg",
+          "type": "image"
+        }
+      ]
+    },
+    {
+      "id": "gas-cooktop",
+      "name": "燃气灶台",
+      "category": "厨房电器",
+      "brand": "六点半",
+      "model": "Q5-2 850 mm 双眼款",
+      "stage": "selected",
+      "stageLabel": "型号或方向已定",
+      "progress": "型号已选、未下单",
+      "nextAction": "确认气源、定时版本与焊接安装图",
+      "technical": [
+        {
+          "source": "04-assets/appliances/liudianban-two-burner-gas-cooktop.md",
+          "sections": [
+            {
+              "title": "Confirmed Countertop and Installation Method",
+              "points": [
+                "Countertop material: stainless-steel plate.",
+                "Countertop thickness: 5 mm.",
+                "Cooktop installation: the selected two-burner cooktop is to be welded to the stainless-steel countertop.",
+                "Decision source: owner confirmation on 2026-08-24, not an inference from the Q5-HJ three-burner dimensions."
+              ]
+            },
+            {
+              "title": "Required Q5-2 Inputs Before Cabinet Freeze",
+              "points": [
+                "Exact order title / SKU showing Q5-2, gas type and timer variant.",
+                "Overall width × depth × height.",
+                "Countertop cutout length × width and corner radius.",
+                "Weldable flange / interface dimensions and the manufacturer's written confirmation that this two-burner model supports welding to a 5 mm stainless-steel countertop.",
+                "Welding method, weld extent, distortion-control method, finishing/passivation, sealing, and post-weld inspection requirements.",
+                "Service/removal method for the burner body and controls after the countertop interface is welded.",
+                "Minimum countertop front, rear, and side edge distances.",
+                "Minimum cabinet internal width, depth, and clear height.",
+                "Whether drawers, oven, dishwasher, or shelf may be installed below it.",
+                "Natural-gas or LPG version and gas-source compatibility.",
+                "Gas inlet position, direction, thread/interface, and hose clearance.",
+                "Left and right burner rated heat loads and total heat load.",
+                "Ignition power: battery or mains plug.",
+                "If mains-powered: rated voltage/power, plug type, cord exit, and socket position.",
+                "Flame-failure protection type.",
+                "Ventilation/opening requirements for the cabinet below.",
+                "Whether metal cabinet doors interfere with any timer, radar, or wireless function on the exact selected model.",
+                "Installation and after-sales constraints."
+              ]
+            },
+            {
+              "title": "Coordination with the Y6 Range Hood",
+              "points": [
+                "Align the final two-burner cooktop centerline with the Y6 range hood centerline.",
+                "The Y6 source requires the gas-burner head center to be no more than 260 mm from the finished rear wall; confirm this remains compatible with the selected two-burner cooktop's cutout and countertop rear margin.",
+                "The Y6 source recommends 300-400 mm vertically from cooktop surface to hood bottom.",
+                "Do not cut the countertop or finalize the gas point from the current images alone."
+              ]
+            }
+          ]
+        }
+      ],
+      "assets": [
+        {
+          "title": "two burner cooktop cabinet reference",
+          "href": "/technical/2026-08-24-two-burner-cooktop-cabinet-reference.jpg",
+          "type": "image"
+        }
+      ]
+    },
+    {
+      "id": "wire-materials",
+      "name": "电线及配套材料",
+      "category": "电气",
+      "brand": "金貂",
+      "model": null,
+      "stage": "coordination",
+      "stageLabel": "施工方协调采购",
+      "progress": "委托施工方代购，施工费不包料",
+      "nextAction": "具体安排由项目负责人另行确认",
+      "technical": [
+        {
+          "source": "03-systems/electrical.md",
+          "sections": [
+            {
+              "title": "Commercial Coordination",
+              "points": [
+                "This commercial confirmation does not freeze the circuit design, point positions, quantities, materials, testing, or acceptance requirements."
+              ]
+            }
+          ]
+        }
+      ],
+      "assets": []
+    },
+    {
+      "id": "pipe-materials",
+      "name": "水管及配件",
+      "category": "水系统",
+      "brand": "伟星",
+      "model": null,
+      "stage": "coordination",
+      "stageLabel": "施工方协调采购",
+      "progress": "委托施工方代购，施工费不包料",
+      "nextAction": "确认系列、管径、数量、单价和质保",
+      "technical": [
+        {
+          "source": "03-systems/plumbing.md",
+          "sections": [
+            {
+              "title": "Procurement and Site Acceptance",
+              "points": [
+                "Require a pre-purchase itemised list showing every pipe, elbow, tee, coupling, valve, adapter, clamp, sleeve, and other fitting.",
+                "On arrival, photograph labels, production/batch information, dimensions, condition, and counts before installation.",
+                "Keep pipe and fitting systems compatible; do not accept mixed or unidentified substitute materials without written owner approval.",
+                "Record the completed pipe routes and joints before concealment.",
+                "Perform and document the agreed pressure test, duration, pressure readings, leak inspection, acceptance signature, and any manufacturer/installer warranty service."
+              ]
+            }
+          ]
+        }
+      ],
+      "assets": []
+    },
+    {
+      "id": "bedroom-doors",
+      "name": "卧室室内门（2 扇）",
+      "category": "门窗",
+      "brand": null,
+      "model": null,
+      "stage": "planning",
+      "stageLabel": "待选型",
+      "progress": "未购买",
+      "nextAction": "复测门洞并确定材质、五金和安装",
+      "technical": [],
+      "assets": []
+    },
+    {
+      "id": "bathroom-door",
+      "name": "浴室门（1 扇）",
+      "category": "门窗",
+      "brand": null,
+      "model": "走廊侧外置滑轨门",
+      "stage": "selected",
+      "stageLabel": "型号或方向已定",
+      "progress": "形式已确定、未购买",
+      "nextAction": "确认洞口、门扇材质、轨道和锁具",
+      "technical": [],
+      "assets": []
+    }
+  ]
+}
