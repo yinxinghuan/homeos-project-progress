@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-08-30T23:01:15+08:00",
+  "updatedAt": "2026-08-30T23:32:04+08:00",
   "project": {
     "title": "HomeOS 工程进度",
     "phase": "装修执行与设备协调"
@@ -487,7 +487,7 @@
       "priority": null,
       "decisionDeadline": null,
       "urgencyReason": null,
-      "progress": "第一期已付，后续三期待付",
+      "progress": "已确定 / 推进中",
       "nextAction": "具体安排由项目负责人另行确认",
       "technical": [],
       "assets": []
