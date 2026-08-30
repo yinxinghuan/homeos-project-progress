@@ -29,6 +29,9 @@ type ProgressItem = {
   model: string | null;
   stage: Stage;
   stageLabel: string;
+  priority: 'P0' | 'P1' | 'P2' | null;
+  decisionDeadline: string | null;
+  urgencyReason: string | null;
   progress: string;
   nextAction: string;
   technical: { source: string; sections: TechnicalSection[] }[];
@@ -53,6 +56,12 @@ const stageColors: Record<Stage, { dot: string; fill: string; text: string }> = 
   coordination: { dot: '#9a613d', fill: '#f4e9e2', text: '#80543a' },
   planning: { dot: '#8a9194', fill: '#eceeef', text: '#666e71' },
 };
+
+const priorityStyle = (priority: ProgressItem['priority']) => priority === 'P0'
+  ? 'border-[#dba98f] bg-[#fff1e9] text-[#8a482c]'
+  : priority === 'P1'
+    ? 'border-[#ddc99e] bg-[#fbf5e8] text-[#765d27]'
+    : 'border-[#cbd6da] bg-[#f1f5f6] text-[#5f737b]';
 function utcDay(date: string) {
   const [year, month, day] = date.split('-').map(Number);
   return Date.UTC(year, month - 1, day) / 86400000;
@@ -120,7 +129,7 @@ function TimelineBoard({ onOpenItem }: { onOpenItem: (id: string) => void }) {
         <p className="text-[10px] font-medium tracking-[0.1em] text-[#839096]">关联事项 · {linkedItems.length}</p>
         <div className="mt-2 grid gap-2 sm:grid-cols-2">
           {linkedItems.map((item) => <button key={item.id} onClick={() => onOpenItem(item.id)} className="group flex min-h-14 items-center justify-between gap-3 rounded-[6px] border border-[#d7e0e3] bg-white px-3 py-2.5 text-left transition hover:border-[#8fa7b2] focus-visible:ring-2 focus-visible:ring-[#6d91a7]">
-            <span className="min-w-0"><strong className="block text-xs font-semibold">{item.name}</strong><span className="mt-1 block truncate text-[10px] text-[#7a888e]">{item.nextAction}</span></span><ArrowUpRight className="size-3.5 shrink-0 text-[#718791] transition group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+            <span className="min-w-0"><span className="flex flex-wrap items-center gap-1.5"><strong className="text-xs font-semibold">{item.name}</strong>{item.priority && <small className={`rounded-full border px-1.5 py-0.5 text-[9px] font-semibold ${priorityStyle(item.priority)}`}>{item.priority}</small>}</span><span className="mt-1 block truncate text-[10px] text-[#7a888e]">{item.nextAction}</span></span><ArrowUpRight className="size-3.5 shrink-0 text-[#718791] transition group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
           </button>)}
           {!linkedItems.length && <div className="border border-dashed border-[#ccd6da] px-3 py-3 text-xs text-[#7b898f]">该节点尚未建立独立事项档案。</div>}
         </div>
@@ -293,7 +302,7 @@ export default function Home() {
               return (
                 <details id={`item-${item.id}`} key={item.id} tabIndex={-1} className="group scroll-mt-4 border border-[#d7dde0] bg-white open:border-[#aebdc3] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#6d91a7] sm:scroll-mt-20 sm:rounded-[9px]">
                   <summary className="grid cursor-pointer list-none gap-3 p-4 marker:hidden sm:grid-cols-[minmax(190px,1.1fr)_minmax(180px,1fr)_175px_115px_24px] sm:items-center sm:gap-5 sm:p-5 [&::-webkit-details-marker]:hidden">
-                    <div className="min-w-0"><div className="flex items-center gap-2"><span className="font-medium">{item.name}</span><small className="text-[10px] text-[#929b9f]">{item.category}</small></div><p className="mt-1 truncate text-xs text-[#6f7c82]">{[item.brand, item.model].filter(Boolean).join(' · ') || '型号待补充'}</p></div>
+                    <div className="min-w-0"><div className="flex flex-wrap items-center gap-2"><span className="font-medium">{item.name}</span>{item.priority && <small className={`rounded-full border px-2 py-0.5 text-[9px] font-semibold ${priorityStyle(item.priority)}`}>{item.priority}{item.decisionDeadline ? ` · ${item.decisionDeadline.slice(5).replace('-', '/')}` : ''}</small>}<small className="text-[10px] text-[#929b9f]">{item.category}</small></div><p className="mt-1 truncate text-xs text-[#6f7c82]">{[item.brand, item.model].filter(Boolean).join(' · ') || '型号待补充'}</p></div>
                     <div className="min-w-0"><p className="truncate text-xs text-[#57656b]">{item.progress}</p><p className="mt-1 truncate text-[11px] text-[#899397]">下一步：{item.nextAction}</p>{relatedTimeline.length > 0 && <p className="mt-1 flex items-center gap-1 truncate text-[10px] text-[#55798a]"><CalendarClock className="size-3 shrink-0" />关联工程：{relatedTimeline.join('、')}</p>}</div>
                     <span className="w-fit rounded-full px-2.5 py-1 text-[11px] font-medium" style={{ backgroundColor: colors.fill, color: colors.text }}><i className="mr-1.5 inline-block size-1.5 rounded-full" style={{ backgroundColor: colors.dot }} />{item.stageLabel}</span>
                     <span className="flex items-center gap-1.5 text-[11px] text-[#77858b]"><Wrench className="size-3.5" />{technicalCount ? `${technicalCount} 条技术信息` : '待补技术资料'}</span>
@@ -303,6 +312,7 @@ export default function Home() {
                   <div className="border-t border-[#e0e5e7] bg-[#f9fafb] p-4 sm:p-5">
                     <div className="grid gap-4 lg:grid-cols-[minmax(0,1fr)_280px]">
                       <div className="space-y-4">
+                        {item.priority && item.urgencyReason && <div className="border border-[#ead8ca] bg-[#fffaf6] p-3"><div className="flex flex-wrap items-center justify-between gap-2"><p className="text-[10px] font-medium tracking-[0.1em] text-[#8d705d]">优先级与决策截止</p><span className={`rounded-full border px-2 py-0.5 text-[9px] font-semibold ${priorityStyle(item.priority)}`}>{item.priority}{item.decisionDeadline ? ` · ${item.decisionDeadline.slice(5).replace('-', '/')}` : ''}</span></div><p className="mt-1.5 text-xs leading-6 text-[#66584f]">{item.urgencyReason}</p></div>}
                         <div className="grid gap-3 sm:grid-cols-2">
                           <div className="border-l-2 border-[#2f638c] bg-white p-3"><p className="text-[10px] font-medium tracking-[0.1em] text-[#8a959a]">CURRENT</p><p className="mt-1.5 text-sm leading-6 text-[#4f5e64]">{item.progress}</p></div>
                           <div className="border-l-2 border-[#dc7440] bg-white p-3"><p className="text-[10px] font-medium tracking-[0.1em] text-[#8a959a]">NEXT</p><p className="mt-1.5 text-sm leading-6 text-[#4f5e64]">{item.nextAction}</p></div>
