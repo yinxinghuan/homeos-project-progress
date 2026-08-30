@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-08-30T23:41:00+08:00",
+  "updatedAt": "2026-08-30T23:58:00+08:00",
   "project": {
     "title": "HomeOS 工程进度",
     "phase": "装修执行与设备协调"
@@ -208,7 +208,7 @@
       "decisionDeadline": null,
       "urgencyReason": null,
       "progress": "已采购 / 待交付安装",
-      "nextAction": "具体安排由项目负责人另行确认",
+      "nextAction": "到货拍铭牌以锁定 23-8409 或 23-5468；两套官方手册均为 AC100V，未确认变压器/保护及燃气类别前禁止通电点火",
       "technical": [
         {
           "source": "04-assets/appliances/rinnai-rux-a1616w-e-water-heater.md",
@@ -218,7 +218,7 @@
               "points": [
                 "Exact gas type and Beijing pipeline-gas compatibility; do not infer from the model name alone",
                 "Whether gas conversion or adjustment has been performed, by whom, and with what combustion-test record",
-                "Electrical voltage and whether a transformer is required/included",
+                "Delivered nameplate voltage; both official candidate manuals state AC 100 V, 50-60 Hz, so the approved transformer/protection solution is mandatory before energisation",
                 "Outdoor mounting position, wall load, weather exposure, service clearances, drainage, condensate applicability, and freeze protection",
                 "Water/gas valve and connector specifications",
                 "Flue/exhaust safety clearances from windows, openings, neighbours, and enclosed spaces",
@@ -244,7 +244,33 @@
           ]
         }
       ],
-      "assets": []
+      "assets": [
+        {
+          "title": "rinnai rux a1616wa e outline",
+          "href": "technical/rinnai-rux-a1616wa-e-outline.pdf",
+          "type": "pdf"
+        },
+        {
+          "title": "rinnai rux a1616wa e outdoor installation drawing",
+          "href": "technical/rinnai-rux-a1616wa-e-outdoor-installation-drawing.pdf",
+          "type": "pdf"
+        },
+        {
+          "title": "rinnai rux a1616wa e installation manual",
+          "href": "technical/rinnai-rux-a1616wa-e-installation-manual.pdf",
+          "type": "pdf"
+        },
+        {
+          "title": "rinnai rux a1616w e outline",
+          "href": "technical/rinnai-rux-a1616w-e-outline.pdf",
+          "type": "pdf"
+        },
+        {
+          "title": "rinnai rux a1616w e installation manual",
+          "href": "technical/rinnai-rux-a1616w-e-installation-manual.pdf",
+          "type": "pdf"
+        }
+      ]
     },
     {
       "id": "grohe-shower",
@@ -376,7 +402,7 @@
       "decisionDeadline": null,
       "urgencyReason": null,
       "progress": "已采购 / 待交付安装",
-      "nextAction": "到货核对 39947SH0 与 400 mm 安装图",
+      "nextAction": "到货核对 39947SH0，并扫描箱内精确安装说明；现有 39932 BIM 与 39933/39948 手册只作对照，未补档前不放行安装",
       "technical": [
         {
           "source": "04-assets/fixtures/grohe-39932sh0-smart-toilet.md",
@@ -400,6 +426,7 @@
               "title": "Installation Hold Points",
               "points": [
                 "Verify the carton/nameplate SKU 39947SH0, then verify floor-outlet centreline, flange/seal and soil-stack compatibility against the supplied 400 mm installation drawing and delivered unit.",
+                "Scan and archive the enclosed 39947SH0 installation instructions before installation release; stop if the carton lacks a matching model-specific drawing.",
                 "Product width/depth/height and clearances to the corner pipe chase, wall radiator, vanity, door path, and bathtub circulation",
                 "Provide a dedicated grounded 220 V circuit/socket and coordinate residual-current protection and wet-zone placement with the electrician; IPX4 does not eliminate local electrical-zone requirements.",
                 "Keep the connection within the supplied 1.0 m cable route without an extension lead; coordinate the dedicated circuit/socket for the stated 920 W rating and still verify the delivered nameplate.",
@@ -419,11 +446,6 @@
         {
           "title": "grohe 39947SH0 product specification",
           "href": "technical/grohe-39947SH0-product-specification.pdf",
-          "type": "pdf"
-        },
-        {
-          "title": "grohe igina 39933 39948 user manual",
-          "href": "technical/grohe-igina-39933-39948-user-manual.pdf",
           "type": "pdf"
         }
       ]
@@ -515,7 +537,7 @@
       "decisionDeadline": null,
       "urgencyReason": null,
       "progress": "已采购 / 待交付安装",
-      "nextAction": "到货核对排水配件兼容性并预约安装",
+      "nextAction": "官方 PAY1320P 图纸已归档；到货核对 DB601S-1B + QCHRG 与官方推荐 DB505R-1A/1B 的兼容性，书面确认并试装试水后方可封闭",
       "technical": [
         {
           "source": "04-assets/fixtures/toto-pay1320p-bathtub.md",
@@ -543,11 +565,50 @@
                 "Retain a removable access panel near the waste connection.",
                 "Use a flexible joint and bathroom-compatible mould-resistant sealant at the rim/finish junction."
               ]
+            },
+            {
+              "title": "Official Installation Data",
+              "points": [
+                "TOTO NTE210 bathtub installation manual",
+                "TOTO NTE211R user and maintenance manual",
+                "DB505R-1A/1B product specification",
+                "DB505R installation manual",
+                "The floor must be waterproofed and able to drain; complete and leak-test the waste connection before enclosure.",
+                "Set the tub on a flat, rigid base with all feet bearing. Keep about 3 mm between the rim and wall finish. Do not carry the tub on its rim and do not backfill the shell with mortar.",
+                "TOTO's direct-drain reference uses a Φ40 mm drain connection with a 45-55 mm height datum; the horizontal-drain reference uses Φ40 mm, a 30-40 mm height datum and a fall of at least 1:50. The exact route must be checked against the delivered waste fitting and site drain.",
+                "The purchased DB601S-1B + QCHRG package is not yet released for concealment: the official PAY1320P specification recommends DB505R-1A/1B, so obtain a written compatibility statement or verify every mating dimension against the delivered parts before closing the terrazzo/access panel."
+              ]
             }
           ]
         }
       ],
-      "assets": []
+      "assets": [
+        {
+          "title": "toto pay1320 1323 product specification",
+          "href": "technical/toto-pay1320-1323-product-specification.pdf",
+          "type": "pdf"
+        },
+        {
+          "title": "toto nte210 bathtub installation",
+          "href": "technical/toto-nte210-bathtub-installation.pdf",
+          "type": "pdf"
+        },
+        {
+          "title": "toto nte211r bathtub user manual",
+          "href": "technical/toto-nte211r-bathtub-user-manual.pdf",
+          "type": "pdf"
+        },
+        {
+          "title": "toto db505r product specification",
+          "href": "technical/toto-db505r-product-specification.pdf",
+          "type": "pdf"
+        },
+        {
+          "title": "toto nte170 db505r installation",
+          "href": "technical/toto-nte170-db505r-installation.pdf",
+          "type": "pdf"
+        }
+      ]
     },
     {
       "id": "flooring",
@@ -740,7 +801,7 @@
       "decisionDeadline": "2026-09-01",
       "urgencyReason": "9 月 2—3 日橱柜点位交底前必须锁定最终后缀、柜体开口、进排水与插座。",
       "progress": "P0｜型号系列已选、未下单；最终后缀未锁定",
-      "nextAction": "8 月 31 日 16:30 联合确认会上锁定 SJ435S00JC 或 SJ435S01JC，并用对应官方安装图完成柜体、进排水和插座交底；9 月 1 日前定稿",
+      "nextAction": "两后缀共用的官方安装图已归档；8 月 31 日 16:30 联合确认会上锁定最终后缀，并据图完成柜体、进排水和插座交底；9 月 1 日前定稿",
       "technical": [
         {
           "source": "04-assets/appliances/built-in-dishwasher-598.md",
@@ -762,8 +823,7 @@
                 "Door-panel dimensions, weight, hinge system, and toe-kick clearance.",
                 "Required countertop steam/moisture protection strip.",
                 "For S01JC, confirm rated voltage and connected power; for either suffix, confirm cord length, plug exit and exact socket position.",
-                "Water-inlet thread size, permitted pressure range, hose length, and inlet-valve position.",
-                "Drain-hose length, permitted rise / high-loop height, and drain-tee connection size.",
+                "Final hose reach and the exact accessible valve/tee positions; thread, pressure and maximum drain rise are now confirmed by the official installation sheet.",
                 "Required side, top, rear, and ventilation clearances.",
                 "Whether the adjustable-height range assumes the finished floor continues underneath the dishwasher.",
                 "Installer-approved cabinet elevation and service-hole position."
@@ -779,7 +839,7 @@
                 "Provide a dishwasher drain branch / tee and confirm backflow and high-loop requirements with the exact model installer.",
                 "Finish cabinet service holes with smooth edges or protective sleeves.",
                 "Confirm that the open appliance door clears the opposite cabinets and circulation aisle.",
-                "Do not close the cabinet or install the countertop until the final suffix's official model sheet is approved."
+                "The common official installation drawing can now govern the cabinet/service zone, but do not order the appliance or close inaccessible services until the final commercial suffix is recorded."
               ]
             }
           ]
@@ -790,6 +850,26 @@
           "title": "built in dishwasher installation reference",
           "href": "technical/2026-08-24-built-in-dishwasher-installation-reference.jpg",
           "type": "image"
+        },
+        {
+          "title": "siemens sj435s00jc sj435s01jc installation",
+          "href": "technical/siemens-sj435s00jc-sj435s01jc-installation.pdf",
+          "type": "pdf"
+        },
+        {
+          "title": "siemens sj435s00jc sj435s01jc user manual",
+          "href": "technical/siemens-sj435s00jc-sj435s01jc-user-manual.pdf",
+          "type": "pdf"
+        },
+        {
+          "title": "siemens sj435s00jc product specification",
+          "href": "technical/siemens-sj435s00jc-product-specification.pdf",
+          "type": "pdf"
+        },
+        {
+          "title": "siemens sj435s01jc product specification",
+          "href": "technical/siemens-sj435s01jc-product-specification.pdf",
+          "type": "pdf"
         }
       ]
     },
@@ -804,8 +884,8 @@
       "priority": "P0",
       "decisionDeadline": "2026-09-01",
       "urgencyReason": "9 月 2—3 日橱柜点位交底前必须冻结开孔、供电、插座与散热条件。",
-      "progress": "P0｜型号已选、未下单；安装条件待最终复核",
-      "nextAction": "8 月 31 日 16:30 联合确认会上按官方手册确认开孔尺寸、电气负荷、散热与插座位置；9 月 1 日前定稿",
+      "progress": "P0｜型号已选、未下单；官方安装图已归档",
+      "nextAction": "8 月 31 日 16:30 联合确认会上按官方图锁定 560+8 × 450+2 × ≥550 mm 开口、无背板、≥50 cm² 底部通风及插座位置；9 月 1 日前定稿",
       "technical": [
         {
           "source": "04-assets/appliances/built-in-oven-595x454.md",
@@ -813,11 +893,6 @@
             {
               "title": "Remaining Inputs Before Cabinet Freeze",
               "points": [
-                "Cabinet opening width and permitted tolerance.",
-                "Exact cabinet opening height range and whether 450 mm is nominal or minimum.",
-                "Required rear, top, bottom, and side ventilation clearances.",
-                "Meaning and location of the printed minimum 9 mm clearance.",
-                "Whether a rear cabinet panel is prohibited or requires a ventilation opening.",
                 "Door swing depth and required aisle clearance when fully open.",
                 "Door/fascia alignment with adjacent drawers and cabinet fronts.",
                 "Rated voltage, connected load, maximum power, and circuit requirement.",
@@ -836,6 +911,16 @@
           "title": "built in oven dimension reference",
           "href": "technical/2026-08-24-built-in-oven-dimension-reference.jpg",
           "type": "image"
+        },
+        {
+          "title": "bosch hbc84h500w installation",
+          "href": "technical/bosch-hbc84h500w-installation.pdf",
+          "type": "pdf"
+        },
+        {
+          "title": "bosch hbc84h500w user manual",
+          "href": "technical/bosch-hbc84h500w-user-manual.pdf",
+          "type": "pdf"
         }
       ]
     },

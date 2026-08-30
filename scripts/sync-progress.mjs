@@ -40,6 +40,13 @@ const safeAssets = {
     'source/media/2026-08-26-central-purifier-softener-installation-requirements.jpeg',
     'source/media/2026-08-26-central-water-treatment-cabinet-clearance-reference.jpeg',
   ],
+  'gas-water-heater': [
+    'source/manuals/rinnai/rinnai-rux-a1616wa-e-outline.pdf',
+    'source/manuals/rinnai/rinnai-rux-a1616wa-e-outdoor-installation-drawing.pdf',
+    'source/manuals/rinnai/rinnai-rux-a1616wa-e-installation-manual.pdf',
+    'source/manuals/rinnai/rinnai-rux-a1616w-e-outline.pdf',
+    'source/manuals/rinnai/rinnai-rux-a1616w-e-installation-manual.pdf',
+  ],
   'grohe-shower': [
     'source/manuals/grohe/grohe-26810000-dimension.jpg',
     'source/manuals/grohe/grohe-26810000-installation.pdf',
@@ -51,14 +58,30 @@ const safeAssets = {
   'grohe-smart-toilet': [
     'source/media/2026-08-30-grohe-igina-light-39932-39947-dimension-sheet.png',
     'source/manuals/grohe/grohe-39947SH0-product-specification.pdf',
-    'source/manuals/grohe/grohe-igina-39933-39948-user-manual.pdf',
+  ],
+  bathtub: [
+    'source/manuals/toto/toto-pay1320-1323-product-specification.pdf',
+    'source/manuals/toto/toto-nte210-bathtub-installation.pdf',
+    'source/manuals/toto/toto-nte211r-bathtub-user-manual.pdf',
+    'source/manuals/toto/toto-db505r-product-specification.pdf',
+    'source/manuals/toto/toto-nte170-db505r-installation.pdf',
   ],
   'kitchen-sink': [
     'source/manuals/grohe/grohe-31919SD0-dimension.jpg',
     'source/manuals/grohe/grohe-31919SD0-installation.pdf',
   ],
-  dishwasher: ['source/media/2026-08-24-built-in-dishwasher-installation-reference.jpg'],
-  oven: ['source/media/2026-08-24-built-in-oven-dimension-reference.jpg'],
+  dishwasher: [
+    'source/media/2026-08-24-built-in-dishwasher-installation-reference.jpg',
+    'source/manuals/siemens/siemens-sj435s00jc-sj435s01jc-installation.pdf',
+    'source/manuals/siemens/siemens-sj435s00jc-sj435s01jc-user-manual.pdf',
+    'source/manuals/siemens/siemens-sj435s00jc-product-specification.pdf',
+    'source/manuals/siemens/siemens-sj435s01jc-product-specification.pdf',
+  ],
+  oven: [
+    'source/media/2026-08-24-built-in-oven-dimension-reference.jpg',
+    'source/manuals/bosch/bosch-hbc84h500w-installation.pdf',
+    'source/manuals/bosch/bosch-hbc84h500w-user-manual.pdf',
+  ],
   'range-hood': ['source/media/2026-08-24-liudianban-y6-range-hood-installation.jpg'],
   'gas-cooktop': ['source/media/2026-08-24-two-burner-cooktop-cabinet-reference.jpg'],
   'kitchen-cabinetry': [
