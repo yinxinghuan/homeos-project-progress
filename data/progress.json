@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-08-30T21:03:00+08:00",
+  "updatedAt": "2026-08-30T21:05:00+08:00",
   "project": {
     "title": "HomeOS 工程进度",
     "phase": "装修执行与设备协调"
@@ -164,7 +164,7 @@
       "stage": "ordered",
       "stageLabel": "已采购 / 待交付安装",
       "progress": "已采购 / 待交付安装",
-      "nextAction": "具体安排由项目负责人另行确认",
+      "nextAction": "核对包装标签、产品编码、送货数量及退补货规则",
       "technical": [
         {
           "source": "02-renovation/TILE_LAYOUT.md",
