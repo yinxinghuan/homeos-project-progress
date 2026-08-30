@@ -35,7 +35,7 @@ type ProgressItem = {
   assets: { title: string; href: string; type: 'pdf' | 'image' }[];
 };
 type TimelineRange = { start: string; end: string; label: string };
-type TimelineActual = { status: 'not_started' | 'in_progress' | 'completed' | 'blocked'; confirmedDate: string | null; note: string | null };
+type TimelineActual = { status: 'not_started' | 'scheduled' | 'in_progress' | 'completed' | 'blocked'; confirmedDate: string | null; note: string | null };
 type TimelineRow = { name: string; kind: 'construction' | 'supplier'; linkedItemIds: string[]; actual: TimelineActual | null; ranges: TimelineRange[] };
 
 const data = progressData as {
@@ -87,6 +87,7 @@ function TimelineBoard({ onOpenItem }: { onOpenItem: (id: string) => void }) {
   };
   const actualState = (actual: TimelineActual) => ({
     not_started: { label: '现场确认未开始', shortLabel: '未开始', tone: 'bg-[#edf0f1] text-[#68757a]', bar: '#9aa7ac' },
+    scheduled: { label: '现场预约已确认', shortLabel: '已预约', tone: 'bg-[#f3ece2] text-[#785a3d]', bar: '#b27b47' },
     in_progress: { label: '现场确认进行中', shortLabel: '进行中', tone: 'bg-[#e4edf4] text-[#315e7c]', bar: '#2e6d8f' },
     completed: { label: '现场确认已完成', shortLabel: '已完成', tone: 'bg-[#e4efe9] text-[#326250]', bar: '#3f8067' },
     blocked: { label: '现场确认受阻', shortLabel: '受阻', tone: 'bg-[#f5e7e3] text-[#895347]', bar: '#a2574a' },
