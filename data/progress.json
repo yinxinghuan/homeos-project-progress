@@ -1036,7 +1036,7 @@
     "source": "02-renovation/CONSTRUCTION_PLAN.md",
     "trackingSource": "02-renovation/CONSTRUCTION_PROGRESS.md",
     "actualStatus": "recorded",
-    "actualCount": 3,
+    "actualCount": 4,
     "phases": [
       {
         "name": "准备与拆除",
@@ -1116,7 +1116,7 @@
         "actual": {
           "status": "completed",
           "confirmedDate": "2026-08-30",
-          "note": "墙体改造、拆除及铲墙皮已完成。此记录不推断建筑垃圾清运已经完成。"
+          "note": "墙体改造、拆除及铲墙皮已完成。"
         },
         "ranges": [
           {
@@ -1132,7 +1132,11 @@
         "linkedItemIds": [
           "construction"
         ],
-        "actual": null,
+        "actual": {
+          "status": "completed",
+          "confirmedDate": "2026-08-30",
+          "note": "建筑垃圾清运已完成。"
+        },
         "ranges": [
           {
             "start": "2026-08-26",
