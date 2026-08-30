@@ -149,3 +149,25 @@ summary {
     scroll-behavior: auto !important;
   }
 }
+
+@media (max-width: 639px) {
+  .mobile-readable :where(.text-\[9px\]) {
+    font-size: 10px;
+  }
+
+  .mobile-readable :where(.text-\[10px\]) {
+    font-size: 11px;
+  }
+
+  .mobile-readable :where(.text-\[11px\]) {
+    font-size: 12px;
+  }
+
+  .mobile-readable :where(.text-xs) {
+    font-size: 13px;
+  }
+
+  .mobile-readable :where(.text-\[13px\]) {
+    font-size: 14px;
+  }
+}
