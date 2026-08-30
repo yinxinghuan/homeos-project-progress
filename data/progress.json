@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-08-30T20:30:00+08:00",
+  "updatedAt": "2026-08-30T21:03:00+08:00",
   "project": {
     "title": "HomeOS 工程进度",
     "phase": "装修执行与设备协调"
@@ -159,12 +159,12 @@
       "id": "tiles",
       "name": "瓷砖",
       "category": "饰面材料",
-      "brand": "待补充",
+      "brand": "美联天地建材市场销售单（具体品牌待核）",
       "model": "卫生间与厨房排砖方案",
-      "stage": "confirmed",
-      "stageLabel": "已确定 / 推进中",
-      "progress": "已确定 / 推进中",
-      "nextAction": "确认品牌、数量、损耗和订单总价",
+      "stage": "ordered",
+      "stageLabel": "已采购 / 待交付安装",
+      "progress": "已采购 / 待交付安装",
+      "nextAction": "具体安排由项目负责人另行确认",
       "technical": [
         {
           "source": "02-renovation/TILE_LAYOUT.md",
