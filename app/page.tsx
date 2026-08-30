@@ -7,72 +7,20 @@ import {
   CheckCircle2,
   ChevronDown,
   ClipboardCheck,
-  FileText,
-  ImageIcon,
-  Info,
   Link2,
   Search,
   ShieldCheck,
   Wrench,
 } from 'lucide-react';
 
-import progressData from '@/data/progress.json';
 import { Input } from '@/components/ui/input';
-
-type Stage = 'ordered' | 'confirmed' | 'selected' | 'coordination' | 'planning';
-type TechnicalSection = { title: string; points: string[] };
-type ProgressItem = {
-  id: string;
-  name: string;
-  category: string;
-  brand: string | null;
-  model: string | null;
-  stage: Stage;
-  stageLabel: string;
-  priority: 'P0' | 'P1' | 'P2' | null;
-  decisionDeadline: string | null;
-  urgencyReason: string | null;
-  progress: string;
-  nextAction: string;
-  technical: { source: string; sections: TechnicalSection[] }[];
-  assets: { title: string; href: string; type: 'pdf' | 'image' }[];
-};
-type TimelineRange = { start: string; end: string; label: string };
-type TimelineActual = { status: 'not_started' | 'scheduled' | 'in_progress' | 'completed' | 'blocked'; confirmedDate: string | null; note: string | null };
-type TimelineRow = { name: string; kind: 'construction' | 'supplier'; linkedItemIds: string[]; actual: TimelineActual | null; ranges: TimelineRange[] };
-
-const data = progressData as {
-  updatedAt: string;
-  project: { title: string; phase: string };
-  stages: { id: Stage; label: string }[];
-  items: ProgressItem[];
-  timeline: { title: string; start: string; end: string; durationDays: number; source: string; trackingSource: string; actualStatus: 'not_confirmed' | 'recorded'; actualCount: number; phases: { name: string; range: TimelineRange; focus: string }[]; main: TimelineRow[]; suppliers: TimelineRow[] };
-};
-
-const stageColors: Record<Stage, { dot: string; fill: string; text: string }> = {
-  ordered: { dot: '#2c6a58', fill: '#e5f0eb', text: '#315d50' },
-  confirmed: { dot: '#2d5f8b', fill: '#e5edf5', text: '#355f81' },
-  selected: { dot: '#7b6b42', fill: '#f0ecdf', text: '#6c5d36' },
-  coordination: { dot: '#9a613d', fill: '#f4e9e2', text: '#80543a' },
-  planning: { dot: '#8a9194', fill: '#eceeef', text: '#666e71' },
-};
-
-const priorityStyle = (priority: ProgressItem['priority']) => priority === 'P0'
-  ? 'border-[#dba98f] bg-[#fff1e9] text-[#8a482c]'
-  : priority === 'P1'
-    ? 'border-[#ddc99e] bg-[#fbf5e8] text-[#765d27]'
-    : 'border-[#cbd6da] bg-[#f1f5f6] text-[#5f737b]';
+import { data, dateTime, priorityStyle, shortRange, stageColors, type ProgressItem, type Stage, type TimelineActual, type TimelineRange, type TimelineRow } from '@/lib/progress';
 function utcDay(date: string) {
   const [year, month, day] = date.split('-').map(Number);
   return Date.UTC(year, month - 1, day) / 86400000;
 }
 
-function shortRange(range: TimelineRange) {
-  const format = (value: string) => `${Number(value.slice(5, 7))}/${Number(value.slice(8, 10))}`;
-  return range.start === range.end ? format(range.start) : `${format(range.start)}—${format(range.end)}`;
-}
-
-function TimelineBoard({ onOpenItem }: { onOpenItem: (id: string) => void }) {
+function TimelineBoard({ itemHref }: { itemHref: (id: string) => string }) {
   const timeline = data.timeline;
   const total = timeline.durationDays;
   const startDay = utcDay(timeline.start);
@@ -138,9 +86,9 @@ function TimelineBoard({ onOpenItem }: { onOpenItem: (id: string) => void }) {
       <div className="min-w-0">
         <p className="text-[10px] font-medium tracking-[0.1em] text-[#839096]">关联事项 · {linkedItems.length}</p>
         <div className="mt-2 flex min-w-0 flex-wrap gap-2">
-          {linkedItems.map((item) => <button key={item.id} onClick={() => onOpenItem(item.id)} title={`打开 ${item.name} 的型号、安装与进度档案`} className="group inline-flex min-h-9 max-w-full items-center gap-1.5 rounded-[6px] border border-[#d7e0e3] bg-white px-2.5 py-1.5 text-left text-[12px] font-medium text-[#4f6570] transition active:scale-[0.98] active:bg-[#e8f0f3] hover:border-[#8fa7b2] hover:bg-[#f3f7f8] focus-visible:ring-2 focus-visible:ring-[#6d91a7]">
+          {linkedItems.map((item) => <a key={item.id} href={itemHref(item.id)} title={`打开 ${item.name} 的型号、安装与进度档案`} className="group inline-flex min-h-9 max-w-full items-center gap-1.5 rounded-[6px] border border-[#d7e0e3] bg-white px-2.5 py-1.5 text-left text-[12px] font-medium text-[#4f6570] transition active:scale-[0.98] active:bg-[#e8f0f3] hover:border-[#8fa7b2] hover:bg-[#f3f7f8] focus-visible:ring-2 focus-visible:ring-[#6d91a7]">
             <span className="min-w-0 break-words">{item.name}</span>{item.priority && <small className={`shrink-0 rounded-full border px-1.5 py-0.5 text-[9px] font-semibold ${priorityStyle(item.priority)}`}>{item.priority}</small>}<ArrowUpRight className="size-3.5 shrink-0 text-[#718791] transition group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-          </button>)}
+          </a>)}
           {!linkedItems.length && <div className="border border-dashed border-[#ccd6da] px-3 py-3 text-xs text-[#7b898f]">该节点尚未建立独立事项档案。</div>}
         </div>
       </div>
@@ -189,16 +137,7 @@ function TimelineBoard({ onOpenItem }: { onOpenItem: (id: string) => void }) {
   );
 }
 
-const dateTime = new Intl.DateTimeFormat('zh-CN', {
-  timeZone: 'Asia/Shanghai',
-  year: 'numeric',
-  month: '2-digit',
-  day: '2-digit',
-  hour: '2-digit',
-  minute: '2-digit',
-});
-
-export default function Home() {
+export function ProgressOverview({ basePath = '' }: { basePath?: string }) {
   const [stage, setStage] = useState<'all' | Stage>('all');
   const [category, setCategory] = useState('all');
   const [query, setQuery] = useState('');
@@ -234,19 +173,7 @@ export default function Home() {
     setCategory(next);
     focusResults();
   };
-  const openItem = (id: string) => {
-    setStage('all');
-    setCategory('all');
-    setQuery('');
-    window.history.replaceState(null, '', `#item-${id}`);
-    window.setTimeout(() => requestAnimationFrame(() => {
-      const target = document.getElementById(`item-${id}`) as HTMLDetailsElement | null;
-      if (!target) return;
-      target.open = true;
-      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      target.focus({ preventScroll: true });
-    }), 0);
-  };
+  const itemHref = (id: string) => `${basePath}/items/${id}${basePath ? '/' : ''}`;
 
   return (
     <main className="mobile-readable min-h-screen bg-[#f4f6f7] text-[#20282d]">
@@ -274,7 +201,7 @@ export default function Home() {
           </div>
         </section>
 
-        <TimelineBoard onOpenItem={openItem} />
+        <TimelineBoard itemHref={itemHref} />
 
         <section className="mt-7 border-y border-[#cfd7da] py-4" aria-label="工程阶段筛选">
           <div className="relative flex gap-2 overflow-x-auto pb-1 [scrollbar-width:none] sm:grid sm:grid-cols-5 sm:overflow-visible sm:pb-0">
@@ -294,7 +221,7 @@ export default function Home() {
 
         <section id="work-items" ref={workItemsRef} className="mt-7 scroll-mt-4 sm:scroll-mt-20">
           <div className="flex flex-col gap-4 border border-[#d7dde0] bg-white p-4 sm:rounded-[10px] sm:p-5 lg:flex-row lg:items-end lg:justify-between">
-            <div><p className="text-[10px] font-medium tracking-[0.13em] text-[#879298]">WORK ITEMS</p><h2 className="mt-1 text-xl font-semibold">工程事项</h2><p className="mt-1 text-xs text-[#818c91]">显示 {filtered.length} / {data.items.length} 项；展开条目查看型号、技术条件和安装资料。</p></div>
+            <div><p className="text-[10px] font-medium tracking-[0.13em] text-[#879298]">WORK ITEMS</p><h2 className="mt-1 text-xl font-semibold">工程事项档案</h2><p className="mt-1 text-xs text-[#818c91]">显示 {filtered.length} / {data.items.length} 项；每项均有独立页面，可直接分享和返回。</p></div>
             <div className="flex w-full flex-col gap-2 sm:flex-row lg:w-auto">
               <select value={category} onChange={(event) => setCategoryAndFocus(event.target.value)} className="h-11 rounded-[7px] border border-[#d5dcdf] bg-white px-3 text-sm text-[#58666c] outline-none focus:border-[#7b9aaa] sm:h-10 sm:w-44" aria-label="按分类筛选">
                 <option value="all">全部分类</option>{categories.map((entry) => <option key={entry} value={entry}>{entry}</option>)}
@@ -303,55 +230,23 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="mt-3 space-y-2">
+          <div className="mt-3 grid gap-2 lg:grid-cols-2">
             {filtered.map((item) => {
               const colors = stageColors[item.stage];
               const technicalCount = item.technical.reduce((sum, source) => sum + source.sections.reduce((sectionSum, section) => sectionSum + section.points.length, 0), 0);
               const relatedTimeline = timelineByItem.get(item.id) ?? [];
-              return (
-                <details id={`item-${item.id}`} key={item.id} tabIndex={-1} className="group scroll-mt-4 border border-[#d7dde0] bg-white open:border-[#aebdc3] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#6d91a7] sm:scroll-mt-20 sm:rounded-[9px]">
-                  <summary className="grid cursor-pointer list-none gap-3 p-4 marker:hidden sm:grid-cols-[minmax(190px,1.1fr)_minmax(180px,1fr)_175px_115px_24px] sm:items-center sm:gap-5 sm:p-5 [&::-webkit-details-marker]:hidden">
-                    <div className="min-w-0"><div className="flex flex-wrap items-center gap-2"><span className="font-medium">{item.name}</span>{item.priority && <small className={`rounded-full border px-2 py-0.5 text-[9px] font-semibold ${priorityStyle(item.priority)}`}>{item.priority}{item.decisionDeadline ? ` · ${item.decisionDeadline.slice(5).replace('-', '/')}` : ''}</small>}<small className="text-[10px] text-[#929b9f]">{item.category}</small></div><p className="mt-1 truncate text-xs text-[#6f7c82]">{[item.brand, item.model].filter(Boolean).join(' · ') || '型号待补充'}</p></div>
-                    <div className="min-w-0"><p className="truncate text-xs text-[#57656b]">{item.progress}</p><p className="mt-1 truncate text-[13px] text-[#899397] sm:text-[11px]">下一步：{item.nextAction}</p>{relatedTimeline.length > 0 && <p className="mt-1 flex items-center gap-1 truncate text-[10px] text-[#55798a]"><CalendarClock className="size-3 shrink-0" />关联工程：{relatedTimeline.join('、')}</p>}</div>
-                    <span className="w-fit rounded-full px-2.5 py-1 text-[11px] font-medium" style={{ backgroundColor: colors.fill, color: colors.text }}><i className="mr-1.5 inline-block size-1.5 rounded-full" style={{ backgroundColor: colors.dot }} />{item.stageLabel}</span>
-                    <span className="flex items-center gap-1.5 text-[11px] text-[#77858b]"><Wrench className="size-3.5" />{technicalCount ? `${technicalCount} 条技术信息` : '待补技术资料'}</span>
-                    <ChevronDown className="size-4 text-[#8a969b] transition group-open:rotate-180" />
-                  </summary>
-
-                  <div className="border-t border-[#e0e5e7] bg-[#f9fafb] p-4 sm:p-5">
-                    <div className="grid gap-4 lg:grid-cols-[minmax(0,1fr)_280px]">
-                      <div className="space-y-4">
-                        {item.priority && item.urgencyReason && <div className="border border-[#ead8ca] bg-[#fffaf6] p-3"><div className="flex flex-wrap items-center justify-between gap-2"><p className="text-[10px] font-medium tracking-[0.1em] text-[#8d705d]">优先级与决策截止</p><span className={`rounded-full border px-2 py-0.5 text-[9px] font-semibold ${priorityStyle(item.priority)}`}>{item.priority}{item.decisionDeadline ? ` · ${item.decisionDeadline.slice(5).replace('-', '/')}` : ''}</span></div><p className="mt-1.5 text-xs leading-6 text-[#66584f]">{item.urgencyReason}</p></div>}
-                        <div className="grid gap-3 sm:grid-cols-2">
-                          <div className="border-l-2 border-[#2f638c] bg-white p-3"><p className="text-[10px] font-medium tracking-[0.1em] text-[#8a959a]">CURRENT</p><p className="mt-1.5 text-sm leading-6 text-[#4f5e64]">{item.progress}</p></div>
-                          <div className="border-l-2 border-[#dc7440] bg-white p-3"><p className="text-[10px] font-medium tracking-[0.1em] text-[#8a959a]">NEXT</p><p className="mt-1.5 text-sm leading-6 text-[#4f5e64]">{item.nextAction}</p></div>
-                        </div>
-
-                        {item.technical.map((record) => (
-                          <article key={record.source} className="border border-[#dde3e5] bg-white p-4 sm:rounded-[7px]">
-                            <p className="font-data text-[10px] text-[#909a9e]">{record.source}</p>
-                            {record.sections.map((section) => (
-                              <section key={section.title} className="mt-4 border-t border-[#e4e8e9] pt-4 first:mt-2 first:border-0 first:pt-0">
-                                <h3 className="text-sm font-semibold">{section.title}</h3>
-                                <ul className="mt-2.5 space-y-2">{section.points.map((point, index) => <li key={index} className="grid grid-cols-[7px_1fr] gap-2.5 text-[14px] leading-6 text-[#59676d] sm:text-xs"><span className="mt-[9px] size-1.5 rounded-full bg-[#7f969f]" /><span>{point}</span></li>)}</ul>
-                              </section>
-                            ))}
-                          </article>
-                        ))}
-                        {!item.technical.length && <div className="border border-dashed border-[#ccd5d8] bg-white p-5 text-sm leading-6 text-[#7c888d] sm:rounded-[7px]"><Info className="mr-2 inline size-4" />详细型号或安装资料尚未进入 HomeOS；取得后会同步到这里。</div>}
-                      </div>
-
-                      <aside>
-                        <p className="text-[10px] font-medium tracking-[0.11em] text-[#8a959a]">TECHNICAL FILES</p>
-                        <div className="mt-2 space-y-2">
-                          {item.assets.map((asset) => <a key={asset.href} href={asset.href} target="_blank" rel="noreferrer" className="group/file block overflow-hidden border border-[#dbe1e3] bg-white sm:rounded-[7px]">{asset.type === 'image' ? <div className="aspect-[16/10] overflow-hidden bg-[#e9eef0]"><img src={asset.href} alt={asset.title} className="h-full w-full object-cover transition group-hover/file:scale-[1.01]" /></div> : <div className="grid aspect-[16/9] place-items-center bg-[#e9eef0]"><FileText className="size-8 text-[#708791]" /></div>}<div className="flex items-center justify-between gap-2 p-3"><span className="truncate text-xs font-medium">{asset.title}</span><ArrowUpRight className="size-3.5 shrink-0 text-[#72848b]" /></div></a>)}
-                          {!item.assets.length && <div className="border border-dashed border-[#d1d9dc] p-4 text-xs leading-5 text-[#839095] sm:rounded-[7px]"><ImageIcon className="mb-2 size-4" />暂无可公开的技术图纸附件。</div>}
-                        </div>
-                      </aside>
-                    </div>
-                  </div>
-                </details>
-              );
+              return <a id={`item-${item.id}`} href={itemHref(item.id)} key={item.id} className="group grid min-h-[150px] scroll-mt-20 gap-4 border border-[#d7dde0] bg-white p-4 transition hover:border-[#9fb2ba] hover:shadow-[0_8px_24px_rgba(31,79,118,.06)] focus-visible:ring-2 focus-visible:ring-[#6d91a7] sm:rounded-[9px] sm:p-5">
+                <div className="flex min-w-0 items-start justify-between gap-4">
+                  <div className="min-w-0"><div className="flex flex-wrap items-center gap-2"><span className="text-[15px] font-semibold">{item.name}</span>{item.priority && <small className={`rounded-full border px-2 py-0.5 text-[9px] font-semibold ${priorityStyle(item.priority)}`}>{item.priority}{item.decisionDeadline ? ` · ${item.decisionDeadline.slice(5).replace('-', '/')}` : ''}</small>}<small className="text-[10px] text-[#929b9f]">{item.category}</small></div><p className="mt-1.5 truncate text-xs text-[#6f7c82]">{[item.brand, item.model].filter(Boolean).join(' · ') || '型号待补充'}</p></div>
+                  <ArrowUpRight className="mt-1 size-4 shrink-0 text-[#718791] transition group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                </div>
+                <p className="line-clamp-2 text-xs leading-5 text-[#57656b]">{item.progress}</p>
+                <div className="mt-auto flex flex-wrap items-center gap-x-4 gap-y-2 border-t border-[#edf0f1] pt-3">
+                  <span className="rounded-full px-2.5 py-1 text-[11px] font-medium" style={{ backgroundColor: colors.fill, color: colors.text }}><i className="mr-1.5 inline-block size-1.5 rounded-full" style={{ backgroundColor: colors.dot }} />{item.stageLabel}</span>
+                  <span className="flex items-center gap-1.5 text-[11px] text-[#77858b]"><Wrench className="size-3.5" />{technicalCount ? `${technicalCount} 条技术信息` : '待补技术资料'}</span>
+                  {relatedTimeline.length > 0 && <span className="flex min-w-0 items-center gap-1 truncate text-[10px] text-[#55798a]"><CalendarClock className="size-3 shrink-0" />{relatedTimeline[0]}{relatedTimeline.length > 1 ? ` +${relatedTimeline.length - 1}` : ''}</span>}
+                </div>
+              </a>;
             })}
             {!filtered.length && <div className="border border-dashed border-[#cdd6d9] bg-white py-16 text-center text-sm text-[#7d898e]">没有找到符合条件的工程事项。</div>}
           </div>
@@ -361,4 +256,8 @@ export default function Home() {
       </div>
     </main>
   );
+}
+
+export default function Home() {
+  return <ProgressOverview />;
 }
