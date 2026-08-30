@@ -1,6 +1,6 @@
 'use client';
 
-import { useMemo, useState } from 'react';
+import { useMemo, useRef, useState } from 'react';
 import {
   ArrowUpRight,
   CheckCircle2,
@@ -13,10 +13,8 @@ import {
   ShieldCheck,
   Wrench,
 } from 'lucide-react';
-import { Bar, BarChart, CartesianGrid, LabelList, XAxis, YAxis } from 'recharts';
 
 import progressData from '@/data/progress.json';
-import { ChartContainer, ChartTooltip, ChartTooltipContent, type ChartConfig } from '@/components/ui/chart';
 import { Input } from '@/components/ui/input';
 
 type Stage = 'ordered' | 'confirmed' | 'selected' | 'coordination' | 'planning';
@@ -52,10 +50,6 @@ const stageColors: Record<Stage, { dot: string; fill: string; text: string }> = 
   coordination: { dot: '#9a613d', fill: '#f4e9e2', text: '#80543a' },
   planning: { dot: '#8a9194', fill: '#eceeef', text: '#666e71' },
 };
-const shortStageLabels: Record<Stage, string> = { ordered: '已采购', confirmed: '推进中', selected: '已选型', coordination: '协调采购', planning: '待选型' };
-const stageChartConfig = { count: { label: '事项数量', color: '#1f4f76' } } satisfies ChartConfig;
-const readinessChartConfig = { readiness: { label: '明确度', color: '#39715f' } } satisfies ChartConfig;
-
 function utcDay(date: string) {
   const [year, month, day] = date.split('-').map(Number);
   return Date.UTC(year, month - 1, day) / 86400000;
@@ -133,15 +127,10 @@ export default function Home() {
   const [stage, setStage] = useState<'all' | Stage>('all');
   const [category, setCategory] = useState('all');
   const [query, setQuery] = useState('');
+  const workItemsRef = useRef<HTMLElement>(null);
 
   const categories = useMemo(() => [...new Set(data.items.map((item) => item.category))].sort((a, b) => a.localeCompare(b, 'zh-CN')), []);
   const counts = useMemo(() => Object.fromEntries(data.stages.map((entry) => [entry.id, data.items.filter((item) => item.stage === entry.id).length])), []);
-  const stageChartData = useMemo(() => data.stages.map((entry) => ({ stage: shortStageLabels[entry.id], count: counts[entry.id] })), [counts]);
-  const categoryChartData = useMemo(() => {
-    const grouped = new Map<string, { total: number; clear: number }>();
-    data.items.forEach((item) => { const current = grouped.get(item.category) ?? { total: 0, clear: 0 }; current.total += 1; if (item.stage !== 'planning') current.clear += 1; grouped.set(item.category, current); });
-    return [...grouped].map(([name, value]) => ({ name, readiness: Math.round((value.clear / value.total) * 100) })).sort((a, b) => b.readiness - a.readiness || a.name.localeCompare(b.name, 'zh-CN')).slice(0, 8);
-  }, []);
   const filtered = useMemo(() => {
     const normalized = query.trim().toLocaleLowerCase('zh-CN');
     return data.items.filter((item) => {
@@ -155,6 +144,16 @@ export default function Home() {
         .includes(normalized);
     });
   }, [category, query, stage]);
+
+  const focusResults = () => requestAnimationFrame(() => workItemsRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' }));
+  const setStageAndFocus = (next: Stage) => {
+    setStage((current) => current === next ? 'all' : next);
+    focusResults();
+  };
+  const setCategoryAndFocus = (next: string) => {
+    setCategory(next);
+    focusResults();
+  };
 
   return (
     <main className="min-h-screen bg-[#f4f6f7] text-[#20282d]">
@@ -183,43 +182,26 @@ export default function Home() {
         </section>
 
         <section className="mt-7 border-y border-[#cfd7da] py-4" aria-label="工程阶段筛选">
-          <div className="relative grid gap-2 sm:grid-cols-5">
+          <div className="relative flex gap-2 overflow-x-auto pb-1 [scrollbar-width:none] sm:grid sm:grid-cols-5 sm:overflow-visible sm:pb-0">
             <div aria-hidden className="absolute left-[8%] right-[8%] top-[18px] hidden h-px bg-[#c8d1d4] sm:block" />
             {data.stages.map((entry) => {
               const colors = stageColors[entry.id];
               const active = stage === entry.id;
               return (
-                <button key={entry.id} onClick={() => setStage(active ? 'all' : entry.id)} className={`relative z-10 flex items-center gap-3 border px-3 py-3 text-left transition sm:block sm:border-0 sm:bg-transparent sm:px-2 sm:text-center ${active ? 'border-[#97abb3] bg-white' : 'border-[#dce1e3] bg-[#f8f9f9]'}`}>
-                  <span className="grid size-9 shrink-0 place-items-center rounded-full border-[5px] border-[#f4f6f7] font-data text-[11px] font-semibold text-white sm:mx-auto" style={{ backgroundColor: colors.dot }}>{counts[entry.id]}</span>
-                  <span className="text-xs font-medium text-[#59666c] sm:mt-2 sm:block">{entry.label}</span>
+                <button key={entry.id} onClick={() => setStageAndFocus(entry.id)} className={`relative z-10 flex min-h-11 shrink-0 items-center gap-2 rounded-[7px] border px-3 py-2 text-left transition sm:block sm:border-0 sm:bg-transparent sm:px-2 sm:text-center ${active ? 'border-[#7894a2] bg-white' : 'border-[#dce1e3] bg-[#f8f9f9]'}`} aria-pressed={active}>
+                  <span className="grid size-7 shrink-0 place-items-center rounded-full font-data text-[10px] font-semibold text-white sm:mx-auto sm:size-9 sm:border-[5px] sm:border-[#f4f6f7] sm:text-[11px]" style={{ backgroundColor: colors.dot }}>{counts[entry.id]}</span>
+                  <span className="whitespace-nowrap text-xs font-medium text-[#59666c] sm:mt-2 sm:block">{entry.label}</span>
                 </button>
               );
             })}
           </div>
         </section>
 
-        <section className="mt-7 grid gap-3 lg:grid-cols-[.9fr_1.1fr]" aria-label="工程进度图表">
-          <article className="border border-[#d7dde0] bg-white p-5 sm:rounded-[10px] sm:p-6">
-            <div><p className="text-[10px] font-medium tracking-[0.13em] text-[#879298]">PROGRESS MIX</p><h2 className="mt-1 text-base font-semibold">事项所处阶段</h2><p className="mt-1 text-xs text-[#829096]">共 {data.items.length} 项，柱形高度表示各阶段事项数量。</p></div>
-            <ChartContainer config={stageChartConfig} className="mt-4 h-[220px] w-full aspect-auto" aria-label="工程事项阶段分布柱形图">
-              <BarChart accessibilityLayer data={stageChartData} margin={{ top: 18, right: 6, left: 6, bottom: 0 }}><CartesianGrid vertical={false} strokeDasharray="3 3" /><XAxis dataKey="stage" tickLine={false} axisLine={false} fontSize={10} /><YAxis allowDecimals={false} tickLine={false} axisLine={false} width={20} /><ChartTooltip cursor={false} content={<ChartTooltipContent hideLabel />} /><Bar dataKey="count" fill="var(--color-count)" radius={[4, 4, 0, 0]}><LabelList dataKey="count" position="top" className="fill-[#40525b]" fontSize={11} /></Bar></BarChart>
-            </ChartContainer>
-          </article>
-          <article className="border border-[#d7dde0] bg-white p-5 sm:rounded-[10px] sm:p-6">
-            <div><p className="text-[10px] font-medium tracking-[0.13em] text-[#879298]">CATEGORY READINESS</p><h2 className="mt-1 text-base font-semibold">各专业明确度</h2><p className="mt-1 text-xs text-[#829096]">已采购、推进中、已选型或施工方协调的项目计为已明确。</p></div>
-            <ChartContainer config={readinessChartConfig} className="mt-4 h-[220px] w-full aspect-auto" aria-label="各专业明确度横向条形图">
-              <BarChart accessibilityLayer data={categoryChartData} layout="vertical" margin={{ top: 2, right: 34, left: 4, bottom: 0 }}><CartesianGrid horizontal={false} strokeDasharray="3 3" /><XAxis type="number" domain={[0, 100]} hide /><YAxis dataKey="name" type="category" tickLine={false} axisLine={false} width={78} fontSize={10} /><ChartTooltip cursor={false} content={<ChartTooltipContent hideLabel formatter={(value) => <span className="font-data font-semibold">{Number(value)}%</span>} />} /><Bar dataKey="readiness" fill="var(--color-readiness)" radius={[0, 4, 4, 0]}><LabelList dataKey="readiness" position="right" formatter={(value: unknown) => `${value}%`} className="fill-[#50626a]" fontSize={10} /></Bar></BarChart>
-            </ChartContainer>
-          </article>
-        </section>
-
-        <TimelineBoard />
-
-        <section id="work-items" className="mt-7 scroll-mt-20">
+        <section id="work-items" ref={workItemsRef} className="mt-7 scroll-mt-4 sm:scroll-mt-20">
           <div className="flex flex-col gap-4 border border-[#d7dde0] bg-white p-4 sm:rounded-[10px] sm:p-5 lg:flex-row lg:items-end lg:justify-between">
             <div><p className="text-[10px] font-medium tracking-[0.13em] text-[#879298]">WORK ITEMS</p><h2 className="mt-1 text-xl font-semibold">工程事项</h2><p className="mt-1 text-xs text-[#818c91]">显示 {filtered.length} / {data.items.length} 项；展开条目查看型号、技术条件和安装资料。</p></div>
             <div className="flex w-full flex-col gap-2 sm:flex-row lg:w-auto">
-              <select value={category} onChange={(event) => setCategory(event.target.value)} className="h-10 rounded-[7px] border border-[#d5dcdf] bg-white px-3 text-sm text-[#58666c] outline-none focus:border-[#7b9aaa] sm:w-44" aria-label="按分类筛选">
+              <select value={category} onChange={(event) => setCategoryAndFocus(event.target.value)} className="h-11 rounded-[7px] border border-[#d5dcdf] bg-white px-3 text-sm text-[#58666c] outline-none focus:border-[#7b9aaa] sm:h-10 sm:w-44" aria-label="按分类筛选">
                 <option value="all">全部分类</option>{categories.map((entry) => <option key={entry} value={entry}>{entry}</option>)}
               </select>
               <div className="relative flex-1 sm:w-72"><Search className="pointer-events-none absolute left-3 top-1/2 size-4 -translate-y-1/2 text-[#899399]" /><Input value={query} onChange={(event) => setQuery(event.target.value)} placeholder="搜索型号、尺寸或安装要求" className="h-10 rounded-[7px] border-[#d5dcdf] bg-white pl-9 shadow-none" /></div>
@@ -277,6 +259,8 @@ export default function Home() {
             {!filtered.length && <div className="border border-dashed border-[#cdd6d9] bg-white py-16 text-center text-sm text-[#7d898e]">没有找到符合条件的工程事项。</div>}
           </div>
         </section>
+
+        <TimelineBoard />
 
         <footer className="mt-8 flex flex-col gap-2 border-t border-[#d2d9dc] py-6 text-[11px] text-[#7f8a8f] sm:flex-row sm:items-center sm:justify-between"><span className="flex items-center gap-1.5"><ClipboardCheck className="size-3.5" />HomeOS 工程协作版</span><span>仅展示工程进度、型号、尺寸、安装与验收信息</span></footer>
       </div>
