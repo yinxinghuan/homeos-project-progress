@@ -60,6 +60,7 @@ const safeAssets = {
     'source/media/2026-08-30-grohe-igina-light-39932-39947-dimension-sheet.png',
     'source/manuals/grohe/grohe-39947SH0-product-specification.pdf',
   ],
+  'wall-paint': ['source/media/2026-08-31-ceiling-finish-scope-red-markup.jpg'],
   bathtub: [
     'source/manuals/toto/toto-pay1320-1323-product-specification.pdf',
     'source/manuals/toto/toto-nte210-bathtub-installation.pdf',
