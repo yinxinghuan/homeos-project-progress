@@ -1034,10 +1034,71 @@
     "end": "2026-10-30",
     "durationDays": 68,
     "source": "02-renovation/CONSTRUCTION_PLAN.md",
+    "trackingSource": "02-renovation/CONSTRUCTION_PROGRESS.md",
+    "actualStatus": "not_confirmed",
+    "actualCount": 0,
+    "phases": [
+      {
+        "name": "准备与拆除",
+        "range": {
+          "start": "2026-08-24",
+          "end": "2026-08-31",
+          "label": "Aug 24-31"
+        },
+        "focus": "物业手续、拆除、清运，以及门窗和入户门前期测量。"
+      },
+      {
+        "name": "水电与隐蔽工程",
+        "range": {
+          "start": "2026-09-01",
+          "end": "2026-09-13",
+          "label": "Sep 1-13"
+        },
+        "focus": "水电定位施工、材料协调、隐蔽验收、防水闭水与相关订货。"
+      },
+      {
+        "name": "瓦工与基础安装",
+        "range": {
+          "start": "2026-09-14",
+          "end": "2026-09-27",
+          "label": "Sep 14-27"
+        },
+        "focus": "找平铺砖、瓦工验收、门窗入户门安装、吊顶和复尺。"
+      },
+      {
+        "name": "墙顶面施工",
+        "range": {
+          "start": "2026-09-28",
+          "end": "2026-10-17",
+          "label": "Sep 28-Oct 17"
+        },
+        "focus": "基层、石膏线、腻子打磨、涂刷及同期设备安装。"
+      },
+      {
+        "name": "主材安装与收尾",
+        "range": {
+          "start": "2026-10-18",
+          "end": "2026-10-27",
+          "label": "Oct 18-27"
+        },
+        "focus": "暖气、橱柜、灯具、卫浴、厨电、木门安装及补漆收尾。"
+      },
+      {
+        "name": "竣工验收",
+        "range": {
+          "start": "2026-10-28",
+          "end": "2026-10-30",
+          "label": "Oct 28-30"
+        },
+        "focus": "完工验收、问题关闭与保修资料。"
+      }
+    ],
     "main": [
       {
         "name": "物业装修手续",
         "kind": "construction",
+        "linkedItemIds": [],
+        "actual": null,
         "ranges": [
           {
             "start": "2026-08-24",
@@ -1049,6 +1110,10 @@
       {
         "name": "墙体拆除与铲墙皮",
         "kind": "construction",
+        "linkedItemIds": [
+          "construction"
+        ],
+        "actual": null,
         "ranges": [
           {
             "start": "2026-08-26",
@@ -1060,6 +1125,10 @@
       {
         "name": "建筑垃圾清运",
         "kind": "construction",
+        "linkedItemIds": [
+          "construction"
+        ],
+        "actual": null,
         "ranges": [
           {
             "start": "2026-08-26",
@@ -1071,6 +1140,12 @@
       {
         "name": "强弱电开槽与布线",
         "kind": "construction",
+        "linkedItemIds": [
+          "construction",
+          "wire-materials",
+          "switches"
+        ],
+        "actual": null,
         "ranges": [
           {
             "start": "2026-09-02",
@@ -1082,6 +1157,12 @@
       {
         "name": "水路开槽与布管",
         "kind": "construction",
+        "linkedItemIds": [
+          "construction",
+          "pipe-materials",
+          "water-system"
+        ],
+        "actual": null,
         "ranges": [
           {
             "start": "2026-09-02",
@@ -1093,6 +1174,10 @@
       {
         "name": "水电验收",
         "kind": "construction",
+        "linkedItemIds": [
+          "construction"
+        ],
+        "actual": null,
         "ranges": [
           {
             "start": "2026-09-10",
@@ -1104,6 +1189,10 @@
       {
         "name": "新建墙体与抹灰",
         "kind": "construction",
+        "linkedItemIds": [
+          "construction"
+        ],
+        "actual": null,
         "ranges": [
           {
             "start": "2026-09-10",
@@ -1115,6 +1204,10 @@
       {
         "name": "卫生间防水与闭水试验",
         "kind": "construction",
+        "linkedItemIds": [
+          "construction"
+        ],
+        "actual": null,
         "ranges": [
           {
             "start": "2026-09-10",
@@ -1126,6 +1219,11 @@
       {
         "name": "墙地找平与铺砖",
         "kind": "construction",
+        "linkedItemIds": [
+          "construction",
+          "tiles"
+        ],
+        "actual": null,
         "ranges": [
           {
             "start": "2026-09-14",
@@ -1137,6 +1235,11 @@
       {
         "name": "瓦工验收",
         "kind": "construction",
+        "linkedItemIds": [
+          "construction",
+          "tiles"
+        ],
+        "actual": null,
         "ranges": [
           {
             "start": "2026-09-22",
@@ -1148,6 +1251,10 @@
       {
         "name": "客餐厅吊顶及假梁",
         "kind": "construction",
+        "linkedItemIds": [
+          "construction"
+        ],
+        "actual": null,
         "ranges": [
           {
             "start": "2026-09-22",
@@ -1159,6 +1266,11 @@
       {
         "name": "厨卫吊顶施工",
         "kind": "construction",
+        "linkedItemIds": [
+          "kitchen-ceiling",
+          "bathroom-ceiling"
+        ],
+        "actual": null,
         "ranges": [
           {
             "start": "2026-09-22",
@@ -1170,6 +1282,11 @@
       {
         "name": "墙顶基层处理",
         "kind": "construction",
+        "linkedItemIds": [
+          "construction",
+          "wall-paint"
+        ],
+        "actual": null,
         "ranges": [
           {
             "start": "2026-09-28",
@@ -1181,6 +1298,10 @@
       {
         "name": "石膏线",
         "kind": "construction",
+        "linkedItemIds": [
+          "construction"
+        ],
+        "actual": null,
         "ranges": [
           {
             "start": "2026-10-02",
@@ -1192,6 +1313,11 @@
       {
         "name": "刮腻子与打磨",
         "kind": "construction",
+        "linkedItemIds": [
+          "construction",
+          "wall-paint"
+        ],
+        "actual": null,
         "ranges": [
           {
             "start": "2026-10-04",
@@ -1203,6 +1329,11 @@
       {
         "name": "墙顶面涂刷",
         "kind": "construction",
+        "linkedItemIds": [
+          "wall-paint",
+          "construction"
+        ],
+        "actual": null,
         "ranges": [
           {
             "start": "2026-10-14",
@@ -1214,6 +1345,11 @@
       {
         "name": "补漆与收尾保洁",
         "kind": "construction",
+        "linkedItemIds": [
+          "wall-paint",
+          "construction"
+        ],
+        "actual": null,
         "ranges": [
           {
             "start": "2026-10-26",
@@ -1225,6 +1361,10 @@
       {
         "name": "竣工验收与保修资料",
         "kind": "construction",
+        "linkedItemIds": [
+          "construction"
+        ],
+        "actual": null,
         "ranges": [
           {
             "start": "2026-10-28",
@@ -1238,6 +1378,10 @@
       {
         "name": "暖气片",
         "kind": "supplier",
+        "linkedItemIds": [
+          "heating"
+        ],
+        "actual": null,
         "ranges": [
           {
             "start": "2026-09-02",
@@ -1254,6 +1398,10 @@
       {
         "name": "窗户",
         "kind": "supplier",
+        "linkedItemIds": [
+          "windows"
+        ],
+        "actual": null,
         "ranges": [
           {
             "start": "2026-08-26",
@@ -1270,6 +1418,10 @@
       {
         "name": "入户门",
         "kind": "supplier",
+        "linkedItemIds": [
+          "entry-door"
+        ],
+        "actual": null,
         "ranges": [
           {
             "start": "2026-08-26",
@@ -1286,6 +1438,10 @@
       {
         "name": "墙地砖",
         "kind": "supplier",
+        "linkedItemIds": [
+          "tiles"
+        ],
+        "actual": null,
         "ranges": [
           {
             "start": "2026-09-02",
@@ -1307,6 +1463,10 @@
       {
         "name": "橱柜",
         "kind": "supplier",
+        "linkedItemIds": [
+          "kitchen-cabinetry"
+        ],
+        "actual": null,
         "ranges": [
           {
             "start": "2026-09-02",
@@ -1328,6 +1488,15 @@
       {
         "name": "厨电、水槽与热水器",
         "kind": "supplier",
+        "linkedItemIds": [
+          "gas-water-heater",
+          "kitchen-sink",
+          "dishwasher",
+          "oven",
+          "range-hood",
+          "gas-cooktop"
+        ],
+        "actual": null,
         "ranges": [
           {
             "start": "2026-09-16",
@@ -1349,6 +1518,10 @@
       {
         "name": "窗台石",
         "kind": "supplier",
+        "linkedItemIds": [
+          "terrazzo"
+        ],
+        "actual": null,
         "ranges": [
           {
             "start": "2026-09-10",
@@ -1365,6 +1538,11 @@
       {
         "name": "厨卫铝扣板吊顶",
         "kind": "supplier",
+        "linkedItemIds": [
+          "kitchen-ceiling",
+          "bathroom-ceiling"
+        ],
+        "actual": null,
         "ranges": [
           {
             "start": "2026-09-10",
@@ -1381,6 +1559,10 @@
       {
         "name": "墙漆",
         "kind": "supplier",
+        "linkedItemIds": [
+          "wall-paint"
+        ],
+        "actual": null,
         "ranges": [
           {
             "start": "2026-09-10",
@@ -1392,6 +1574,11 @@
       {
         "name": "灯具、开关与插座",
         "kind": "supplier",
+        "linkedItemIds": [
+          "lighting",
+          "switches"
+        ],
+        "actual": null,
         "ranges": [
           {
             "start": "2026-09-10",
@@ -1408,6 +1595,14 @@
       {
         "name": "卫浴洁具与五金",
         "kind": "supplier",
+        "linkedItemIds": [
+          "grohe-shower",
+          "grohe-kitchen-faucet",
+          "grohe-smart-toilet",
+          "bathtub",
+          "bathroom-vanity"
+        ],
+        "actual": null,
         "ranges": [
           {
             "start": "2026-09-10",
@@ -1424,6 +1619,11 @@
       {
         "name": "室内木门",
         "kind": "supplier",
+        "linkedItemIds": [
+          "bedroom-doors",
+          "bathroom-door"
+        ],
+        "actual": null,
         "ranges": [
           {
             "start": "2026-09-20",
@@ -1440,6 +1640,10 @@
       {
         "name": "地板",
         "kind": "supplier",
+        "linkedItemIds": [
+          "flooring"
+        ],
+        "actual": null,
         "ranges": [
           {
             "start": "2026-09-10",

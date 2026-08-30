@@ -3,12 +3,14 @@
 import { useMemo, useRef, useState } from 'react';
 import {
   ArrowUpRight,
+  CalendarClock,
   CheckCircle2,
   ChevronDown,
   ClipboardCheck,
   FileText,
   ImageIcon,
   Info,
+  Link2,
   Search,
   ShieldCheck,
   Wrench,
@@ -33,14 +35,15 @@ type ProgressItem = {
   assets: { title: string; href: string; type: 'pdf' | 'image' }[];
 };
 type TimelineRange = { start: string; end: string; label: string };
-type TimelineRow = { name: string; kind: 'construction' | 'supplier'; ranges: TimelineRange[] };
+type TimelineActual = { status: 'not_started' | 'in_progress' | 'completed' | 'blocked'; confirmedDate: string | null; note: string | null };
+type TimelineRow = { name: string; kind: 'construction' | 'supplier'; linkedItemIds: string[]; actual: TimelineActual | null; ranges: TimelineRange[] };
 
 const data = progressData as {
   updatedAt: string;
   project: { title: string; phase: string };
   stages: { id: Stage; label: string }[];
   items: ProgressItem[];
-  timeline: { title: string; start: string; end: string; durationDays: number; source: string; main: TimelineRow[]; suppliers: TimelineRow[] };
+  timeline: { title: string; start: string; end: string; durationDays: number; source: string; trackingSource: string; actualStatus: 'not_confirmed' | 'recorded'; actualCount: number; phases: { name: string; range: TimelineRange; focus: string }[]; main: TimelineRow[]; suppliers: TimelineRow[] };
 };
 
 const stageColors: Record<Stage, { dot: string; fill: string; text: string }> = {
@@ -60,7 +63,7 @@ function shortRange(range: TimelineRange) {
   return range.start === range.end ? format(range.start) : `${format(range.start)}—${format(range.end)}`;
 }
 
-function TimelineBoard() {
+function TimelineBoard({ onOpenItem }: { onOpenItem: (id: string) => void }) {
   const timeline = data.timeline;
   const total = timeline.durationDays;
   const startDay = utcDay(timeline.start);
@@ -72,21 +75,66 @@ function TimelineBoard() {
     { label: '9 月', start: '2026-09-01', end: '2026-09-30' },
     { label: '10 月', start: '2026-10-01', end: '2026-10-30' },
   ];
-  const groups = [{ label: '主施工阶段', rows: timeline.main }, { label: '供应与安装节点', rows: timeline.suppliers }];
+  const allRows = [...timeline.main, ...timeline.suppliers];
+  const phaseGroups = timeline.phases.map((phase) => ({
+    ...phase,
+    rows: allRows.map((row) => ({ ...row, ranges: row.ranges.filter((range) => range.start <= phase.range.end && range.end >= phase.range.start) })).filter((row) => row.ranges.length),
+  }));
+  const planState = (row: TimelineRow) => {
+    if (row.ranges.some((range) => range.start <= todayKey && range.end >= todayKey)) return { id: 'current', label: '计划进行中', tone: 'bg-[#e4edf4] text-[#315e7c]' };
+    if (row.ranges.every((range) => range.end < todayKey)) return { id: 'past', label: '计划窗口已过', tone: 'bg-[#edf0f1] text-[#69757a]' };
+    return { id: 'upcoming', label: '计划待开始', tone: 'bg-[#f5ebdf] text-[#805d3e]' };
+  };
+  const actualState = (actual: TimelineActual) => ({
+    not_started: { label: '现场确认未开始', tone: 'bg-[#edf0f1] text-[#68757a]' },
+    in_progress: { label: '现场确认进行中', tone: 'bg-[#e4edf4] text-[#315e7c]' },
+    completed: { label: '现场确认已完成', tone: 'bg-[#e4efe9] text-[#326250]' },
+    blocked: { label: '现场确认受阻', tone: 'bg-[#f5e7e3] text-[#895347]' },
+  }[actual.status]);
+  const currentRows = allRows.filter((row) => planState(row).id === 'current');
+  const [selectedKey, setSelectedKey] = useState(() => `${(currentRows[0] ?? allRows[0]).kind}:${(currentRows[0] ?? allRows[0]).name}`);
+  const selectedRow = allRows.find((row) => `${row.kind}:${row.name}` === selectedKey) ?? allRows[0];
+  const linkedItems = selectedRow.linkedItemIds.map((id) => data.items.find((item) => item.id === id)).filter((item): item is ProgressItem => Boolean(item));
   const barStyle = (range: TimelineRange) => ({
     left: `${((utcDay(range.start) - startDay) / total) * 100}%`,
     width: `${Math.max(((utcDay(range.end) - utcDay(range.start) + 1) / total) * 100, 1.45)}%`,
   });
 
+  const selectedDetail = (mobile = false) => (
+    <div className={`${mobile ? 'mt-2 border border-[#d9e2e6] bg-white p-3' : 'grid gap-4 border-b border-[#dce3e6] bg-[#f7f9fa] p-5 sm:grid-cols-[220px_1fr] sm:p-6'}`}>
+      <div>
+        <div className="flex flex-wrap items-center gap-2"><span className={`rounded-full px-2 py-1 text-[10px] font-medium ${(selectedRow.actual ? actualState(selectedRow.actual) : planState(selectedRow)).tone}`}>{(selectedRow.actual ? actualState(selectedRow.actual) : planState(selectedRow)).label}</span><span className="font-data text-[11px] text-[#667983]">{selectedRow.ranges.map(shortRange).join(' · ')}</span></div>
+        <h3 className="mt-2 text-sm font-semibold">{selectedRow.name}</h3>
+        <p className="mt-1.5 text-[11px] leading-5 text-[#7b888e]">{selectedRow.actual ? `${selectedRow.actual.confirmedDate ? `确认于 ${selectedRow.actual.confirmedDate}。` : ''}${selectedRow.actual.note ?? ''}` : '当前标签只按计划日期计算；实际完成状态尚未录入。'}</p>
+      </div>
+      <div>
+        <p className="text-[10px] font-medium tracking-[0.1em] text-[#839096]">关联事项 · {linkedItems.length}</p>
+        <div className="mt-2 grid gap-2 sm:grid-cols-2">
+          {linkedItems.map((item) => <button key={item.id} onClick={() => onOpenItem(item.id)} className="group flex min-h-14 items-center justify-between gap-3 rounded-[6px] border border-[#d7e0e3] bg-white px-3 py-2.5 text-left transition hover:border-[#8fa7b2] focus-visible:ring-2 focus-visible:ring-[#6d91a7]">
+            <span className="min-w-0"><strong className="block text-xs font-semibold">{item.name}</strong><span className="mt-1 block truncate text-[10px] text-[#7a888e]">{item.nextAction}</span></span><ArrowUpRight className="size-3.5 shrink-0 text-[#718791] transition group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+          </button>)}
+          {!linkedItems.length && <div className="border border-dashed border-[#ccd6da] px-3 py-3 text-xs text-[#7b898f]">该节点尚未建立独立事项档案。</div>}
+        </div>
+      </div>
+    </div>
+  );
+
   return (
-    <section id="timeline" className="mt-8 scroll-mt-20 border border-[#cfd8dc] bg-white sm:rounded-[10px]" aria-labelledby="timeline-title">
+    <section id="timeline" className="mt-7 scroll-mt-20 border border-[#bfcdd3] bg-white shadow-[0_10px_30px_rgba(31,79,118,.05)] sm:rounded-[10px]" aria-labelledby="timeline-title">
       <div className="flex flex-col gap-3 border-b border-[#dde4e7] p-5 sm:flex-row sm:items-end sm:justify-between sm:p-6">
-        <div><p className="text-[10px] font-medium tracking-[0.13em] text-[#879298]">MASTER SCHEDULE · 68 DAYS</p><h2 id="timeline-title" className="mt-1.5 text-xl font-semibold">工程时间总表</h2><p className="mt-1.5 text-xs leading-5 text-[#78858b]">依据 HomeOS 工程计划：2026 年 8 月 24 日—10 月 30 日。施工阶段与供应安装节点采用同一时间轴。</p></div>
-        <a href="#work-items" className="flex items-center gap-1.5 text-xs font-medium text-[#315f7d]">查看对应事项 <ArrowUpRight className="size-3.5" /></a>
+        <div><p className="text-[10px] font-medium tracking-[0.13em] text-[#879298]">PRIMARY WORKSPACE · 68 DAYS</p><h2 id="timeline-title" className="mt-1.5 text-xl font-semibold">按时间推进工程</h2><p className="mt-1.5 text-xs leading-5 text-[#78858b]">2026 年 8 月 24 日—10 月 30 日。选择节点，查看关联采购、安装条件和下一步。</p></div>
+        <div className={`flex items-center gap-2 rounded-[6px] border px-3 py-2 text-[11px] ${timeline.actualCount ? 'border-[#bfd3ca] bg-[#eff6f2] text-[#416557]' : 'border-[#e1cbb8] bg-[#fbf5ef] text-[#795f49]'}`}><CalendarClock className="size-3.5" />{timeline.actualCount ? `${timeline.actualCount} 个节点已有现场确认` : '实际进度待现场确认'}</div>
       </div>
 
+      <div className="grid gap-3 border-b border-[#dde4e7] bg-[#f6f8f9] p-4 sm:grid-cols-[170px_1fr] sm:items-center sm:px-6">
+        <div><p className="text-[10px] font-medium tracking-[0.1em] text-[#859197]">今天的计划窗口</p><p className="mt-1 font-data text-sm font-semibold">{currentRows.length} 个节点</p></div>
+        <div className="flex gap-2 overflow-x-auto [scrollbar-width:none]">{currentRows.map((row) => <button key={`${row.kind}:${row.name}`} onClick={() => setSelectedKey(`${row.kind}:${row.name}`)} className="flex min-h-10 shrink-0 items-center gap-2 rounded-[6px] border border-[#cbd8de] bg-white px-3 text-xs font-medium text-[#4e626c]"><i className={`size-2 rounded-sm ${row.kind === 'construction' ? 'bg-[#34698f]' : 'bg-[#db7442]'}`} />{row.name}<span className="text-[10px] text-[#8a969b]">{row.linkedItemIds.length} 项</span></button>)}</div>
+      </div>
+
+      <div className="hidden md:block">{selectedDetail()}</div>
+
       <div className="md:hidden">
-        {groups.map((group) => <section key={group.label} className="border-b border-[#e1e6e8] p-4 last:border-0"><h3 className="mb-2 text-[11px] font-semibold tracking-[0.1em] text-[#77868d]">{group.label}</h3><div className="space-y-2">{group.rows.map((row) => <div key={row.name} className="grid grid-cols-[1fr_auto] gap-3 border-l-2 border-[#6e8fa3] bg-[#f7f9fa] px-3 py-2.5"><span className="text-xs font-medium leading-5">{row.name}</span><span className="font-data text-[11px] text-[#5f737e]">{row.ranges.map(shortRange).join(' · ')}</span></div>)}</div></section>)}
+        {phaseGroups.map((phase) => { const current = phase.range.start <= todayKey && phase.range.end >= todayKey; return <details key={phase.name} defaultOpen={current} className="group/phase border-b border-[#e1e6e8] last:border-0"><summary className="flex min-h-14 list-none items-center justify-between gap-3 bg-[#edf2f4] px-4 py-3 [&::-webkit-details-marker]:hidden"><span><strong className="block text-xs font-semibold">{phase.name}</strong><span className="mt-1 block font-data text-[10px] text-[#75858c]">{shortRange(phase.range)} · {phase.rows.length} 个节点</span></span><ChevronDown className="size-4 text-[#72858e] transition group-open/phase:rotate-180" /></summary><div className="space-y-2 p-4">{phase.rows.map((row) => { const key = `${row.kind}:${row.name}`; const selected = key === selectedKey; const state = row.actual ? actualState(row.actual) : planState(row); return <div key={`${phase.name}:${row.name}`}><button onClick={() => setSelectedKey(key)} className={`grid min-h-14 w-full grid-cols-[1fr_auto] gap-3 border-l-2 px-3 py-2.5 text-left ${selected ? 'border-[#1f4f76] bg-[#edf3f6]' : 'border-[#8fa5af] bg-[#f7f9fa]'}`} aria-expanded={selected}><span><strong className="block text-xs font-medium leading-5">{row.name}</strong><span className="mt-1 flex items-center gap-1.5 text-[10px] text-[#77868c]"><Link2 className="size-3" />{row.linkedItemIds.length} 个关联事项 · {state.label}</span></span><span className="font-data text-[11px] text-[#5f737e]">{row.ranges.map(shortRange).join(' · ')}</span></button>{selected && selectedDetail(true)}</div>; })}</div></details>; })}
       </div>
 
       <div className="hidden overflow-x-auto md:block">
@@ -97,19 +145,19 @@ function TimelineBoard() {
               {months.map((month) => { const left = ((utcDay(month.start) - startDay) / total) * 100; const width = ((utcDay(month.end) - utcDay(month.start) + 1) / total) * 100; return <div key={month.label} className="absolute top-0 flex h-full items-center justify-center border-r border-[#d7e0e3] text-[11px] font-semibold text-[#60717a]" style={{ left: `${left}%`, width: `${width}%` }}>{month.label}</div>; })}
             </div>
           </div>
-          {groups.map((group) => <div key={group.label}>
-            <div className="grid grid-cols-[230px_1fr] border-b border-[#dfe5e7] bg-[#edf2f4]"><h3 className="border-r border-[#d7e0e3] px-5 py-2 text-[10px] font-semibold tracking-[0.12em] text-[#5c707a]">{group.label}</h3><div /></div>
-            {group.rows.map((row) => <div key={row.name} className="grid min-h-10 grid-cols-[230px_1fr] border-b border-[#e7ebec] last:border-0">
-              <div className="border-r border-[#e0e6e8] px-5 py-2.5 text-xs font-medium text-[#526269]">{row.name}</div>
+          {phaseGroups.map((phase) => { const current = phase.range.start <= todayKey && phase.range.end >= todayKey; return <details key={phase.name} defaultOpen={current} className="group/phase">
+            <summary className="grid min-h-10 list-none grid-cols-[230px_1fr] border-b border-[#dfe5e7] bg-[#edf2f4] [&::-webkit-details-marker]:hidden"><h3 className="flex items-center justify-between border-r border-[#d7e0e3] px-5 py-2 text-[10px] font-semibold tracking-[0.08em] text-[#5c707a]"><span>{phase.name}</span><span className="font-data font-normal tracking-normal text-[#7e8d93]">{shortRange(phase.range)} · {phase.rows.length}</span></h3><div className="flex items-center justify-end px-4"><ChevronDown className="size-3.5 text-[#71848d] transition group-open/phase:rotate-180" /></div></summary>
+            {phase.rows.map((row) => { const key = `${row.kind}:${row.name}`; const selected = key === selectedKey; return <div key={`${phase.name}:${row.name}`} className={`grid min-h-10 grid-cols-[230px_1fr] border-b border-[#e7ebec] last:border-0 ${selected ? 'bg-[#edf3f6]' : ''}`}>
+              <button onClick={() => setSelectedKey(key)} className="flex items-center justify-between gap-2 border-r border-[#e0e6e8] px-5 py-2.5 text-left text-xs font-medium text-[#526269]"><span>{row.name}</span><span className="flex shrink-0 items-center gap-1 text-[9px] font-normal text-[#87949a]"><Link2 className="size-2.5" />{row.linkedItemIds.length}</span></button>
               <div className="relative bg-[repeating-linear-gradient(to_right,transparent_0,transparent_calc(11.76%_-_1px),#edf1f2_calc(11.76%_-_1px),#edf1f2_11.76%)]">
                 {todayOffset >= 0 && todayOffset < total && <span aria-label="今天" className="absolute inset-y-0 z-10 w-px bg-[#dc7440]" style={{ left: `${(todayOffset / total) * 100}%` }} />}
-                {row.ranges.map((range, index) => <span key={`${range.label}-${index}`} title={`${row.name} · ${shortRange(range)}`} className={`absolute top-1/2 h-4 -translate-y-1/2 rounded-[3px] ${row.kind === 'construction' ? 'bg-[#34698f]' : 'bg-[#db7442]'}`} style={barStyle(range)}><span className="sr-only">{row.name}：{shortRange(range)}</span></span>)}
+                {row.ranges.map((range, index) => <button onClick={() => setSelectedKey(key)} key={`${range.label}-${index}`} title={`${row.name} · ${shortRange(range)}`} className={`absolute top-1/2 h-4 -translate-y-1/2 rounded-[3px] ring-offset-1 focus-visible:ring-2 focus-visible:ring-[#1f4f76] ${row.kind === 'construction' ? 'bg-[#34698f]' : 'bg-[#db7442]'}`} style={barStyle(range)}><span className="sr-only">选择 {row.name}：{shortRange(range)}</span></button>)}
               </div>
-            </div>)}
-          </div>)}
+            </div>; })}
+          </details>; })}
         </div>
       </div>
-      <div className="flex flex-wrap gap-x-5 gap-y-2 border-t border-[#dde4e7] px-5 py-3 text-[11px] text-[#77858b]"><span className="flex items-center gap-1.5"><i className="size-2 rounded-sm bg-[#34698f]" />主施工</span><span className="flex items-center gap-1.5"><i className="size-2 rounded-sm bg-[#db7442]" />供应 / 安装</span><span className="flex items-center gap-1.5"><i className="h-3 w-px bg-[#dc7440]" />今日</span><span className="ml-auto font-data">来源：{timeline.source}</span></div>
+      <div className="flex flex-wrap gap-x-5 gap-y-2 border-t border-[#dde4e7] px-5 py-3 text-[11px] text-[#77858b]"><span className="flex items-center gap-1.5"><i className="size-2 rounded-sm bg-[#34698f]" />主施工</span><span className="flex items-center gap-1.5"><i className="size-2 rounded-sm bg-[#db7442]" />供应 / 安装</span><span className="flex items-center gap-1.5"><i className="h-3 w-px bg-[#dc7440]" />今日</span><span className="ml-auto">计划：{timeline.source} · 实际：{timeline.trackingSource}</span></div>
     </section>
   );
 }
@@ -154,6 +202,17 @@ export default function Home() {
     setCategory(next);
     focusResults();
   };
+  const openItem = (id: string) => {
+    setStage('all');
+    setCategory('all');
+    setQuery('');
+    requestAnimationFrame(() => requestAnimationFrame(() => {
+      const target = document.getElementById(`item-${id}`) as HTMLDetailsElement | null;
+      if (!target) return;
+      target.open = true;
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }));
+  };
 
   return (
     <main className="min-h-screen bg-[#f4f6f7] text-[#20282d]">
@@ -171,8 +230,8 @@ export default function Home() {
         <section className="grid gap-5 lg:grid-cols-[minmax(0,1fr)_320px] lg:items-end">
           <div>
             <div className="flex items-center gap-2 text-[11px] font-medium tracking-[0.12em] text-[#78868d]"><span className="h-px w-8 bg-[#dc7440]" />当前阶段 · {data.project.phase}</div>
-            <h1 className="mt-4 max-w-4xl text-[clamp(2rem,5vw,4rem)] font-semibold leading-[1.02] tracking-[-0.055em]">型号、安装条件和下一步，<br />都在同一张工程板上。</h1>
-            <p className="mt-4 max-w-2xl text-sm leading-7 text-[#68757b]">供施工方、安装方与供应商协作查看。内容来自 HomeOS 工程档案，不包含价格、付款、具体地址或个人信息。</p>
+            <h1 className="mt-4 max-w-4xl text-[clamp(2rem,5vw,4rem)] font-semibold leading-[1.02] tracking-[-0.055em]">先看现在该做什么，<br />再进入对应事项。</h1>
+            <p className="mt-4 max-w-2xl text-sm leading-7 text-[#68757b]">时间总表是主要入口。选择计划节点即可查看关联采购、型号、安装条件与下一步；实际完成情况只在收到现场确认后更新。</p>
           </div>
           <div className="border-l-2 border-[#1f4f76] bg-white p-4 shadow-[0_1px_0_rgba(32,45,52,.04)] sm:rounded-r-[8px]">
             <div className="flex items-center justify-between"><span className="text-[10px] font-medium tracking-[0.12em] text-[#879298]">LAST SYNC</span><CheckCircle2 className="size-4 text-[#39715f]" /></div>
@@ -180,6 +239,8 @@ export default function Home() {
             <p className="mt-2 text-xs leading-5 text-[#77848a]">新图纸和尺寸先进入 HomeOS 主记录，核对后同步到此页面。</p>
           </div>
         </section>
+
+        <TimelineBoard onOpenItem={openItem} />
 
         <section className="mt-7 border-y border-[#cfd7da] py-4" aria-label="工程阶段筛选">
           <div className="relative flex gap-2 overflow-x-auto pb-1 [scrollbar-width:none] sm:grid sm:grid-cols-5 sm:overflow-visible sm:pb-0">
@@ -213,7 +274,7 @@ export default function Home() {
               const colors = stageColors[item.stage];
               const technicalCount = item.technical.reduce((sum, source) => sum + source.sections.reduce((sectionSum, section) => sectionSum + section.points.length, 0), 0);
               return (
-                <details key={item.id} className="group border border-[#d7dde0] bg-white open:border-[#aebdc3] sm:rounded-[9px]">
+                <details id={`item-${item.id}`} key={item.id} className="group scroll-mt-4 border border-[#d7dde0] bg-white open:border-[#aebdc3] sm:scroll-mt-20 sm:rounded-[9px]">
                   <summary className="grid cursor-pointer list-none gap-3 p-4 marker:hidden sm:grid-cols-[minmax(190px,1.1fr)_minmax(180px,1fr)_175px_115px_24px] sm:items-center sm:gap-5 sm:p-5 [&::-webkit-details-marker]:hidden">
                     <div className="min-w-0"><div className="flex items-center gap-2"><span className="font-medium">{item.name}</span><small className="text-[10px] text-[#929b9f]">{item.category}</small></div><p className="mt-1 truncate text-xs text-[#6f7c82]">{[item.brand, item.model].filter(Boolean).join(' · ') || '型号待补充'}</p></div>
                     <div className="min-w-0"><p className="truncate text-xs text-[#57656b]">{item.progress}</p><p className="mt-1 truncate text-[11px] text-[#899397]">下一步：{item.nextAction}</p></div>
@@ -259,8 +320,6 @@ export default function Home() {
             {!filtered.length && <div className="border border-dashed border-[#cdd6d9] bg-white py-16 text-center text-sm text-[#7d898e]">没有找到符合条件的工程事项。</div>}
           </div>
         </section>
-
-        <TimelineBoard />
 
         <footer className="mt-8 flex flex-col gap-2 border-t border-[#d2d9dc] py-6 text-[11px] text-[#7f8a8f] sm:flex-row sm:items-center sm:justify-between"><span className="flex items-center gap-1.5"><ClipboardCheck className="size-3.5" />HomeOS 工程协作版</span><span>仅展示工程进度、型号、尺寸、安装与验收信息</span></footer>
       </div>

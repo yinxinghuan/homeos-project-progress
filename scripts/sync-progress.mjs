@@ -155,6 +155,39 @@ const timelineLabels = {
   'Wooden doors': '室内木门',
   Flooring: '地板',
 };
+const timelineItemLinks = {
+  'Property renovation procedures': [],
+  'Wall demolition and wall-skin removal': ['construction'],
+  'Construction-waste removal': ['construction'],
+  'Strong/weak-current chasing and wiring': ['construction', 'wire-materials', 'switches'],
+  'Water-line chasing and piping': ['construction', 'pipe-materials', 'water-system'],
+  'Water and electrical inspection': ['construction'],
+  'New walls and wall plastering': ['construction'],
+  'Bathroom waterproofing and closed-water test': ['construction'],
+  'Wall/floor leveling and tiling': ['construction', 'tiles'],
+  'Masonry acceptance': ['construction', 'tiles'],
+  'Living/dining ceiling and plasterboard false-beam work': ['construction'],
+  'Kitchen and bathroom ceiling work': ['kitchen-ceiling', 'bathroom-ceiling'],
+  'Wall/ceiling base treatment': ['construction', 'wall-paint'],
+  'Gypsum cornice': ['construction'],
+  'Putty application and sanding': ['construction', 'wall-paint'],
+  'Wall/ceiling paint': ['wall-paint', 'construction'],
+  'Paint touch-up / closeout cleaning stage': ['wall-paint', 'construction'],
+  'Completion acceptance and warranty paperwork': ['construction'],
+  Radiators: ['heating'],
+  Windows: ['windows'],
+  'Entry security door': ['entry-door'],
+  'Wall and floor tiles': ['tiles'],
+  Cabinets: ['kitchen-cabinetry'],
+  'Kitchen appliances, sink, water heater': ['gas-water-heater', 'kitchen-sink', 'dishwasher', 'oven', 'range-hood', 'gas-cooktop'],
+  'Window-sill stone': ['terrazzo'],
+  'Kitchen/bath aluminum ceiling': ['kitchen-ceiling', 'bathroom-ceiling'],
+  'Wall paint': ['wall-paint'],
+  'Lights, switches, sockets': ['lighting', 'switches'],
+  'Bathroom fixtures and hardware': ['grohe-shower', 'grohe-kitchen-faucet', 'grohe-smart-toilet', 'bathtub', 'bathroom-vanity'],
+  'Wooden doors': ['bedroom-doors', 'bathroom-door'],
+  Flooring: ['flooring'],
+};
 
 function dateRange(label) {
   const match = label.match(/(Aug|Sep|Oct)\s+(\d{1,2})(?:-(?:(Aug|Sep|Oct)\s+)?(\d{1,2}))?/);
@@ -166,16 +199,23 @@ function dateRange(label) {
   return { start, end, label };
 }
 
-function buildTimeline(content) {
+function buildTimeline(content, trackingContent) {
+  const actualMap = new Map(parseTableSection(trackingContent, 'Confirmed Actual Progress').map((row) => [row[0], { status: row[1], confirmedDate: row[2] || null, note: row[4] || null }]));
+  const actualFor = (name) => actualMap.get(name) ?? null;
+  const phases = parseTableSection(content, 'Schedule Board Phases')
+    .map((row) => ({ name: row[0], range: dateRange(row[1]), focus: row[2] }))
+    .filter((phase) => phase.range);
   const main = parseTableSection(content, 'Main Construction Sequence')
-    .map((row) => ({ name: timelineLabels[row[1]] ?? row[1], kind: 'construction', ranges: [dateRange(row[2])].filter(Boolean) }))
+    .map((row) => { const name = timelineLabels[row[1]] ?? row[1]; return { name, kind: 'construction', linkedItemIds: timelineItemLinks[row[1]] ?? [], actual: actualFor(name), ranges: [dateRange(row[2])].filter(Boolean) }; })
     .filter((row) => row.ranges.length);
   const suppliers = parseTableSection(content, 'Supplier and Installation Milestones')
-    .map((row) => ({
-      name: timelineLabels[row[0]] ?? row[0],
+    .map((row) => { const name = timelineLabels[row[0]] ?? row[0]; return ({
+      name,
       kind: 'supplier',
+      linkedItemIds: timelineItemLinks[row[0]] ?? [],
+      actual: actualFor(name),
       ranges: row.slice(1).flatMap((cell) => (cell.match(datePattern) ?? []).map(dateRange)).filter(Boolean),
-    }))
+    }); })
     .filter((row) => row.ranges.length);
   return {
     title: '工程时间总表',
@@ -183,6 +223,10 @@ function buildTimeline(content) {
     end: '2026-10-30',
     durationDays: 68,
     source: '02-renovation/CONSTRUCTION_PLAN.md',
+    trackingSource: '02-renovation/CONSTRUCTION_PROGRESS.md',
+    actualStatus: actualMap.size ? 'recorded' : 'not_confirmed',
+    actualCount: actualMap.size,
+    phases,
     main,
     suppliers,
   };
@@ -244,7 +288,10 @@ const output = {
   project: { title: 'HomeOS 工程进度', phase: '装修执行与设备协调' },
   stages: Object.entries(stageLabels).map(([id, label]) => ({ id, label })),
   items,
-  timeline: buildTimeline(await readFile(resolve(homeRoot, '02-renovation', 'CONSTRUCTION_PLAN.md'), 'utf8')),
+  timeline: buildTimeline(
+    await readFile(resolve(homeRoot, '02-renovation', 'CONSTRUCTION_PLAN.md'), 'utf8'),
+    await readFile(resolve(homeRoot, '02-renovation', 'CONSTRUCTION_PROGRESS.md'), 'utf8'),
+  ),
 };
 
 const serialized = JSON.stringify(output, null, 2);
