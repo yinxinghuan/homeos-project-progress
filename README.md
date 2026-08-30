@@ -13,4 +13,7 @@
 ```bash
 npm run dev
 npm run build
+npm run build:pages
 ```
+
+`npm run build` 生成现有 Sites 部署；`npm run build:pages` 从已提交的脱敏数据生成 GitHub Pages 静态镜像。GitHub 工作流不会接触 HomeOS 内部主记录，只发布仓库中已经通过脱敏守卫生成的 `data/progress.json` 与公开技术资料。

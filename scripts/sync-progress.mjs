@@ -268,7 +268,7 @@ for (const sourceItem of procurement.items) {
     await chmod(destination, 0o644);
     assets.push({
       title: clean(fileName.replace(/\.[^.]+$/, '').replace(/^\d{4}-\d{2}-\d{2}-/, '').replaceAll('-', ' ')),
-      href: `/technical/${encodeURIComponent(fileName)}`,
+      href: `technical/${encodeURIComponent(fileName)}`,
       type: extname(fileName).toLowerCase() === '.pdf' ? 'pdf' : 'image',
     });
   }
