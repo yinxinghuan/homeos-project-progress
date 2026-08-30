@@ -63,7 +63,7 @@ const safeAssets = {
   'gas-cooktop': ['source/media/2026-08-24-two-burner-cooktop-cabinet-reference.jpg'],
 };
 
-const blocked = /¥|￥|\bCNY\b|\bprices?\b|\bpayments?\b|\binvoices?\b|\bcosts?\b|\bfees?\b|\bcharges?\b|chargeable|surcharges?|\bdeposits?\b|\bbalances?\b|\bquotations?\b|\baddress\b|\bphone\b|金额|价格|付款|支付|定金|余款|全款|报价|收费|费用|地址|电话|姓名|客户|账户|合同编号|订单编号|销售单号|发票/i;
+const blocked = /¥|￥|\bCNY\b|\bprices?\b|\bpayments?\b|\binvoices?\b|\bcosts?\b|\bfees?\b|\bcharges?\b|chargeable|surcharges?|\bdeposits?\b|\bbalances?\b|\bquotations?\b|\baddress\b|\bphone\b|金额|价格|付款|支付|定金|余款|全款|付清|实付|报价|收费|费用|地址|电话|姓名|客户|账户|合同编号|订单编号|销售单号|发票/i;
 const technicalHeading = /安装|尺寸|规格|技术|留位|开孔|接口|水电|排水|供电|通风|协调|验收|到货|施工|要求|条件|配置|product data|dimension|installation|acceptance|hold point|requirement|coordination|utility|clearance|before/i;
 
 function clean(text) {
@@ -200,7 +200,11 @@ function dateRange(label) {
 }
 
 function buildTimeline(content, trackingContent) {
-  const actualMap = new Map(parseTableSection(trackingContent, 'Confirmed Actual Progress').map((row) => [row[0], { status: row[1], confirmedDate: row[2] || null, note: row[4] || null }]));
+  const actualMap = new Map(parseTableSection(trackingContent, 'Confirmed Actual Progress').map((row) => [row[0], {
+    status: row[1],
+    confirmedDate: row[2] || null,
+    note: row[4] && !blocked.test(row[4]) ? row[4] : null,
+  }]));
   const actualFor = (name) => actualMap.get(name) ?? null;
   const phases = parseTableSection(content, 'Schedule Board Phases')
     .map((row) => ({ name: row[0], range: dateRange(row[1]), focus: row[2] }))

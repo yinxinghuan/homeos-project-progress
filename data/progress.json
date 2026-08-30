@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-08-30T14:30:00+08:00",
+  "updatedAt": "2026-08-30T19:48:00+08:00",
   "project": {
     "title": "HomeOS 工程进度",
     "phase": "装修执行与设备协调"
@@ -36,8 +36,8 @@
       "model": "待补充",
       "stage": "ordered",
       "stageLabel": "已采购 / 待交付安装",
-      "progress": "待确认到货与安装",
-      "nextAction": "补充具体型号、购买日期和安装安排",
+      "progress": "已采购 / 待交付安装",
+      "nextAction": "补充具体型号、购买日期并确认到货与安装安排",
       "technical": [],
       "assets": []
     },
@@ -49,8 +49,8 @@
       "model": "85ES 框扇平齐系列",
       "stage": "ordered",
       "stageLabel": "已采购 / 待交付安装",
-      "progress": "生产 / 到货状态待确认",
-      "nextAction": "确认生产进度、送货与安装日期",
+      "progress": "正在定制生产，尚未交付安装",
+      "nextAction": "跟进生产完成时间并确认送货与安装日期",
       "technical": [
         {
           "source": "02-renovation/WINDOWS.md",
@@ -1035,8 +1035,8 @@
     "durationDays": 68,
     "source": "02-renovation/CONSTRUCTION_PLAN.md",
     "trackingSource": "02-renovation/CONSTRUCTION_PROGRESS.md",
-    "actualStatus": "not_confirmed",
-    "actualCount": 0,
+    "actualStatus": "recorded",
+    "actualCount": 3,
     "phases": [
       {
         "name": "准备与拆除",
@@ -1113,7 +1113,11 @@
         "linkedItemIds": [
           "construction"
         ],
-        "actual": null,
+        "actual": {
+          "status": "completed",
+          "confirmedDate": "2026-08-30",
+          "note": "墙体改造、拆除及铲墙皮已完成。此记录不推断建筑垃圾清运已经完成。"
+        },
         "ranges": [
           {
             "start": "2026-08-26",
@@ -1401,7 +1405,11 @@
         "linkedItemIds": [
           "windows"
         ],
-        "actual": null,
+        "actual": {
+          "status": "in_progress",
+          "confirmedDate": "2026-08-30",
+          "note": "伊博莱全屋窗户正在定制生产，尚未确认交付和安装。"
+        },
         "ranges": [
           {
             "start": "2026-08-26",
@@ -1421,7 +1429,11 @@
         "linkedItemIds": [
           "entry-door"
         ],
-        "actual": null,
+        "actual": {
+          "status": "in_progress",
+          "confirmedDate": "2026-08-30",
+          "note": "德盾入户门当前尚未安装；到货状态仍待确认。"
+        },
         "ranges": [
           {
             "start": "2026-08-26",
