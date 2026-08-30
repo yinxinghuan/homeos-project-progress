@@ -156,7 +156,7 @@ const timelineLabels = {
   Flooring: '地板',
 };
 const timelineItemLinks = {
-  'Property renovation procedures': [],
+  'Property renovation procedures': ['construction'],
   'Wall demolition and wall-skin removal': ['construction'],
   'Construction-waste removal': ['construction'],
   'Strong/weak-current chasing and wiring': ['construction', 'wire-materials', 'switches'],

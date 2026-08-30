@@ -81,15 +81,15 @@ function TimelineBoard({ onOpenItem }: { onOpenItem: (id: string) => void }) {
     rows: allRows.map((row) => ({ ...row, ranges: row.ranges.filter((range) => range.start <= phase.range.end && range.end >= phase.range.start) })).filter((row) => row.ranges.length),
   }));
   const planState = (row: TimelineRow) => {
-    if (row.ranges.some((range) => range.start <= todayKey && range.end >= todayKey)) return { id: 'current', label: '计划进行中', tone: 'bg-[#e4edf4] text-[#315e7c]' };
-    if (row.ranges.every((range) => range.end < todayKey)) return { id: 'past', label: '计划窗口已过', tone: 'bg-[#edf0f1] text-[#69757a]' };
-    return { id: 'upcoming', label: '计划待开始', tone: 'bg-[#f5ebdf] text-[#805d3e]' };
+    if (row.ranges.some((range) => range.start <= todayKey && range.end >= todayKey)) return { id: 'current', label: '计划进行中', shortLabel: '计划中', tone: 'bg-[#e4edf4] text-[#315e7c]', bar: row.kind === 'construction' ? '#34698f' : '#db7442' };
+    if (row.ranges.every((range) => range.end < todayKey)) return { id: 'past', label: '计划窗口已过', shortLabel: '待确认', tone: 'bg-[#edf0f1] text-[#69757a]', bar: '#9aa7ac' };
+    return { id: 'upcoming', label: '计划待开始', shortLabel: '待开始', tone: 'bg-[#f5ebdf] text-[#805d3e]', bar: row.kind === 'construction' ? '#34698f' : '#db7442' };
   };
   const actualState = (actual: TimelineActual) => ({
-    not_started: { label: '现场确认未开始', tone: 'bg-[#edf0f1] text-[#68757a]' },
-    in_progress: { label: '现场确认进行中', tone: 'bg-[#e4edf4] text-[#315e7c]' },
-    completed: { label: '现场确认已完成', tone: 'bg-[#e4efe9] text-[#326250]' },
-    blocked: { label: '现场确认受阻', tone: 'bg-[#f5e7e3] text-[#895347]' },
+    not_started: { label: '现场确认未开始', shortLabel: '未开始', tone: 'bg-[#edf0f1] text-[#68757a]', bar: '#9aa7ac' },
+    in_progress: { label: '现场确认进行中', shortLabel: '进行中', tone: 'bg-[#e4edf4] text-[#315e7c]', bar: '#2e6d8f' },
+    completed: { label: '现场确认已完成', shortLabel: '已完成', tone: 'bg-[#e4efe9] text-[#326250]', bar: '#3f8067' },
+    blocked: { label: '现场确认受阻', shortLabel: '受阻', tone: 'bg-[#f5e7e3] text-[#895347]', bar: '#a2574a' },
   }[actual.status]);
   const currentRows = allRows.filter((row) => planState(row).id === 'current');
   const [selectedKey, setSelectedKey] = useState(() => `${(currentRows[0] ?? allRows[0]).kind}:${(currentRows[0] ?? allRows[0]).name}`);
@@ -101,6 +101,12 @@ function TimelineBoard({ onOpenItem }: { onOpenItem: (id: string) => void }) {
     width: `${Math.max(((utcDay(range.end) - utcDay(range.start) + 1) / total) * 100, 1.45)}%`,
   });
   const togglePhase = (name: string) => setOpenPhases((current) => current.includes(name) ? current.filter((entry) => entry !== name) : [...current, name]);
+  const stateFor = (row: TimelineRow) => row.actual ? actualState(row.actual) : planState(row);
+  const openTimelineRow = (row: TimelineRow) => {
+    setSelectedKey(`${row.kind}:${row.name}`);
+    const primaryItemId = row.linkedItemIds.find((id) => data.items.some((item) => item.id === id));
+    if (primaryItemId) onOpenItem(primaryItemId);
+  };
 
   const selectedDetail = (mobile = false) => (
     <div className={`${mobile ? 'mt-2 border border-[#d9e2e6] bg-white p-3' : 'grid gap-4 border-b border-[#dce3e6] bg-[#f7f9fa] p-5 sm:grid-cols-[220px_1fr] sm:p-6'}`}>
@@ -130,36 +136,36 @@ function TimelineBoard({ onOpenItem }: { onOpenItem: (id: string) => void }) {
 
       <div className="grid gap-3 border-b border-[#dde4e7] bg-[#f6f8f9] p-4 sm:grid-cols-[170px_1fr] sm:items-center sm:px-6">
         <div><p className="text-[10px] font-medium tracking-[0.1em] text-[#859197]">今天的计划窗口</p><p className="mt-1 font-data text-sm font-semibold">{currentRows.length} 个节点</p></div>
-        <div className="flex gap-2 overflow-x-auto [scrollbar-width:none]">{currentRows.map((row) => <button key={`${row.kind}:${row.name}`} onClick={() => setSelectedKey(`${row.kind}:${row.name}`)} className="flex min-h-10 shrink-0 items-center gap-2 rounded-[6px] border border-[#cbd8de] bg-white px-3 text-xs font-medium text-[#4e626c]"><i className={`size-2 rounded-sm ${row.kind === 'construction' ? 'bg-[#34698f]' : 'bg-[#db7442]'}`} />{row.name}<span className="text-[10px] text-[#8a969b]">{row.linkedItemIds.length} 项</span></button>)}</div>
+        <div className="flex gap-2 overflow-x-auto [scrollbar-width:none]">{currentRows.map((row) => { const state = stateFor(row); return <button key={`${row.kind}:${row.name}`} onClick={() => openTimelineRow(row)} className="flex min-h-10 shrink-0 items-center gap-2 rounded-[6px] border border-[#cbd8de] bg-white px-3 text-xs font-medium text-[#4e626c]"><i className="size-2 rounded-sm" style={{ backgroundColor: state.bar }} />{row.name}<span className={`rounded-full px-1.5 py-0.5 text-[9px] ${state.tone}`}>{state.shortLabel}</span><ArrowUpRight className="size-3 text-[#79909a]" /></button>; })}</div>
       </div>
 
       <div className="hidden md:block">{selectedDetail()}</div>
 
       <div className="md:hidden">
-        {phaseGroups.map((phase) => { const open = openPhases.includes(phase.name); return <section key={phase.name} className="border-b border-[#e1e6e8] last:border-0"><button onClick={() => togglePhase(phase.name)} className="flex min-h-14 w-full items-center justify-between gap-3 bg-[#edf2f4] px-4 py-3 text-left" aria-expanded={open}><span><strong className="block text-xs font-semibold">{phase.name}</strong><span className="mt-1 block font-data text-[10px] text-[#75858c]">{shortRange(phase.range)} · {phase.rows.length} 个节点</span></span><ChevronDown className={`size-4 text-[#72858e] transition ${open ? 'rotate-180' : ''}`} /></button>{open && <div className="space-y-2 p-4">{phase.rows.map((row) => { const key = `${row.kind}:${row.name}`; const selected = key === selectedKey; const state = row.actual ? actualState(row.actual) : planState(row); return <div key={`${phase.name}:${row.name}`}><button onClick={() => setSelectedKey(key)} className={`grid min-h-14 w-full grid-cols-[1fr_auto] gap-3 border-l-2 px-3 py-2.5 text-left ${selected ? 'border-[#1f4f76] bg-[#edf3f6]' : 'border-[#8fa5af] bg-[#f7f9fa]'}`} aria-expanded={selected}><span><strong className="block text-xs font-medium leading-5">{row.name}</strong><span className="mt-1 flex items-center gap-1.5 text-[10px] text-[#77868c]"><Link2 className="size-3" />{row.linkedItemIds.length} 个关联事项 · {state.label}</span></span><span className="font-data text-[11px] text-[#5f737e]">{row.ranges.map(shortRange).join(' · ')}</span></button>{selected && selectedDetail(true)}</div>; })}</div>}</section>; })}
+        {phaseGroups.map((phase) => { const open = openPhases.includes(phase.name); const completedCount = phase.rows.filter((row) => row.actual?.status === 'completed').length; return <section key={phase.name} className="border-b border-[#e1e6e8] last:border-0"><button onClick={() => togglePhase(phase.name)} className="flex min-h-14 w-full items-center justify-between gap-3 bg-[#edf2f4] px-4 py-3 text-left" aria-expanded={open}><span><strong className="block text-xs font-semibold">{phase.name}</strong><span className="mt-1 block font-data text-[10px] text-[#75858c]">{shortRange(phase.range)} · {phase.rows.length} 个节点{completedCount ? ` · ${completedCount} 已完成` : ''}</span></span><ChevronDown className={`size-4 text-[#72858e] transition ${open ? 'rotate-180' : ''}`} /></button>{open && <div className="space-y-2 p-4">{phase.rows.map((row) => { const key = `${row.kind}:${row.name}`; const selected = key === selectedKey; const state = stateFor(row); return <div key={`${phase.name}:${row.name}`}><button onClick={() => openTimelineRow(row)} className={`grid min-h-14 w-full grid-cols-[1fr_auto] gap-3 border-l-2 px-3 py-2.5 text-left ${selected ? 'border-[#1f4f76] bg-[#edf3f6]' : 'border-[#8fa5af] bg-[#f7f9fa]'}`}><span><span className="flex flex-wrap items-center gap-2"><strong className="text-xs font-medium leading-5">{row.name}</strong><i className={`rounded-full px-1.5 py-0.5 text-[9px] not-italic ${state.tone}`}>{state.shortLabel}</i></span><span className="mt-1 flex items-center gap-1.5 text-[10px] text-[#77868c]"><Link2 className="size-3" />{row.linkedItemIds.length} 个关联事项 · 点击直达</span></span><span className="flex items-center gap-1 font-data text-[11px] text-[#5f737e]">{row.ranges.map(shortRange).join(' · ')}<ArrowUpRight className="size-3" /></span></button></div>; })}</div>}</section>; })}
       </div>
 
       <div className="hidden overflow-x-auto md:block">
         <div className="min-w-[1020px]">
-          <div className="grid grid-cols-[230px_1fr] border-b border-[#dfe5e7] bg-[#f7f9fa]">
+          <div className="grid grid-cols-[330px_1fr] border-b border-[#dfe5e7] bg-[#f7f9fa]">
             <div className="border-r border-[#dfe5e7] px-5 py-3 text-[10px] font-medium tracking-[0.11em] text-[#859096]">工作项目</div>
             <div className="relative h-11">
               {months.map((month) => { const left = ((utcDay(month.start) - startDay) / total) * 100; const width = ((utcDay(month.end) - utcDay(month.start) + 1) / total) * 100; return <div key={month.label} className="absolute top-0 flex h-full items-center justify-center border-r border-[#d7e0e3] text-[11px] font-semibold text-[#60717a]" style={{ left: `${left}%`, width: `${width}%` }}>{month.label}</div>; })}
             </div>
           </div>
-          {phaseGroups.map((phase) => { const open = openPhases.includes(phase.name); return <section key={phase.name}>
-            <button onClick={() => togglePhase(phase.name)} className="grid min-h-10 w-full grid-cols-[230px_1fr] border-b border-[#dfe5e7] bg-[#edf2f4] text-left" aria-expanded={open}><h3 className="flex items-center justify-between border-r border-[#d7e0e3] px-5 py-2 text-[10px] font-semibold tracking-[0.08em] text-[#5c707a]"><span>{phase.name}</span><span className="font-data font-normal tracking-normal text-[#7e8d93]">{shortRange(phase.range)} · {phase.rows.length}</span></h3><div className="flex items-center justify-end px-4"><ChevronDown className={`size-3.5 text-[#71848d] transition ${open ? 'rotate-180' : ''}`} /></div></button>
-            {open && phase.rows.map((row) => { const key = `${row.kind}:${row.name}`; const selected = key === selectedKey; return <div key={`${phase.name}:${row.name}`} className={`grid min-h-10 grid-cols-[230px_1fr] border-b border-[#e7ebec] last:border-0 ${selected ? 'bg-[#edf3f6]' : ''}`}>
-              <button onClick={() => setSelectedKey(key)} className="flex items-center justify-between gap-2 border-r border-[#e0e6e8] px-5 py-2.5 text-left text-xs font-medium text-[#526269]"><span>{row.name}</span><span className="flex shrink-0 items-center gap-1 text-[9px] font-normal text-[#87949a]"><Link2 className="size-2.5" />{row.linkedItemIds.length}</span></button>
+          {phaseGroups.map((phase) => { const open = openPhases.includes(phase.name); const completedCount = phase.rows.filter((row) => row.actual?.status === 'completed').length; return <section key={phase.name}>
+            <button onClick={() => togglePhase(phase.name)} className="grid min-h-10 w-full grid-cols-[330px_1fr] border-b border-[#dfe5e7] bg-[#edf2f4] text-left" aria-expanded={open}><h3 className="flex items-center justify-between border-r border-[#d7e0e3] px-5 py-2 text-[10px] font-semibold tracking-[0.08em] text-[#5c707a]"><span>{phase.name}</span><span className="font-data font-normal tracking-normal text-[#7e8d93]">{shortRange(phase.range)} · {phase.rows.length}{completedCount ? ` · ${completedCount} 完成` : ''}</span></h3><div className="flex items-center justify-end px-4"><ChevronDown className={`size-3.5 text-[#71848d] transition ${open ? 'rotate-180' : ''}`} /></div></button>
+            {open && phase.rows.map((row) => { const key = `${row.kind}:${row.name}`; const selected = key === selectedKey; const state = stateFor(row); return <div key={`${phase.name}:${row.name}`} className={`grid min-h-11 grid-cols-[330px_1fr] border-b border-[#e7ebec] last:border-0 ${selected ? 'bg-[#edf3f6]' : ''}`}>
+              <button onClick={() => openTimelineRow(row)} className="flex items-center justify-between gap-3 border-r border-[#e0e6e8] px-5 py-2.5 text-left text-xs font-medium text-[#526269]"><span className="min-w-0 truncate">{row.name}</span><span className="flex shrink-0 items-center gap-2"><i className={`rounded-full px-1.5 py-0.5 text-[9px] not-italic font-medium ${state.tone}`}>{state.shortLabel}</i><span className="flex items-center gap-1 text-[9px] font-normal text-[#87949a]"><Link2 className="size-2.5" />{row.linkedItemIds.length}</span><ArrowUpRight className="size-3 text-[#718791]" /></span></button>
               <div className="relative bg-[repeating-linear-gradient(to_right,transparent_0,transparent_calc(11.76%_-_1px),#edf1f2_calc(11.76%_-_1px),#edf1f2_11.76%)]">
                 {todayOffset >= 0 && todayOffset < total && <span aria-label="今天" className="absolute inset-y-0 z-10 w-px bg-[#dc7440]" style={{ left: `${(todayOffset / total) * 100}%` }} />}
-                {row.ranges.map((range, index) => <button onClick={() => setSelectedKey(key)} key={`${range.label}-${index}`} title={`${row.name} · ${shortRange(range)}`} className={`absolute top-1/2 h-4 -translate-y-1/2 rounded-[3px] ring-offset-1 focus-visible:ring-2 focus-visible:ring-[#1f4f76] ${row.kind === 'construction' ? 'bg-[#34698f]' : 'bg-[#db7442]'}`} style={barStyle(range)}><span className="sr-only">选择 {row.name}：{shortRange(range)}</span></button>)}
+                {row.ranges.map((range, index) => <button onClick={() => openTimelineRow(row)} key={`${range.label}-${index}`} title={`${row.name} · ${state.shortLabel} · 点击打开关联事项`} className="absolute top-1/2 flex h-[18px] -translate-y-1/2 items-center justify-center overflow-hidden rounded-[3px] text-white ring-offset-1 focus-visible:ring-2 focus-visible:ring-[#1f4f76]" style={{ ...barStyle(range), backgroundColor: state.bar }}>{row.actual?.status === 'completed' && <CheckCircle2 className="size-3" />}<span className="sr-only">打开 {row.name} 的关联事项：{shortRange(range)}，{state.shortLabel}</span></button>)}
               </div>
             </div>; })}
           </section>; })}
         </div>
       </div>
-      <div className="flex flex-wrap gap-x-5 gap-y-2 border-t border-[#dde4e7] px-5 py-3 text-[11px] text-[#77858b]"><span className="flex items-center gap-1.5"><i className="size-2 rounded-sm bg-[#34698f]" />主施工</span><span className="flex items-center gap-1.5"><i className="size-2 rounded-sm bg-[#db7442]" />供应 / 安装</span><span className="flex items-center gap-1.5"><i className="h-3 w-px bg-[#dc7440]" />今日</span><span className="ml-auto">计划：{timeline.source} · 实际：{timeline.trackingSource}</span></div>
+      <div className="flex flex-wrap gap-x-5 gap-y-2 border-t border-[#dde4e7] px-5 py-3 text-[11px] text-[#77858b]"><span className="flex items-center gap-1.5"><i className="size-2 rounded-sm bg-[#34698f]" />计划施工</span><span className="flex items-center gap-1.5"><i className="size-2 rounded-sm bg-[#db7442]" />计划供应 / 安装</span><span className="flex items-center gap-1.5"><i className="size-2 rounded-sm bg-[#3f8067]" />现场已完成</span><span className="flex items-center gap-1.5"><i className="size-2 rounded-sm bg-[#2e6d8f]" />现场进行中</span><span className="flex items-center gap-1.5"><i className="h-3 w-px bg-[#dc7440]" />今日</span><span className="ml-auto">点击任一节点或时间条，直接进入主要关联事项</span></div>
     </section>
   );
 }
@@ -181,6 +187,11 @@ export default function Home() {
 
   const categories = useMemo(() => [...new Set(data.items.map((item) => item.category))].sort((a, b) => a.localeCompare(b, 'zh-CN')), []);
   const counts = useMemo(() => Object.fromEntries(data.stages.map((entry) => [entry.id, data.items.filter((item) => item.stage === entry.id).length])), []);
+  const timelineByItem = useMemo(() => {
+    const links = new Map<string, string[]>();
+    [...data.timeline.main, ...data.timeline.suppliers].forEach((row) => row.linkedItemIds.forEach((id) => links.set(id, [...(links.get(id) ?? []), row.name])));
+    return links;
+  }, []);
   const filtered = useMemo(() => {
     const normalized = query.trim().toLocaleLowerCase('zh-CN');
     return data.items.filter((item) => {
@@ -208,12 +219,14 @@ export default function Home() {
     setStage('all');
     setCategory('all');
     setQuery('');
-    requestAnimationFrame(() => requestAnimationFrame(() => {
+    window.history.replaceState(null, '', `#item-${id}`);
+    window.setTimeout(() => requestAnimationFrame(() => {
       const target = document.getElementById(`item-${id}`) as HTMLDetailsElement | null;
       if (!target) return;
       target.open = true;
       target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }));
+      target.focus({ preventScroll: true });
+    }), 0);
   };
 
   return (
@@ -275,11 +288,12 @@ export default function Home() {
             {filtered.map((item) => {
               const colors = stageColors[item.stage];
               const technicalCount = item.technical.reduce((sum, source) => sum + source.sections.reduce((sectionSum, section) => sectionSum + section.points.length, 0), 0);
+              const relatedTimeline = timelineByItem.get(item.id) ?? [];
               return (
-                <details id={`item-${item.id}`} key={item.id} className="group scroll-mt-4 border border-[#d7dde0] bg-white open:border-[#aebdc3] sm:scroll-mt-20 sm:rounded-[9px]">
+                <details id={`item-${item.id}`} key={item.id} tabIndex={-1} className="group scroll-mt-4 border border-[#d7dde0] bg-white open:border-[#aebdc3] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#6d91a7] sm:scroll-mt-20 sm:rounded-[9px]">
                   <summary className="grid cursor-pointer list-none gap-3 p-4 marker:hidden sm:grid-cols-[minmax(190px,1.1fr)_minmax(180px,1fr)_175px_115px_24px] sm:items-center sm:gap-5 sm:p-5 [&::-webkit-details-marker]:hidden">
                     <div className="min-w-0"><div className="flex items-center gap-2"><span className="font-medium">{item.name}</span><small className="text-[10px] text-[#929b9f]">{item.category}</small></div><p className="mt-1 truncate text-xs text-[#6f7c82]">{[item.brand, item.model].filter(Boolean).join(' · ') || '型号待补充'}</p></div>
-                    <div className="min-w-0"><p className="truncate text-xs text-[#57656b]">{item.progress}</p><p className="mt-1 truncate text-[11px] text-[#899397]">下一步：{item.nextAction}</p></div>
+                    <div className="min-w-0"><p className="truncate text-xs text-[#57656b]">{item.progress}</p><p className="mt-1 truncate text-[11px] text-[#899397]">下一步：{item.nextAction}</p>{relatedTimeline.length > 0 && <p className="mt-1 flex items-center gap-1 truncate text-[10px] text-[#55798a]"><CalendarClock className="size-3 shrink-0" />关联工程：{relatedTimeline.join('、')}</p>}</div>
                     <span className="w-fit rounded-full px-2.5 py-1 text-[11px] font-medium" style={{ backgroundColor: colors.fill, color: colors.text }}><i className="mr-1.5 inline-block size-1.5 rounded-full" style={{ backgroundColor: colors.dot }} />{item.stageLabel}</span>
                     <span className="flex items-center gap-1.5 text-[11px] text-[#77858b]"><Wrench className="size-3.5" />{technicalCount ? `${technicalCount} 条技术信息` : '待补技术资料'}</span>
                     <ChevronDown className="size-4 text-[#8a969b] transition group-open:rotate-180" />

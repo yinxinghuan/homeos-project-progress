@@ -1097,7 +1097,9 @@
       {
         "name": "物业装修手续",
         "kind": "construction",
-        "linkedItemIds": [],
+        "linkedItemIds": [
+          "construction"
+        ],
         "actual": null,
         "ranges": [
           {
