@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-08-30T23:32:04+08:00",
+  "updatedAt": "2026-08-30T23:41:00+08:00",
   "project": {
     "title": "HomeOS 工程进度",
     "phase": "装修执行与设备协调"
@@ -456,9 +456,20 @@
       "decisionDeadline": null,
       "urgencyReason": null,
       "progress": "已确定 / 推进中",
-      "nextAction": "取得测量图、正式合同并核对水槽相关条目",
+      "nextAction": "8 月 31 日 16:30 联合确认会上核对两张点位图的基准、插座高度/横向定位、用途与回路，并形成带图号、版本和签字的定稿；同时取得完整测量图和正式合同",
       "technical": [],
-      "assets": []
+      "assets": [
+        {
+          "title": "cabinet maker electrical elevation 01",
+          "href": "technical/2026-08-30-cabinet-maker-electrical-elevation-01.png",
+          "type": "image"
+        },
+        {
+          "title": "cabinet maker electrical elevation 02",
+          "href": "technical/2026-08-30-cabinet-maker-electrical-elevation-02.png",
+          "type": "image"
+        }
+      ]
     },
     {
       "id": "terrazzo",
@@ -609,6 +620,16 @@
               "title": "Commercial Coordination",
               "points": [
                 "This commercial confirmation does not freeze the circuit design, point positions, quantities, materials, testing, or acceptance requirements."
+              ]
+            },
+            {
+              "title": "Cabinet-Maker Point Drawings — Draft Coordination Input",
+              "points": [
+                "Two cabinet-supplier elevation screenshots were received on 2026-08-30: elevation 01 and kitchen elevation 02.",
+                "Elevation 01 visibly marks one socket height at 450 mm. The crop also shows 2800 mm overall height, a 900 mm base-cabinet zone and 1460 / 400 / 300 mm vertical annotations; the red 1201.2034 horizontal text requires supplier clarification.",
+                "Kitchen elevation 02 visibly marks socket-height annotations of 2200 mm, 600 mm and 1200 mm, with 450 mm horizontal offsets from the depicted left/right datums. The high point appears associated with the hood zone, but all appliance/circuit labels must be confirmed rather than inferred from the crop.",
+                "The drawings lack visible revision, scale, legend and approval fields. Before cutting chases, confirm finished-floor datum, wall datum, box-centre convention, socket type/quantity, circuit/load, accessibility after cabinet installation, and the meaning of the two unlabeled black point symbols.",
+                "The 2026-08-31 16:30 joint cabinet/water-electrical/equipment review must mark all corrections on one revision-controlled drawing and obtain cabinet supplier, water/electrical contractor and owner sign-off."
               ]
             }
           ]
@@ -995,8 +1016,8 @@
       "priority": "P0",
       "decisionDeadline": "2026-09-01",
       "urgencyReason": "水电放线和开槽前必须冻结点位、底盒和控制逻辑；面板本体不必现在购买。",
-      "progress": "P0｜未购买；先完成点位与控制逻辑定稿",
-      "nextAction": "8 月 31 日 16:30 联合确认会上确认点位数量、底盒规格、双控/智能逻辑与特殊插座；9 月 1 日前定稿，系列颜色和面板可后续确定",
+      "progress": "P0｜未购买；已收到橱柜厂商两张水电点位立面图，尚未联合确认签字",
+      "nextAction": "8 月 31 日 16:30 联合确认会上核对图中的 450 / 600 / 1200 / 2200 mm 标注、横向基准、点位用途、回路、底盒和两个未标注黑点；9 月 1 日前形成定稿，系列颜色和面板可后续确定",
       "technical": [
         {
           "source": "03-systems/electrical.md",
@@ -1006,11 +1027,32 @@
               "points": [
                 "This commercial confirmation does not freeze the circuit design, point positions, quantities, materials, testing, or acceptance requirements."
               ]
+            },
+            {
+              "title": "Cabinet-Maker Point Drawings — Draft Coordination Input",
+              "points": [
+                "Two cabinet-supplier elevation screenshots were received on 2026-08-30: elevation 01 and kitchen elevation 02.",
+                "Elevation 01 visibly marks one socket height at 450 mm. The crop also shows 2800 mm overall height, a 900 mm base-cabinet zone and 1460 / 400 / 300 mm vertical annotations; the red 1201.2034 horizontal text requires supplier clarification.",
+                "Kitchen elevation 02 visibly marks socket-height annotations of 2200 mm, 600 mm and 1200 mm, with 450 mm horizontal offsets from the depicted left/right datums. The high point appears associated with the hood zone, but all appliance/circuit labels must be confirmed rather than inferred from the crop.",
+                "The drawings lack visible revision, scale, legend and approval fields. Before cutting chases, confirm finished-floor datum, wall datum, box-centre convention, socket type/quantity, circuit/load, accessibility after cabinet installation, and the meaning of the two unlabeled black point symbols.",
+                "The 2026-08-31 16:30 joint cabinet/water-electrical/equipment review must mark all corrections on one revision-controlled drawing and obtain cabinet supplier, water/electrical contractor and owner sign-off."
+              ]
             }
           ]
         }
       ],
-      "assets": []
+      "assets": [
+        {
+          "title": "cabinet maker electrical elevation 01",
+          "href": "technical/2026-08-30-cabinet-maker-electrical-elevation-01.png",
+          "type": "image"
+        },
+        {
+          "title": "cabinet maker electrical elevation 02",
+          "href": "technical/2026-08-30-cabinet-maker-electrical-elevation-02.png",
+          "type": "image"
+        }
+      ]
     },
     {
       "id": "lighting",

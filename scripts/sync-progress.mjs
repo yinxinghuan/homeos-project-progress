@@ -61,6 +61,14 @@ const safeAssets = {
   oven: ['source/media/2026-08-24-built-in-oven-dimension-reference.jpg'],
   'range-hood': ['source/media/2026-08-24-liudianban-y6-range-hood-installation.jpg'],
   'gas-cooktop': ['source/media/2026-08-24-two-burner-cooktop-cabinet-reference.jpg'],
+  'kitchen-cabinetry': [
+    'source/media/2026-08-30-cabinet-maker-electrical-elevation-01.png',
+    'source/media/2026-08-30-cabinet-maker-electrical-elevation-02.png',
+  ],
+  switches: [
+    'source/media/2026-08-30-cabinet-maker-electrical-elevation-01.png',
+    'source/media/2026-08-30-cabinet-maker-electrical-elevation-02.png',
+  ],
 };
 
 const blocked = /¥|￥|\bCNY\b|\bprices?\b|\bpayments?\b|\binvoices?\b|\bcosts?\b|\bfees?\b|\bcharges?\b|chargeable|surcharges?|\bdeposits?\b|\bbalances?\b|\bquotations?\b|\baddress\b|\bphone\b|金额|价格|付款|支付|已付|待付|定金|预付款|余款|期款|款项|付款比例|全款|付清|实付|报价|收费|费用|地址|电话|姓名|客户|账户|合同编号|订单编号|销售单号|发票/i;
