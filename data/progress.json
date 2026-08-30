@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-08-30T23:58:00+08:00",
+  "updatedAt": "2026-08-31T01:35:00+08:00",
   "project": {
     "title": "HomeOS 工程进度",
     "phase": "装修执行与设备协调"
@@ -929,18 +929,34 @@
       "name": "油烟机",
       "category": "厨房电器",
       "brand": "六点半",
-      "model": "Y6 超薄全不锈钢",
+      "model": "Y6 不锈钢变频款｜26 m³/min｜1280 Pa",
       "stage": "selected",
       "stageLabel": "型号或方向已定",
       "priority": "P0",
       "decisionDeadline": "2026-09-01",
       "urgencyReason": "9 月 2—3 日橱柜点位交底前必须确认机体包络、供电和排烟路径。",
-      "progress": "P0｜已有选型方向、未购买；精确型号未锁定",
-      "nextAction": "8 月 31 日 16:30 联合确认会上确认精确型号、机体尺寸、供电、排烟孔位和安装范围；9 月 1 日前定稿",
+      "progress": "P0｜Y6 不锈钢变频款已选、未下单；商家安装图已归档，未找到厂家正式手册",
+      "nextAction": "按商家图复核 998 mm 机宽、430 × 313 mm 箱体、≥450 × 330 mm 吊柜留位、直径 250 mm 吊顶烟道孔及 300—400 mm 灶面净距；补电气参数和签字版开孔坐标",
       "technical": [
         {
           "source": "04-assets/appliances/liudianban-y6-range-hood.md",
           "sections": [
+            {
+              "title": "Cabinet and Ceiling Coordination",
+              "points": [
+                "Main hood width: 998 mm; merchant drawing states that integrated cabinetry should retain at least 10 mm allowance, with allocation per side still to confirm.",
+                "Upper hood box: 430 W × 313 D mm; cabinet clear reserve at least 450 W × 330 D mm.",
+                "Ceiling duct pass-through: diameter 250 mm within the upper-box zone; obtain signed center coordinates before drilling.",
+                "Product exhaust outlet: diameter 185 mm; public-flue opening: diameter 180 mm; confirm the transition and backdraft valve."
+              ]
+            },
+            {
+              "title": "Performance Data",
+              "points": [
+                "Selected variable-frequency option: boost airflow 26 m³/min and maximum static pressure 1280 Pa.",
+                "Earlier merchant data also states 56 dB(A) and Grade 1 energy efficiency; confirm these on the final order/nameplate."
+              ]
+            },
             {
               "title": "Included and Excluded Installation Items",
               "points": [
@@ -962,7 +978,8 @@
                 "Exact ceiling-hole center coordinates relative to finished wall/cabinet datum.",
                 "Confirmation of the 563 mm front-view datum versus the 888 mm side-view overall height.",
                 "Confirmation whether the recommended 10 mm cabinet allowance is total or per side.",
-                "Final installer-approved elevation and cabinet shop drawing."
+                "Final installer-approved elevation and cabinet shop drawing.",
+                "Signed seller CAD for the ceiling opening, including the diameter-250 center coordinates relative to finished wall, cabinet and hood centerline."
               ]
             },
             {
@@ -986,6 +1003,21 @@
           "title": "liudianban y6 range hood installation",
           "href": "technical/2026-08-24-liudianban-y6-range-hood-installation.jpg",
           "type": "image"
+        },
+        {
+          "title": "liudianban y6 dimensions",
+          "href": "technical/2026-08-31-liudianban-y6-dimensions.jpg",
+          "type": "image"
+        },
+        {
+          "title": "liudianban y6 installation",
+          "href": "technical/2026-08-31-liudianban-y6-installation.jpg",
+          "type": "image"
+        },
+        {
+          "title": "liudianban y6 ceiling cutout",
+          "href": "technical/2026-08-31-liudianban-y6-ceiling-cutout.jpg",
+          "type": "image"
         }
       ]
     },
@@ -994,40 +1026,61 @@
       "name": "燃气灶台",
       "category": "厨房电器",
       "brand": "六点半",
-      "model": "Q5-2 850 mm 双眼款",
+      "model": "Q5-2 焊接双眼｜哨兵定时｜天然气",
       "stage": "selected",
       "stageLabel": "型号或方向已定",
       "priority": "P0",
       "decisionDeadline": "2026-09-01",
       "urgencyReason": "9 月 2—3 日橱柜点位交底前必须确认台面焊接、燃气接口、检修与柜体尺寸。",
-      "progress": "P0｜型号已选、未下单；安装图与气源待确认",
-      "nextAction": "8 月 31 日 16:30 联合确认会上确认天然气 12T、定时版本、Q5-2 官方安装图及焊接和检修方案；9 月 1 日前定稿",
+      "progress": "P0｜选型与商家 Q5-2 开孔图已补充，未下单；未找到厂家正式安装文件",
+      "nextAction": "复核本体 813 × 480、预留约 823 × 490、开孔 743 × 370 / R11.2、2 个直径 26 控制孔（间距 120、退距 50）；确认最终 12T 铭牌、燃气/点火/通风/检修要求并取得签字 CAD 与焊接方案；不得使用 950 × 370 三孔图",
       "technical": [
         {
           "source": "04-assets/appliances/liudianban-two-burner-gas-cooktop.md",
           "sections": [
+            {
+              "title": "Merchant Q5-2 Product and Cutout Drawing",
+              "points": [
+                "Working product envelope: 813 W × 480 D mm; merchant labels indicate reserve approximately 823 W × 490 D mm.",
+                "Working countertop opening: 743 W × 370 D mm with R11.2 corners.",
+                "Working control pattern: two diameter-26 holes, 120 mm center spacing and 50 mm centerline setback from the shown long-edge datum.",
+                "Fabrication rule: transfer the original drawing to the stainless-steel fabricator and obtain a signed CAD/shop drawing before cutting or welding."
+              ]
+            },
             {
               "title": "Confirmed Countertop and Installation Method",
               "points": [
                 "Countertop material: stainless-steel plate.",
                 "Countertop thickness: 5 mm.",
                 "Cooktop installation: the selected two-burner cooktop is to be welded to the stainless-steel countertop.",
+                "Seller note: the Q5 welded interface applies only to a 5 mm stainless-steel countertop and the welded version is recommended for installation by the stainless-steel countertop factory.",
                 "Decision source: owner confirmation on 2026-08-24, not an inference from the Q5-HJ three-burner dimensions."
               ]
             },
             {
-              "title": "Required Q5-2 Inputs Before Cabinet Freeze",
+              "title": "Do Not Use for Cabinet Fabrication Yet",
               "points": [
-                "Exact order title / SKU showing Q5-2, gas type and timer variant.",
-                "Overall width × depth × height.",
-                "Countertop cutout length × width and corner radius.",
+                "Three-burner product/cutout template 950 × 370 mm.",
+                "Three-burner cabinet opening length greater than 980 mm.",
+                "Cabinet width/depth requirement greater than 490 mm.",
+                "Cabinet clear height greater than 350 mm.",
+                "Three control holes at diameter 26 mm and 150 + 150 mm spacing.",
+                "Q5-HJ left/right 5.0 kW and center 2.4 kW heat loads.",
+                "Q5-HJ timed/sniper-model socket and non-metal-door requirements."
+              ]
+            },
+            {
+              "title": "Fabrication Hold Points",
+              "points": [
+                "Signed seller/fabricator shop drawing matching Q5-2, 哨兵定时, two-burner welded version and the final natural-gas group.",
+                "Written reconciliation of product 813 × 480, reserve 823 × 490, opening 743 × 370, R11.2 and the two diameter-26 control holes.",
                 "Weldable flange / interface dimensions and the manufacturer's written confirmation that this two-burner model supports welding to a 5 mm stainless-steel countertop.",
                 "Welding method, weld extent, distortion-control method, finishing/passivation, sealing, and post-weld inspection requirements.",
                 "Service/removal method for the burner body and controls after the countertop interface is welded.",
                 "Minimum countertop front, rear, and side edge distances.",
                 "Minimum cabinet internal width, depth, and clear height.",
                 "Whether drawers, oven, dishwasher, or shelf may be installed below it.",
-                "Natural-gas or LPG version and gas-source compatibility.",
+                "Final order and nameplate must explicitly show natural gas 12T; do not rely only on the generic 天然气 option label.",
                 "Gas inlet position, direction, thread/interface, and hose clearance.",
                 "Left and right burner rated heat loads and total heat load.",
                 "Ignition power: battery or mains plug.",
@@ -1054,6 +1107,16 @@
         {
           "title": "two burner cooktop cabinet reference",
           "href": "technical/2026-08-24-two-burner-cooktop-cabinet-reference.jpg",
+          "type": "image"
+        },
+        {
+          "title": "liudianban q5 2 product drawing",
+          "href": "technical/2026-08-31-liudianban-q5-2-product-drawing.jpg",
+          "type": "image"
+        },
+        {
+          "title": "liudianban q5 2 weld cutout",
+          "href": "technical/2026-08-31-liudianban-q5-2-weld-cutout.jpg",
           "type": "image"
         }
       ]
