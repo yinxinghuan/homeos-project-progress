@@ -13,8 +13,10 @@ import {
   ShieldCheck,
   Wrench,
 } from 'lucide-react';
+import { Bar, BarChart, CartesianGrid, LabelList, XAxis, YAxis } from 'recharts';
 
 import progressData from '@/data/progress.json';
+import { ChartContainer, ChartTooltip, ChartTooltipContent, type ChartConfig } from '@/components/ui/chart';
 import { Input } from '@/components/ui/input';
 
 type Stage = 'ordered' | 'confirmed' | 'selected' | 'coordination' | 'planning';
@@ -32,12 +34,15 @@ type ProgressItem = {
   technical: { source: string; sections: TechnicalSection[] }[];
   assets: { title: string; href: string; type: 'pdf' | 'image' }[];
 };
+type TimelineRange = { start: string; end: string; label: string };
+type TimelineRow = { name: string; kind: 'construction' | 'supplier'; ranges: TimelineRange[] };
 
 const data = progressData as {
   updatedAt: string;
   project: { title: string; phase: string };
   stages: { id: Stage; label: string }[];
   items: ProgressItem[];
+  timeline: { title: string; start: string; end: string; durationDays: number; source: string; main: TimelineRow[]; suppliers: TimelineRow[] };
 };
 
 const stageColors: Record<Stage, { dot: string; fill: string; text: string }> = {
@@ -47,6 +52,73 @@ const stageColors: Record<Stage, { dot: string; fill: string; text: string }> = 
   coordination: { dot: '#9a613d', fill: '#f4e9e2', text: '#80543a' },
   planning: { dot: '#8a9194', fill: '#eceeef', text: '#666e71' },
 };
+const shortStageLabels: Record<Stage, string> = { ordered: '已采购', confirmed: '推进中', selected: '已选型', coordination: '协调采购', planning: '待选型' };
+const stageChartConfig = { count: { label: '事项数量', color: '#1f4f76' } } satisfies ChartConfig;
+const readinessChartConfig = { readiness: { label: '明确度', color: '#39715f' } } satisfies ChartConfig;
+
+function utcDay(date: string) {
+  const [year, month, day] = date.split('-').map(Number);
+  return Date.UTC(year, month - 1, day) / 86400000;
+}
+
+function shortRange(range: TimelineRange) {
+  const format = (value: string) => `${Number(value.slice(5, 7))}/${Number(value.slice(8, 10))}`;
+  return range.start === range.end ? format(range.start) : `${format(range.start)}—${format(range.end)}`;
+}
+
+function TimelineBoard() {
+  const timeline = data.timeline;
+  const total = timeline.durationDays;
+  const startDay = utcDay(timeline.start);
+  const today = new Date();
+  const todayKey = `${today.getFullYear()}-${String(today.getMonth() + 1).padStart(2, '0')}-${String(today.getDate()).padStart(2, '0')}`;
+  const todayOffset = utcDay(todayKey) - startDay;
+  const months = [
+    { label: '8 月', start: '2026-08-24', end: '2026-08-31' },
+    { label: '9 月', start: '2026-09-01', end: '2026-09-30' },
+    { label: '10 月', start: '2026-10-01', end: '2026-10-30' },
+  ];
+  const groups = [{ label: '主施工阶段', rows: timeline.main }, { label: '供应与安装节点', rows: timeline.suppliers }];
+  const barStyle = (range: TimelineRange) => ({
+    left: `${((utcDay(range.start) - startDay) / total) * 100}%`,
+    width: `${Math.max(((utcDay(range.end) - utcDay(range.start) + 1) / total) * 100, 1.45)}%`,
+  });
+
+  return (
+    <section id="timeline" className="mt-8 scroll-mt-20 border border-[#cfd8dc] bg-white sm:rounded-[10px]" aria-labelledby="timeline-title">
+      <div className="flex flex-col gap-3 border-b border-[#dde4e7] p-5 sm:flex-row sm:items-end sm:justify-between sm:p-6">
+        <div><p className="text-[10px] font-medium tracking-[0.13em] text-[#879298]">MASTER SCHEDULE · 68 DAYS</p><h2 id="timeline-title" className="mt-1.5 text-xl font-semibold">工程时间总表</h2><p className="mt-1.5 text-xs leading-5 text-[#78858b]">依据 HomeOS 工程计划：2026 年 8 月 24 日—10 月 30 日。施工阶段与供应安装节点采用同一时间轴。</p></div>
+        <a href="#work-items" className="flex items-center gap-1.5 text-xs font-medium text-[#315f7d]">查看对应事项 <ArrowUpRight className="size-3.5" /></a>
+      </div>
+
+      <div className="md:hidden">
+        {groups.map((group) => <section key={group.label} className="border-b border-[#e1e6e8] p-4 last:border-0"><h3 className="mb-2 text-[11px] font-semibold tracking-[0.1em] text-[#77868d]">{group.label}</h3><div className="space-y-2">{group.rows.map((row) => <div key={row.name} className="grid grid-cols-[1fr_auto] gap-3 border-l-2 border-[#6e8fa3] bg-[#f7f9fa] px-3 py-2.5"><span className="text-xs font-medium leading-5">{row.name}</span><span className="font-data text-[11px] text-[#5f737e]">{row.ranges.map(shortRange).join(' · ')}</span></div>)}</div></section>)}
+      </div>
+
+      <div className="hidden overflow-x-auto md:block">
+        <div className="min-w-[1020px]">
+          <div className="grid grid-cols-[230px_1fr] border-b border-[#dfe5e7] bg-[#f7f9fa]">
+            <div className="border-r border-[#dfe5e7] px-5 py-3 text-[10px] font-medium tracking-[0.11em] text-[#859096]">工作项目</div>
+            <div className="relative h-11">
+              {months.map((month) => { const left = ((utcDay(month.start) - startDay) / total) * 100; const width = ((utcDay(month.end) - utcDay(month.start) + 1) / total) * 100; return <div key={month.label} className="absolute top-0 flex h-full items-center justify-center border-r border-[#d7e0e3] text-[11px] font-semibold text-[#60717a]" style={{ left: `${left}%`, width: `${width}%` }}>{month.label}</div>; })}
+            </div>
+          </div>
+          {groups.map((group) => <div key={group.label}>
+            <div className="grid grid-cols-[230px_1fr] border-b border-[#dfe5e7] bg-[#edf2f4]"><h3 className="border-r border-[#d7e0e3] px-5 py-2 text-[10px] font-semibold tracking-[0.12em] text-[#5c707a]">{group.label}</h3><div /></div>
+            {group.rows.map((row) => <div key={row.name} className="grid min-h-10 grid-cols-[230px_1fr] border-b border-[#e7ebec] last:border-0">
+              <div className="border-r border-[#e0e6e8] px-5 py-2.5 text-xs font-medium text-[#526269]">{row.name}</div>
+              <div className="relative bg-[repeating-linear-gradient(to_right,transparent_0,transparent_calc(11.76%_-_1px),#edf1f2_calc(11.76%_-_1px),#edf1f2_11.76%)]">
+                {todayOffset >= 0 && todayOffset < total && <span aria-label="今天" className="absolute inset-y-0 z-10 w-px bg-[#dc7440]" style={{ left: `${(todayOffset / total) * 100}%` }} />}
+                {row.ranges.map((range, index) => <span key={`${range.label}-${index}`} title={`${row.name} · ${shortRange(range)}`} className={`absolute top-1/2 h-4 -translate-y-1/2 rounded-[3px] ${row.kind === 'construction' ? 'bg-[#34698f]' : 'bg-[#db7442]'}`} style={barStyle(range)}><span className="sr-only">{row.name}：{shortRange(range)}</span></span>)}
+              </div>
+            </div>)}
+          </div>)}
+        </div>
+      </div>
+      <div className="flex flex-wrap gap-x-5 gap-y-2 border-t border-[#dde4e7] px-5 py-3 text-[11px] text-[#77858b]"><span className="flex items-center gap-1.5"><i className="size-2 rounded-sm bg-[#34698f]" />主施工</span><span className="flex items-center gap-1.5"><i className="size-2 rounded-sm bg-[#db7442]" />供应 / 安装</span><span className="flex items-center gap-1.5"><i className="h-3 w-px bg-[#dc7440]" />今日</span><span className="ml-auto font-data">来源：{timeline.source}</span></div>
+    </section>
+  );
+}
 
 const dateTime = new Intl.DateTimeFormat('zh-CN', {
   timeZone: 'Asia/Shanghai',
@@ -64,6 +136,12 @@ export default function Home() {
 
   const categories = useMemo(() => [...new Set(data.items.map((item) => item.category))].sort((a, b) => a.localeCompare(b, 'zh-CN')), []);
   const counts = useMemo(() => Object.fromEntries(data.stages.map((entry) => [entry.id, data.items.filter((item) => item.stage === entry.id).length])), []);
+  const stageChartData = useMemo(() => data.stages.map((entry) => ({ stage: shortStageLabels[entry.id], count: counts[entry.id] })), [counts]);
+  const categoryChartData = useMemo(() => {
+    const grouped = new Map<string, { total: number; clear: number }>();
+    data.items.forEach((item) => { const current = grouped.get(item.category) ?? { total: 0, clear: 0 }; current.total += 1; if (item.stage !== 'planning') current.clear += 1; grouped.set(item.category, current); });
+    return [...grouped].map(([name, value]) => ({ name, readiness: Math.round((value.clear / value.total) * 100) })).sort((a, b) => b.readiness - a.readiness || a.name.localeCompare(b.name, 'zh-CN')).slice(0, 8);
+  }, []);
   const filtered = useMemo(() => {
     const normalized = query.trim().toLocaleLowerCase('zh-CN');
     return data.items.filter((item) => {
@@ -120,7 +198,24 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="mt-7">
+        <section className="mt-7 grid gap-3 lg:grid-cols-[.9fr_1.1fr]" aria-label="工程进度图表">
+          <article className="border border-[#d7dde0] bg-white p-5 sm:rounded-[10px] sm:p-6">
+            <div><p className="text-[10px] font-medium tracking-[0.13em] text-[#879298]">PROGRESS MIX</p><h2 className="mt-1 text-base font-semibold">事项所处阶段</h2><p className="mt-1 text-xs text-[#829096]">共 {data.items.length} 项，柱形高度表示各阶段事项数量。</p></div>
+            <ChartContainer config={stageChartConfig} className="mt-4 h-[220px] w-full aspect-auto" aria-label="工程事项阶段分布柱形图">
+              <BarChart accessibilityLayer data={stageChartData} margin={{ top: 18, right: 6, left: 6, bottom: 0 }}><CartesianGrid vertical={false} strokeDasharray="3 3" /><XAxis dataKey="stage" tickLine={false} axisLine={false} fontSize={10} /><YAxis allowDecimals={false} tickLine={false} axisLine={false} width={20} /><ChartTooltip cursor={false} content={<ChartTooltipContent hideLabel />} /><Bar dataKey="count" fill="var(--color-count)" radius={[4, 4, 0, 0]}><LabelList dataKey="count" position="top" className="fill-[#40525b]" fontSize={11} /></Bar></BarChart>
+            </ChartContainer>
+          </article>
+          <article className="border border-[#d7dde0] bg-white p-5 sm:rounded-[10px] sm:p-6">
+            <div><p className="text-[10px] font-medium tracking-[0.13em] text-[#879298]">CATEGORY READINESS</p><h2 className="mt-1 text-base font-semibold">各专业明确度</h2><p className="mt-1 text-xs text-[#829096]">已采购、推进中、已选型或施工方协调的项目计为已明确。</p></div>
+            <ChartContainer config={readinessChartConfig} className="mt-4 h-[220px] w-full aspect-auto" aria-label="各专业明确度横向条形图">
+              <BarChart accessibilityLayer data={categoryChartData} layout="vertical" margin={{ top: 2, right: 34, left: 4, bottom: 0 }}><CartesianGrid horizontal={false} strokeDasharray="3 3" /><XAxis type="number" domain={[0, 100]} hide /><YAxis dataKey="name" type="category" tickLine={false} axisLine={false} width={78} fontSize={10} /><ChartTooltip cursor={false} content={<ChartTooltipContent hideLabel formatter={(value) => <span className="font-data font-semibold">{Number(value)}%</span>} />} /><Bar dataKey="readiness" fill="var(--color-readiness)" radius={[0, 4, 4, 0]}><LabelList dataKey="readiness" position="right" formatter={(value: unknown) => `${value}%`} className="fill-[#50626a]" fontSize={10} /></Bar></BarChart>
+            </ChartContainer>
+          </article>
+        </section>
+
+        <TimelineBoard />
+
+        <section id="work-items" className="mt-7 scroll-mt-20">
           <div className="flex flex-col gap-4 border border-[#d7dde0] bg-white p-4 sm:rounded-[10px] sm:p-5 lg:flex-row lg:items-end lg:justify-between">
             <div><p className="text-[10px] font-medium tracking-[0.13em] text-[#879298]">WORK ITEMS</p><h2 className="mt-1 text-xl font-semibold">工程事项</h2><p className="mt-1 text-xs text-[#818c91]">显示 {filtered.length} / {data.items.length} 项；展开条目查看型号、技术条件和安装资料。</p></div>
             <div className="flex w-full flex-col gap-2 sm:flex-row lg:w-auto">

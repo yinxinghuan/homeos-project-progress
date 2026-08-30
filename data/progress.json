@@ -1027,5 +1027,427 @@
       "technical": [],
       "assets": []
     }
-  ]
+  ],
+  "timeline": {
+    "title": "工程时间总表",
+    "start": "2026-08-24",
+    "end": "2026-10-30",
+    "durationDays": 68,
+    "source": "02-renovation/CONSTRUCTION_PLAN.md",
+    "main": [
+      {
+        "name": "物业装修手续",
+        "kind": "construction",
+        "ranges": [
+          {
+            "start": "2026-08-24",
+            "end": "2026-08-25",
+            "label": "Aug 24-25"
+          }
+        ]
+      },
+      {
+        "name": "墙体拆除与铲墙皮",
+        "kind": "construction",
+        "ranges": [
+          {
+            "start": "2026-08-26",
+            "end": "2026-08-31",
+            "label": "Aug 26-31"
+          }
+        ]
+      },
+      {
+        "name": "建筑垃圾清运",
+        "kind": "construction",
+        "ranges": [
+          {
+            "start": "2026-08-26",
+            "end": "2026-08-31",
+            "label": "Aug 26-31"
+          }
+        ]
+      },
+      {
+        "name": "强弱电开槽与布线",
+        "kind": "construction",
+        "ranges": [
+          {
+            "start": "2026-09-02",
+            "end": "2026-09-09",
+            "label": "Sep 2-9"
+          }
+        ]
+      },
+      {
+        "name": "水路开槽与布管",
+        "kind": "construction",
+        "ranges": [
+          {
+            "start": "2026-09-02",
+            "end": "2026-09-09",
+            "label": "Sep 2-9"
+          }
+        ]
+      },
+      {
+        "name": "水电验收",
+        "kind": "construction",
+        "ranges": [
+          {
+            "start": "2026-09-10",
+            "end": "2026-09-11",
+            "label": "Sep 10-11"
+          }
+        ]
+      },
+      {
+        "name": "新建墙体与抹灰",
+        "kind": "construction",
+        "ranges": [
+          {
+            "start": "2026-09-10",
+            "end": "2026-09-13",
+            "label": "Sep 10-13"
+          }
+        ]
+      },
+      {
+        "name": "卫生间防水与闭水试验",
+        "kind": "construction",
+        "ranges": [
+          {
+            "start": "2026-09-10",
+            "end": "2026-09-13",
+            "label": "Sep 10-13"
+          }
+        ]
+      },
+      {
+        "name": "墙地找平与铺砖",
+        "kind": "construction",
+        "ranges": [
+          {
+            "start": "2026-09-14",
+            "end": "2026-09-21",
+            "label": "Sep 14-21"
+          }
+        ]
+      },
+      {
+        "name": "瓦工验收",
+        "kind": "construction",
+        "ranges": [
+          {
+            "start": "2026-09-22",
+            "end": "2026-09-23",
+            "label": "Sep 22-23"
+          }
+        ]
+      },
+      {
+        "name": "客餐厅吊顶及假梁",
+        "kind": "construction",
+        "ranges": [
+          {
+            "start": "2026-09-22",
+            "end": "2026-09-23",
+            "label": "Sep 22-23"
+          }
+        ]
+      },
+      {
+        "name": "厨卫吊顶施工",
+        "kind": "construction",
+        "ranges": [
+          {
+            "start": "2026-09-22",
+            "end": "2026-09-23",
+            "label": "Sep 22-23"
+          }
+        ]
+      },
+      {
+        "name": "墙顶基层处理",
+        "kind": "construction",
+        "ranges": [
+          {
+            "start": "2026-09-28",
+            "end": "2026-10-01",
+            "label": "Sep 28-Oct 1"
+          }
+        ]
+      },
+      {
+        "name": "石膏线",
+        "kind": "construction",
+        "ranges": [
+          {
+            "start": "2026-10-02",
+            "end": "2026-10-03",
+            "label": "Oct 2-3"
+          }
+        ]
+      },
+      {
+        "name": "刮腻子与打磨",
+        "kind": "construction",
+        "ranges": [
+          {
+            "start": "2026-10-04",
+            "end": "2026-10-13",
+            "label": "Oct 4-13"
+          }
+        ]
+      },
+      {
+        "name": "墙顶面涂刷",
+        "kind": "construction",
+        "ranges": [
+          {
+            "start": "2026-10-14",
+            "end": "2026-10-17",
+            "label": "Oct 14-17"
+          }
+        ]
+      },
+      {
+        "name": "补漆与收尾保洁",
+        "kind": "construction",
+        "ranges": [
+          {
+            "start": "2026-10-26",
+            "end": "2026-10-27",
+            "label": "Oct 26-27"
+          }
+        ]
+      },
+      {
+        "name": "竣工验收与保修资料",
+        "kind": "construction",
+        "ranges": [
+          {
+            "start": "2026-10-28",
+            "end": "2026-10-30",
+            "label": "Oct 28-30"
+          }
+        ]
+      }
+    ],
+    "suppliers": [
+      {
+        "name": "暖气片",
+        "kind": "supplier",
+        "ranges": [
+          {
+            "start": "2026-09-02",
+            "end": "2026-09-03",
+            "label": "Sep 2-3"
+          },
+          {
+            "start": "2026-10-18",
+            "end": "2026-10-19",
+            "label": "Oct 18-19"
+          }
+        ]
+      },
+      {
+        "name": "窗户",
+        "kind": "supplier",
+        "ranges": [
+          {
+            "start": "2026-08-26",
+            "end": "2026-08-27",
+            "label": "Aug 26-27"
+          },
+          {
+            "start": "2026-09-14",
+            "end": "2026-09-15",
+            "label": "Sep 14-15"
+          }
+        ]
+      },
+      {
+        "name": "入户门",
+        "kind": "supplier",
+        "ranges": [
+          {
+            "start": "2026-08-26",
+            "end": "2026-08-27",
+            "label": "Aug 26-27"
+          },
+          {
+            "start": "2026-09-14",
+            "end": "2026-09-15",
+            "label": "Sep 14-15"
+          }
+        ]
+      },
+      {
+        "name": "墙地砖",
+        "kind": "supplier",
+        "ranges": [
+          {
+            "start": "2026-09-02",
+            "end": "2026-09-03",
+            "label": "Sep 2-3"
+          },
+          {
+            "start": "2026-09-10",
+            "end": "2026-09-11",
+            "label": "Sep 10-11"
+          },
+          {
+            "start": "2026-10-20",
+            "end": "2026-10-21",
+            "label": "Oct 20-21"
+          }
+        ]
+      },
+      {
+        "name": "橱柜",
+        "kind": "supplier",
+        "ranges": [
+          {
+            "start": "2026-09-02",
+            "end": "2026-09-03",
+            "label": "Sep 2-3"
+          },
+          {
+            "start": "2026-09-18",
+            "end": "2026-09-19",
+            "label": "Sep 18-19"
+          },
+          {
+            "start": "2026-10-20",
+            "end": "2026-10-21",
+            "label": "Oct 20-21"
+          }
+        ]
+      },
+      {
+        "name": "厨电、水槽与热水器",
+        "kind": "supplier",
+        "ranges": [
+          {
+            "start": "2026-09-16",
+            "end": "2026-09-17",
+            "label": "Sep 16-17"
+          },
+          {
+            "start": "2026-10-14",
+            "end": "2026-10-15",
+            "label": "Oct 14-15"
+          },
+          {
+            "start": "2026-10-22",
+            "end": "2026-10-23",
+            "label": "Oct 22-23"
+          }
+        ]
+      },
+      {
+        "name": "窗台石",
+        "kind": "supplier",
+        "ranges": [
+          {
+            "start": "2026-09-10",
+            "end": "2026-09-11",
+            "label": "Sep 10-11"
+          },
+          {
+            "start": "2026-10-08",
+            "end": "2026-10-09",
+            "label": "Oct 8-9"
+          }
+        ]
+      },
+      {
+        "name": "厨卫铝扣板吊顶",
+        "kind": "supplier",
+        "ranges": [
+          {
+            "start": "2026-09-10",
+            "end": "2026-09-11",
+            "label": "Sep 10-11"
+          },
+          {
+            "start": "2026-10-12",
+            "end": "2026-10-13",
+            "label": "Oct 12-13"
+          }
+        ]
+      },
+      {
+        "name": "墙漆",
+        "kind": "supplier",
+        "ranges": [
+          {
+            "start": "2026-09-10",
+            "end": "2026-09-11",
+            "label": "Sep 10-11"
+          }
+        ]
+      },
+      {
+        "name": "灯具、开关与插座",
+        "kind": "supplier",
+        "ranges": [
+          {
+            "start": "2026-09-10",
+            "end": "2026-09-11",
+            "label": "Sep 10-11"
+          },
+          {
+            "start": "2026-10-20",
+            "end": "2026-10-21",
+            "label": "Oct 20-21"
+          }
+        ]
+      },
+      {
+        "name": "卫浴洁具与五金",
+        "kind": "supplier",
+        "ranges": [
+          {
+            "start": "2026-09-10",
+            "end": "2026-09-11",
+            "label": "Sep 10-11"
+          },
+          {
+            "start": "2026-10-22",
+            "end": "2026-10-23",
+            "label": "Oct 22-23"
+          }
+        ]
+      },
+      {
+        "name": "室内木门",
+        "kind": "supplier",
+        "ranges": [
+          {
+            "start": "2026-09-20",
+            "end": "2026-09-21",
+            "label": "Sep 20-21"
+          },
+          {
+            "start": "2026-10-24",
+            "end": "2026-10-25",
+            "label": "Oct 24-25"
+          }
+        ]
+      },
+      {
+        "name": "地板",
+        "kind": "supplier",
+        "ranges": [
+          {
+            "start": "2026-09-10",
+            "end": "2026-09-11",
+            "label": "Sep 10-11"
+          }
+        ]
+      }
+    ]
+  }
 }

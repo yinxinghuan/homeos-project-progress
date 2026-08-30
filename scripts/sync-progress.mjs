@@ -107,6 +107,87 @@ function stageFor(status) {
   return 'planning';
 }
 
+function parseTableSection(content, heading) {
+  const lines = content.split(/\r?\n/);
+  const start = lines.findIndex((line) => line.trim() === `## ${heading}`);
+  if (start < 0) return [];
+  const tableStart = lines.findIndex((line, index) => index > start && /^\s*\|/.test(line));
+  if (tableStart < 0) return [];
+  const rows = [];
+  for (let index = tableStart; index < lines.length && /^\s*\|/.test(lines[index]); index += 1) {
+    rows.push(lines[index].split('|').slice(1, -1).map(clean));
+  }
+  return rows.length > 2 ? rows.slice(2) : [];
+}
+
+const monthNumbers = { Aug: 8, Sep: 9, Oct: 10 };
+const datePattern = /(?:Aug|Sep|Oct)\s+\d{1,2}(?:-(?:(?:Aug|Sep|Oct)\s+)?\d{1,2})?/g;
+const timelineLabels = {
+  'Property renovation procedures': '物业装修手续',
+  'Wall demolition and wall-skin removal': '墙体拆除与铲墙皮',
+  'Construction-waste removal': '建筑垃圾清运',
+  'Strong/weak-current chasing and wiring': '强弱电开槽与布线',
+  'Water-line chasing and piping': '水路开槽与布管',
+  'Water and electrical inspection': '水电验收',
+  'New walls and wall plastering': '新建墙体与抹灰',
+  'Bathroom waterproofing and closed-water test': '卫生间防水与闭水试验',
+  'Wall/floor leveling and tiling': '墙地找平与铺砖',
+  'Masonry acceptance': '瓦工验收',
+  'Living/dining ceiling and plasterboard false-beam work': '客餐厅吊顶及假梁',
+  'Kitchen and bathroom ceiling work': '厨卫吊顶施工',
+  'Wall/ceiling base treatment': '墙顶基层处理',
+  'Gypsum cornice': '石膏线',
+  'Putty application and sanding': '刮腻子与打磨',
+  'Wall/ceiling paint': '墙顶面涂刷',
+  'Paint touch-up / closeout cleaning stage': '补漆与收尾保洁',
+  'Completion acceptance and warranty paperwork': '竣工验收与保修资料',
+  Radiators: '暖气片',
+  Windows: '窗户',
+  'Entry security door': '入户门',
+  'Wall and floor tiles': '墙地砖',
+  Cabinets: '橱柜',
+  'Kitchen appliances, sink, water heater': '厨电、水槽与热水器',
+  'Window-sill stone': '窗台石',
+  'Kitchen/bath aluminum ceiling': '厨卫铝扣板吊顶',
+  'Wall paint': '墙漆',
+  'Lights, switches, sockets': '灯具、开关与插座',
+  'Bathroom fixtures and hardware': '卫浴洁具与五金',
+  'Wooden doors': '室内木门',
+  Flooring: '地板',
+};
+
+function dateRange(label) {
+  const match = label.match(/(Aug|Sep|Oct)\s+(\d{1,2})(?:-(?:(Aug|Sep|Oct)\s+)?(\d{1,2}))?/);
+  if (!match) return null;
+  const startMonth = monthNumbers[match[1]];
+  const endMonth = monthNumbers[match[3] ?? match[1]];
+  const start = `2026-${String(startMonth).padStart(2, '0')}-${String(Number(match[2])).padStart(2, '0')}`;
+  const end = `2026-${String(endMonth).padStart(2, '0')}-${String(Number(match[4] ?? match[2])).padStart(2, '0')}`;
+  return { start, end, label };
+}
+
+function buildTimeline(content) {
+  const main = parseTableSection(content, 'Main Construction Sequence')
+    .map((row) => ({ name: timelineLabels[row[1]] ?? row[1], kind: 'construction', ranges: [dateRange(row[2])].filter(Boolean) }))
+    .filter((row) => row.ranges.length);
+  const suppliers = parseTableSection(content, 'Supplier and Installation Milestones')
+    .map((row) => ({
+      name: timelineLabels[row[0]] ?? row[0],
+      kind: 'supplier',
+      ranges: row.slice(1).flatMap((cell) => (cell.match(datePattern) ?? []).map(dateRange)).filter(Boolean),
+    }))
+    .filter((row) => row.ranges.length);
+  return {
+    title: '工程时间总表',
+    start: '2026-08-24',
+    end: '2026-10-30',
+    durationDays: 68,
+    source: '02-renovation/CONSTRUCTION_PLAN.md',
+    main,
+    suppliers,
+  };
+}
+
 const stageLabels = {
   ordered: '已采购 / 待交付安装',
   confirmed: '已确定 / 推进中',
@@ -163,6 +244,7 @@ const output = {
   project: { title: 'HomeOS 工程进度', phase: '装修执行与设备协调' },
   stages: Object.entries(stageLabels).map(([id, label]) => ({ id, label })),
   items,
+  timeline: buildTimeline(await readFile(resolve(homeRoot, '02-renovation', 'CONSTRUCTION_PLAN.md'), 'utf8')),
 };
 
 const serialized = JSON.stringify(output, null, 2);
