@@ -107,7 +107,7 @@ const safeAssets = {
 };
 
 const blocked = /¥|￥|\bCNY\b|\bprices?\b|\bpayments?\b|\binvoices?\b|\bcosts?\b|\bfees?\b|\bcharges?\b|chargeable|surcharges?|\bdeposits?\b|\bbalances?\b|\bquotations?\b|\baddress\b|\bphone\b|金额|价格|付款|支付|已付|待付|定金|预付款|余款|期款|款项|付款比例|全款|付清|实付|报价|收费|费用|地址|电话|姓名|客户|账户|合同编号|订单编号|销售单号|发票/i;
-const technicalHeading = /安装|尺寸|规格|技术|留位|开孔|接口|水电|排水|供电|通风|协调|验收|到货|施工|要求|条件|配置|阀门|防冻|冬季|product data|dimension|installation|acceptance|hold point|requirement|coordination|utility|clearance|cutout|fabrication|performance|valve|freeze|winter|before/i;
+const technicalHeading = /安装|尺寸|规格|技术|留位|开孔|接口|水电|排水|供电|通风|协调|验收|到货|施工|要求|条件|配置|阀门|防冻|冬季|变压器|product data|dimension|installation|acceptance|hold point|requirement|coordination|utility|clearance|cutout|fabrication|performance|valve|freeze|winter|transformer|before/i;
 
 function clean(text) {
   return text

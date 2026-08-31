@@ -236,6 +236,18 @@
               ]
             },
             {
+              "title": "Built-In Transformer Research / 内置变压器核查",
+              "points": [
+                "The official Rinnai Japan candidate documentation identifies the heater base unit as AC 100 V. The exact-family technical manual lists approximately 36 W during normal operation and approximately 68 W when the freeze-protection heater operates.",
+                "No Rinnai Japan source found in this review documents a factory 220 V input version or a factory-integrated 220-to-100 V transformer for either seller-shown candidate model.",
+                "One Chinese marketplace listing for RUX-A1616W-E describes the product as 100 V and says a 100 W transformer is supplied. This supports the possibility of a seller-bundled conversion solution, but does not verify whether this supplier has physically integrated one into the purchased unit.",
+                "Therefore this is recorded as a supplier-installed internal conversion package, not as a verified Rinnai factory 220 V model. The arrangement is more compact than a separate outdoor transformer and is compatible with the planned indoor 220 V socket in principle, but it is not inherently safer unless the converter, enclosure, wiring and protection are documented. Obtain written confirmation of who modified it and whether waterproofing, electrical safety, gas-appliance approval and warranty remain valid.",
+                "Rinnai Japan 2026 product catalogue",
+                "Rinnai official product/manual portal — RUX-A1616W-E, item code 23-5468",
+                "Chinese same-model listing stating 100 V and supplied transformer"
+              ]
+            },
+            {
               "title": "Beijing Winter Valve Decision / 北京冬季阀门决定",
               "points": [
                 "Keep the cold-water inlet isolation valve indoors, near the wall penetration and continuously accessible after cabinetry is installed.",
@@ -261,7 +273,7 @@
                 "Four separate routes are to pass from the cabinet-lower zone through the exterior wall: cold-water inlet, hot-water outlet, gas pipe, and wired-controller cable.",
                 "The cold- and hot-water isolation valves are to remain indoors and accessible.",
                 "The gas shut-off valve is also to remain indoors and accessible.",
-                "Electrical power is to be taken from an indoor socket. The supplier states that the supplied Japanese outdoor unit has a built-in transformer. This is currently a supplier claim, not yet verified against the delivered unit. Because both archived Japanese base-model manuals specify AC 100 V, do not energise until the complete unit input label and the built-in transformer's input/output rating confirm a safe 220 V supply arrangement, protection and earthing.",
+                "Electrical power is to be taken from an indoor socket. The supplier now states that a 220-to-100 V transformer has already been added inside the supplied assembly before delivery. Treat this as a supplier-installed conversion package rather than a Rinnai factory 220 V specification unless factory documentation proves otherwise. Because both archived Japanese base-model manuals specify AC 100 V, do not energise until the complete assembly input label and the internal transformer's input/output rating confirm a safe 220 V supply arrangement, continuous capacity, protection, weather sealing and earthing.",
                 "Before drilling or cabinet fabrication, the installer, gas contractor and cabinet maker must sign off the exact penetration diameters, spacing, sleeves, weather/water sealing, pipe insulation, controller-cable separation, valve access and future service/removal route."
               ]
             },
@@ -275,6 +287,16 @@
                 "Combustion and gas-tightness commissioning record",
                 "Freeze-protection power and water-drain strategy for Beijing winter conditions",
                 "Written or nameplate confirmation of the supplier-claimed built-in transformer, including 220 V input, output rating, protection and warranty responsibility"
+              ]
+            },
+            {
+              "title": "Transformer Evidence Review / 变压器资料核查",
+              "points": [
+                "The archived Rinnai Japan documentation for both seller-shown candidate models specifies an AC 100 V base unit; the exact-family manual lists normal electrical consumption around 36 W and freeze-protection heater operation around 68 W.",
+                "No Rinnai Japan catalogue, product page or official installation document located in this review describes a factory-integrated 220-to-100 V transformer or approves direct 220 V input for RUX-A1616W(A)-E / RUX-A1616W-E.",
+                "A Chinese retail listing for the same RUX-A1616W-E explicitly describes the heater as 100 V and says a 100 W transformer is supplied separately. That listing does not prove the configuration of this purchased unit, but it shows that a bundled transformer is a seller-side package rather than evidence of a standard Rinnai Japan 220 V model.",
+                "Working conclusion: the supplier has clarified that the conversion module has already been installed inside the supplied assembly. This makes the planned indoor 220 V socket and outdoor-unit routing workable in principle and avoids a separate weather-exposed transformer, but it remains a supplier-installed conversion rather than an identified Rinnai factory configuration. Treat its safety and compatibility as unverified until the delivered assembly is documented.",
+                "Required arrival evidence: complete heater nameplate, overall 220 V input label if present, transformer brand/model, input/output voltage and VA/W rating, installation location/enclosure, wiring/protection diagram, earthing method and written warranty responsibility for the conversion."
               ]
             },
             {
