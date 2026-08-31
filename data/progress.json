@@ -41,6 +41,12 @@
       "urgencyReason": null,
       "progress": "已采购 / 待交付安装",
       "nextAction": "补充具体型号、购买日期并跟进入户门到货与安装安排",
+      "drawingAudit": {
+        "status": "missing",
+        "label": "缺少定型施工图",
+        "note": "正在备货，但精确型号、门洞固定节点和锁具安装资料尚未归档。",
+        "nextAction": "安装前取得型号、门洞／固定节点图和锁具说明。"
+      },
       "technical": [],
       "assets": []
     },
@@ -57,6 +63,12 @@
       "urgencyReason": null,
       "progress": "正在备货及定制生产，尚未交付安装",
       "nextAction": "跟进生产完成时间并确认送货与安装日期",
+      "drawingAudit": {
+        "status": "complete",
+        "label": "定制图已归档",
+        "note": "窗户订单图已归档，可用于生产与洞口协调。",
+        "nextAction": "交付时保留最终生产图、安装验收和质保资料。"
+      },
       "technical": [
         {
           "source": "02-renovation/WINDOWS.md",
@@ -87,6 +99,12 @@
       "urgencyReason": null,
       "progress": "已确定 / 推进中",
       "nextAction": "具体安排由项目负责人另行确认",
+      "drawingAudit": {
+        "status": "missing",
+        "label": "缺少分机型施工资料",
+        "note": "现有资料仅为套餐参考示意，未确认各组成设备的精确型号。",
+        "nextAction": "取得逐项型号、正式连接图、排水、电源和检修尺寸。"
+      },
       "technical": [
         {
           "source": "03-systems/water-treatment.md",
@@ -177,6 +195,12 @@
       "urgencyReason": null,
       "progress": "已采购 / 待交付安装",
       "nextAction": "核对包装标签、产品编码、送货数量及退补货规则",
+      "drawingAudit": {
+        "status": "partial",
+        "label": "排砖施工图已有",
+        "note": "厨房与卫生间两页排砖图已归档并生成公开脱敏版；材料技术资料仍不完整。",
+        "nextAction": "到货时拍摄包装型号、批次，并补齐瓷砖胶和填缝剂施工参数。"
+      },
       "technical": [
         {
           "source": "02-renovation/TILE_LAYOUT.md",
@@ -194,7 +218,13 @@
           ]
         }
       ],
-      "assets": []
+      "assets": [
+        {
+          "title": "厨房与卫生间排砖施工图（公开脱敏版）",
+          "href": "https://yinxinghuan.github.io/homeos-project-progress/technical/2026-08-29-lijing-tile-layout-redacted.pdf",
+          "type": "pdf"
+        }
+      ]
     },
     {
       "id": "gas-water-heater",
@@ -209,6 +239,12 @@
       "urgencyReason": null,
       "progress": "已采购 / 待交付安装",
       "nextAction": "到货拍铭牌以锁定 23-8409 或 23-5468；两套官方手册均为 AC100V，未确认变压器/保护及燃气类别前禁止通电点火",
+      "drawingAudit": {
+        "status": "partial",
+        "label": "基础机型图纸已有",
+        "note": "候选后缀的官方外形和安装资料已归档，但交付机后缀及内置变压器配置仍待实物确认。",
+        "nextAction": "通电安装前核对整机铭牌、变压器标签和燃气适配。"
+      },
       "technical": [
         {
           "source": "04-assets/appliances/rinnai-rux-a1616w-e-water-heater.md",
@@ -357,6 +393,12 @@
       "urgencyReason": null,
       "progress": "已采购 / 待交付安装",
       "nextAction": "具体安排由项目负责人另行确认",
+      "drawingAudit": {
+        "status": "complete",
+        "label": "官方安装资料完整",
+        "note": "型号对应的官方尺寸图和安装说明已归档。",
+        "nextAction": "安装前复核成品墙基准与最终安装高度。"
+      },
       "technical": [
         {
           "source": "04-assets/fixtures/grohe-26810000-thermostatic-shower.md",
@@ -415,6 +457,12 @@
       "urgencyReason": null,
       "progress": "已采购 / 待交付安装",
       "nextAction": "到货核对包装型号并预留独立净水龙头",
+      "drawingAudit": {
+        "status": "complete",
+        "label": "官方安装资料完整",
+        "note": "型号对应的官方尺寸图和安装说明已归档。",
+        "nextAction": "到货时核对完整 SKU 和转接件。"
+      },
       "technical": [
         {
           "source": "04-assets/fixtures/grohe-31874-kitchen-faucet.md",
@@ -475,6 +523,12 @@
       "urgencyReason": null,
       "progress": "已采购 / 待交付安装",
       "nextAction": "到货核对 39947SH0，并扫描箱内精确安装说明；现有 39932 BIM 与 39933/39948 手册只作对照，未补档前不放行安装",
+      "drawingAudit": {
+        "status": "partial",
+        "label": "精确安装手册仍缺",
+        "note": "39947SH0 官方规格和 400 mm 尺寸图已有，但现存长手册属于另一遥控型号组合。",
+        "nextAction": "安装前扫描包装内 39947SH0 精确安装手册。"
+      },
       "technical": [
         {
           "source": "04-assets/fixtures/grohe-39932sh0-smart-toilet.md",
@@ -535,6 +589,12 @@
       "urgencyReason": null,
       "progress": "已确定 / 推进中",
       "nextAction": "取得清晰电子明细并确认颜色、数量和送货",
+      "drawingAudit": {
+        "status": "partial",
+        "label": "饰面范围图已有",
+        "note": "裸顶与白色墙漆范围示意已归档；底漆、面漆和罩面漆的精确产品技术数据仍缺。",
+        "nextAction": "取得产品编码、色号、基层条件、覆盖率和重涂时间。"
+      },
       "technical": [
         {
           "source": "02-renovation/WALL_PAINT.md",
@@ -614,6 +674,12 @@
       "urgencyReason": null,
       "progress": "已确定 / 推进中",
       "nextAction": "8 月 31 日 16:30 联合确认会上核对两张点位图的基准、插座高度/横向定位、用途与回路，并形成带图号、版本和签字的定稿；同时取得完整测量图和正式合同",
+      "drawingAudit": {
+        "status": "partial",
+        "label": "点位草图已有",
+        "note": "两张橱柜水电立面图已归档，但仍是协调输入，不是签字版综合施工图。",
+        "nextAction": "取得包含设备、管线、开孔和检修边界的最终签字版图纸。"
+      },
       "technical": [],
       "assets": [
         {
@@ -641,6 +707,12 @@
       "urgencyReason": null,
       "progress": "已确定 / 推进中",
       "nextAction": "具体安排由项目负责人另行确认",
+      "drawingAudit": {
+        "status": "missing",
+        "label": "深化施工图未出",
+        "note": "商家已测量，但分板、节点、开孔、防水交接和安装方案尚未提交。",
+        "nextAction": "取得带尺寸的平立面、分板图和节点详图。"
+      },
       "technical": [],
       "assets": []
     },
@@ -657,6 +729,12 @@
       "urgencyReason": null,
       "progress": "已确定 / 推进中",
       "nextAction": "具体安排由项目负责人另行确认",
+      "drawingAudit": {
+        "status": "missing",
+        "label": "水电竣工图未归档",
+        "note": "合同范围和进度已有记录，但尚无最终水电定位图、管线走向图和隐蔽验收影像索引。",
+        "nextAction": "封槽前形成实测水电图并按房间拍摄隐蔽工程。"
+      },
       "technical": [],
       "assets": []
     },
@@ -673,6 +751,12 @@
       "urgencyReason": null,
       "progress": "已采购 / 待交付安装",
       "nextAction": "官方 PAY1320P 图纸已归档；到货核对 DB601S-1B + QCHRG 与官方推荐 DB505R-1A/1B 的兼容性，书面确认并试装试水后方可封闭",
+      "drawingAudit": {
+        "status": "partial",
+        "label": "浴缸图纸完整，排水待核",
+        "note": "PAY1320P 官方尺寸与安装资料已归档；随单排水组件与官方推荐型号不一致。",
+        "nextAction": "封闭前核对实物排水标签、接口尺寸和检修口。"
+      },
       "technical": [
         {
           "source": "04-assets/fixtures/toto-pay1320p-bathtub.md",
@@ -758,6 +842,12 @@
       "urgencyReason": null,
       "progress": "已确定 / 推进中",
       "nextAction": "具体安排由项目负责人另行确认",
+      "drawingAudit": {
+        "status": "missing",
+        "label": "铺装深化图未出",
+        "note": "品牌与人字拼方向已定，但精确产品、测量、中心线和收口节点尚未确认。",
+        "nextAction": "测量后取得人字拼中心线／起铺方向图和门口收边节点。"
+      },
       "technical": [
         {
           "source": "02-renovation/FLOORING.md",
@@ -792,6 +882,12 @@
       "urgencyReason": null,
       "progress": "已确定 / 推进中",
       "nextAction": "按预约完成改管与打压验收，并确认温控、安装及运输是否包含",
+      "drawingAudit": {
+        "status": "partial",
+        "label": "订单已有，改管图未归档",
+        "note": "散热器订单已归档，但逐房型号、管中心、阀门方向和压力测试图表仍缺。",
+        "nextAction": "补齐逐房定位、管路走向和压力测试记录。"
+      },
       "technical": [],
       "assets": []
     },
@@ -808,6 +904,12 @@
       "urgencyReason": "9 月 2 日强弱电开槽与布线计划开始，材料需要在开工前确认并到场验收。",
       "progress": "P0｜施工方代购，尚未形成可验收的材料清单",
       "nextAction": "具体安排由项目负责人另行确认",
+      "drawingAudit": {
+        "status": "missing",
+        "label": "材料与回路图待补",
+        "note": "已指定金貂电线并委托施工方采购，但规格、回路表和合格证明尚未归档。",
+        "nextAction": "进场前确认线径、回路、卷标、合格证和实物照片。"
+      },
       "technical": [
         {
           "source": "03-systems/electrical.md",
@@ -846,6 +948,12 @@
       "urgencyReason": "9 月 2 日水路开槽与布管计划开始，材料需要在开工前确认并到场验收。",
       "progress": "P0｜施工方代购，尚未形成可验收的材料清单",
       "nextAction": "9 月 1 日前确认伟星系列、管径、数量、单价、授权渠道、打压与质保，并约定进场验货",
+      "drawingAudit": {
+        "status": "missing",
+        "label": "材料与管路图待补",
+        "note": "已指定伟星管并委托施工方采购，但管径、配件、走向和试压标准尚未归档。",
+        "nextAction": "进场前确认管径配件，封槽前补管路图和试压记录。"
+      },
       "technical": [
         {
           "source": "03-systems/plumbing.md",
@@ -878,6 +986,12 @@
       "urgencyReason": "方案已经确定；9 月 2—3 日橱柜点位交底前仍须把焊接节点、厨房龙头孔和直饮龙头孔落实到台面加工图。",
       "progress": "P0｜GROHE K500 31919SD0 方案已定、未下单；水槽直接焊接于台面",
       "nextAction": "具体安排由项目负责人另行确认",
+      "drawingAudit": {
+        "status": "partial",
+        "label": "产品图已有，焊接深化图待签",
+        "note": "K500 官方尺寸和标准安装资料已归档；直接焊接台面及双龙头孔属于非标准深化。",
+        "nextAction": "下单／开料前取得台面厂签字版焊接、开孔和检修图。"
+      },
       "technical": [
         {
           "source": "04-assets/fixtures/grohe-k500-31919sd0-kitchen-sink.md",
@@ -937,6 +1051,12 @@
       "urgencyReason": "9 月 2—3 日橱柜点位交底前必须锁定最终后缀、柜体开口、进排水与插座。",
       "progress": "P0｜型号系列已选、未下单；最终后缀未锁定",
       "nextAction": "两后缀共用的官方安装图已归档；8 月 31 日 16:30 联合确认会上锁定最终后缀，并据图完成柜体、进排水和插座交底；9 月 1 日前定稿",
+      "drawingAudit": {
+        "status": "complete",
+        "label": "安装资料完整",
+        "note": "共享安装图、用户手册及两个候选后缀规格均已归档。",
+        "nextAction": "下单前锁定最终后缀并按图释放柜体与水电。"
+      },
       "technical": [
         {
           "source": "04-assets/appliances/built-in-dishwasher-598.md",
@@ -1021,6 +1141,12 @@
       "urgencyReason": "9 月 2—3 日橱柜点位交底前必须冻结开孔、供电、插座与散热条件。",
       "progress": "P0｜型号已选、未下单；官方安装图已归档",
       "nextAction": "8 月 31 日 16:30 联合确认会上按官方图锁定 560+8 × 450+2 × ≥550 mm 开口、无背板、≥50 cm² 底部通风及插座位置；9 月 1 日前定稿",
+      "drawingAudit": {
+        "status": "complete",
+        "label": "安装资料完整",
+        "note": "官方开孔、通风、电气和用户资料已归档。",
+        "nextAction": "按最终柜体完成面复核开孔。"
+      },
       "technical": [
         {
           "source": "04-assets/appliances/built-in-oven-595x454.md",
@@ -1072,6 +1198,12 @@
       "urgencyReason": "9 月 2—3 日橱柜点位交底前必须确认机体包络、供电和排烟路径。",
       "progress": "P0｜Y6 不锈钢变频款已选、未下单；商家安装图已归档，未找到厂家正式手册",
       "nextAction": "按商家图复核 998 mm 机宽、430 × 313 mm 箱体、≥450 × 330 mm 吊柜留位、直径 250 mm 吊顶烟道孔及 300—400 mm 灶面净距；补电气参数和签字版开孔坐标",
+      "drawingAudit": {
+        "status": "partial",
+        "label": "商家图已有，签字图待补",
+        "note": "产品尺寸、安装示意和吊顶开孔参考已归档，但无可核验厂家手册。",
+        "nextAction": "取得签字版中心坐标、电气参数、风管转接和安装立面。"
+      },
       "technical": [
         {
           "source": "04-assets/appliances/liudianban-y6-range-hood.md",
@@ -1169,6 +1301,12 @@
       "urgencyReason": "9 月 2—3 日橱柜点位交底前必须确认台面焊接、燃气接口、检修与柜体尺寸。",
       "progress": "P0｜选型与商家 Q5-2 开孔图已补充，未下单；未找到厂家正式安装文件",
       "nextAction": "复核本体 813 × 480、预留约 823 × 490、开孔 743 × 370 / R11.2、2 个直径 26 控制孔（间距 120、退距 50）；确认最终 12T 铭牌、燃气/点火/通风/检修要求并取得签字 CAD 与焊接方案；不得使用 950 × 370 三孔图",
+      "drawingAudit": {
+        "status": "partial",
+        "label": "商家开孔图已有",
+        "note": "Q5-2 产品与开孔参考已归档，但燃气接口、通风和焊后检修方式仍未书面确认。",
+        "nextAction": "开孔焊接前取得 12T 铭牌和签字版 5 mm 不锈钢台面加工图。"
+      },
       "technical": [
         {
           "source": "04-assets/appliances/liudianban-two-burner-gas-cooktop.md",
@@ -1269,6 +1407,12 @@
       "urgencyReason": "9 月 2—3 日橱柜点位交底前必须冻结冰箱包络、散热、开门和插座位置。",
       "progress": "P0｜未选型号；当前先冻结尺寸与安装边界",
       "nextAction": "8 月 31 日 16:30 联合确认会上确定目标宽深高、散热间隙、开门和抽屉空间、插座与搬运通道；9 月 1 日前定稿，机器可后续下单",
+      "drawingAudit": {
+        "status": "pending_selection",
+        "label": "待选型后补图",
+        "note": "型号尚未确定，无法冻结散热、开门和电源尺寸。",
+        "nextAction": "选型后归档产品尺寸与嵌入／散热要求。"
+      },
       "technical": [],
       "assets": []
     },
@@ -1285,6 +1429,12 @@
       "urgencyReason": "水电开槽前需要确定空调电源、冷凝水、室内外机位置和穿墙孔，返工代价高。",
       "progress": "P0｜未购买；点位与安装方案未冻结",
       "nextAction": "8 月 31 日 16:30 联合确认会上确定各房间机型/匹数、内外机位置、冷凝水坡度、孔洞和独立回路；9 月 1 日前定稿，机器可后续下单",
+      "drawingAudit": {
+        "status": "pending_selection",
+        "label": "待选型后补图",
+        "note": "型号和安装方案尚未确定。",
+        "nextAction": "选型后归档室内外机尺寸、孔位、冷凝水和电源图。"
+      },
       "technical": [],
       "assets": []
     },
@@ -1301,6 +1451,12 @@
       "urgencyReason": "水电放线和开槽前必须冻结点位、底盒和控制逻辑；面板本体不必现在购买。",
       "progress": "P0｜未购买；已收到橱柜厂商两张水电点位立面图，尚未联合确认签字",
       "nextAction": "8 月 31 日 16:30 联合确认会上核对图中的 450 / 600 / 1200 / 2200 mm 标注、横向基准、点位用途、回路、底盒和两个未标注黑点；9 月 1 日前形成定稿，系列颜色和面板可后续确定",
+      "drawingAudit": {
+        "status": "pending_selection",
+        "label": "待选型与点位确认",
+        "note": "部分点位参考已有，最终面板型号与全屋点位图仍待确认。",
+        "nextAction": "形成带编号的点位表和回路对应关系。"
+      },
       "technical": [
         {
           "source": "03-systems/electrical.md",
@@ -1350,6 +1506,12 @@
       "urgencyReason": "水电放线前必须冻结灯位、回路和控制关系；装饰灯具本体可后续购买。",
       "progress": "P0｜灯具均未购买；当前先定灯位和控制",
       "nextAction": "8 月 31 日 16:30 联合确认会上完成灯位、回路、控制、预留和基础负载清单；9 月 1 日前定稿，具体灯具按后续窗口下单",
+      "drawingAudit": {
+        "status": "pending_selection",
+        "label": "待选型与灯位确认",
+        "note": "灯具尚未选择，最终灯位、控制和安装条件未冻结。",
+        "nextAction": "确认灯位／开关逻辑后归档灯具安装资料。"
+      },
       "technical": [],
       "assets": []
     },
@@ -1366,6 +1528,12 @@
       "urgencyReason": "水电施工前必须确定机身包络、开门、进排水、地漏和插座；机器可后续购买。",
       "progress": "P0｜未购买；安装边界与水电条件未冻结",
       "nextAction": "8 月 31 日 16:30 联合确认会上确定类型、目标尺寸、开门方向、进排水、地漏与插座位置；9 月 1 日前定稿，机器可后续下单",
+      "drawingAudit": {
+        "status": "pending_selection",
+        "label": "待选型后补图",
+        "note": "型号尚未确定。",
+        "nextAction": "选型后归档尺寸、给排水、电源和门体净空。"
+      },
       "technical": [],
       "assets": []
     },
@@ -1382,6 +1550,12 @@
       "urgencyReason": "水电施工前必须冻结台盆、龙头、墙排/地排、镜柜插座和柜体边界。",
       "progress": "P0｜未购买；水电定位条件未冻结",
       "nextAction": "8 月 31 日 16:30 联合确认会上确认目标宽深高、台盆形式、龙头孔、排水方式、镜柜及插座；9 月 1 日前定稿，材质和商家可后续确定",
+      "drawingAudit": {
+        "status": "pending_selection",
+        "label": "待方案后补图",
+        "note": "浴室柜方案和型号尚未确定。",
+        "nextAction": "确定方案后归档墙排／地排、镜柜、电源和固定节点。"
+      },
       "technical": [],
       "assets": []
     },
@@ -1398,6 +1572,12 @@
       "urgencyReason": "计划 9 月 10—11 日定制、9 月 22—23 日施工，需要提前协调检修口、灯具、烟机和热水器。",
       "progress": "P1｜未购买；计划在厨卫吊顶定制窗口前完成选型",
       "nextAction": "9 月 10 日前确定材质、颜色、板型、龙骨、检修口、设备关系、测量与安装范围",
+      "drawingAudit": {
+        "status": "pending_selection",
+        "label": "待方案后补图",
+        "note": "吊顶方案尚未确定。",
+        "nextAction": "确认标高、分块、检修口、灯位和油烟机风管关系。"
+      },
       "technical": [],
       "assets": []
     },
@@ -1414,6 +1594,12 @@
       "urgencyReason": "计划 9 月 10—11 日定制、9 月 22—23 日施工，需同步确认浴霸、排风和照明开孔。",
       "progress": "P1｜未购买；浴霸/排风/照明条件需一并确认",
       "nextAction": "9 月 10 日前确定防潮材质、浴霸/排风/照明设备与开孔、检修口、完成面高度、测量与安装范围",
+      "drawingAudit": {
+        "status": "pending_selection",
+        "label": "待方案后补图",
+        "note": "吊顶方案尚未确定。",
+        "nextAction": "确认标高、分块、检修口、灯位和排风设备关系。"
+      },
       "technical": [],
       "assets": []
     },
@@ -1430,6 +1616,12 @@
       "urgencyReason": "计划 9 月 20—21 日定制，需在墙地完成面条件明确后复测门洞。",
       "progress": "P2｜未购买；等待完成面条件后复测",
       "nextAction": "9 月 18 日前复测两个门洞并确定门套、材质、隔音、五金、开启方向、收口和安装",
+      "drawingAudit": {
+        "status": "pending_selection",
+        "label": "待选型后补图",
+        "note": "两扇卧室门尚未选型。",
+        "nextAction": "测量后归档门洞、套线、开启方向和五金节点。"
+      },
       "technical": [],
       "assets": []
     },
@@ -1446,6 +1638,12 @@
       "urgencyReason": "计划 9 月 20—21 日定制，需在完成面条件明确后确认外置滑轨的固定与收口。",
       "progress": "P2｜外置滑轨形式已确定、未购买",
       "nextAction": "9 月 18 日前确认完成面洞口、门扇材质、防潮、轨道承重、缓冲限位、锁具和墙体固定条件",
+      "drawingAudit": {
+        "status": "pending_selection",
+        "label": "方向已定，图纸待补",
+        "note": "浴室门方向已确定，但精确产品和安装节点未确认。",
+        "nextAction": "确认产品后归档门洞、轨道／门槛、防水收口和五金节点。"
+      },
       "technical": [],
       "assets": []
     }

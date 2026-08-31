@@ -24,6 +24,13 @@ const actualStyle: Record<NonNullable<TimelineActual>['status'], { label: string
   blocked: { label: '受阻', tone: 'bg-[#f5e7e3] text-[#895347]' },
 };
 
+const drawingAuditStyle = {
+  complete: 'border-[#cbded6] bg-[#f1f7f4] text-[#376454]',
+  partial: 'border-[#e5d4b5] bg-[#fbf7ef] text-[#775d35]',
+  missing: 'border-[#e4c7bf] bg-[#fcf3f0] text-[#824f43]',
+  pending_selection: 'border-[#d9dfe1] bg-[#f5f7f7] text-[#667378]',
+} as const;
+
 function normalizeBasePath(basePath: string) {
   return basePath.replace(/\/$/, '');
 }
@@ -84,6 +91,7 @@ export function ProgressItemPage({ item, basePath = '' }: { item: ProgressItem; 
                   <div className="border-l-2 border-[#2f638c] bg-[#f7f9fa] p-4"><p className="text-[10px] font-medium tracking-[0.12em] text-[#859197]">CURRENT · 当前</p><p className="mt-2 text-sm leading-6 text-[#4f5f66]">{item.progress}</p></div>
                   <div className="border-l-2 border-[#dc7440] bg-[#faf8f5] p-4"><p className="text-[10px] font-medium tracking-[0.12em] text-[#8d7d70]">NEXT · 下一步</p><p className="mt-2 text-sm leading-6 text-[#4f5f66]">{item.nextAction}</p></div>
                 </div>
+                {item.drawingAudit && <div className="mt-4 border border-[#d8e0e2] bg-[#fbfcfc] p-4"><div className="flex flex-wrap items-center justify-between gap-2"><p className="flex items-center gap-1.5 text-[10px] font-medium tracking-[0.11em] text-[#76878e]"><FileText className="size-3.5" />施工图完整度</p><span className={`rounded-full border px-2.5 py-1 text-[10px] font-medium ${drawingAuditStyle[item.drawingAudit.status]}`}>{item.drawingAudit.label}</span></div><p className="mt-3 text-sm leading-6 text-[#526168]">{item.drawingAudit.note}</p><p className="mt-2 text-xs leading-5 text-[#78868c]"><strong className="font-medium text-[#596b72]">补图动作：</strong>{item.drawingAudit.nextAction}</p></div>}
                 {item.priority && item.urgencyReason && <div className="mt-4 border border-[#ead8ca] bg-[#fffaf6] p-4"><p className="text-[10px] font-medium tracking-[0.11em] text-[#8d705d]">优先级说明</p><p className="mt-2 text-sm leading-6 text-[#66584f]">{item.urgencyReason}</p></div>}
               </div>
             </section>

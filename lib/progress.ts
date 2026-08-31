@@ -15,6 +15,7 @@ export type ProgressItem = {
   urgencyReason: string | null;
   progress: string;
   nextAction: string;
+  drawingAudit: { status: 'complete' | 'partial' | 'missing' | 'pending_selection'; label: string; note: string; nextAction: string } | null;
   technical: { source: string; sections: TechnicalSection[] }[];
   assets: { title: string; href: string; type: 'pdf' | 'image' }[];
 };

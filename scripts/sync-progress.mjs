@@ -10,6 +10,7 @@ const publicDocsDir = resolve(siteRoot, 'public', 'technical');
 const publicTechnicalBase = 'https://yinxinghuan.github.io/homeos-project-progress/technical';
 
 const procurement = JSON.parse(await readFile(resolve(homeRoot, '06-records', 'procurement.json'), 'utf8'));
+const documentAudit = JSON.parse(await readFile(resolve(homeRoot, '06-records', 'INSTALLATION_DOCUMENT_AUDIT.json'), 'utf8'));
 
 const detailSources = {
   windows: ['02-renovation/WINDOWS.md'],
@@ -38,6 +39,7 @@ const detailSources = {
 };
 
 const safeAssets = {
+  tiles: ['source/plans/2026-08-29-lijing-tile-layout-redacted.pdf'],
   'water-system': [
     'source/media/2026-08-26-central-purifier-softener-installation-requirements.jpeg',
     'source/media/2026-08-26-central-water-treatment-cabinet-clearance-reference.jpeg',
@@ -106,7 +108,11 @@ const safeAssets = {
   ],
 };
 
-const blocked = /¥|￥|\bCNY\b|\bprices?\b|\bpayments?\b|\bpaid\b|\binvoices?\b|\bcosts?\b|\bfees?\b|\bcharges?\b|chargeable|surcharges?|\bdeposits?\b|\bbalances?\b|\bquotations?\b|\baddress\b|\bphone\b|金额|价格|付款|支付|已付|待付|定金|预付款|余款|期款|款项|付款比例|全款|付清|实付|报价|收费|费用|地址|电话|姓名|客户|账户|合同编号|订单编号|销售单号|发票/i;
+const assetTitleOverrides = {
+  '2026-08-29-lijing-tile-layout-redacted.pdf': '厨房与卫生间排砖施工图（公开脱敏版）',
+};
+
+const blocked = /¥|￥|\bCNY\b|\bprices?\b|\bpayments?\b|\bpaid\b|\binvoices?\b|\bcosts?\b|\bfees?\b|\bcharges?\b|chargeable|surcharges?|\bdeposits?\b|\bbalances?\b|\bquotations?\b|\baddress\b|\bphone\b|金额|价格|付款|支付|已付|待付|定金(?!貂)|预付款|余款|期款|款项|付款比例|全款|付清|实付|报价|收费|费用|地址|电话|姓名|客户|账户|合同编号|订单编号|销售单号|发票/i;
 const technicalHeading = /安装|尺寸|规格|技术|留位|开孔|接口|水电|排水|供电|通风|协调|验收|到货|施工|要求|条件|配置|阀门|防冻|冬季|变压器|product data|dimension|installation|acceptance|hold point|requirement|coordination|utility|clearance|cutout|fabrication|performance|valve|freeze|winter|transformer|before/i;
 
 function clean(text) {
@@ -307,16 +313,16 @@ for (const sourceItem of procurement.items) {
   const assets = [];
   for (const relativePath of safeAssets[sourceItem.id] ?? []) {
     const fileName = basename(relativePath);
-    const isPublicManual = relativePath.startsWith('source/manuals/');
-    if (!isPublicManual) {
+    const usePublicTechnicalBase = relativePath.startsWith('source/manuals/') || extname(fileName).toLowerCase() === '.pdf';
+    if (!usePublicTechnicalBase) {
       const destination = resolve(publicDocsDir, fileName);
       await chmod(destination, 0o644).catch(() => {});
       await copyFile(resolve(homeRoot, relativePath), destination);
       await chmod(destination, 0o644);
     }
     assets.push({
-      title: clean(fileName.replace(/\.[^.]+$/, '').replace(/^\d{4}-\d{2}-\d{2}-/, '').replaceAll('-', ' ')),
-      href: isPublicManual ? `${publicTechnicalBase}/${encodeURIComponent(fileName)}` : `technical/${encodeURIComponent(fileName)}`,
+      title: assetTitleOverrides[fileName] ?? clean(fileName.replace(/\.[^.]+$/, '').replace(/^\d{4}-\d{2}-\d{2}-/, '').replaceAll('-', ' ')),
+      href: usePublicTechnicalBase ? `${publicTechnicalBase}/${encodeURIComponent(fileName)}` : `technical/${encodeURIComponent(fileName)}`,
       type: extname(fileName).toLowerCase() === '.pdf' ? 'pdf' : 'image',
     });
   }
@@ -334,6 +340,7 @@ for (const sourceItem of procurement.items) {
     urgencyReason: sourceItem.urgencyReason && !blocked.test(sourceItem.urgencyReason) ? sourceItem.urgencyReason : null,
     progress: blocked.test(sourceItem.progress) ? stageLabels[stage] : sourceItem.progress,
     nextAction: blocked.test(sourceItem.nextAction) ? '具体安排由项目负责人另行确认' : sourceItem.nextAction,
+    drawingAudit: documentAudit.items[sourceItem.id] ?? null,
     technical,
     assets,
   });
@@ -354,7 +361,14 @@ const output = {
 const serialized = JSON.stringify(output, null, 2);
 const blockedMatches = serialized.match(new RegExp(blocked.source, 'gi'));
 if (blockedMatches) {
-  throw new Error(`Sanitization guard failed: ${[...new Set(blockedMatches)].join(', ')}`);
+  const blockedPaths = [];
+  const inspect = (value, path = 'output') => {
+    if (typeof value === 'string' && blocked.test(value)) blockedPaths.push(path);
+    else if (Array.isArray(value)) value.forEach((entry, index) => inspect(entry, `${path}[${index}]`));
+    else if (value && typeof value === 'object') Object.entries(value).forEach(([key, entry]) => inspect(entry, `${path}.${key}`));
+  };
+  inspect(output);
+  throw new Error(`Sanitization guard failed at ${blockedPaths.slice(0, 12).join(', ')}: ${[...new Set(blockedMatches)].join(', ')}`);
 }
 await writeFile(resolve(dataDir, 'progress.json'), serialized);
 console.log(`Generated sanitized public progress data for ${items.length} work items.`);
