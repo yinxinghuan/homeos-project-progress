@@ -7,9 +7,10 @@
   },
   "scripts": {
     "sync:data": "node scripts/sync-progress.mjs",
+    "check:translations": "node scripts/check-detail-translations.mjs",
     "predev": "npm run sync:data",
     "dev": "vinext dev",
-    "prebuild": "npm run sync:data",
+    "prebuild": "npm run sync:data && npm run check:translations",
     "build": "vinext build",
     "build:pages": "vite build --config vite.pages.config.ts",
     "preview:pages": "vite preview --config vite.pages.config.ts",

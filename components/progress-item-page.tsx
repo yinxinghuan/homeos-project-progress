@@ -14,6 +14,7 @@ import {
 } from 'lucide-react';
 
 import { data, priorityStyle, shortRange, stageColors, type ProgressItem, type TimelineActual } from '@/lib/progress';
+import { BilingualText } from '@/components/bilingual-text';
 
 const actualStyle: Record<NonNullable<TimelineActual>['status'], { label: string; tone: string }> = {
   not_started: { label: '未开始', tone: 'bg-[#edf0f1] text-[#68757a]' },
@@ -99,9 +100,9 @@ export function ProgressItemPage({ item, basePath = '' }: { item: ProgressItem; 
             </section>
 
             <section className="mt-5 border border-[#d7dde0] bg-white p-5 sm:rounded-[12px] sm:p-7">
-              <div className="flex flex-wrap items-end justify-between gap-3"><div><p className="text-[10px] font-medium tracking-[0.12em] text-[#879298]">INSTALLATION DOSSIER</p><h2 className="mt-1 text-xl font-semibold">型号与安装信息</h2></div><span className="flex items-center gap-1.5 text-[11px] text-[#77858b]"><Wrench className="size-3.5" />{technicalCount} 条技术信息</span></div>
+              <div className="flex flex-wrap items-end justify-between gap-3"><div><p className="text-[10px] font-medium tracking-[0.12em] text-[#879298]">INSTALLATION DOSSIER · 安装档案</p><h2 className="mt-1 text-xl font-semibold">型号与安装信息</h2></div><span className="flex items-center gap-1.5 text-[11px] text-[#77858b]"><Wrench className="size-3.5" />{technicalCount} 条技术信息</span></div>
               <div className="mt-5 space-y-4">
-                {item.technical.map((record) => <article key={record.source} className="border border-[#dde3e5] bg-[#fbfcfc] p-4 sm:rounded-[8px] sm:p-5"><p className="font-data text-[10px] text-[#909a9e]">{record.source}</p>{record.sections.map((section) => <section key={section.title} className="mt-5 border-t border-[#e4e8e9] pt-5 first:mt-3 first:border-0 first:pt-0"><h3 className="text-[15px] font-semibold">{section.title}</h3><ul className="mt-3 space-y-2.5">{section.points.map((point, pointIndex) => <li key={pointIndex} className="grid grid-cols-[7px_1fr] gap-2.5 text-sm leading-6 text-[#59676d]"><span className="mt-[9px] size-1.5 rounded-full bg-[#7f969f]" /><span>{point}</span></li>)}</ul></section>)}</article>)}
+                {item.technical.map((record) => <article key={record.source} className="border border-[#dde3e5] bg-[#fbfcfc] p-4 sm:rounded-[8px] sm:p-5"><p className="font-data text-[10px] text-[#909a9e]">{record.source}</p>{record.sections.map((section) => <section key={section.title} className="mt-5 border-t border-[#e4e8e9] pt-5 first:mt-3 first:border-0 first:pt-0"><h3 className="text-[15px] font-semibold"><BilingualText text={section.title} translationClassName="mt-1 text-[0.9em] font-medium leading-5 text-[#718087]" /></h3><ul className="mt-3 space-y-3">{section.points.map((point, pointIndex) => <li key={pointIndex} className="grid grid-cols-[7px_1fr] gap-2.5 text-sm leading-6 text-[#59676d]"><span className="mt-[9px] size-1.5 rounded-full bg-[#7f969f]" /><span><BilingualText text={point} /></span></li>)}</ul></section>)}</article>)}
                 {!item.technical.length && <div className="border border-dashed border-[#ccd5d8] bg-[#f9fafb] p-6 text-sm leading-6 text-[#7c888d]"><Info className="mr-2 inline size-4" />详细型号或安装资料尚未进入 HomeOS；取得后会同步到这里。</div>}
               </div>
             </section>
@@ -109,14 +110,14 @@ export function ProgressItemPage({ item, basePath = '' }: { item: ProgressItem; 
 
           <aside className="space-y-4 lg:sticky lg:top-20">
             <section className="border border-[#d7dde0] bg-white p-5 sm:rounded-[12px]">
-              <div className="flex items-center justify-between"><div><p className="text-[10px] font-medium tracking-[0.12em] text-[#879298]">FILES & DRAWINGS</p><h2 className="mt-1 text-sm font-semibold">图纸与安装附件</h2></div><span className="font-data text-xs text-[#89949a]">{item.assets.length}</span></div>
+              <div className="flex items-center justify-between"><div><p className="text-[10px] font-medium tracking-[0.12em] text-[#879298]">FILES & DRAWINGS · 文件与图纸</p><h2 className="mt-1 text-sm font-semibold">图纸与安装附件</h2></div><span className="font-data text-xs text-[#89949a]">{item.assets.length}</span></div>
               <div className="mt-4 space-y-3">
                 {item.assets.map((asset) => { const href = assetHref(asset.href, basePath); return <a key={asset.href} href={href} target="_blank" rel="noreferrer" className="group block overflow-hidden border border-[#dbe1e3] bg-[#fafbfb] transition hover:border-[#9fb2ba] sm:rounded-[8px]">{asset.type === 'image' ? <div className="aspect-[16/10] overflow-hidden bg-[#e9eef0]"><img src={href} alt={asset.title} className="h-full w-full object-cover transition duration-300 group-hover:scale-[1.015]" /></div> : <div className="grid aspect-[16/9] place-items-center bg-[#e9eef0]"><FileText className="size-8 text-[#708791]" /></div>}<div className="flex items-center justify-between gap-2 p-3"><span className="truncate text-xs font-medium">{asset.title}</span><ArrowUpRight className="size-3.5 shrink-0 text-[#72848b]" /></div></a>; })}
                 {!item.assets.length && <div className="border border-dashed border-[#d1d9dc] p-4 text-xs leading-5 text-[#839095]"><ImageIcon className="mb-2 size-4" />暂无可公开的技术图纸附件。</div>}
               </div>
             </section>
 
-            <section className="border border-[#d7dde0] bg-white p-5 sm:rounded-[12px]"><p className="flex items-center gap-1.5 text-[10px] font-medium tracking-[0.12em] text-[#879298]"><ListTree className="size-3.5" />RECORD POSITION</p><p className="mt-2 text-sm font-semibold">第 {index + 1} / {data.items.length} 项</p><p className="mt-2 text-xs leading-5 text-[#7a878c]">独立页面保留型号、尺寸、安装条件、图纸和关联工程节点；不展示价格与地址。</p><div className="mt-4 flex items-center gap-2 text-[11px] text-[#557065]"><ShieldCheck className="size-3.5" />公开脱敏工程档案</div></section>
+            <section className="border border-[#d7dde0] bg-white p-5 sm:rounded-[12px]"><p className="flex items-center gap-1.5 text-[10px] font-medium tracking-[0.12em] text-[#879298]"><ListTree className="size-3.5" />RECORD POSITION · 档案位置</p><p className="mt-2 text-sm font-semibold">第 {index + 1} / {data.items.length} 项</p><p className="mt-2 text-xs leading-5 text-[#7a878c]">独立页面保留型号、尺寸、安装条件、图纸和关联工程节点；不展示价格与地址。</p><div className="mt-4 flex items-center gap-2 text-[11px] text-[#557065]"><ShieldCheck className="size-3.5" />公开脱敏工程档案</div></section>
 
             <div className="grid grid-cols-2 gap-2">
               {previous ? <a href={itemHref(previous.id, basePath)} className="group rounded-[8px] border border-[#d7dde0] bg-white p-3 transition hover:border-[#9fb2ba] hover:bg-[#f7f9fa]"><span className="flex items-center gap-1 text-[10px] text-[#929ca0]"><ArrowLeft className="size-3" />上一项</span><span className="mt-1.5 block truncate text-xs font-medium">{previous.name}</span></a> : <span />}
