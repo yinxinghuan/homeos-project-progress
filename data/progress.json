@@ -218,11 +218,21 @@
               "points": [
                 "Exact gas type and Beijing pipeline-gas compatibility; do not infer from the model name alone",
                 "Whether gas conversion or adjustment has been performed, by whom, and with what combustion-test record",
-                "Delivered nameplate voltage; both official candidate manuals state AC 100 V, 50-60 Hz, so the approved transformer/protection solution is mandatory before energisation",
+                "Delivered assembly input voltage; both official candidate manuals state AC 100 V, 50-60 Hz, while the supplier claims a built-in transformer. Photograph and verify the complete input label and transformer ratings; a verified voltage-conversion/protection solution is mandatory before energisation.",
                 "Outdoor mounting position, wall load, weather exposure, service clearances, drainage, condensate applicability, and freeze protection",
                 "Water/gas valve and connector specifications",
                 "Flue/exhaust safety clearances from windows, openings, neighbours, and enclosed spaces",
                 "Commissioning record for inlet pressure, gas tightness, combustion, outlet temperature, and flow"
+              ]
+            },
+            {
+              "title": "Owner-Confirmed Installation Intent / 预定安装细节",
+              "points": [
+                "Planned unit position: exterior side near the right side of the kitchen window.",
+                "Planned wall route: four independent passages from below the adjacent kitchen cabinetry to the exterior wall, respectively for the cold-water inlet, hot-water outlet, gas pipe and wired-controller cable.",
+                "Valve positions: cold-water, hot-water and gas isolation valves all remain indoors and must stay accessible after the cabinets are installed.",
+                "Power source: use an indoor socket. The supplier says the product has a built-in transformer; this does not by itself release a 220 V connection. Confirm that the delivered complete assembly and transformer labels explicitly accept 220 V input and verify capacity, protection and earthing before energisation. If the claim is not confirmed, an approved external conversion solution remains required.",
+                "The four routes are a layout decision only. Final hole/slot sizes, centre lines, sleeves, separation, exterior sealing, insulation and service clearances must be confirmed against the delivered unit, official manual, gas-contractor requirements and the signed cabinet drawing before drilling."
               ]
             }
           ]
@@ -231,6 +241,17 @@
           "source": "03-systems/gas.md",
           "sections": [
             {
+              "title": "Planned Outdoor-Unit Routing / 预定安装走向",
+              "points": [
+                "The outdoor unit is planned near the right side of the kitchen window.",
+                "Four separate routes are to pass from the cabinet-lower zone through the exterior wall: cold-water inlet, hot-water outlet, gas pipe, and wired-controller cable.",
+                "The cold- and hot-water isolation valves are to remain indoors and accessible.",
+                "The gas shut-off valve is also to remain indoors and accessible.",
+                "Electrical power is to be taken from an indoor socket. The supplier states that the supplied Japanese outdoor unit has a built-in transformer. This is currently a supplier claim, not yet verified against the delivered unit. Because both archived Japanese base-model manuals specify AC 100 V, do not energise until the complete unit input label and the built-in transformer's input/output rating confirm a safe 220 V supply arrangement, protection and earthing.",
+                "Before drilling or cabinet fabrication, the installer, gas contractor and cabinet maker must sign off the exact penetration diameters, spacing, sleeves, weather/water sealing, pipe insulation, controller-cable separation, valve access and future service/removal route."
+              ]
+            },
+            {
               "title": "Must Confirm Before Installation",
               "points": [
                 "Delivered nameplate and exact model suffix",
@@ -238,7 +259,8 @@
                 "Legal/local acceptance of the outdoor mounting location",
                 "Manufacturer/seller installation instructions and third-party warranty conditions",
                 "Combustion and gas-tightness commissioning record",
-                "Freeze-protection power and water-drain strategy for Beijing winter conditions"
+                "Freeze-protection power and water-drain strategy for Beijing winter conditions",
+                "Written or nameplate confirmation of the supplier-claimed built-in transformer, including 220 V input, output rating, protection and warranty responsibility"
               ]
             }
           ]
