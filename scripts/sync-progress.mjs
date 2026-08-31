@@ -7,6 +7,7 @@ const siteRoot = resolve(scriptDir, '..');
 const homeRoot = resolve(siteRoot, '..');
 const dataDir = resolve(siteRoot, 'data');
 const publicDocsDir = resolve(siteRoot, 'public', 'technical');
+const publicTechnicalBase = 'https://yinxinghuan.github.io/homeos-project-progress/technical';
 
 const procurement = JSON.parse(await readFile(resolve(homeRoot, '06-records', 'procurement.json'), 'utf8'));
 
@@ -304,13 +305,16 @@ for (const sourceItem of procurement.items) {
   const assets = [];
   for (const relativePath of safeAssets[sourceItem.id] ?? []) {
     const fileName = basename(relativePath);
-    const destination = resolve(publicDocsDir, fileName);
-    await chmod(destination, 0o644).catch(() => {});
-    await copyFile(resolve(homeRoot, relativePath), destination);
-    await chmod(destination, 0o644);
+    const isPublicManual = relativePath.startsWith('source/manuals/');
+    if (!isPublicManual) {
+      const destination = resolve(publicDocsDir, fileName);
+      await chmod(destination, 0o644).catch(() => {});
+      await copyFile(resolve(homeRoot, relativePath), destination);
+      await chmod(destination, 0o644);
+    }
     assets.push({
       title: clean(fileName.replace(/\.[^.]+$/, '').replace(/^\d{4}-\d{2}-\d{2}-/, '').replaceAll('-', ' ')),
-      href: `technical/${encodeURIComponent(fileName)}`,
+      href: isPublicManual ? `${publicTechnicalBase}/${encodeURIComponent(fileName)}` : `technical/${encodeURIComponent(fileName)}`,
       type: extname(fileName).toLowerCase() === '.pdf' ? 'pdf' : 'image',
     });
   }
