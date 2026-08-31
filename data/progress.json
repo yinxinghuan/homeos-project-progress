@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-08-31T01:35:00+08:00",
+  "updatedAt": "2026-08-31T22:30:00+08:00",
   "project": {
     "title": "HomeOS 工程进度",
     "phase": "装修执行与设备协调"
@@ -237,13 +237,13 @@
       "priority": null,
       "decisionDeadline": null,
       "urgencyReason": null,
-      "progress": "已采购 / 待交付安装",
-      "nextAction": "到货拍铭牌以锁定 23-8409 或 23-5468；两套官方手册均为 AC100V，未确认变压器/保护及燃气类别前禁止通电点火",
+      "progress": "受阻｜产品已采购；施工方提出室外安装需物业认可，正在等待物业书面答复",
+      "nextAction": "未取得物业书面意见前不在外墙钻孔或安装；同时要求供应商提供整机 CCC 证书编号、北京 12T 气源适配证明，并由燃气供应企业或合格安装单位确认方案。到货后仍须核对铭牌、内置变压器和完整型号",
       "drawingAudit": {
         "status": "partial",
-        "label": "基础机型图纸已有",
-        "note": "候选后缀的官方外形和安装资料已归档，但交付机后缀及内置变压器配置仍待实物确认。",
-        "nextAction": "通电安装前核对整机铭牌、变压器标签和燃气适配。"
+        "label": "法规与安装审批待确认",
+        "note": "候选机型资料已归档，但室外安装正等待物业书面答复；整机 CCC、北京 12T 气源适配、外墙方案及内置变压器仍未形成可放行证据。",
+        "nextAction": "取得物业书面意见、整机 CCC 证书编号、12T 适配证明及燃气安装方确认后，再核对铭牌和点位图并放行施工。"
       },
       "technical": [
         {
@@ -259,6 +259,16 @@
                 "Water/gas valve and connector specifications",
                 "Flue/exhaust safety clearances from windows, openings, neighbours, and enclosed spaces",
                 "Commissioning record for inlet pressure, gas tightness, combustion, outlet temperature, and flow"
+              ]
+            },
+            {
+              "title": "Current Installation Blocker / 当前安装受阻",
+              "points": [
+                "施工方要求物业确认拟定的外墙安装方案，并转述可能存在法规异议；物业正式答复尚未收到。",
+                "当前记录为审批／合规事项未决，不代表所有室外型热水器都违法。CJJ 12-2013 第 4.3.1 条明确考虑了室外或未封闭阳台安装室外型热水器的情形。",
+                "但本台日本市场机型仍然不得放行安装。须先取得外墙／共有部分同意、经认可的钻孔与固定详图、燃气安装认可、与交付完整型号匹配且可查询的 CCC 证书、明确的北京 12T 气源适配证据，以及交付整机的 220 V／变压器资料。",
+                "日本目录中的 13A/12A 是另一套气源分类，不能在没有书面技术证据和调试验收的情况下视同北京 12T。",
+                "在解除受阻状态前：不得钻外墙、改燃气走向、挂装设备、通电或通气调试。"
               ]
             },
             {
@@ -323,6 +333,14 @@
                 "Combustion and gas-tightness commissioning record",
                 "Freeze-protection power and water-drain strategy for Beijing winter conditions",
                 "Written or nameplate confirmation of the supplier-claimed built-in transformer, including 220 V input, output rating, protection and warranty responsibility"
+              ]
+            },
+            {
+              "title": "Installation Approval Hold / 安装审批受阻",
+              "points": [
+                "施工方提出，室外机挂装及穿外墙走管需要物业认可，并转述可能存在法规异议。",
+                "物业正式答复仍在等待中。在收到书面结论及其依据之前，HomeOS 将其记录为 受阻／等待审核，不记录为已经确认违法。",
+                "在以下放行条件全部关闭前，不得钻外墙、改燃气走向、挂装设备、通电或通气调试。"
               ]
             },
             {
