@@ -234,6 +234,20 @@
                 "Power source: use an indoor socket. The supplier says the product has a built-in transformer; this does not by itself release a 220 V connection. Confirm that the delivered complete assembly and transformer labels explicitly accept 220 V input and verify capacity, protection and earthing before energisation. If the claim is not confirmed, an approved external conversion solution remains required.",
                 "The four routes are a layout decision only. Final hole/slot sizes, centre lines, sleeves, separation, exterior sealing, insulation and service clearances must be confirmed against the delivered unit, official manual, gas-contractor requirements and the signed cabinet drawing before drilling."
               ]
+            },
+            {
+              "title": "Beijing Winter Valve Decision / 北京冬季阀门决定",
+              "points": [
+                "Keep the cold-water inlet isolation valve indoors, near the wall penetration and continuously accessible after cabinetry is installed.",
+                "Keep the hot-water service isolation valve indoors if it is included in the final valve set. Provide a drain/bleed arrangement that can empty the outdoor cold/hot runs and the heater in accordance with the delivered manual.",
+                "Keep the primary appliance gas shut-off indoors, near the penetration and not behind a fixed or sealed cabinet panel. The gas company/qualified installer must approve its exact location and decide whether a second outdoor service valve is required at the unit.",
+                "Minimise and fully weatherproof-insulate all exterior water pipes, connections and exposed metal gaps. Indoor valves alone do not prevent the outdoor trapped water from freezing.",
+                "Preserve power to the approved freeze-protection arrangement in normal winter operation, but also provide a manual drain procedure: Rinnai states that automatic freeze protection is unavailable during a power outage or power-off mode.",
+                "Use approved fixed gas piping through the exterior wall; a flexible appliance hose must not pass through the wall.",
+                "Beijing winter water-supply freeze-protection guidance",
+                "Rinnai official water-heater freeze-protection guidance",
+                "GB 55009-2021 Gas Engineering Project Code"
+              ]
             }
           ]
         },
@@ -261,6 +275,20 @@
                 "Combustion and gas-tightness commissioning record",
                 "Freeze-protection power and water-drain strategy for Beijing winter conditions",
                 "Written or nameplate confirmation of the supplier-claimed built-in transformer, including 220 V input, output rating, protection and warranty responsibility"
+              ]
+            },
+            {
+              "title": "Beijing Winter Valve-Location Review / 北京冬季阀门位置结论",
+              "points": [
+                "Cold-water inlet isolation: keep the valve indoors, immediately upstream of the exterior-wall route, in an accessible cabinet/service opening. This makes emergency shut-off possible without going outdoors and keeps the valve body out of Beijing freeze exposure.",
+                "Hot-water outlet isolation: if fitted for service, keep it indoors and accessible beside the cold-water valve. Confirm the final valve set and operating procedure with the installer so that the outdoor section can be drained without trapping water.",
+                "Primary appliance gas shut-off: keep it indoors near the wall route, readily reachable and not concealed behind a fixed cabinet or sealed panel. The final approved position, pipe material and any additional outdoor service valve must be confirmed by the gas company or a qualified gas contractor. Gas-valve location is governed mainly by safe access and maintenance, not water-freezing risk.",
+                "Outdoor water side remains a freeze-risk section: indoor valves do not protect the water left between those valves and the outdoor heater. Keep the exterior run as short as practicable; insulate the complete exposed cold/hot pipes, joints and metal gaps with weather- and UV-resistant protection; and provide a documented drain-down path for the outdoor pipes and heater.",
+                "Power loss is a design condition: Rinnai states that its automatic freeze protection does not operate during a power outage or power-off mode. The installation therefore needs a manual drain procedure that can be performed from an accessible position, rather than relying only on the heater's electric freeze protection.",
+                "Gas wall crossing: use the gas contractor's approved fixed piping, sleeve/seal and anti-settlement/protection details. Do not route a flexible appliance hose through the exterior wall.",
+                "Beijing winter water-supply freeze-protection guidance",
+                "Rinnai official water-heater freeze-protection guidance",
+                "GB 55009-2021 Gas Engineering Project Code, clauses 5.3.8-5.3.11 and 6.1.8"
               ]
             }
           ]
