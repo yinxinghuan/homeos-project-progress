@@ -893,13 +893,13 @@
       "category": "暖通",
       "brand": "Zehnder / 森德",
       "model": "防腐型订单 1000934",
-      "stage": "confirmed",
-      "stageLabel": "已确定 / 推进中",
+      "stage": "ordered",
+      "stageLabel": "已采购 / 待交付安装",
       "priority": null,
       "decisionDeadline": null,
       "urgencyReason": null,
-      "progress": "已确定 / 推进中",
-      "nextAction": "按预约完成改管与打压验收，并确认温控、安装及运输是否包含",
+      "progress": "已采购 / 待交付安装",
+      "nextAction": "取得并核对压力测试结果，确认无渗漏、阀门/温控运行正常，并留存验收记录",
       "drawingAudit": {
         "status": "partial",
         "label": "订单已有，改管图未归档",
@@ -2068,9 +2068,9 @@
           "heating"
         ],
         "actual": {
-          "status": "scheduled",
-          "confirmedDate": "2026-08-31 09:00",
-          "note": "暖气施工方已预约上门进行暖气改管；在现场开工确认前不计为施工进行中。"
+          "status": "in_progress",
+          "confirmedDate": "2026-09-01",
+          "note": "暖气改管已完成，正在等待压力测试结果；压力测试合格前不标记为验收完成。"
         },
         "ranges": [
           {
