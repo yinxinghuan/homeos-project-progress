@@ -258,22 +258,22 @@
     },
     {
       "id": "gas-water-heater",
-      "name": "室外型燃气热水器",
+      "name": "燃气热水器方案",
       "category": "厨房电器",
       "brand": "Rinnai / 林内",
-      "model": "RUX-A1616W(A)-E / RUX-A1616W-E",
+      "model": "已购室外机 RUX-A1616W(A)-E / RUX-A1616W-E；室内平衡式备选 RUX-V1615SFUA（待核 RUX-V1615SFFUA(A)-E）",
       "stage": "ordered",
       "stageLabel": "已采购 / 待交付安装",
       "priority": null,
       "decisionDeadline": null,
       "urgencyReason": null,
-      "progress": "受阻｜产品已采购；施工方提出室外安装需物业认可，正在等待物业书面答复",
-      "nextAction": "未取得物业书面意见前不在外墙钻孔或安装；同时要求供应商提供整机 CCC 证书编号、北京 12T 气源适配证明，并由燃气供应企业或合格安装单位确认方案。到货后仍须核对铭牌、内置变压器和完整型号",
+      "progress": "室外机已采购但安装受阻；室内 FF 平衡式备选已选定、尚未下单",
+      "nextAction": "继续取得室外机物业与燃气合规结论；同时向客服书面核对室内备选的完整 SFFUA 型号、北京 12T／中国合规、铭牌电压与变压器、φ110×φ75 同轴给排气组件、原预留孔及墙厚适配和安装责任",
       "drawingAudit": {
         "status": "partial",
-        "label": "法规与安装审批待确认",
-        "note": "候选机型资料已归档，但室外安装正等待物业书面答复；整机 CCC、北京 12T 气源适配、外墙方案及内置变压器仍未形成可放行证据。",
-        "nextAction": "取得物业书面意见、整机 CCC 证书编号、12T 适配证明及燃气安装方确认后，再核对铭牌和点位图并放行施工。"
+        "label": "双方案资料已建，均未放行",
+        "note": "已购室外机资料已归档但外墙／物业／12T／CCC／变压器仍未关闭；室内 FF 平衡式备选已增加官方 SFFUA 家族型号页，但商铺简称、完整后缀、12T／中国合规、电压及同轴给排气组件仍待客服与安装方确认。",
+        "nextAction": "分别关闭室外方案审批与室内备选的完整 SKU、合规、气源、电压、同轴筒、原孔墙厚及安装资质；未确认前不钻孔、不改燃气、不下单备选。"
       },
       "technical": [
         {
@@ -335,6 +335,63 @@
                 "Beijing winter water-supply freeze-protection guidance",
                 "Rinnai official water-heater freeze-protection guidance",
                 "GB 55009-2021 Gas Engineering Project Code"
+              ]
+            }
+          ]
+        },
+        {
+          "source": "04-assets/appliances/rinnai-rux-v1615sffua-balanced-water-heater.md",
+          "sections": [
+            {
+              "title": "平衡式技术结构与官方身份",
+              "points": [
+                "林内官方将 RUX-V1615SFFUA(A)-E 定义为室内专用、壁挂、FF 方式、上方给排气的 16 号燃气热水器。",
+                "FF 方式通过专用同轴给排气系统从室外取得燃烧空气，并把燃烧废气排至室外；这就是本项目所说的“平衡式”结构，不是普通室内强排机的营销别名。",
+                "官方目录标示本体带一氧化碳浓度检测装置；仍不能代替合规安装、气密检查、燃烧调试和室内一氧化碳报警措施。",
+                "本机为给热水专用机，不带追焚；额定能力范围为 16 至 3.0 号。"
+              ]
+            },
+            {
+              "title": "官方尺寸与接口",
+              "points": [
+                "本体尺寸：高 610 mm × 宽 350 mm × 深 200 mm。",
+                "质量：约 20.0 kg。",
+                "最大燃气消耗量：34.9 kW。",
+                "官方列示气种：LPG、日本 13A / 12A；这不能单独证明适配北京管道天然气 12T。",
+                "燃气、给水和给热水接口均列为 15A（R1/2）。",
+                "给排气筒系统：同轴规格 φ110 × φ75；上方给排气延长上限为双层管 7 m / 4 个弯。",
+                "官方选配给排气筒顶为 FFT-6U-200(A)；壁厚必须与具体筒顶规格匹配。直出方案使用的部件需由合格安装方按最终墙体和版本确认。"
+              ]
+            },
+            {
+              "title": "本项目安装条件",
+              "points": [
+                "拟安装位置为交付时原厨房区域预留热水器烟道口附近；厨房墙拆除后，该位置处于开放式厨房与客厅相连的室内区域。",
+                "原有墙孔不等于可以直接使用。下单前必须实测孔径、孔中心、墙厚、内外完成面、外侧终端净空和防水／防火封堵条件，并与 φ110 × φ75 同轴给排气系统及所选筒顶逐项匹配。",
+                "机器、给排气筒、弯头、吊柜和任何装饰包覆均不得影响检修、拆卸及连接检查；不得把本机封进未经厂家允许的密闭柜体。",
+                "必须由北京燃气供应企业认可或具备相应资格的安装单位确认室内安装位置、天然气管路、阀门、给排气终端和调试验收。",
+                "下单前取得与完整型号一致、可查询的中国合规资料和北京 12T 适配证明；日本 13A / 12A 标识不能直接替代。",
+                "电源电压、插头、接地、变压器及保护方式必须以正式说明书和交付铭牌为准。进口机不得在缺少明确证据时直接接入 220 V。"
+              ]
+            },
+            {
+              "title": "下单前技术确认清单",
+              "points": [
+                "完整订货型号究竟是 RUX-V1615SFFUA(A)-E、RUX-V1615SFFUA-E，还是其他后缀。",
+                "天然气版本是否有明确的北京 12T 适配和中国合规证明。",
+                "整机铭牌电压；若需变压器，确认品牌、输入／输出、连续容量、接地、保护和保修责任。",
+                "商铺所称免费安装是否覆盖同轴孔、加长管、弯头、墙厚适配、燃气管、水阀、电气和现场调试。",
+                "安装方是否具备室内燃气热水器及给排气系统施工资质，并能出具气密、燃烧和一氧化碳检测记录。",
+                "第三方联保的主体、期限、零件／人工／上门范围，以及进口机和变压器改装是否在保修范围内。"
+              ]
+            },
+            {
+              "title": "官方技术资料",
+              "points": [
+                "林内日本官方目录原文件：source/manuals/rinnai/rinnai-rux-v1615sffua-a-e-product-catalogue.pdf",
+                "型号页单页提取：output/pdf/2026-09-02-rinnai-rux-v1615sffua-a-e-official-catalogue-extract.pdf",
+                "林内官方产品／说明书入口：https://rkids.rinnai.jp/rin/cgi-bin/itemDetail.cgi?pid=23-6918",
+                "林内日本官方目录：https://rinnai.jp/catalog_download/pdf/Rinnai_KSE.pdf"
               ]
             }
           ]
@@ -424,6 +481,11 @@
         {
           "title": "rinnai rux a1616w e installation manual",
           "href": "https://yinxinghuan.github.io/homeos-project-progress/technical/rinnai-rux-a1616w-e-installation-manual.pdf",
+          "type": "pdf"
+        },
+        {
+          "title": "林内 RUX-V1615SFFUA(A)-E 官方型号页",
+          "href": "technical/2026-09-02-rinnai-rux-v1615sffua-a-e-official-catalogue-extract.pdf",
           "type": "pdf"
         }
       ]

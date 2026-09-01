@@ -16,7 +16,7 @@ const detailSources = {
   windows: ['02-renovation/WINDOWS.md'],
   'water-system': ['03-systems/water-treatment.md', '03-systems/plumbing.md'],
   tiles: ['02-renovation/TILE_LAYOUT.md'],
-  'gas-water-heater': ['04-assets/appliances/rinnai-rux-a1616w-e-water-heater.md', '03-systems/gas.md'],
+  'gas-water-heater': ['04-assets/appliances/rinnai-rux-a1616w-e-water-heater.md', '04-assets/appliances/rinnai-rux-v1615sffua-balanced-water-heater.md', '03-systems/gas.md'],
   'grohe-shower': ['04-assets/fixtures/grohe-26810000-thermostatic-shower.md'],
   'grohe-kitchen-faucet': ['04-assets/fixtures/grohe-31874-kitchen-faucet.md'],
   'grohe-smart-toilet': ['04-assets/fixtures/grohe-39932sh0-smart-toilet.md'],
@@ -55,6 +55,7 @@ const safeAssets = {
     'source/manuals/rinnai/rinnai-rux-a1616wa-e-installation-manual.pdf',
     'source/manuals/rinnai/rinnai-rux-a1616w-e-outline.pdf',
     'source/manuals/rinnai/rinnai-rux-a1616w-e-installation-manual.pdf',
+    'output/pdf/2026-09-02-rinnai-rux-v1615sffua-a-e-official-catalogue-extract.pdf',
   ],
   'grohe-shower': [
     'source/manuals/grohe/grohe-26810000-dimension.jpg',
@@ -119,6 +120,7 @@ const assetTitleOverrides = {
   '2026-08-27-window-order-drawing-redacted.pdf': '伊博莱全屋窗户方案图（公开脱敏 PDF）',
   '2026-08-29-lijing-tile-layout-redacted.pdf': '厨房与卫生间排砖施工图（公开脱敏版）',
   '2026-09-01-aupu-mr009m-installation-service.png': '奥普 MR009M 安装服务图',
+  '2026-09-02-rinnai-rux-v1615sffua-a-e-official-catalogue-extract.pdf': '林内 RUX-V1615SFFUA(A)-E 官方型号页',
 };
 
 const blocked = /¥|￥|\bCNY\b|\bprices?\b|\bpayments?\b|\bpaid\b|\binvoices?\b|\bcosts?\b|\bfees?\b|\bcharges?\b|chargeable|surcharges?|\bdeposits?\b|\bbalances?\b|\bquotations?\b|\baddress\b|\bphone\b|金额|价格|付款|支付|已付|待付|定金(?!貂)|预付款|余款|期款|款项|付款比例|全款|付清|实付|报价|收费|费用|地址|电话|姓名|客户|账户|合同编号|订单编号|销售单号|发票/i;
