@@ -731,7 +731,22 @@
         "note": "商家已测量，但分板、节点、开孔、防水交接和安装方案尚未提交。",
         "nextAction": "取得带尺寸的平立面、分板图和节点详图。"
       },
-      "technical": [],
+      "technical": [
+        {
+          "source": "02-renovation/TERRAZZO.md",
+          "sections": [
+            {
+              "title": "推荐方案的施工控制点",
+              "points": [
+                "采用方案 A：独立水磨石台面／前脸与浴缸缸沿柔性平接，不让石材压住或承托亚克力缸沿。",
+                "先完成防水和闭水验收，再安装、调平浴缸并做满水试漏，最后封水磨石前脸和相邻瓷砖。",
+                "供应商开料前须提交节点剖面，标明约 150 mm 置物台、基层支撑、防水上翻、板厚、坡度、柔性缝和可拆检修口。",
+                "不采用水磨石压盖或夹死缸沿的做法，以免妨碍热胀冷缩、排水检修和后期换缸。"
+              ]
+            }
+          ]
+        }
+      ],
       "assets": []
     },
     {
@@ -763,17 +778,17 @@
       "brand": "TOTO / 东陶",
       "model": "PAY1320P (08)",
       "stage": "ordered",
-      "stageLabel": "已采购 / 待交付安装",
+      "stageLabel": "已到货 / 待安装",
       "priority": null,
       "decisionDeadline": null,
       "urgencyReason": null,
-      "progress": "已采购 / 待交付安装",
-      "nextAction": "官方 PAY1320P 图纸已归档；到货核对 DB601S-1B + QCHRG 与官方推荐 DB505R-1A/1B 的兼容性，书面确认并试装试水后方可封闭",
+      "progress": "已到货，等待水电改造完成及卫生间防水/闭水验收后联系师傅安装",
+      "nextAction": "先核对到货型号、外观及 DB601S-1B + QCHRG 配件；水电与防水验收后试放并安装浴缸、连接排水、满水试漏，再施工周边瓷砖和水磨石收口",
       "drawingAudit": {
         "status": "partial",
-        "label": "浴缸图纸完整，排水待核",
-        "note": "PAY1320P 官方尺寸与安装资料已归档；随单排水组件与官方推荐型号不一致。",
-        "nextAction": "封闭前核对实物排水标签、接口尺寸和检修口。"
+        "label": "浴缸已到货，排水待核",
+        "note": "PAY1320P 已到货，官方尺寸与安装资料已归档；随单排水组件与官方推荐型号不一致。",
+        "nextAction": "水电与防水/闭水验收后试放安装；封闭前核对实物排水标签、接口尺寸、满水试漏和检修口。"
       },
       "technical": [
         {
@@ -801,6 +816,17 @@
                 "Fill and leak-test the tub and drain before sealing the terrazzo face.",
                 "Retain a removable access panel near the waste connection.",
                 "Use a flexible joint and bathroom-compatible mould-resistant sealant at the rim/finish junction."
+              ]
+            },
+            {
+              "title": "安装入场顺序",
+              "points": [
+                "1｜完成水电和给排水粗装，锁定浴缸冷热水、排水、溢水及检修位置。",
+                "2｜完成基层和卫生间防水，浴缸下方地面也必须纳入防水；闭水试验合格后才放行浴缸安装。",
+                "3｜用已到货浴缸和排水配件现场试放，确认完成面净尺寸、底脚／基座、排水路线、检修口，以及 DB601S-1B + QCHRG 的实际兼容性。",
+                "4｜让浴缸由自身底脚／基座稳定承重并调平，连接排水，然后进行满水试漏和排水测试；该测试是独立的施工验收节点。",
+                "5｜浴缸和排水测试通过后，再施工紧邻浴缸的瓷砖以及水磨石台面／前脸；砌筑和铺贴全过程必须保护亚克力表面。",
+                "6｜浴缸与饰面之间保留厂家要求的柔性间隙，使用卫生间防霉硅胶，不用水泥填缝；排水／溢水连接附近保留可拆检修口。"
               ]
             },
             {
