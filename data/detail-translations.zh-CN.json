@@ -313,5 +313,11 @@
   "The Y6 source recommends 300-400 mm vertically from cooktop surface to hood bottom.": "Y6 资料建议灶台面至油烟机底部的垂直距离为 300–400 mm。",
   "Do not cut the countertop or finalize the gas point from the current images alone.": "不要根据当前的图片来切割台面或确定燃气点的位置。",
   "Retain a removable access panel near the waste connection. The official PAY1320P / NTE210 documents do not prescribe a single access-panel width and height; this project therefore controls the clear opening at a preferred minimum of 400 × 400 mm, subject to an on-site service test after trial placement.": "在排水连接附近保留可拆检修口。PAY1320P / NTE210 官方资料没有规定唯一的检修口宽高，因此本项目优先按净开口不小于 400 × 400 mm 控制，并在浴缸试放后通过现场检修操作验证。",
-  "Access-panel basis: TOTO NTE210 confirms installation, drainage connection and leak-testing requirements but gives no fixed panel size for PAY1320P. Beijing DB11/T 1076-2023 requires a service door leading to the bathtub drain where the bathtub has a decorative finish; the opening must be sized and located for actual maintenance.": "检修口依据：TOTO NTE210 明确了安装、排水连接和试漏要求，但没有给出 PAY1320P 的固定检修口尺寸。北京 DB11/T 1076-2023 要求有装饰面的浴盆设置通向排水口的检修门，开口尺寸和位置必须满足实际检修。"
+  "Access-panel basis: TOTO NTE210 confirms installation, drainage connection and leak-testing requirements but gives no fixed panel size for PAY1320P. Beijing DB11/T 1076-2023 requires a service door leading to the bathtub drain where the bathtub has a decorative finish; the opening must be sized and located for actual maintenance.": "检修口依据：TOTO NTE210 明确了安装、排水连接和试漏要求，但没有给出 PAY1320P 的固定检修口尺寸。北京 DB11/T 1076-2023 要求有装饰面的浴盆设置通向排水口的检修门，开口尺寸和位置必须满足实际检修。",
+  "Opening Directions and Dimensions": "开扇方向与尺寸",
+  "Kitchen, 860×1355 mm: upper sash inward-opening and tilt; the 400 mm lower section is fixed; handle is 5 cm below the usual centre position.": "厨房，860×1355 mm：上部窗扇内开内倒；下部 400 mm 固定；执手较常规中心位置下移 5 cm。",
+  "Living room, 1760×1355 mm: 1060 mm fixed section on the left and 700 mm inward-opening-and-tilt sash on the right.": "客厅，1760×1355 mm：左侧 1060 mm 固定，右侧 700 mm 内开内倒。",
+  "Master bedroom, 2060×1360 mm: 1360 mm fixed section on the left and 700 mm inward-opening-and-tilt sash on the right.": "主卧，2060×1360 mm：左侧 1360 mm 固定，右侧 700 mm 内开内倒。",
+  "Bedroom, 1465×1360 mm: 700 mm inward-opening-and-tilt sash on the left and 765 mm fixed section on the right.": "卧室，1465×1360 mm：左侧 700 mm 内开内倒，右侧 765 mm 固定。",
+  "Opening-direction symbols and handle positions are retained in the public redacted drawing so installers can verify them visually.": "公开脱敏图保留开扇方向符号和执手位置，便于施工人员直观复核。"
 }

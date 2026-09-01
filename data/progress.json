@@ -74,6 +74,16 @@
           "source": "02-renovation/WINDOWS.md",
           "sections": [
             {
+              "title": "Opening Directions and Dimensions",
+              "points": [
+                "Kitchen, 860×1355 mm: upper sash inward-opening and tilt; the 400 mm lower section is fixed; handle is 5 cm below the usual centre position.",
+                "Living room, 1760×1355 mm: 1060 mm fixed section on the left and 700 mm inward-opening-and-tilt sash on the right.",
+                "Master bedroom, 2060×1360 mm: 1360 mm fixed section on the left and 700 mm inward-opening-and-tilt sash on the right.",
+                "Bedroom, 1465×1360 mm: 700 mm inward-opening-and-tilt sash on the left and 765 mm fixed section on the right.",
+                "Opening-direction symbols and handle positions are retained in the public redacted drawing so installers can verify them visually."
+              ]
+            },
+            {
               "title": "Installation Notes From Drawing",
               "points": [
                 "Installation gaps between frame and opening are expected for vertical and horizontal adjustment.",
@@ -84,7 +94,18 @@
           ]
         }
       ],
-      "assets": []
+      "assets": [
+        {
+          "title": "伊博莱全屋窗户方案图（公开脱敏预览）",
+          "href": "technical/2026-08-27-window-order-drawing-redacted.png",
+          "type": "image"
+        },
+        {
+          "title": "伊博莱全屋窗户方案图（公开脱敏 PDF）",
+          "href": "technical/2026-08-27-window-order-drawing-redacted.pdf",
+          "type": "pdf"
+        }
+      ]
     },
     {
       "id": "water-system",

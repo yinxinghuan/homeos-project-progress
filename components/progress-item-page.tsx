@@ -96,6 +96,14 @@ export function ProgressItemPage({ item, basePath = '' }: { item: ProgressItem; 
               </div>
             </section>
 
+            {item.assets.length > 0 && <section className="mt-5 border border-[#d7dde0] bg-white p-5 sm:rounded-[12px] lg:hidden">
+              <div className="flex items-center justify-between"><div><p className="text-[10px] font-medium tracking-[0.12em] text-[#879298]">FILES & DRAWINGS · 文件与图纸</p><h2 className="mt-1 text-lg font-semibold">关键图纸与安装附件</h2></div><span className="font-data text-xs text-[#89949a]">{item.assets.length}</span></div>
+              <p className="mt-2 text-xs leading-5 text-[#77858b]">图纸已作公开脱敏处理；点击可查看完整尺寸与开扇方向。</p>
+              <div className="mt-4 grid gap-3 sm:grid-cols-2">
+                {item.assets.map((asset) => { const href = assetHref(asset.href, basePath); return <a key={asset.href} href={href} target="_blank" rel="noreferrer" className="group block overflow-hidden border border-[#dbe1e3] bg-[#fafbfb] transition active:scale-[0.99] active:border-[#6f8d99] sm:rounded-[8px]">{asset.type === 'image' ? <div className="aspect-[16/10] overflow-hidden bg-[#e9eef0]"><img src={href} alt={asset.title} className="h-full w-full object-cover" /></div> : <div className="grid aspect-[16/9] place-items-center bg-[#e9eef0]"><FileText className="size-8 text-[#708791]" /></div>}<div className="flex items-center justify-between gap-2 p-3"><span className="text-sm font-medium leading-5">{asset.title}</span><ArrowUpRight className="size-4 shrink-0 text-[#72848b]" /></div></a>; })}
+              </div>
+            </section>}
+
             <section className="mt-5 border border-[#d7dde0] bg-white p-5 sm:rounded-[12px] sm:p-7">
               <div className="flex flex-wrap items-end justify-between gap-3"><div><p className="text-[10px] font-medium tracking-[0.12em] text-[#879298]">PROJECT CONNECTIONS</p><h2 className="mt-1 text-xl font-semibold">关联工程节点</h2></div><a href={overviewHref(basePath, '#timeline')} className="inline-flex min-h-9 items-center gap-1 rounded-[6px] border border-[#d4dde0] px-3 text-xs font-medium text-[#536c77] hover:bg-[#f3f7f8]">回到时间总表 <ArrowUpRight className="size-3.5" /></a></div>
               <div className="mt-5 grid gap-3 sm:grid-cols-2">
@@ -117,7 +125,7 @@ export function ProgressItemPage({ item, basePath = '' }: { item: ProgressItem; 
           </div>
 
           <aside className="space-y-4 lg:sticky lg:top-20">
-            <section className="border border-[#d7dde0] bg-white p-5 sm:rounded-[12px]">
+            <section className="hidden border border-[#d7dde0] bg-white p-5 sm:rounded-[12px] lg:block">
               <div className="flex items-center justify-between"><div><p className="text-[10px] font-medium tracking-[0.12em] text-[#879298]">FILES & DRAWINGS · 文件与图纸</p><h2 className="mt-1 text-sm font-semibold">图纸与安装附件</h2></div><span className="font-data text-xs text-[#89949a]">{item.assets.length}</span></div>
               <div className="mt-4 space-y-3">
                 {item.assets.map((asset) => { const href = assetHref(asset.href, basePath); return <a key={asset.href} href={href} target="_blank" rel="noreferrer" className="group block overflow-hidden border border-[#dbe1e3] bg-[#fafbfb] transition hover:border-[#9fb2ba] sm:rounded-[8px]">{asset.type === 'image' ? <div className="aspect-[16/10] overflow-hidden bg-[#e9eef0]"><img src={href} alt={asset.title} className="h-full w-full object-cover transition duration-300 group-hover:scale-[1.015]" /></div> : <div className="grid aspect-[16/9] place-items-center bg-[#e9eef0]"><FileText className="size-8 text-[#708791]" /></div>}<div className="flex items-center justify-between gap-2 p-3"><span className="truncate text-xs font-medium">{asset.title}</span><ArrowUpRight className="size-3.5 shrink-0 text-[#72848b]" /></div></a>; })}

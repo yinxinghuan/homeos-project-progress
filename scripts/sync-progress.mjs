@@ -40,6 +40,10 @@ const detailSources = {
 };
 
 const safeAssets = {
+  windows: [
+    'output/images/2026-08-27-window-order-drawing-redacted.png',
+    'output/pdf/2026-08-27-window-order-drawing-redacted.pdf',
+  ],
   tiles: ['source/plans/2026-08-29-lijing-tile-layout-redacted.pdf'],
   'water-system': [
     'source/media/2026-08-26-central-purifier-softener-installation-requirements.jpeg',
@@ -111,6 +115,8 @@ const safeAssets = {
 };
 
 const assetTitleOverrides = {
+  '2026-08-27-window-order-drawing-redacted.png': '伊博莱全屋窗户方案图（公开脱敏预览）',
+  '2026-08-27-window-order-drawing-redacted.pdf': '伊博莱全屋窗户方案图（公开脱敏 PDF）',
   '2026-08-29-lijing-tile-layout-redacted.pdf': '厨房与卫生间排砖施工图（公开脱敏版）',
   '2026-09-01-aupu-mr009m-installation-service.png': '奥普 MR009M 安装服务图',
 };
@@ -316,7 +322,9 @@ for (const sourceItem of procurement.items) {
   const assets = [];
   for (const relativePath of safeAssets[sourceItem.id] ?? []) {
     const fileName = basename(relativePath);
-    const usePublicTechnicalBase = relativePath.startsWith('source/manuals/') || extname(fileName).toLowerCase() === '.pdf';
+    const usePublicTechnicalBase = relativePath.startsWith('source/manuals/') || (
+      extname(fileName).toLowerCase() === '.pdf' && !relativePath.startsWith('output/pdf/')
+    );
     if (!usePublicTechnicalBase) {
       const destination = resolve(publicDocsDir, fileName);
       await chmod(destination, 0o644).catch(() => {});
