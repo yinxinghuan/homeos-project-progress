@@ -332,5 +332,20 @@
   "The public engineering-collaboration version must retain the four-window division, dimensions, opening directions, hardware and installation notes.": "公开工程协作版必须保留四樘窗的分格、尺寸、开启方向、五金和安装说明。",
   "Owner name, telephone number and exact installation address are removed from the public copy.": "公开副本已移除业主姓名、电话号码和具体安装地址。",
   "Public PDF: output/pdf/2026-08-27-window-order-drawing-redacted.pdf": "公开 PDF：output/pdf/2026-08-27-window-order-drawing-redacted.pdf",
-  "Public preview: output/images/2026-08-27-window-order-drawing-redacted.png": "公开预览：output/images/2026-08-27-window-order-drawing-redacted.png"
+  "Public preview: output/images/2026-08-27-window-order-drawing-redacted.png": "公开预览：output/images/2026-08-27-window-order-drawing-redacted.png",
+  "Full-House Socket Point Drawing — Current Coordination Issue": "全屋插座点位图——当前协调版",
+  "Received 2026-09-02: 2026-09-02-socket-point-layout.pdf.": "2026-09-02 收到：2026-09-02-socket-point-layout.pdf。",
+  "It is more complete than the earlier cabinet elevation crops, but it still lacks a visible revision/date, legend, circuit numbers, cable sizes, breaker/RCD mapping and signature/approval block.": "该图比此前橱柜立面截图更完整，但仍缺少可见版本／日期、图例、回路编号、线径、断路器／漏保对应关系及签字确认栏。",
+  "Before chasing: walk every point room by room; number it; identify ordinary/dedicated, strong/weak current, height and datum; cross-check cabinets, doors, radiators, furniture and every selected appliance; then issue a signed revision.": "开槽前：逐房逐点核对并编号，明确普通／专用、强／弱电、高度和基准；与橱柜、门、暖气、家具及已选设备交叉检查后，出具签字版本。",
+  "Before concealment: photograph all routes with a scale/datum and produce an as-built route/circuit record.": "隐蔽前：使用尺度／基准拍摄全部线路，并形成实际走向与回路记录。",
+  "Ceiling Light-Position Drawing": "天花灯位图",
+  "Received 2026-09-02: 2026-09-02-ceiling-light-point-layout.pdf.": "2026-09-02 收到：2026-09-02-ceiling-light-point-layout.pdf。",
+  "The one-page A4 plan records ceiling light positions and several plan dimensions. It is the current coordination issue for setting-out.": "该一页 A4 平面图记录了天花灯位及若干平面尺寸，是当前放线协调版本。",
+  "The visible sheet does not include a revision/date, legend, fixture schedule, circuit/switch relationship, mounting detail, load, colour temperature or approval block.": "可见图面没有版本／日期、图例、灯具表、回路／开关关系、安装节点、负载、色温或签字确认栏。",
+  "Before wiring or ceiling closure, number every light point and bind it to a switch/control circuit. Confirm how points in the exposed-concrete ceiling are fixed and wired without undermining the selected bare-ceiling finish, and coordinate kitchen/bathroom points with suspended-ceiling modules, access and the bathroom heater.": "布线或封闭吊顶前，应为每个灯位编号并绑定开关／控制回路。确认裸露混凝土顶面的灯位固定和布线方式，不破坏既定裸顶效果；厨卫灯位还须与吊顶模块、检修和浴霸协调。",
+  "Point-Position Drawings Received": "已收到点位图",
+  "Full-house socket point-position drawing received on 2026-09-02: 2026-09-02-socket-point-layout.pdf.": "2026-09-02 已收到全屋插座点位图：2026-09-02-socket-point-layout.pdf。",
+  "Ceiling light-position drawing received on 2026-09-02: 2026-09-02-ceiling-light-point-layout.pdf.": "2026-09-02 已收到天花灯位图：2026-09-02-ceiling-light-point-layout.pdf。",
+  "Both are one-page A4 CAD exports. They show the plan and point annotations, but the visible sheets do not include a revision number, issue date, legend, designer/contractor signature or owner approval field.": "两份文件均为一页 A4 CAD 导出图，包含平面与点位标注；可见图面没有版本号、出图日期、图例、设计／施工签字或业主确认栏。",
+  "Treat them as the current coordination issue, not as an as-built record. Before chasing and concealment, mark corrections, identify every point and circuit, confirm finished-surface datums, then obtain signed/revision-controlled issue sheets.": "将其作为当前协调版，而非竣工图。开槽和隐蔽前须标注修改、识别每个点位和回路、确认完成面基准，并取得带签字与版本控制的施工图。"
 }

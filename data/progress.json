@@ -786,9 +786,9 @@
       "nextAction": "具体安排由项目负责人另行确认",
       "drawingAudit": {
         "status": "partial",
-        "label": "联合确认已完成，正式图待出",
-        "note": "两张橱柜水电立面草图已归档，2026-08-31 联合确认会议已完成；施工方正式点位图尚未提交。",
-        "nextAction": "取得包含设备、管线、开孔、检修边界、图号和版本的施工方正式点位图并完成复核。"
+        "label": "全屋点位图已收到，柜体深化待闭环",
+        "note": "橱柜立面草图及施工方全屋插座／天花灯位图均已归档；新图仍缺明显版本、图例和签字栏，柜体开孔及设备边界需逐项复核。",
+        "nextAction": "把设备、管线、开孔、检修边界和柜体完成面基准落实到带版本的签字施工图。"
       },
       "technical": [],
       "assets": [
@@ -847,7 +847,7 @@
       "name": "水电改造及墙面施工",
       "category": "施工",
       "brand": "施工方",
-      "model": "四期 30% / 30% / 30% / 10%",
+      "model": null,
       "stage": "confirmed",
       "stageLabel": "已确定 / 推进中",
       "priority": null,
@@ -856,13 +856,39 @@
       "progress": "已确定 / 推进中",
       "nextAction": "具体安排由项目负责人另行确认",
       "drawingAudit": {
-        "status": "missing",
-        "label": "水电竣工图未归档",
-        "note": "合同范围和进度已有记录，但尚无最终水电定位图、管线走向图和隐蔽验收影像索引。",
-        "nextAction": "封槽前形成实测水电图并按房间拍摄隐蔽工程。"
+        "status": "partial",
+        "label": "点位图已归档，隐蔽／竣工图待补",
+        "note": "2026-09-02 已归档插座点位图和天花灯位图；当前文件可用于复核，但尚缺签字版本、完整回路／管线走向、隐蔽验收影像和竣工图。",
+        "nextAction": "开槽前逐点编号并签字确认；封槽前按房间拍摄带尺度的管线影像，最终形成回路表和竣工图。"
       },
-      "technical": [],
-      "assets": []
+      "technical": [
+        {
+          "source": "02-renovation/WATER_ELECTRICAL_WALL_CONTRACT.md",
+          "sections": [
+            {
+              "title": "Point-Position Drawings Received",
+              "points": [
+                "Full-house socket point-position drawing received on 2026-09-02: 2026-09-02-socket-point-layout.pdf.",
+                "Ceiling light-position drawing received on 2026-09-02: 2026-09-02-ceiling-light-point-layout.pdf.",
+                "Both are one-page A4 CAD exports. They show the plan and point annotations, but the visible sheets do not include a revision number, issue date, legend, designer/contractor signature or owner approval field.",
+                "Treat them as the current coordination issue, not as an as-built record. Before chasing and concealment, mark corrections, identify every point and circuit, confirm finished-surface datums, then obtain signed/revision-controlled issue sheets."
+              ]
+            }
+          ]
+        }
+      ],
+      "assets": [
+        {
+          "title": "全屋插座点位图",
+          "href": "https://yinxinghuan.github.io/homeos-project-progress/technical/2026-09-02-socket-point-layout.pdf",
+          "type": "pdf"
+        },
+        {
+          "title": "全屋天花灯位图",
+          "href": "https://yinxinghuan.github.io/homeos-project-progress/technical/2026-09-02-ceiling-light-point-layout.pdf",
+          "type": "pdf"
+        }
+      ]
     },
     {
       "id": "bathtub",
@@ -1076,6 +1102,16 @@
                 "Kitchen elevation 02 visibly marks socket-height annotations of 2200 mm, 600 mm and 1200 mm, with 450 mm horizontal offsets from the depicted left/right datums. The high point appears associated with the hood zone, but all appliance/circuit labels must be confirmed rather than inferred from the crop.",
                 "The drawings lack visible revision, scale, legend and approval fields. Before cutting chases, confirm finished-floor datum, wall datum, box-centre convention, socket type/quantity, circuit/load, accessibility after cabinet installation, and the meaning of the two unlabeled black point symbols.",
                 "The 2026-08-31 16:30 joint cabinet/water-electrical/equipment review must mark all corrections on one revision-controlled drawing and obtain cabinet supplier, water/electrical contractor and owner sign-off."
+              ]
+            },
+            {
+              "title": "Full-House Socket Point Drawing — Current Coordination Issue",
+              "points": [
+                "Received 2026-09-02: 2026-09-02-socket-point-layout.pdf.",
+                "The sheet is a one-page A4 CAD export titled “插座点位图” and contains plan-based outlet annotations.",
+                "It is more complete than the earlier cabinet elevation crops, but it still lacks a visible revision/date, legend, circuit numbers, cable sizes, breaker/RCD mapping and signature/approval block.",
+                "Before chasing: walk every point room by room; number it; identify ordinary/dedicated, strong/weak current, height and datum; cross-check cabinets, doors, radiators, furniture and every selected appliance; then issue a signed revision.",
+                "Before concealment: photograph all routes with a scale/datum and produce an as-built route/circuit record."
               ]
             }
           ]
@@ -1603,10 +1639,10 @@
       "progress": "P0｜未购买；点位联合确认会议已完成，等待施工方正式点位图",
       "nextAction": "收到施工方点位图后，核对 450 / 600 / 1200 / 2200 mm 标注、横向基准、点位用途、回路、底盒和未标注点位，再形成施工交底定稿；系列颜色和面板可后续确定",
       "drawingAudit": {
-        "status": "pending_selection",
-        "label": "待选型与点位确认",
-        "note": "部分点位参考已有，最终面板型号与全屋点位图仍待确认。",
-        "nextAction": "形成带编号的点位表和回路对应关系。"
+        "status": "partial",
+        "label": "插座点位图已归档",
+        "note": "全屋插座点位图已收到；面板型号、每个符号的用途／高度、回路编号、线径及配电保护映射仍未冻结。",
+        "nextAction": "现场逐点编号复核并形成插座／开关点位表、回路表和签字版施工图。"
       },
       "technical": [
         {
@@ -1627,6 +1663,16 @@
                 "The drawings lack visible revision, scale, legend and approval fields. Before cutting chases, confirm finished-floor datum, wall datum, box-centre convention, socket type/quantity, circuit/load, accessibility after cabinet installation, and the meaning of the two unlabeled black point symbols.",
                 "The 2026-08-31 16:30 joint cabinet/water-electrical/equipment review must mark all corrections on one revision-controlled drawing and obtain cabinet supplier, water/electrical contractor and owner sign-off."
               ]
+            },
+            {
+              "title": "Full-House Socket Point Drawing — Current Coordination Issue",
+              "points": [
+                "Received 2026-09-02: 2026-09-02-socket-point-layout.pdf.",
+                "The sheet is a one-page A4 CAD export titled “插座点位图” and contains plan-based outlet annotations.",
+                "It is more complete than the earlier cabinet elevation crops, but it still lacks a visible revision/date, legend, circuit numbers, cable sizes, breaker/RCD mapping and signature/approval block.",
+                "Before chasing: walk every point room by room; number it; identify ordinary/dedicated, strong/weak current, height and datum; cross-check cabinets, doors, radiators, furniture and every selected appliance; then issue a signed revision.",
+                "Before concealment: photograph all routes with a scale/datum and produce an as-built route/circuit record."
+              ]
             }
           ]
         }
@@ -1641,6 +1687,11 @@
           "title": "cabinet maker electrical elevation 02",
           "href": "technical/2026-08-30-cabinet-maker-electrical-elevation-02.png",
           "type": "image"
+        },
+        {
+          "title": "全屋插座点位图",
+          "href": "https://yinxinghuan.github.io/homeos-project-progress/technical/2026-09-02-socket-point-layout.pdf",
+          "type": "pdf"
         }
       ]
     },
@@ -1658,13 +1709,34 @@
       "progress": "P0｜灯具均未购买；当前先定灯位和控制",
       "nextAction": "8 月 31 日 16:30 联合确认会上完成灯位、回路、控制、预留和基础负载清单；9 月 1 日前定稿，具体灯具按后续窗口下单",
       "drawingAudit": {
-        "status": "pending_selection",
-        "label": "待选型与灯位确认",
-        "note": "灯具尚未选择，最终灯位、控制和安装条件未冻结。",
-        "nextAction": "确认灯位／开关逻辑后归档灯具安装资料。"
+        "status": "partial",
+        "label": "天花灯位图已归档",
+        "note": "天花灯位图已收到；灯具尚未选择，灯位编号、开关控制、回路、负载及裸顶／吊顶安装节点仍待确认。",
+        "nextAction": "逐点绑定控制回路并协调裸顶走线、厨卫吊顶和浴霸，再补灯具安装资料。"
       },
-      "technical": [],
-      "assets": []
+      "technical": [
+        {
+          "source": "03-systems/lighting.md",
+          "sections": [
+            {
+              "title": "Ceiling Light-Position Drawing",
+              "points": [
+                "Received 2026-09-02: 2026-09-02-ceiling-light-point-layout.pdf.",
+                "The one-page A4 plan records ceiling light positions and several plan dimensions. It is the current coordination issue for setting-out.",
+                "The visible sheet does not include a revision/date, legend, fixture schedule, circuit/switch relationship, mounting detail, load, colour temperature or approval block.",
+                "Before wiring or ceiling closure, number every light point and bind it to a switch/control circuit. Confirm how points in the exposed-concrete ceiling are fixed and wired without undermining the selected bare-ceiling finish, and coordinate kitchen/bathroom points with suspended-ceiling modules, access and the bathroom heater."
+              ]
+            }
+          ]
+        }
+      ],
+      "assets": [
+        {
+          "title": "全屋天花灯位图",
+          "href": "https://yinxinghuan.github.io/homeos-project-progress/technical/2026-09-02-ceiling-light-point-layout.pdf",
+          "type": "pdf"
+        }
+      ]
     },
     {
       "id": "washing-machine",
@@ -2000,8 +2072,8 @@
         ],
         "actual": {
           "status": "completed",
-          "confirmedDate": "2026-08-31",
-          "note": "联合确认会议已结束；现等待施工方提交正式点位图，收到后再进行图纸复核和施工交底。"
+          "confirmedDate": "2026-09-02",
+          "note": "会议已结束，施工方已提交插座点位图和天花灯位图；现进入图纸复核、回路/点位编号及签字版施工交底，尚不等于隐蔽或竣工验收。"
         },
         "ranges": [
           {

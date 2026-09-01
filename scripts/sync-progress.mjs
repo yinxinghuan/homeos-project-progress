@@ -70,6 +70,10 @@ const safeAssets = {
     'source/manuals/grohe/grohe-39947SH0-product-specification.pdf',
   ],
   'wall-paint': ['source/media/2026-08-31-ceiling-finish-scope-red-markup.jpg'],
+  construction: [
+    'source/plans/2026-09-02-socket-point-layout.pdf',
+    'source/plans/2026-09-02-ceiling-light-point-layout.pdf',
+  ],
   bathtub: [
     'source/manuals/toto/toto-pay1320-1323-product-specification.pdf',
     'source/manuals/toto/toto-nte210-bathtub-installation.pdf',
@@ -112,7 +116,9 @@ const safeAssets = {
   switches: [
     'source/media/2026-08-30-cabinet-maker-electrical-elevation-01.png',
     'source/media/2026-08-30-cabinet-maker-electrical-elevation-02.png',
+    'source/plans/2026-09-02-socket-point-layout.pdf',
   ],
+  lighting: ['source/plans/2026-09-02-ceiling-light-point-layout.pdf'],
 };
 
 const assetTitleOverrides = {
@@ -121,10 +127,12 @@ const assetTitleOverrides = {
   '2026-08-29-lijing-tile-layout-redacted.pdf': '厨房与卫生间排砖施工图（公开脱敏版）',
   '2026-09-01-aupu-mr009m-installation-service.png': '奥普 MR009M 安装服务图',
   '2026-09-02-rinnai-rux-v1615sffua-a-e-official-catalogue-extract.pdf': '林内 RUX-V1615SFFUA(A)-E 官方型号页',
+  '2026-09-02-socket-point-layout.pdf': '全屋插座点位图',
+  '2026-09-02-ceiling-light-point-layout.pdf': '全屋天花灯位图',
 };
 
 const blocked = /¥|￥|\bCNY\b|\bprices?\b|\bpayments?\b|\bpaid\b|\binvoices?\b|\bcosts?\b|\bfees?\b|\bcharges?\b|chargeable|surcharges?|\bdeposits?\b|\bbalances?\b|\bquotations?\b|\baddress\b|\bphone\b|金额|价格|付款|支付|已付|待付|定金(?!貂)|预付款|余款|期款|款项|付款比例|全款|付清|实付|报价|收费|费用|地址|电话|姓名|客户|账户|合同编号|订单编号|销售单号|发票/i;
-const technicalHeading = /安装|尺寸|规格|技术|留位|开孔|接口|水电|排水|供电|通风|协调|验收|到货|施工|要求|条件|配置|阀门|防冻|冬季|变压器|product data|dimension|installation|acceptance|hold point|requirement|coordination|utility|clearance|cutout|fabrication|performance|valve|freeze|winter|transformer|before/i;
+const technicalHeading = /安装|尺寸|规格|技术|留位|开孔|接口|水电|排水|供电|通风|协调|验收|到货|施工|要求|条件|配置|阀门|防冻|冬季|变压器|点位|插座|开关|回路|灯位|product data|dimension|installation|acceptance|hold point|requirement|coordination|utility|clearance|cutout|fabrication|performance|valve|freeze|winter|transformer|before|point-position|socket|switch|circuit|light-position/i;
 
 function clean(text) {
   return text
