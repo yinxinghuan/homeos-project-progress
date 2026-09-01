@@ -22,9 +22,9 @@ const detailSources = {
   'grohe-smart-toilet': ['04-assets/fixtures/grohe-39932sh0-smart-toilet.md'],
   'wall-paint': ['02-renovation/WALL_PAINT.md', '07-references/ceiling-exposed-concrete-finish.md'],
   'kitchen-cabinetry': ['02-renovation/KITCHEN_CABINETRY.md'],
-  terrazzo: ['02-renovation/TERRAZZO.md'],
+  terrazzo: ['02-renovation/TERRAZZO.md', 'decisions/0004-bathtub-terrazzo-interface.md'],
   construction: ['02-renovation/WATER_ELECTRICAL_WALL_CONTRACT.md'],
-  bathtub: ['04-assets/fixtures/toto-pay1320p-bathtub.md', 'decisions/0003-bathroom-bathtub-selection.md'],
+  bathtub: ['04-assets/fixtures/toto-pay1320p-bathtub.md', 'decisions/0003-bathroom-bathtub-selection.md', 'decisions/0004-bathtub-terrazzo-interface.md'],
   flooring: ['02-renovation/FLOORING.md'],
   heating: ['03-systems/heating.md'],
   'kitchen-sink': ['04-assets/fixtures/grohe-k500-31919sd0-kitchen-sink.md'],
@@ -32,6 +32,7 @@ const detailSources = {
   oven: ['04-assets/appliances/built-in-oven-595x454.md'],
   'range-hood': ['04-assets/appliances/liudianban-y6-range-hood.md'],
   'gas-cooktop': ['04-assets/appliances/liudianban-two-burner-gas-cooktop.md'],
+  'bathroom-heater': ['04-assets/appliances/aupu-mr009m-bathroom-heater.md'],
   'wire-materials': ['03-systems/electrical.md'],
   'pipe-materials': ['03-systems/plumbing.md'],
   lighting: ['03-systems/lighting.md'],
@@ -98,6 +99,7 @@ const safeAssets = {
     'source/media/2026-08-31-liudianban-q5-2-product-drawing.jpg',
     'source/media/2026-08-31-liudianban-q5-2-weld-cutout.jpg',
   ],
+  'bathroom-heater': ['source/media/2026-09-01-aupu-mr009m-installation-service.png'],
   'kitchen-cabinetry': [
     'source/media/2026-08-30-cabinet-maker-electrical-elevation-01.png',
     'source/media/2026-08-30-cabinet-maker-electrical-elevation-02.png',
@@ -110,6 +112,7 @@ const safeAssets = {
 
 const assetTitleOverrides = {
   '2026-08-29-lijing-tile-layout-redacted.pdf': '厨房与卫生间排砖施工图（公开脱敏版）',
+  '2026-09-01-aupu-mr009m-installation-service.png': '奥普 MR009M 安装服务图',
 };
 
 const blocked = /¥|￥|\bCNY\b|\bprices?\b|\bpayments?\b|\bpaid\b|\binvoices?\b|\bcosts?\b|\bfees?\b|\bcharges?\b|chargeable|surcharges?|\bdeposits?\b|\bbalances?\b|\bquotations?\b|\baddress\b|\bphone\b|金额|价格|付款|支付|已付|待付|定金(?!貂)|预付款|余款|期款|款项|付款比例|全款|付清|实付|报价|收费|费用|地址|电话|姓名|客户|账户|合同编号|订单编号|销售单号|发票/i;
@@ -220,7 +223,7 @@ const timelineItemLinks = {
   'Wall/floor leveling and tiling': ['construction', 'tiles'],
   'Masonry acceptance': ['construction', 'tiles'],
   'Living/dining ceiling and plasterboard false-beam work': ['construction'],
-  'Kitchen and bathroom ceiling work': ['kitchen-ceiling', 'bathroom-ceiling'],
+  'Kitchen and bathroom ceiling work': ['kitchen-ceiling', 'bathroom-ceiling', 'bathroom-heater'],
   'Wall/ceiling base treatment': ['construction', 'wall-paint'],
   'Gypsum cornice': ['construction'],
   'Putty application and sanding': ['construction', 'wall-paint'],
@@ -234,7 +237,7 @@ const timelineItemLinks = {
   Cabinets: ['kitchen-cabinetry'],
   'Kitchen appliances, sink, water heater': ['gas-water-heater', 'kitchen-sink', 'dishwasher', 'oven', 'range-hood', 'gas-cooktop'],
   'Window-sill stone': ['terrazzo'],
-  'Kitchen/bath aluminum ceiling': ['kitchen-ceiling', 'bathroom-ceiling'],
+  'Kitchen/bath aluminum ceiling': ['kitchen-ceiling', 'bathroom-ceiling', 'bathroom-heater'],
   'Wall paint': ['wall-paint'],
   'Lights, switches, sockets': ['lighting', 'switches'],
   'Bathroom fixtures and hardware': ['grohe-shower', 'grohe-kitchen-faucet', 'grohe-smart-toilet', 'bathtub', 'bathroom-vanity'],

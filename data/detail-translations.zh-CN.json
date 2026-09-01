@@ -311,5 +311,7 @@
   "Align the final two-burner cooktop centerline with the Y6 range hood centerline.": "将最终两眼烹饪中心线对齐Y6挡风板中心线。",
   "The Y6 source requires the gas-burner head center to be no more than 260 mm from the finished rear wall; confirm this remains compatible with the selected two-burner cooktop's cutout and countertop rear margin.": "Y6 源要求燃气喷头中心距离后墙完成面不超过 260 mm；确认这仍然兼容所选双灶台的开孔和台面后侧边缘。",
   "The Y6 source recommends 300-400 mm vertically from cooktop surface to hood bottom.": "Y6 资料建议灶台面至油烟机底部的垂直距离为 300–400 mm。",
-  "Do not cut the countertop or finalize the gas point from the current images alone.": "不要根据当前的图片来切割台面或确定燃气点的位置。"
+  "Do not cut the countertop or finalize the gas point from the current images alone.": "不要根据当前的图片来切割台面或确定燃气点的位置。",
+  "Retain a removable access panel near the waste connection. The official PAY1320P / NTE210 documents do not prescribe a single access-panel width and height; this project therefore controls the clear opening at a preferred minimum of 400 × 400 mm, subject to an on-site service test after trial placement.": "在排水连接附近保留可拆检修口。PAY1320P / NTE210 官方资料没有规定唯一的检修口宽高，因此本项目优先按净开口不小于 400 × 400 mm 控制，并在浴缸试放后通过现场检修操作验证。",
+  "Access-panel basis: TOTO NTE210 confirms installation, drainage connection and leak-testing requirements but gives no fixed panel size for PAY1320P. Beijing DB11/T 1076-2023 requires a service door leading to the bathtub drain where the bathtub has a decorative finish; the opening must be sized and located for actual maintenance.": "检修口依据：TOTO NTE210 明确了安装、排水连接和试漏要求，但没有给出 PAY1320P 的固定检修口尺寸。北京 DB11/T 1076-2023 要求有装饰面的浴盆设置通向排水口的检修门，开口尺寸和位置必须满足实际检修。"
 }

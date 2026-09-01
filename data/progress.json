@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-08-31T22:30:00+08:00",
+  "updatedAt": "2026-09-01T21:35:00+08:00",
   "project": {
     "title": "HomeOS 工程进度",
     "phase": "装修执行与设备协调"
@@ -741,6 +741,7 @@
                 "采用方案 A：独立水磨石台面／前脸与浴缸缸沿柔性平接，不让石材压住或承托亚克力缸沿。",
                 "先完成防水和闭水验收，再安装、调平浴缸并做满水试漏，最后封水磨石前脸和相邻瓷砖。",
                 "供应商开料前须提交节点剖面，标明约 150 mm 置物台、基层支撑、防水上翻、板厚、坡度、柔性缝和可拆检修口。",
+                "检修口按净开口优先不小于 400 × 400 mm控制，并尽量正对浴缸排水／溢水连接；若排水件、接头或溢水传动件不能从该开口实际拆装，应放大开口或将更大范围前脸做成可拆板。只有安装师傅在浴缸试放后完成伸手、工具和拆装验证，才允许缩小；不以装饰面或外框标称尺寸代替净开口。",
                 "不采用水磨石压盖或夹死缸沿的做法，以免妨碍热胀冷缩、排水检修和后期换缸。"
               ]
             }
@@ -814,7 +815,7 @@
                 "Confirm direct or horizontal drainage and the exact DB505R-1A / DB505R-1B fitting before closing access.",
                 "Because the purchased package states DB601S-1B + QCHRG, do not substitute or install either drainage route until the seller and installer confirm compatibility against the delivered tub and site drain position.",
                 "Fill and leak-test the tub and drain before sealing the terrazzo face.",
-                "Retain a removable access panel near the waste connection.",
+                "Retain a removable access panel near the waste connection. The official PAY1320P / NTE210 documents do not prescribe a single access-panel width and height; this project therefore controls the clear opening at a preferred minimum of 400 × 400 mm, subject to an on-site service test after trial placement.",
                 "Use a flexible joint and bathroom-compatible mould-resistant sealant at the rim/finish junction."
               ]
             },
@@ -830,6 +831,16 @@
               ]
             },
             {
+              "title": "检修口尺寸与位置",
+              "points": [
+                "TOTO PAY1320P 产品式样书和 NTE210 浴缸安装说明没有给出本型号唯一的检修口长宽，因此不能把经验尺寸写成厂家强制尺寸。",
+                "本项目以净开口优先不小于 400 × 400 mm作为水磨石前脸控制值；“净开口”是拆下盖板后可实际伸手和进工具的尺寸，不是外框、瓷砖分格或装饰盖板标称尺寸。",
+                "开口应尽量正对排水口、排水接头和溢水／传动连接，且盖板拆除后不应被浴缸底脚、基层龙骨、粘结层或固定件遮挡。",
+                "浴缸与到货排水件试放后，安装师傅须从检修口实际完成观察、双手／工具进入、接头拆装和漏水检查。若 400 × 400 mm 仍不能操作，应放大或改为更大范围可拆前脸；只有现场验证通过才允许缩小至约 300 × 300 mm，并由安装方在节点图上签字确认。",
+                "北京地方标准要求有装饰面的浴盆保留通向排水口的检修门，位置和尺寸应满足设备、管道检修；因此水磨石封板前必须把检修口作为验收停点。"
+              ]
+            },
+            {
               "title": "Official Installation Data",
               "points": [
                 "TOTO NTE210 bathtub installation manual",
@@ -839,7 +850,8 @@
                 "The floor must be waterproofed and able to drain; complete and leak-test the waste connection before enclosure.",
                 "Set the tub on a flat, rigid base with all feet bearing. Keep about 3 mm between the rim and wall finish. Do not carry the tub on its rim and do not backfill the shell with mortar.",
                 "TOTO's direct-drain reference uses a Φ40 mm drain connection with a 45-55 mm height datum; the horizontal-drain reference uses Φ40 mm, a 30-40 mm height datum and a fall of at least 1:50. The exact route must be checked against the delivered waste fitting and site drain.",
-                "The purchased DB601S-1B + QCHRG package is not yet released for concealment: the official PAY1320P specification recommends DB505R-1A/1B, so obtain a written compatibility statement or verify every mating dimension against the delivered parts before closing the terrazzo/access panel."
+                "The purchased DB601S-1B + QCHRG package is not yet released for concealment: the official PAY1320P specification recommends DB505R-1A/1B, so obtain a written compatibility statement or verify every mating dimension against the delivered parts before closing the terrazzo/access panel.",
+                "Access-panel basis: TOTO NTE210 confirms installation, drainage connection and leak-testing requirements but gives no fixed panel size for PAY1320P. Beijing DB11/T 1076-2023 requires a service door leading to the bathtub drain where the bathtub has a decorative finish; the opening must be sized and located for actual maintenance."
               ]
             }
           ]
@@ -1626,6 +1638,61 @@
       "assets": []
     },
     {
+      "id": "bathroom-heater",
+      "name": "浴霸 / 排风一体机",
+      "category": "卫浴电器",
+      "brand": "AUPU / 奥普",
+      "model": "MR009M",
+      "stage": "selected",
+      "stageLabel": "型号或方向已定",
+      "priority": "P1",
+      "decisionDeadline": "2026-09-10",
+      "urgencyReason": "浴室吊顶计划 9 月 10—11 日定制，开孔、吊顶内净高、供电和排风条件需要提前冻结。",
+      "progress": "型号或方向已定",
+      "nextAction": "购买前核验 MR009M 铭牌、序列号、CCC、成色、配件、质保和米家解绑；吊顶按 605 × 305 mm 开孔协调，集成吊顶内高度至少 140 mm，石膏/大板吊顶至少 165 mm，并向卖家或奥普补取正式安装说明以确认箱体实测尺寸、排风管径/方向、接线和检修要求",
+      "drawingAudit": {
+        "status": "partial",
+        "label": "开孔与净高已有，正式说明书待补",
+        "note": "MR009M 型号已定、未采购；现有产品图和网络资料可交叉确认 605×305 mm 开孔及吊顶内净高要求，但箱体实测尺寸、排风管径/方向、电气和检修条件尚无厂家正式安装文件。",
+        "nextAction": "购买和最终开孔前核验实物铭牌，并向卖家或奥普取得正式安装说明；确认箱体、排风、电气、固定、检修和湿区安装条件。"
+      },
+      "technical": [
+        {
+          "source": "04-assets/appliances/aupu-mr009m-bathroom-heater.md",
+          "sections": [
+            {
+              "title": "安装与吊顶协调摘要",
+              "points": [
+                "MR009M 是风暖浴霸与换气／排风一体机，同一主机承担取暖和排风功能。",
+                "面板／整机外廓约 600 × 300 mm；现阶段用于吊顶协调的开孔为 605 × 305 mm。",
+                "集成吊顶内高度至少 140 mm；石膏板／大板吊顶内高度至少 165 mm。",
+                "宣传取暖功率为 2800 W，宣传换气量为 180 m³/h；最终配电和排风设计仍以正式说明书与到货铭牌为准。",
+                "吊顶深化时同步确认龙骨避让、主机固定、拆机方向、排风管径／出口／止回、独立回路与保护接地。"
+              ]
+            },
+            {
+              "title": "安装前仍须补证",
+              "points": [
+                "厂家正式安装说明书或带尺寸的安装图",
+                "箱体实际长、宽、厚及最深突出部位",
+                "排风口直径、位置、朝向、止回阀及软管允许长度",
+                "龙骨避让、固定方式、检修/拆机方向与最小维护空间",
+                "独立回路、线径、空开、漏保、保护接地及开关底盒要求",
+                "湿区安装允许范围和防水等级对应的安装限制"
+              ]
+            }
+          ]
+        }
+      ],
+      "assets": [
+        {
+          "title": "奥普 MR009M 安装服务图",
+          "href": "technical/2026-09-01-aupu-mr009m-installation-service.png",
+          "type": "image"
+        }
+      ]
+    },
+    {
       "id": "bathroom-ceiling",
       "name": "浴室吊顶",
       "category": "待购买",
@@ -1636,13 +1703,13 @@
       "priority": "P1",
       "decisionDeadline": "2026-09-10",
       "urgencyReason": "计划 9 月 10—11 日定制、9 月 22—23 日施工，需同步确认浴霸、排风和照明开孔。",
-      "progress": "P1｜未购买；浴霸/排风/照明条件需一并确认",
-      "nextAction": "9 月 10 日前确定防潮材质、浴霸/排风/照明设备与开孔、检修口、完成面高度、测量与安装范围",
+      "progress": "P1｜未购买；浴霸/排风一体机已定为奥普 MR009M，吊顶及照明条件待确认",
+      "nextAction": "9 月 10 日前按 MR009M 的 605 × 305 mm 开孔和吊顶内净高要求完成设备协调，并确定防潮材质、排风管径/路径、照明、检修/拆机方向、完成面高度、测量与安装范围",
       "drawingAudit": {
         "status": "pending_selection",
-        "label": "待方案后补图",
-        "note": "吊顶方案尚未确定。",
-        "nextAction": "确认标高、分块、检修口、灯位和排风设备关系。"
+        "label": "浴霸已定，吊顶方案待补",
+        "note": "浴霸已定为奥普 MR009M；吊顶方案尚未确定。",
+        "nextAction": "按 605×305 mm 浴霸开孔和吊顶内净高要求，确认标高、分块、龙骨避让、检修口、灯位和排风设备关系。"
       },
       "technical": [],
       "assets": []
@@ -1980,7 +2047,8 @@
         "kind": "construction",
         "linkedItemIds": [
           "kitchen-ceiling",
-          "bathroom-ceiling"
+          "bathroom-ceiling",
+          "bathroom-heater"
         ],
         "actual": null,
         "ranges": [
@@ -2264,7 +2332,8 @@
         "kind": "supplier",
         "linkedItemIds": [
           "kitchen-ceiling",
-          "bathroom-ceiling"
+          "bathroom-ceiling",
+          "bathroom-heater"
         ],
         "actual": null,
         "ranges": [
