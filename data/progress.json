@@ -76,11 +76,20 @@
             {
               "title": "Opening Directions and Dimensions",
               "points": [
-                "Kitchen, 860×1355 mm: upper sash inward-opening and tilt; the 400 mm lower section is fixed; handle is 5 cm below the usual centre position.",
+                "Kitchen: the upper sash has two inward-opening modes — inward side opening and top inward tilt. The owner corrected the earlier directional interpretation on 2026-09-02. Exact hinge side, handle side, opening sweep and usable clearances must be confirmed against the signed manufacturer drawing and onsite operation; HomeOS does not infer them from the current image.",
                 "Living room, 1760×1355 mm: 1060 mm fixed section on the left and 700 mm inward-opening-and-tilt sash on the right.",
                 "Master bedroom, 2060×1360 mm: 1360 mm fixed section on the left and 700 mm inward-opening-and-tilt sash on the right.",
                 "Bedroom, 1465×1360 mm: 700 mm inward-opening-and-tilt sash on the left and 765 mm fixed section on the right.",
                 "Opening-direction symbols and handle positions are retained in the public redacted drawing so installers can verify them visually."
+              ]
+            },
+            {
+              "title": "Kitchen Window / Exhaust-Duct Coordination Hold",
+              "points": [
+                "Confirmed fact: the kitchen sash supports both inward side opening and top inward tilt.",
+                "The range-hood exhaust duct, elbow, backdraft valve, connectors, supports and any flexible section must stay clear of the sash in both opening modes and must not block the handle or service access.",
+                "Before the duct route is fixed, open the actual sash fully in both modes and mark its occupied space onsite. The window installer and range-hood installer must jointly confirm that the complete duct assembly remains outside that space.",
+                "Do not use a verbal left/right description alone for fabrication or drilling. The signed window drawing must identify the interior viewing direction, hinge side, handle/free-edge side and opening direction."
               ]
             },
             {
@@ -1291,7 +1300,10 @@
                 "Main hood width: 998 mm; merchant drawing states that integrated cabinetry should retain at least 10 mm allowance, with allocation per side still to confirm.",
                 "Upper hood box: 430 W × 313 D mm; cabinet clear reserve at least 450 W × 330 D mm.",
                 "Ceiling duct pass-through: diameter 250 mm within the upper-box zone; obtain signed center coordinates before drilling.",
-                "Product exhaust outlet: diameter 185 mm; public-flue opening: diameter 180 mm; confirm the transition and backdraft valve."
+                "Product exhaust outlet: diameter 185 mm; public-flue opening: diameter 180 mm; confirm the transition and backdraft valve.",
+                "Kitchen-window hard clearance: the duct, elbow, backdraft valve, connectors, supports and flexible sections must remain outside the actual sash space in both inward side-opening and top-inward-tilt modes.",
+                "Before permanent fixing, operate the installed sash fully in both modes and have the window installer and range-hood installer jointly mark and approve the duct route onsite.",
+                "Do not set out from a verbal left/right description. Use the signed window drawing with the interior viewing direction, hinge side and handle/free-edge side explicitly identified."
               ]
             },
             {
