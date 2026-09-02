@@ -1123,6 +1123,34 @@
       "assets": []
     },
     {
+      "id": "electrical-distribution-board",
+      "name": "强电箱及配电保护器件",
+      "category": "电气",
+      "brand": "ABB",
+      "model": "ABB 16位暗装强电箱 + ABB 2P40A总开 + ABB 过欠压保护 + ABB 分路保护器件",
+      "stage": "ordered",
+      "stageLabel": "已采购 / 待交付安装",
+      "priority": null,
+      "decisionDeadline": null,
+      "urgencyReason": null,
+      "progress": "已采购 / 待交付安装",
+      "nextAction": "到货后逐件核对 ABB 完整型号、极数、分断能力、脱扣曲线、漏电参数、CCC、过欠压动作参数及16位箱附件；由电工确认线径、回路映射、N/PE分离和测试记录后安装送电",
+      "drawingAudit": {
+        "status": "partial",
+        "label": "ABB 强电箱及保护器件已购",
+        "note": "本次购入的 16 位暗装箱、总开、过欠压保护和分路保护器件均为 ABB 产品；购买单使用 2P40A、1P+N16、25A漏保等简称，精确型号、脱扣曲线、分断能力、漏电参数及认证仍须按包装和铭牌核验。",
+        "nextAction": "到货时逐件核对 ABB 型号、极数、额定电流、漏电动作参数、CCC／合格证；安装前形成签字版回路表，送电后完成漏保按钮与仪表测试。"
+      },
+      "technical": [],
+      "assets": [
+        {
+          "title": "现场手写配电箱回路配置",
+          "href": "technical/2026-09-02-electrical-panel-circuit-note.jpg",
+          "type": "image"
+        }
+      ]
+    },
+    {
       "id": "wire-materials",
       "name": "电线及配套材料",
       "category": "电气",

@@ -121,6 +121,7 @@ const safeAssets = {
     'source/media/2026-09-02-electrical-panel-circuit-note.jpg',
   ],
   'wire-materials': ['source/media/2026-09-02-electrical-panel-circuit-note.jpg'],
+  'electrical-distribution-board': ['source/media/2026-09-02-electrical-panel-circuit-note.jpg'],
   lighting: ['source/plans/2026-09-02-ceiling-light-point-layout.pdf'],
 };
 
