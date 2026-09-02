@@ -875,6 +875,48 @@
               ]
             }
           ]
+        },
+        {
+          "source": "03-systems/electrical.md",
+          "sections": [
+            {
+              "title": "Commercial Coordination",
+              "points": [
+                "This commercial confirmation does not freeze the circuit design, point positions, quantities, materials, testing, or acceptance requirements."
+              ]
+            },
+            {
+              "title": "Cabinet-Maker Point Drawings — Draft Coordination Input",
+              "points": [
+                "Two cabinet-supplier elevation screenshots were received on 2026-08-30: elevation 01 and kitchen elevation 02.",
+                "Elevation 01 visibly marks one socket height at 450 mm. The crop also shows 2800 mm overall height, a 900 mm base-cabinet zone and 1460 / 400 / 300 mm vertical annotations; the red 1201.2034 horizontal text requires supplier clarification.",
+                "Kitchen elevation 02 visibly marks socket-height annotations of 2200 mm, 600 mm and 1200 mm, with 450 mm horizontal offsets from the depicted left/right datums. The high point appears associated with the hood zone, but all appliance/circuit labels must be confirmed rather than inferred from the crop.",
+                "The drawings lack visible revision, scale, legend and approval fields. Before cutting chases, confirm finished-floor datum, wall datum, box-centre convention, socket type/quantity, circuit/load, accessibility after cabinet installation, and the meaning of the two unlabeled black point symbols.",
+                "The 2026-08-31 16:30 joint cabinet/water-electrical/equipment review must mark all corrections on one revision-controlled drawing and obtain cabinet supplier, water/electrical contractor and owner sign-off."
+              ]
+            },
+            {
+              "title": "Full-House Socket Point Drawing — Current Coordination Issue",
+              "points": [
+                "Received 2026-09-02: 2026-09-02-socket-point-layout.pdf.",
+                "The sheet is a one-page A4 CAD export titled “插座点位图” and contains plan-based outlet annotations.",
+                "It is more complete than the earlier cabinet elevation crops, but it still lacks a visible revision/date, legend, circuit numbers, cable sizes, breaker/RCD mapping and signature/approval block.",
+                "Before chasing: walk every point room by room; number it; identify ordinary/dedicated, strong/weak current, height and datum; cross-check cabinets, doors, radiators, furniture and every selected appliance; then issue a signed revision.",
+                "Before concealment: photograph all routes with a scale/datum and produce an as-built route/circuit record."
+              ]
+            },
+            {
+              "title": "现场手写配电箱回路建议（待签字确认）",
+              "points": [
+                "2026-09-02 收到现场墙面手写记录：2026-09-02-electrical-panel-circuit-note.jpg。",
+                "能够清楚辨认的内容：总开 40A、欠压保护 40A、照明 1P+N / 16A（1P+N 字样需施工方确认）、三路空调分别 20A。",
+                "中间三路手写标签可见额定值为 25A / 25A / 20A，从字迹看可能对应卫生间、厨房及卫生间设备／浴霸，但标签不够清晰，暂不作为最终回路名称。",
+                "下方可辨认“14回路电箱”；其后的“上线配好”或类似字样含义不明确，须由施工方解释。",
+                "这张照片只记录现场拟配方案，不等于正式配电系统图、回路表或产品清单。安装前须补齐：每路用途和服务区域、断路器／RCBO 型号及极数、漏电保护范围和动作参数、线径、敷设方式、负载、分断能力、总开与户内进线容量匹配，以及过欠压保护器是否同时具备过压保护。",
+                "应把最终回路编号同步标在插座点位图、灯位图和配电箱门内回路标签上，并由电工／施工方签字确认；送电前完成绝缘、接地连续性、极性、漏保动作及各回路功能测试。"
+              ]
+            }
+          ]
         }
       ],
       "assets": [
@@ -887,6 +929,11 @@
           "title": "全屋天花灯位图",
           "href": "https://yinxinghuan.github.io/homeos-project-progress/technical/2026-09-02-ceiling-light-point-layout.pdf",
           "type": "pdf"
+        },
+        {
+          "title": "现场手写配电箱回路配置",
+          "href": "technical/2026-09-02-electrical-panel-circuit-note.jpg",
+          "type": "image"
         }
       ]
     },
@@ -1079,10 +1126,10 @@
       "progress": "P0｜施工方代购，尚未形成可验收的材料清单",
       "nextAction": "具体安排由项目负责人另行确认",
       "drawingAudit": {
-        "status": "missing",
-        "label": "材料与回路图待补",
-        "note": "已指定金貂电线并委托施工方采购，但规格、回路表和合格证明尚未归档。",
-        "nextAction": "进场前确认线径、回路、卷标、合格证和实物照片。"
+        "status": "partial",
+        "label": "现场回路草案已有，正式回路表待补",
+        "note": "已归档现场手写配电箱配置照片，可辨认总开／欠压保护 40A、照明 16A、三路空调各 20A 及三路 25A／25A／20A；中间回路名称、器件型号、线径、保护参数和合格证明尚未确认。",
+        "nextAction": "进场和送电前取得签字版单线图／回路表，确认每路线径、断路器／RCBO、漏保、负载、卷标、合格证和测试记录。"
       },
       "technical": [
         {
@@ -1113,11 +1160,28 @@
                 "Before chasing: walk every point room by room; number it; identify ordinary/dedicated, strong/weak current, height and datum; cross-check cabinets, doors, radiators, furniture and every selected appliance; then issue a signed revision.",
                 "Before concealment: photograph all routes with a scale/datum and produce an as-built route/circuit record."
               ]
+            },
+            {
+              "title": "现场手写配电箱回路建议（待签字确认）",
+              "points": [
+                "2026-09-02 收到现场墙面手写记录：2026-09-02-electrical-panel-circuit-note.jpg。",
+                "能够清楚辨认的内容：总开 40A、欠压保护 40A、照明 1P+N / 16A（1P+N 字样需施工方确认）、三路空调分别 20A。",
+                "中间三路手写标签可见额定值为 25A / 25A / 20A，从字迹看可能对应卫生间、厨房及卫生间设备／浴霸，但标签不够清晰，暂不作为最终回路名称。",
+                "下方可辨认“14回路电箱”；其后的“上线配好”或类似字样含义不明确，须由施工方解释。",
+                "这张照片只记录现场拟配方案，不等于正式配电系统图、回路表或产品清单。安装前须补齐：每路用途和服务区域、断路器／RCBO 型号及极数、漏电保护范围和动作参数、线径、敷设方式、负载、分断能力、总开与户内进线容量匹配，以及过欠压保护器是否同时具备过压保护。",
+                "应把最终回路编号同步标在插座点位图、灯位图和配电箱门内回路标签上，并由电工／施工方签字确认；送电前完成绝缘、接地连续性、极性、漏保动作及各回路功能测试。"
+              ]
             }
           ]
         }
       ],
-      "assets": []
+      "assets": [
+        {
+          "title": "现场手写配电箱回路配置",
+          "href": "technical/2026-09-02-electrical-panel-circuit-note.jpg",
+          "type": "image"
+        }
+      ]
     },
     {
       "id": "pipe-materials",
@@ -1640,9 +1704,9 @@
       "nextAction": "收到施工方点位图后，核对 450 / 600 / 1200 / 2200 mm 标注、横向基准、点位用途、回路、底盒和未标注点位，再形成施工交底定稿；系列颜色和面板可后续确定",
       "drawingAudit": {
         "status": "partial",
-        "label": "插座点位图已归档",
-        "note": "全屋插座点位图已收到；面板型号、每个符号的用途／高度、回路编号、线径及配电保护映射仍未冻结。",
-        "nextAction": "现场逐点编号复核并形成插座／开关点位表、回路表和签字版施工图。"
+        "label": "插座图及现场回路草案已归档",
+        "note": "全屋插座点位图和现场手写配电箱配置照片已收到；面板型号、每个符号的用途／高度、正式回路编号、线径及配电保护映射仍未冻结。",
+        "nextAction": "现场逐点编号复核，将插座／开关点位表与签字版配电回路表一一对应。"
       },
       "technical": [
         {
@@ -1673,6 +1737,17 @@
                 "Before chasing: walk every point room by room; number it; identify ordinary/dedicated, strong/weak current, height and datum; cross-check cabinets, doors, radiators, furniture and every selected appliance; then issue a signed revision.",
                 "Before concealment: photograph all routes with a scale/datum and produce an as-built route/circuit record."
               ]
+            },
+            {
+              "title": "现场手写配电箱回路建议（待签字确认）",
+              "points": [
+                "2026-09-02 收到现场墙面手写记录：2026-09-02-electrical-panel-circuit-note.jpg。",
+                "能够清楚辨认的内容：总开 40A、欠压保护 40A、照明 1P+N / 16A（1P+N 字样需施工方确认）、三路空调分别 20A。",
+                "中间三路手写标签可见额定值为 25A / 25A / 20A，从字迹看可能对应卫生间、厨房及卫生间设备／浴霸，但标签不够清晰，暂不作为最终回路名称。",
+                "下方可辨认“14回路电箱”；其后的“上线配好”或类似字样含义不明确，须由施工方解释。",
+                "这张照片只记录现场拟配方案，不等于正式配电系统图、回路表或产品清单。安装前须补齐：每路用途和服务区域、断路器／RCBO 型号及极数、漏电保护范围和动作参数、线径、敷设方式、负载、分断能力、总开与户内进线容量匹配，以及过欠压保护器是否同时具备过压保护。",
+                "应把最终回路编号同步标在插座点位图、灯位图和配电箱门内回路标签上，并由电工／施工方签字确认；送电前完成绝缘、接地连续性、极性、漏保动作及各回路功能测试。"
+              ]
             }
           ]
         }
@@ -1692,6 +1767,11 @@
           "title": "全屋插座点位图",
           "href": "https://yinxinghuan.github.io/homeos-project-progress/technical/2026-09-02-socket-point-layout.pdf",
           "type": "pdf"
+        },
+        {
+          "title": "现场手写配电箱回路配置",
+          "href": "technical/2026-09-02-electrical-panel-circuit-note.jpg",
+          "type": "image"
         }
       ]
     },

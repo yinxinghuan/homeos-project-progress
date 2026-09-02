@@ -23,7 +23,7 @@ const detailSources = {
   'wall-paint': ['02-renovation/WALL_PAINT.md', '07-references/ceiling-exposed-concrete-finish.md'],
   'kitchen-cabinetry': ['02-renovation/KITCHEN_CABINETRY.md'],
   terrazzo: ['02-renovation/TERRAZZO.md', 'decisions/0004-bathtub-terrazzo-interface.md'],
-  construction: ['02-renovation/WATER_ELECTRICAL_WALL_CONTRACT.md'],
+  construction: ['02-renovation/WATER_ELECTRICAL_WALL_CONTRACT.md', '03-systems/electrical.md'],
   bathtub: ['04-assets/fixtures/toto-pay1320p-bathtub.md', 'decisions/0003-bathroom-bathtub-selection.md', 'decisions/0004-bathtub-terrazzo-interface.md'],
   flooring: ['02-renovation/FLOORING.md'],
   heating: ['03-systems/heating.md'],
@@ -73,6 +73,7 @@ const safeAssets = {
   construction: [
     'source/plans/2026-09-02-socket-point-layout.pdf',
     'source/plans/2026-09-02-ceiling-light-point-layout.pdf',
+    'source/media/2026-09-02-electrical-panel-circuit-note.jpg',
   ],
   bathtub: [
     'source/manuals/toto/toto-pay1320-1323-product-specification.pdf',
@@ -117,7 +118,9 @@ const safeAssets = {
     'source/media/2026-08-30-cabinet-maker-electrical-elevation-01.png',
     'source/media/2026-08-30-cabinet-maker-electrical-elevation-02.png',
     'source/plans/2026-09-02-socket-point-layout.pdf',
+    'source/media/2026-09-02-electrical-panel-circuit-note.jpg',
   ],
+  'wire-materials': ['source/media/2026-09-02-electrical-panel-circuit-note.jpg'],
   lighting: ['source/plans/2026-09-02-ceiling-light-point-layout.pdf'],
 };
 
@@ -129,6 +132,7 @@ const assetTitleOverrides = {
   '2026-09-02-rinnai-rux-v1615sffua-a-e-official-catalogue-extract.pdf': '林内 RUX-V1615SFFUA(A)-E 官方型号页',
   '2026-09-02-socket-point-layout.pdf': '全屋插座点位图',
   '2026-09-02-ceiling-light-point-layout.pdf': '全屋天花灯位图',
+  '2026-09-02-electrical-panel-circuit-note.jpg': '现场手写配电箱回路配置',
 };
 
 const blocked = /¥|￥|\bCNY\b|\bprices?\b|\bpayments?\b|\bpaid\b|\binvoices?\b|\bcosts?\b|\bfees?\b|\bcharges?\b|chargeable|surcharges?|\bdeposits?\b|\bbalances?\b|\bquotations?\b|\baddress\b|\bphone\b|金额|价格|付款|支付|已付|待付|定金(?!貂)|预付款|余款|期款|款项|付款比例|全款|付清|实付|报价|收费|费用|地址|电话|姓名|客户|账户|合同编号|订单编号|销售单号|发票/i;
