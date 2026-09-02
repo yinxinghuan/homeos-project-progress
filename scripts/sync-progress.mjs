@@ -176,6 +176,7 @@ function parseTechnical(content) {
 
 function stageFor(status) {
   if (['paid_full', 'paid_full_in_transit', 'delivered_install_pending', 'product_paid_install_pending'].includes(status)) return 'ordered';
+  if (status === 'installation_in_progress') return 'confirmed';
   if (['deposit_paid', 'deposit_paid_total_unknown', 'installment_paid'].includes(status)) return 'confirmed';
   if (['selected_not_ordered', 'direction_selected'].includes(status)) return 'selected';
   if (status === 'contractor_procurement') return 'coordination';
@@ -360,7 +361,7 @@ for (const sourceItem of procurement.items) {
     brand: sourceItem.brand ?? null,
     model: sourceItem.model && !blocked.test(sourceItem.model) ? sourceItem.model : null,
     stage,
-    stageLabel: sourceItem.status === 'delivered_install_pending' ? '已到货 / 待安装' : stageLabels[stage],
+    stageLabel: sourceItem.status === 'delivered_install_pending' ? '已到货 / 待安装' : sourceItem.status === 'installation_in_progress' ? '施工中' : stageLabels[stage],
     priority: sourceItem.priority ?? null,
     decisionDeadline: sourceItem.decisionDeadline ?? null,
     urgencyReason: sourceItem.urgencyReason && !blocked.test(sourceItem.urgencyReason) ? sourceItem.urgencyReason : null,
