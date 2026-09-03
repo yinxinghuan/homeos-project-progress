@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-09-01T21:35:00+08:00",
+  "updatedAt": "2026-09-03T12:18:07+08:00",
   "project": {
     "title": "HomeOS 工程进度",
     "phase": "装修执行与设备协调"
@@ -194,6 +194,15 @@
                 "Keep pipe and fitting systems compatible; do not accept mixed or unidentified substitute materials without written owner approval.",
                 "Record the completed pipe routes and joints before concealment.",
                 "Perform and document the agreed pressure test, duration, pressure readings, leak inspection, acceptance signature, and any manufacturer/installer warranty service."
+              ]
+            },
+            {
+              "title": "2026-09-03 水路施工进度",
+              "points": [
+                "业主确认：水路开槽以及布管已经开始施工。",
+                "2026-09-03 是本次状态确认日期，实际开工日期未另确认；不将施工计划日期当作实绩日期。",
+                "施工中立即核对管材和管件规格、冷热水用途、同系统兼容性及各用水设备点位；材料已进场不等于逐项验收完成。",
+                "封槽前拍摄带位置基准的全部管路及接头，留存压力测试和签字验收记录；目前不标记为试压合格或隐蔽验收完成。"
               ]
             }
           ]
@@ -927,6 +936,45 @@
               ]
             }
           ]
+        },
+        {
+          "source": "03-systems/plumbing.md",
+          "sections": [
+            {
+              "title": "Procurement and Site Acceptance",
+              "points": [
+                "Require a pre-purchase itemised list showing every pipe, elbow, tee, coupling, valve, adapter, clamp, sleeve, and other fitting.",
+                "On arrival, photograph labels, production/batch information, dimensions, condition, and counts before installation.",
+                "Keep pipe and fitting systems compatible; do not accept mixed or unidentified substitute materials without written owner approval.",
+                "Record the completed pipe routes and joints before concealment.",
+                "Perform and document the agreed pressure test, duration, pressure readings, leak inspection, acceptance signature, and any manufacturer/installer warranty service."
+              ]
+            },
+            {
+              "title": "2026-09-03 水路施工进度",
+              "points": [
+                "业主确认：水路开槽以及布管已经开始施工。",
+                "2026-09-03 是本次状态确认日期，实际开工日期未另确认；不将施工计划日期当作实绩日期。",
+                "施工中立即核对管材和管件规格、冷热水用途、同系统兼容性及各用水设备点位；材料已进场不等于逐项验收完成。",
+                "封槽前拍摄带位置基准的全部管路及接头，留存压力测试和签字验收记录；目前不标记为试压合格或隐蔽验收完成。"
+              ]
+            }
+          ]
+        },
+        {
+          "source": "04-assets/fixtures/abb-electrical-distribution-board.md",
+          "sections": [
+            {
+              "title": "配置与安装核验",
+              "points": [
+                "业主确认购入 ABB 16 位暗装强电箱、总开、过／欠压保护器及分路保护器件；到货核验、安装和送电验收尚未确认。",
+                "以上 2P40A、1P+N16A、25A 漏保等均为单据简称，不是完整 ABB 产品型号；须逐件核对包装及本体铭牌，不能据此认定具体系列。",
+                "按电工说明，当前方案占用 14 个模数，16 位箱保留 2 个空模数；最终以实物宽度与完整器件清单核对。",
+                "安装前须确认每路用途、器件型号与极数、额定电流、分断能力、脱扣曲线、漏电保护类型及动作参数、认证、线径、母排兼容性和 N／PE 分离，并形成签字版回路表。",
+                "送电验收需留存电工的绝缘、接地、极性、漏电保护及各回路功能测试记录；采购完成不等于上述验收完成。"
+              ]
+            }
+          ]
         }
       ],
       "assets": [
@@ -1141,7 +1189,23 @@
         "note": "本次购入的 16 位暗装箱、总开、过欠压保护和分路保护器件均为 ABB 产品；购买单使用 2P40A、1P+N16、25A漏保等简称，精确型号、脱扣曲线、分断能力、漏电参数及认证仍须按包装和铭牌核验。",
         "nextAction": "到货时逐件核对 ABB 型号、极数、额定电流、漏电动作参数、CCC／合格证；安装前形成签字版回路表，送电后完成漏保按钮与仪表测试。"
       },
-      "technical": [],
+      "technical": [
+        {
+          "source": "04-assets/fixtures/abb-electrical-distribution-board.md",
+          "sections": [
+            {
+              "title": "配置与安装核验",
+              "points": [
+                "业主确认购入 ABB 16 位暗装强电箱、总开、过／欠压保护器及分路保护器件；到货核验、安装和送电验收尚未确认。",
+                "以上 2P40A、1P+N16A、25A 漏保等均为单据简称，不是完整 ABB 产品型号；须逐件核对包装及本体铭牌，不能据此认定具体系列。",
+                "按电工说明，当前方案占用 14 个模数，16 位箱保留 2 个空模数；最终以实物宽度与完整器件清单核对。",
+                "安装前须确认每路用途、器件型号与极数、额定电流、分断能力、脱扣曲线、漏电保护类型及动作参数、认证、线径、母排兼容性和 N／PE 分离，并形成签字版回路表。",
+                "送电验收需留存电工的绝缘、接地、极性、漏电保护及各回路功能测试记录；采购完成不等于上述验收完成。"
+              ]
+            }
+          ]
+        }
+      ],
       "assets": [
         {
           "title": "现场手写配电箱回路配置",
@@ -1230,18 +1294,18 @@
       "category": "水系统",
       "brand": "伟星",
       "model": "VASEN / 伟星水管及同品牌绿色管件（精确系列、管径和压力等级待核）",
-      "stage": "ordered",
-      "stageLabel": "已到货 / 待安装",
+      "stage": "confirmed",
+      "stageLabel": "施工中",
       "priority": "P0",
       "decisionDeadline": "2026-09-01",
-      "urgencyReason": "9 月 2 日水路开槽与布管计划开始，材料需要在开工前确认并到场验收。",
-      "progress": "2026-09-02 伟星水管及绿色管件已进场并有现场照片；精确系列、冷热水等级、管径、壁厚、压力等级、批次和数量尚待逐项验收",
-      "nextAction": "安装前拍清每种管材/管件标签与防伪码，按清单核对系列、管径、压力等级、数量和同系统兼容性；施工后留存管路影像、压力测试及质保记录",
+      "urgencyReason": "9 月 3 日确认水路开槽及布管已开始，需在施工中立即核验材料与管路点位，并在封槽前完成隐蔽记录。",
+      "progress": "2026-09-02 伟星水管及绿色管件已进场；2026-09-03 业主确认水路开槽及布管已经开始，实际开工日期未另确认；材料规格逐项核验、压力测试与验收记录仍待补齐",
+      "nextAction": "施工中立即核对管材/管件标签、防伪码、系列、管径、压力等级、冷热水用途及点位；封槽前留存带位置基准的全部管路与接头影像，并取得压力测试、签字验收及质保记录",
       "drawingAudit": {
         "status": "partial",
-        "label": "伟星水管及管件已进场待验收",
-        "note": "现场照片可确认伟星水管和同品牌绿色管件到场，但产品系列、管径、壁厚、压力等级、冷热水用途、批次与数量尚未逐项核验；管路走向及试压记录亦未归档。",
-        "nextAction": "安装前逐种核对完整标签、防伪码、规格和数量；封槽前补管路影像，完工后取得完整压力测试和签字验收记录。"
+        "label": "水路开槽及布管施工中",
+        "note": "2026-09-03 业主确认水路开槽及布管已开始，实际开工日期未另确认。伟星管材及绿色管件已进场，但产品系列、管径、壁厚、压力等级、冷热水用途、批次与数量尚未逐项核验；管路走向及试压记录亦未归档。",
+        "nextAction": "施工中立即核对完整标签、防伪码、规格、数量及管路点位；封槽前补齐全管路及接头影像，取得完整压力测试和签字验收记录。"
       },
       "technical": [
         {
@@ -1255,6 +1319,15 @@
                 "Keep pipe and fitting systems compatible; do not accept mixed or unidentified substitute materials without written owner approval.",
                 "Record the completed pipe routes and joints before concealment.",
                 "Perform and document the agreed pressure test, duration, pressure readings, leak inspection, acceptance signature, and any manufacturer/installer warranty service."
+              ]
+            },
+            {
+              "title": "2026-09-03 水路施工进度",
+              "points": [
+                "业主确认：水路开槽以及布管已经开始施工。",
+                "2026-09-03 是本次状态确认日期，实际开工日期未另确认；不将施工计划日期当作实绩日期。",
+                "施工中立即核对管材和管件规格、冷热水用途、同系统兼容性及各用水设备点位；材料已进场不等于逐项验收完成。",
+                "封槽前拍摄带位置基准的全部管路及接头，留存压力测试和签字验收记录；目前不标记为试压合格或隐蔽验收完成。"
               ]
             }
           ]
@@ -2058,7 +2131,7 @@
     "source": "02-renovation/CONSTRUCTION_PLAN.md",
     "trackingSource": "02-renovation/CONSTRUCTION_PROGRESS.md",
     "actualStatus": "recorded",
-    "actualCount": 8,
+    "actualCount": 9,
     "phases": [
       {
         "name": "准备与拆除",
@@ -2212,6 +2285,7 @@
         "kind": "construction",
         "linkedItemIds": [
           "construction",
+          "electrical-distribution-board",
           "wire-materials",
           "switches"
         ],
@@ -2236,7 +2310,11 @@
           "pipe-materials",
           "water-system"
         ],
-        "actual": null,
+        "actual": {
+          "status": "in_progress",
+          "confirmedDate": "2026-09-03",
+          "note": "业主确认水路开槽及布管已经开始；此日期为确认日期，实际开工日期未另确认。材料规格、管路点位及隐蔽记录仍须核验；压力测试和签字验收尚未确认完成。"
+        },
         "ranges": [
           {
             "start": "2026-09-02",
