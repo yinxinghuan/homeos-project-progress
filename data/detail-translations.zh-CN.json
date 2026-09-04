@@ -1,4 +1,11 @@
 {
+  "Refrigerator coordination - Hitachi R-FBF570NSC": "冰箱协调 - 日立 R-FBF570NSC",
+  "Official body size: 900 W × 720 D × 1840 H mm; four doors; 573 L.": "官方机身尺寸：宽 900 × 深 720 × 高 1840 mm；四门；573 L。",
+  "Official manual clearances: top at least 100 mm, rear at least 100 mm, and each side at least 70 mm. The resulting minimum ventilated envelope is 1040 W × 820 D × 1940 H mm, excluding front door-opening and circulation space.": "官方说明书间隙：顶部至少 100 mm、后部至少 100 mm、左右各至少 70 mm。因此最小通风包络为宽 1040 × 深 820 × 高 1940 mm，尚不含正面开门和通行空间。",
+  "This model must not be treated as a zero-clearance built-in refrigerator. If the current cabinet bay is smaller, stop and obtain written model-specific approval from Hitachi service or the seller before cabinet closure or shipment release.": "本机不得按零间隙嵌入式冰箱处理。若现有柜体留位较小，应暂停封板和通知发货，并取得日立售后或卖家针对该型号的书面确认。",
+  "Keep an accessible dedicated grounded socket where the plug is not crushed behind the refrigerator. No fixed water inlet or drain is required; the automatic ice maker uses a manually filled internal tank.": "设置可操作的独立接地插座，避免插头被冰箱挤压。自动制冰使用机内手动加水槽，无需固定进水或排水。",
+  "Before shipment, remeasure the finished bay, left/right obstructions, four-door and lower-drawer operation, front aisle, lift, entry door, corridor turns and kitchen access. Obtain the packaged size and gross weight from the seller.": "发货前复测完成面留位、左右障碍、四门和下部抽屉开启、正面通道、电梯、入户门、走廊转角及厨房通道，并向卖家索取包装尺寸和毛重。",
+  "Detailed appliance record: 04-assets/appliances/hitachi-r-fbf570nsc-refrigerator.md.": "详细设备记录：04-assets/appliances/hitachi-r-fbf570nsc-refrigerator.md。",
   "Installation Notes From Drawing": "图纸安装说明",
   "Installation gaps between frame and opening are expected for vertical and horizontal adjustment.": "框架和开口之间的安装间隙预计用于垂直和水平调整。",
   "Glazing is treated as fragile and excluded from stated delay liability.": "玻璃被视为易碎品，不包括在已声明的延误责任内。",

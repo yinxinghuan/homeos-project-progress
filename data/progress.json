@@ -555,6 +555,23 @@
       ]
     },
     {
+      "id": "gzgz-water-control-accessories",
+      "name": "热水器水路角阀及马桶冲洗喷枪伴侣",
+      "category": "卫浴五金",
+      "brand": "GZGZ / LINAI（商铺标示，非林内原厂认定）",
+      "model": "D09201GZ ×2；D01803GZ 免打孔座套装 ×1",
+      "stage": "ordered",
+      "stageLabel": "已采购 / 待交付安装",
+      "priority": null,
+      "decisionDeadline": null,
+      "urgencyReason": null,
+      "progress": "已采购 / 待交付安装",
+      "nextAction": "到货核对型号、G 1/2 接口、材质和压力参数；D09201GZ 只接热水器冷热水管，禁止接燃气；安装后完成保压检漏，喷枪支路另确认独立关断和防回流措施",
+      "drawingAudit": null,
+      "technical": [],
+      "assets": []
+    },
+    {
       "id": "wall-paint",
       "name": "墙漆系统",
       "category": "饰面材料",
@@ -658,7 +675,24 @@
         "note": "橱柜立面草图及施工方全屋插座／天花灯位图均已归档；新图仍缺明显版本、图例和签字栏，柜体开孔及设备边界需逐项复核。",
         "nextAction": "把设备、管线、开孔、检修边界和柜体完成面基准落实到带版本的签字施工图。"
       },
-      "technical": [],
+      "technical": [
+        {
+          "source": "02-renovation/KITCHEN_CABINETRY.md",
+          "sections": [
+            {
+              "title": "Refrigerator coordination - Hitachi R-FBF570NSC",
+              "points": [
+                "Official body size: 900 W × 720 D × 1840 H mm; four doors; 573 L.",
+                "Official manual clearances: top at least 100 mm, rear at least 100 mm, and each side at least 70 mm. The resulting minimum ventilated envelope is 1040 W × 820 D × 1940 H mm, excluding front door-opening and circulation space.",
+                "This model must not be treated as a zero-clearance built-in refrigerator. If the current cabinet bay is smaller, stop and obtain written model-specific approval from Hitachi service or the seller before cabinet closure or shipment release.",
+                "Keep an accessible dedicated grounded socket where the plug is not crushed behind the refrigerator. No fixed water inlet or drain is required; the automatic ice maker uses a manually filled internal tank.",
+                "Before shipment, remeasure the finished bay, left/right obstructions, four-door and lower-drawer operation, front aisle, lift, entry door, corridor turns and kitchen access. Obtain the packaged size and gross weight from the seller.",
+                "Detailed appliance record: 04-assets/appliances/hitachi-r-fbf570nsc-refrigerator.md."
+              ]
+            }
+          ]
+        }
+      ],
       "assets": [
         {
           "title": "cabinet maker electrical elevation 01",
@@ -671,6 +705,84 @@
           "type": "image"
         }
       ]
+    },
+    {
+      "id": "primary-bedroom-wardrobe",
+      "name": "主卧铝制衣柜",
+      "category": "定制家具",
+      "brand": "与厨房橱柜同一厂商",
+      "model": "铝制定制，具体构造待深化",
+      "stage": "confirmed",
+      "stageLabel": "已确定 / 推进中",
+      "priority": null,
+      "decisionDeadline": null,
+      "urgencyReason": null,
+      "progress": "已确定 / 推进中",
+      "nextAction": "具体安排由项目负责人另行确认",
+      "drawingAudit": {
+        "status": "missing",
+        "label": "定制范围已定，深化图缺失",
+        "note": "主卧铝制衣柜范围和供应商已确定，但尚无带尺寸、内部功能、门扇、五金、收口和接口的签字深化图。",
+        "nextAction": "生产放行前取得签字版深化图、材料构造与五金表。"
+      },
+      "technical": [
+        {
+          "source": "04-assets/furniture/custom-aluminum-bedroom-corridor-cabinets.md",
+          "sections": [
+            {
+              "title": "深化与施工要求",
+              "points": [
+                "完成面后的宽、深、高以及墙体、地面、顶面基准。",
+                "柜体分格、门扇数量与开启方向、抽屉/挂衣区/层板的具体配置。",
+                "铝材体系、板件构造、壁厚/板厚、连接方式、背板、封边和表面颜色/纹理。",
+                "铰链、滑轨、拉手/免拉手、反弹器、缓冲件、挂衣杆及其品牌和型号。",
+                "柜体与墙地顶的固定方式、踢脚/收口、可调脚、防倾倒及承重要求。",
+                "运输分件、入户拼装、成品保护、安装误差、验收、质保和售后范围。"
+              ]
+            }
+          ]
+        }
+      ],
+      "assets": []
+    },
+    {
+      "id": "corridor-storage-cabinet",
+      "name": "过道铝制储物柜",
+      "category": "定制家具",
+      "brand": "与厨房橱柜同一厂商",
+      "model": "铝制定制，具体构造待深化",
+      "stage": "confirmed",
+      "stageLabel": "已确定 / 推进中",
+      "priority": null,
+      "decisionDeadline": null,
+      "urgencyReason": null,
+      "progress": "已确定 / 推进中",
+      "nextAction": "具体安排由项目负责人另行确认",
+      "drawingAudit": {
+        "status": "missing",
+        "label": "定制范围已定，深化图缺失",
+        "note": "过道铝制储物柜范围和供应商已确定，但尚无过道净宽、门扇开启、服务避让和收口的签字深化图。",
+        "nextAction": "生产放行前复核通行和设备检修，并取得签字版深化图。"
+      },
+      "technical": [
+        {
+          "source": "04-assets/furniture/custom-aluminum-bedroom-corridor-cabinets.md",
+          "sections": [
+            {
+              "title": "深化与施工要求",
+              "points": [
+                "完成面后的宽、深、高以及墙体、地面、顶面基准。",
+                "柜体分格、门扇数量与开启方向、抽屉/挂衣区/层板的具体配置。",
+                "铝材体系、板件构造、壁厚/板厚、连接方式、背板、封边和表面颜色/纹理。",
+                "铰链、滑轨、拉手/免拉手、反弹器、缓冲件、挂衣杆及其品牌和型号。",
+                "柜体与墙地顶的固定方式、踢脚/收口、可调脚、防倾倒及承重要求。",
+                "运输分件、入户拼装、成品保护、安装误差、验收、质保和售后范围。"
+              ]
+            }
+          ]
+        }
+      ],
+      "assets": []
     },
     {
       "id": "terrazzo",
@@ -1615,23 +1727,74 @@
       "id": "refrigerator",
       "name": "冰箱",
       "category": "厨房电器",
-      "brand": null,
-      "model": null,
-      "stage": "planning",
-      "stageLabel": "待选型",
-      "priority": "P0",
-      "decisionDeadline": "2026-09-01",
-      "urgencyReason": "9 月 2—3 日橱柜点位交底前必须冻结冰箱包络、散热、开门和插座位置。",
-      "progress": "P0｜未选型号；当前先冻结尺寸与安装边界",
-      "nextAction": "8 月 31 日 16:30 联合确认会上确定目标宽深高、散热间隙、开门和抽屉空间、插座与搬运通道；9 月 1 日前定稿，机器可后续下单",
+      "brand": "HITACHI / 日立",
+      "model": "R-FBF570NSC",
+      "stage": "ordered",
+      "stageLabel": "已采购 / 待交付安装",
+      "priority": null,
+      "decisionDeadline": null,
+      "urgencyReason": null,
+      "progress": "已采购 / 待交付安装",
+      "nextAction": "通知发货前按官方说明书复核冰箱位：顶部≥100 mm、后部≥100 mm、左右各≥70 mm；确认独立接地插座、四门与抽屉完全开启、包装尺寸及入户搬运路线",
       "drawingAudit": {
-        "status": "pending_selection",
-        "label": "待选型后补图",
-        "note": "型号尚未确定，无法冻结散热、开门和电源尺寸。",
-        "nextAction": "选型后归档产品尺寸与嵌入／散热要求。"
+        "status": "complete",
+        "label": "官方说明书已归档",
+        "note": "日立 R-FBF570NSC 官方产品参数和 20 页使用说明书已归档；机身、通风、电源、搬运和启用要求可用于工程协调。",
+        "nextAction": "发货前复测完成面冰箱位和搬运路线；完整开门包络及包装尺寸仍向卖家补取。"
       },
-      "technical": [],
-      "assets": []
+      "technical": [
+        {
+          "source": "04-assets/appliances/hitachi-r-fbf570nsc-refrigerator.md",
+          "sections": [
+            {
+              "title": "安装与橱柜预留",
+              "points": [
+                "顶部至少留 100 mm。",
+                "后部至少留 100 mm。",
+                "左右两侧各至少留 70 mm。",
+                "机身须放在坚固、水平的地面，并用前部可调支脚调平。",
+                "避免阳光直射、热源和潮湿位置；不得堵塞散热通道。",
+                "净宽：900 + 70 + 70 = 1040 mm",
+                "净深：720 + 100 = 820 mm，另加冰箱正面的开门、通行和检修空间",
+                "净高：1840 + 100 = 1940 mm"
+              ]
+            },
+            {
+              "title": "搬运、到货与启用",
+              "points": [
+                "官方说明书要求搬运时取出食品和冰块、擦干内部积水、固定门体并保护地面。",
+                "搬运至少需要 4 人，只能握住指定搬运把手；不得用门把手起吊，也不得横放运输。",
+                "机身裸机包络为 900 × 720 × 1840 mm；包装尺寸未在现有官方资料中给出。发货前须向卖家索取包装尺寸和毛重，并复核电梯、入户门、走廊转角及厨房通道。",
+                "若因运输等原因水平放置超过 10 分钟，官方说明书要求直立静置至少 1 小时后再通电。",
+                "安装后调平、清洁并确认插座安全后再通电；说明书提示通常约 4 小时可充分冷却，高温环境可能需要约 24 小时。"
+              ]
+            }
+          ]
+        },
+        {
+          "source": "02-renovation/KITCHEN_CABINETRY.md",
+          "sections": [
+            {
+              "title": "Refrigerator coordination - Hitachi R-FBF570NSC",
+              "points": [
+                "Official body size: 900 W × 720 D × 1840 H mm; four doors; 573 L.",
+                "Official manual clearances: top at least 100 mm, rear at least 100 mm, and each side at least 70 mm. The resulting minimum ventilated envelope is 1040 W × 820 D × 1940 H mm, excluding front door-opening and circulation space.",
+                "This model must not be treated as a zero-clearance built-in refrigerator. If the current cabinet bay is smaller, stop and obtain written model-specific approval from Hitachi service or the seller before cabinet closure or shipment release.",
+                "Keep an accessible dedicated grounded socket where the plug is not crushed behind the refrigerator. No fixed water inlet or drain is required; the automatic ice maker uses a manually filled internal tank.",
+                "Before shipment, remeasure the finished bay, left/right obstructions, four-door and lower-drawer operation, front aisle, lift, entry door, corridor turns and kitchen access. Obtain the packaged size and gross weight from the seller.",
+                "Detailed appliance record: 04-assets/appliances/hitachi-r-fbf570nsc-refrigerator.md."
+              ]
+            }
+          ]
+        }
+      ],
+      "assets": [
+        {
+          "title": "日立 R-FBF570NSC 官方使用说明书",
+          "href": "https://yinxinghuan.github.io/homeos-project-progress/technical/hitachi-r-fbf570nsc-user-manual.pdf",
+          "type": "pdf"
+        }
+      ]
     },
     {
       "id": "air-conditioning",
@@ -1834,21 +1997,21 @@
     {
       "id": "kitchen-ceiling",
       "name": "厨房吊顶",
-      "category": "待购买",
+      "category": "定制施工",
       "brand": null,
-      "model": null,
-      "stage": "planning",
-      "stageLabel": "待选型",
+      "model": "石膏板吊顶；具体板材与系统待深化",
+      "stage": "selected",
+      "stageLabel": "型号或方向已定",
       "priority": "P1",
       "decisionDeadline": "2026-09-10",
-      "urgencyReason": "计划 9 月 10—11 日定制、9 月 22—23 日施工，需要提前协调检修口、灯具、烟机和热水器。",
-      "progress": "P1｜未购买；计划在厨卫吊顶定制窗口前完成选型",
-      "nextAction": "9 月 10 日前确定材质、颜色、板型、龙骨、检修口、设备关系、测量与安装范围",
+      "urgencyReason": "石膏板吊顶方向已定，封板前必须冻结防潮体系、标高、龙骨、检修口、灯具、烟机风管和热水器排烟关系。",
+      "progress": "型号或方向已定",
+      "nextAction": "确认耐水／防潮石膏板及轻钢龙骨系统、标高、检修口、灯位、烟机风管、热水器同轴烟管和可拆检修边界，取得签字版吊顶综合图后再封板",
       "drawingAudit": {
-        "status": "pending_selection",
-        "label": "待方案后补图",
-        "note": "吊顶方案尚未确定。",
-        "nextAction": "确认标高、分块、检修口、灯位和油烟机风管关系。"
+        "status": "partial",
+        "label": "石膏板方向已定，综合图待补",
+        "note": "厨房石膏板吊顶方向已确定，但耐水／防潮板材系统、轻钢龙骨、标高、检修口、灯位、烟机风管和热水器烟管综合图尚未归档。",
+        "nextAction": "封板前取得签字版吊顶综合图并确认完整材料系统和可拆检修边界。"
       },
       "technical": [],
       "assets": []
@@ -1911,21 +2074,21 @@
     {
       "id": "bathroom-ceiling",
       "name": "浴室吊顶",
-      "category": "待购买",
+      "category": "定制施工",
       "brand": null,
-      "model": null,
-      "stage": "planning",
-      "stageLabel": "待选型",
+      "model": "石膏板吊顶；湿区防潮系统待深化",
+      "stage": "selected",
+      "stageLabel": "型号或方向已定",
       "priority": "P1",
       "decisionDeadline": "2026-09-10",
-      "urgencyReason": "计划 9 月 10—11 日定制、9 月 22—23 日施工，需同步确认浴霸、排风和照明开孔。",
-      "progress": "P1｜未购买；浴霸/排风一体机已定为奥普 MR009M，吊顶及照明条件待确认",
-      "nextAction": "9 月 10 日前按 MR009M 的 605 × 305 mm 开孔和吊顶内净高要求完成设备协调，并确定防潮材质、排风管径/路径、照明、检修/拆机方向、完成面高度、测量与安装范围",
+      "urgencyReason": "石膏板吊顶方向已定，需在封板前同步冻结湿区防潮体系、浴霸、排风、照明、龙骨和检修拆机条件。",
+      "progress": "型号或方向已定",
+      "nextAction": "按 MR009M 605 × 305 mm 开孔及石膏板吊顶内净高至少 165 mm 协调；确认耐水／防潮石膏板、轻钢龙骨、防霉涂层、排风路径、照明、检修口和整机可拆换方案，取得签字版综合图后再封板",
       "drawingAudit": {
-        "status": "pending_selection",
-        "label": "浴霸已定，吊顶方案待补",
-        "note": "浴霸已定为奥普 MR009M；吊顶方案尚未确定。",
-        "nextAction": "按 605×305 mm 浴霸开孔和吊顶内净高要求，确认标高、分块、龙骨避让、检修口、灯位和排风设备关系。"
+        "status": "partial",
+        "label": "石膏板方向已定，湿区综合图待补",
+        "note": "卫生间石膏板吊顶方向已确定，浴霸为奥普 MR009M；湿区防潮系统、至少 165 mm 设备净高、开孔、排风、照明、龙骨和整机拆换方案尚未闭环。",
+        "nextAction": "封板前取得签字版湿区吊顶综合图，确认 MR009M 精确安装文件和完整可拆检修方案。"
       },
       "technical": [],
       "assets": []
@@ -2553,7 +2716,7 @@
         ]
       },
       {
-        "name": "厨卫铝扣板吊顶",
+        "name": "厨卫石膏板吊顶",
         "kind": "supplier",
         "linkedItemIds": [
           "kitchen-ceiling",
@@ -2563,9 +2726,9 @@
         "actual": null,
         "ranges": [
           {
-            "start": "2026-09-10",
-            "end": "2026-09-11",
-            "label": "Sep 10-11"
+            "start": "2026-09-04",
+            "end": "2026-09-04",
+            "label": "Sep 4"
           },
           {
             "start": "2026-10-12",

@@ -33,6 +33,9 @@ const detailSources = {
   oven: ['04-assets/appliances/built-in-oven-595x454.md'],
   'range-hood': ['04-assets/appliances/liudianban-y6-range-hood.md'],
   'gas-cooktop': ['04-assets/appliances/liudianban-two-burner-gas-cooktop.md'],
+  refrigerator: ['04-assets/appliances/hitachi-r-fbf570nsc-refrigerator.md', '02-renovation/KITCHEN_CABINETRY.md'],
+  'primary-bedroom-wardrobe': ['04-assets/furniture/custom-aluminum-bedroom-corridor-cabinets.md'],
+  'corridor-storage-cabinet': ['04-assets/furniture/custom-aluminum-bedroom-corridor-cabinets.md'],
   'bathroom-heater': ['04-assets/appliances/aupu-mr009m-bathroom-heater.md'],
   'wire-materials': ['03-systems/electrical.md'],
   'pipe-materials': ['03-systems/plumbing.md'],
@@ -105,6 +108,7 @@ const safeAssets = {
     'source/media/2026-08-31-liudianban-q5-2-product-drawing.jpg',
     'source/media/2026-08-31-liudianban-q5-2-weld-cutout.jpg',
   ],
+  refrigerator: ['source/manuals/hitachi/hitachi-r-fbf570nsc-user-manual.pdf'],
   'bathroom-heater': ['source/media/2026-09-01-aupu-mr009m-installation-service.png'],
   'kitchen-cabinetry': [
     'source/media/2026-08-30-cabinet-maker-electrical-elevation-01.png',
@@ -130,6 +134,7 @@ const assetTitleOverrides = {
   '2026-09-02-socket-point-layout.pdf': '全屋插座点位图',
   '2026-09-02-ceiling-light-point-layout.pdf': '全屋天花灯位图',
   '2026-09-02-electrical-panel-circuit-note.jpg': '现场手写配电箱回路配置',
+  'hitachi-r-fbf570nsc-user-manual.pdf': '日立 R-FBF570NSC 官方使用说明书',
 };
 
 const blocked = /¥|￥|\bCNY\b|\bprices?\b|\bpayments?\b|\bpaid\b|\binvoices?\b|\bcosts?\b|\bfees?\b|\bcharges?\b|chargeable|surcharges?|\bdeposits?\b|\bbalances?\b|\bquotations?\b|\baddress\b|\bphone\b|金额|价格|付款|支付|已付|待付|定金(?!貂)|预付款|余款|期款|款项|付款比例|全款|付清|实付|报价|收费|费用|地址|电话|姓名|客户|账户|合同编号|订单编号|销售单号|发票/i;
@@ -174,6 +179,7 @@ function stageFor(status) {
   if (['paid_full', 'paid_full_in_transit', 'delivered_install_pending', 'product_paid_install_pending'].includes(status)) return 'ordered';
   if (status === 'installation_in_progress') return 'confirmed';
   if (['deposit_paid', 'deposit_paid_total_unknown', 'installment_paid'].includes(status)) return 'confirmed';
+  if (status === 'contracted_unpaid') return 'confirmed';
   if (['selected_not_ordered', 'direction_selected'].includes(status)) return 'selected';
   if (status === 'contractor_procurement') return 'coordination';
   return 'planning';
@@ -221,7 +227,7 @@ const timelineLabels = {
   Cabinets: '橱柜',
   'Kitchen appliances, sink, water heater': '厨电、水槽与热水器',
   'Window-sill stone': '窗台石',
-  'Kitchen/bath aluminum ceiling': '厨卫铝扣板吊顶',
+  'Kitchen/bath gypsum-board ceiling': '厨卫石膏板吊顶',
   'Wall paint': '墙漆',
   'Lights, switches, sockets': '灯具、开关与插座',
   'Bathroom fixtures and hardware': '卫浴洁具与五金',
@@ -255,7 +261,7 @@ const timelineItemLinks = {
   Cabinets: ['kitchen-cabinetry'],
   'Kitchen appliances, sink, water heater': ['gas-water-heater', 'kitchen-sink', 'dishwasher', 'oven', 'range-hood', 'gas-cooktop'],
   'Window-sill stone': ['terrazzo'],
-  'Kitchen/bath aluminum ceiling': ['kitchen-ceiling', 'bathroom-ceiling', 'bathroom-heater'],
+  'Kitchen/bath gypsum-board ceiling': ['kitchen-ceiling', 'bathroom-ceiling', 'bathroom-heater'],
   'Wall paint': ['wall-paint'],
   'Lights, switches, sockets': ['lighting', 'switches'],
   'Bathroom fixtures and hardware': ['grohe-shower', 'grohe-kitchen-faucet', 'grohe-smart-toilet', 'bathtub', 'bathroom-vanity'],
