@@ -16,7 +16,7 @@ const detailSources = {
   windows: ['02-renovation/WINDOWS.md'],
   'water-system': ['03-systems/water-treatment.md', '03-systems/plumbing.md'],
   tiles: ['02-renovation/TILE_LAYOUT.md'],
-  'gas-water-heater': ['04-assets/appliances/rinnai-rux-a1616w-e-water-heater.md', '04-assets/appliances/rinnai-rux-v1615sffua-balanced-water-heater.md', '03-systems/gas.md'],
+  'gas-water-heater': ['04-assets/appliances/rinnai-rux-v1615sffua-balanced-water-heater.md'],
   'grohe-shower': ['04-assets/fixtures/grohe-26810000-thermostatic-shower.md'],
   'grohe-kitchen-faucet': ['04-assets/fixtures/grohe-31874-kitchen-faucet.md'],
   'grohe-smart-toilet': ['04-assets/fixtures/grohe-39932sh0-smart-toilet.md'],
@@ -51,11 +51,6 @@ const safeAssets = {
     'source/media/2026-08-26-central-water-treatment-cabinet-clearance-reference.jpeg',
   ],
   'gas-water-heater': [
-    'source/manuals/rinnai/rinnai-rux-a1616wa-e-outline.pdf',
-    'source/manuals/rinnai/rinnai-rux-a1616wa-e-outdoor-installation-drawing.pdf',
-    'source/manuals/rinnai/rinnai-rux-a1616wa-e-installation-manual.pdf',
-    'source/manuals/rinnai/rinnai-rux-a1616w-e-outline.pdf',
-    'source/manuals/rinnai/rinnai-rux-a1616w-e-installation-manual.pdf',
     'output/pdf/2026-09-02-rinnai-rux-v1615sffua-a-e-official-catalogue-extract.pdf',
   ],
   'grohe-shower': [

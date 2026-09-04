@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-09-03T12:18:07+08:00",
+  "updatedAt": "2026-09-04T00:00:00+08:00",
   "project": {
     "title": "HomeOS 工程进度",
     "phase": "装修执行与设备协调"
@@ -267,87 +267,24 @@
     },
     {
       "id": "gas-water-heater",
-      "name": "燃气热水器方案",
+      "name": "燃气热水器",
       "category": "厨房电器",
       "brand": "Rinnai / 林内",
-      "model": "已购室外机 RUX-A1616W(A)-E / RUX-A1616W-E；室内平衡式备选 RUX-V1615SFUA（待核 RUX-V1615SFFUA(A)-E）",
+      "model": "室内 FF 平衡式 RUX-V1615SFFUA（待核完整后缀 RUX-V1615SFFUA(A)-E）",
       "stage": "ordered",
       "stageLabel": "已采购 / 待交付安装",
       "priority": null,
       "decisionDeadline": null,
       "urgencyReason": null,
-      "progress": "室外机已采购但安装受阻；室内 FF 平衡式备选已选定、尚未下单",
-      "nextAction": "继续取得室外机物业与燃气合规结论；同时向客服书面核对室内备选的完整 SFFUA 型号、北京 12T／中国合规、铭牌电压与变压器、φ110×φ75 同轴给排气组件、原预留孔及墙厚适配和安装责任",
+      "progress": "已采购 / 待交付安装",
+      "nextAction": "通知发货前向客服书面核对完整 SFFUA 型号后缀、北京 12T／中国合规、铭牌电压与变压器、φ110×φ75 同轴给排气组件、原预留孔及墙厚适配和安装责任",
       "drawingAudit": {
         "status": "partial",
-        "label": "双方案资料已建，均未放行",
-        "note": "已购室外机资料已归档但外墙／物业／12T／CCC／变压器仍未关闭；室内 FF 平衡式备选已增加官方 SFFUA 家族型号页，但商铺简称、完整后缀、12T／中国合规、电压及同轴给排气组件仍待客服与安装方确认。",
-        "nextAction": "分别关闭室外方案审批与室内备选的完整 SKU、合规、气源、电压、同轴筒、原孔墙厚及安装资质；未确认前不钻孔、不改燃气、不下单备选。"
+        "label": "室内平衡式当前方案资料部分归档",
+        "note": "原室外方案已终止；当前室内 FF 平衡式 RUX-V1615SFFUA 等待通知发货。官方 SFFUA 家族型号页已归档，但完整后缀、12T／中国合规、电压及同轴给排气组件仍待客服与安装方确认。",
+        "nextAction": "通知发货前关闭完整 SKU 后缀、合规、气源、电压／变压器、φ110×φ75 同轴筒、原孔／墙厚及安装资质；未确认前不钻孔、不改燃气。"
       },
       "technical": [
-        {
-          "source": "04-assets/appliances/rinnai-rux-a1616w-e-water-heater.md",
-          "sections": [
-            {
-              "title": "Installation Items Still Pending",
-              "points": [
-                "Exact gas type and Beijing pipeline-gas compatibility; do not infer from the model name alone",
-                "Whether gas conversion or adjustment has been performed, by whom, and with what combustion-test record",
-                "Delivered assembly input voltage; both official candidate manuals state AC 100 V, 50-60 Hz, while the supplier claims a built-in transformer. Photograph and verify the complete input label and transformer ratings; a verified voltage-conversion/protection solution is mandatory before energisation.",
-                "Outdoor mounting position, wall load, weather exposure, service clearances, drainage, condensate applicability, and freeze protection",
-                "Water/gas valve and connector specifications",
-                "Flue/exhaust safety clearances from windows, openings, neighbours, and enclosed spaces",
-                "Commissioning record for inlet pressure, gas tightness, combustion, outlet temperature, and flow"
-              ]
-            },
-            {
-              "title": "Current Installation Blocker / 当前安装受阻",
-              "points": [
-                "施工方要求物业确认拟定的外墙安装方案，并转述可能存在法规异议；物业正式答复尚未收到。",
-                "当前记录为审批／合规事项未决，不代表所有室外型热水器都违法。CJJ 12-2013 第 4.3.1 条明确考虑了室外或未封闭阳台安装室外型热水器的情形。",
-                "但本台日本市场机型仍然不得放行安装。须先取得外墙／共有部分同意、经认可的钻孔与固定详图、燃气安装认可、与交付完整型号匹配且可查询的 CCC 证书、明确的北京 12T 气源适配证据，以及交付整机的 220 V／变压器资料。",
-                "日本目录中的 13A/12A 是另一套气源分类，不能在没有书面技术证据和调试验收的情况下视同北京 12T。",
-                "在解除受阻状态前：不得钻外墙、改燃气走向、挂装设备、通电或通气调试。"
-              ]
-            },
-            {
-              "title": "Owner-Confirmed Installation Intent / 预定安装细节",
-              "points": [
-                "Planned unit position: exterior side near the right side of the kitchen window.",
-                "Planned wall route: four independent passages from below the adjacent kitchen cabinetry to the exterior wall, respectively for the cold-water inlet, hot-water outlet, gas pipe and wired-controller cable.",
-                "Valve positions: cold-water, hot-water and gas isolation valves all remain indoors and must stay accessible after the cabinets are installed.",
-                "Power source: use an indoor socket. The supplier says the product has a built-in transformer; this does not by itself release a 220 V connection. Confirm that the delivered complete assembly and transformer labels explicitly accept 220 V input and verify capacity, protection and earthing before energisation. If the claim is not confirmed, an approved external conversion solution remains required.",
-                "The four routes are a layout decision only. Final hole/slot sizes, centre lines, sleeves, separation, exterior sealing, insulation and service clearances must be confirmed against the delivered unit, official manual, gas-contractor requirements and the signed cabinet drawing before drilling."
-              ]
-            },
-            {
-              "title": "Built-In Transformer Research / 内置变压器核查",
-              "points": [
-                "The official Rinnai Japan candidate documentation identifies the heater base unit as AC 100 V. The exact-family technical manual lists approximately 36 W during normal operation and approximately 68 W when the freeze-protection heater operates.",
-                "No Rinnai Japan source found in this review documents a factory 220 V input version or a factory-integrated 220-to-100 V transformer for either seller-shown candidate model.",
-                "One Chinese marketplace listing for RUX-A1616W-E describes the product as 100 V and says a 100 W transformer is supplied. This supports the possibility of a seller-bundled conversion solution, but does not verify whether this supplier has physically integrated one into the purchased unit.",
-                "Therefore this is recorded as a supplier-installed internal conversion package, not as a verified Rinnai factory 220 V model. The arrangement is more compact than a separate outdoor transformer and is compatible with the planned indoor 220 V socket in principle, but it is not inherently safer unless the converter, enclosure, wiring and protection are documented. Obtain written confirmation of who modified it and whether waterproofing, electrical safety, gas-appliance approval and warranty remain valid.",
-                "Rinnai Japan 2026 product catalogue",
-                "Rinnai official product/manual portal — RUX-A1616W-E, item code 23-5468",
-                "Chinese same-model listing stating 100 V and supplied transformer"
-              ]
-            },
-            {
-              "title": "Beijing Winter Valve Decision / 北京冬季阀门决定",
-              "points": [
-                "Keep the cold-water inlet isolation valve indoors, near the wall penetration and continuously accessible after cabinetry is installed.",
-                "Keep the hot-water service isolation valve indoors if it is included in the final valve set. Provide a drain/bleed arrangement that can empty the outdoor cold/hot runs and the heater in accordance with the delivered manual.",
-                "Keep the primary appliance gas shut-off indoors, near the penetration and not behind a fixed or sealed cabinet panel. The gas company/qualified installer must approve its exact location and decide whether a second outdoor service valve is required at the unit.",
-                "Minimise and fully weatherproof-insulate all exterior water pipes, connections and exposed metal gaps. Indoor valves alone do not prevent the outdoor trapped water from freezing.",
-                "Preserve power to the approved freeze-protection arrangement in normal winter operation, but also provide a manual drain procedure: Rinnai states that automatic freeze protection is unavailable during a power outage or power-off mode.",
-                "Use approved fixed gas piping through the exterior wall; a flexible appliance hose must not pass through the wall.",
-                "Beijing winter water-supply freeze-protection guidance",
-                "Rinnai official water-heater freeze-protection guidance",
-                "GB 55009-2021 Gas Engineering Project Code"
-              ]
-            }
-          ]
-        },
         {
           "source": "04-assets/appliances/rinnai-rux-v1615sffua-balanced-water-heater.md",
           "sections": [
@@ -411,94 +348,9 @@
               ]
             }
           ]
-        },
-        {
-          "source": "03-systems/gas.md",
-          "sections": [
-            {
-              "title": "Planned Outdoor-Unit Routing / 预定安装走向",
-              "points": [
-                "The outdoor unit is planned near the right side of the kitchen window.",
-                "Four separate routes are to pass from the cabinet-lower zone through the exterior wall: cold-water inlet, hot-water outlet, gas pipe, and wired-controller cable.",
-                "The cold- and hot-water isolation valves are to remain indoors and accessible.",
-                "The gas shut-off valve is also to remain indoors and accessible.",
-                "Electrical power is to be taken from an indoor socket. The supplier now states that a 220-to-100 V transformer has already been added inside the supplied assembly before delivery. Treat this as a supplier-installed conversion package rather than a Rinnai factory 220 V specification unless factory documentation proves otherwise. Because both archived Japanese base-model manuals specify AC 100 V, do not energise until the complete assembly input label and the internal transformer's input/output rating confirm a safe 220 V supply arrangement, continuous capacity, protection, weather sealing and earthing.",
-                "Before drilling or cabinet fabrication, the installer, gas contractor and cabinet maker must sign off the exact penetration diameters, spacing, sleeves, weather/water sealing, pipe insulation, controller-cable separation, valve access and future service/removal route."
-              ]
-            },
-            {
-              "title": "Must Confirm Before Installation",
-              "points": [
-                "Delivered nameplate and exact model suffix",
-                "Gas type and compatibility with the actual household pipeline gas",
-                "Legal/local acceptance of the outdoor mounting location",
-                "Manufacturer/seller installation instructions and third-party warranty conditions",
-                "Combustion and gas-tightness commissioning record",
-                "Freeze-protection power and water-drain strategy for Beijing winter conditions",
-                "Written or nameplate confirmation of the supplier-claimed built-in transformer, including 220 V input, output rating, protection and warranty responsibility"
-              ]
-            },
-            {
-              "title": "Installation Approval Hold / 安装审批受阻",
-              "points": [
-                "施工方提出，室外机挂装及穿外墙走管需要物业认可，并转述可能存在法规异议。",
-                "物业正式答复仍在等待中。在收到书面结论及其依据之前，HomeOS 将其记录为 受阻／等待审核，不记录为已经确认违法。",
-                "在以下放行条件全部关闭前，不得钻外墙、改燃气走向、挂装设备、通电或通气调试。"
-              ]
-            },
-            {
-              "title": "Transformer Evidence Review / 变压器资料核查",
-              "points": [
-                "The archived Rinnai Japan documentation for both seller-shown candidate models specifies an AC 100 V base unit; the exact-family manual lists normal electrical consumption around 36 W and freeze-protection heater operation around 68 W.",
-                "No Rinnai Japan catalogue, product page or official installation document located in this review describes a factory-integrated 220-to-100 V transformer or approves direct 220 V input for RUX-A1616W(A)-E / RUX-A1616W-E.",
-                "A Chinese retail listing for the same RUX-A1616W-E explicitly describes the heater as 100 V and says a 100 W transformer is supplied separately. That listing does not prove the configuration of this purchased unit, but it shows that a bundled transformer is a seller-side package rather than evidence of a standard Rinnai Japan 220 V model.",
-                "Working conclusion: the supplier has clarified that the conversion module has already been installed inside the supplied assembly. This makes the planned indoor 220 V socket and outdoor-unit routing workable in principle and avoids a separate weather-exposed transformer, but it remains a supplier-installed conversion rather than an identified Rinnai factory configuration. Treat its safety and compatibility as unverified until the delivered assembly is documented.",
-                "Required arrival evidence: complete heater nameplate, overall 220 V input label if present, transformer brand/model, input/output voltage and VA/W rating, installation location/enclosure, wiring/protection diagram, earthing method and written warranty responsibility for the conversion."
-              ]
-            },
-            {
-              "title": "Beijing Winter Valve-Location Review / 北京冬季阀门位置结论",
-              "points": [
-                "Cold-water inlet isolation: keep the valve indoors, immediately upstream of the exterior-wall route, in an accessible cabinet/service opening. This makes emergency shut-off possible without going outdoors and keeps the valve body out of Beijing freeze exposure.",
-                "Hot-water outlet isolation: if fitted for service, keep it indoors and accessible beside the cold-water valve. Confirm the final valve set and operating procedure with the installer so that the outdoor section can be drained without trapping water.",
-                "Primary appliance gas shut-off: keep it indoors near the wall route, readily reachable and not concealed behind a fixed cabinet or sealed panel. The final approved position, pipe material and any additional outdoor service valve must be confirmed by the gas company or a qualified gas contractor. Gas-valve location is governed mainly by safe access and maintenance, not water-freezing risk.",
-                "Outdoor water side remains a freeze-risk section: indoor valves do not protect the water left between those valves and the outdoor heater. Keep the exterior run as short as practicable; insulate the complete exposed cold/hot pipes, joints and metal gaps with weather- and UV-resistant protection; and provide a documented drain-down path for the outdoor pipes and heater.",
-                "Power loss is a design condition: Rinnai states that its automatic freeze protection does not operate during a power outage or power-off mode. The installation therefore needs a manual drain procedure that can be performed from an accessible position, rather than relying only on the heater's electric freeze protection.",
-                "Gas wall crossing: use the gas contractor's approved fixed piping, sleeve/seal and anti-settlement/protection details. Do not route a flexible appliance hose through the exterior wall.",
-                "Beijing winter water-supply freeze-protection guidance",
-                "Rinnai official water-heater freeze-protection guidance",
-                "GB 55009-2021 Gas Engineering Project Code, clauses 5.3.8-5.3.11 and 6.1.8"
-              ]
-            }
-          ]
         }
       ],
       "assets": [
-        {
-          "title": "rinnai rux a1616wa e outline",
-          "href": "https://yinxinghuan.github.io/homeos-project-progress/technical/rinnai-rux-a1616wa-e-outline.pdf",
-          "type": "pdf"
-        },
-        {
-          "title": "rinnai rux a1616wa e outdoor installation drawing",
-          "href": "https://yinxinghuan.github.io/homeos-project-progress/technical/rinnai-rux-a1616wa-e-outdoor-installation-drawing.pdf",
-          "type": "pdf"
-        },
-        {
-          "title": "rinnai rux a1616wa e installation manual",
-          "href": "https://yinxinghuan.github.io/homeos-project-progress/technical/rinnai-rux-a1616wa-e-installation-manual.pdf",
-          "type": "pdf"
-        },
-        {
-          "title": "rinnai rux a1616w e outline",
-          "href": "https://yinxinghuan.github.io/homeos-project-progress/technical/rinnai-rux-a1616w-e-outline.pdf",
-          "type": "pdf"
-        },
-        {
-          "title": "rinnai rux a1616w e installation manual",
-          "href": "https://yinxinghuan.github.io/homeos-project-progress/technical/rinnai-rux-a1616w-e-installation-manual.pdf",
-          "type": "pdf"
-        },
         {
           "title": "林内 RUX-V1615SFFUA(A)-E 官方型号页",
           "href": "technical/2026-09-02-rinnai-rux-v1615sffua-a-e-official-catalogue-extract.pdf",
