@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-09-05T19:13:00+08:00",
+  "updatedAt": "2026-09-05T19:48:00+08:00",
   "project": {
     "title": "HomeOS 工程进度",
     "phase": "装修执行与设备协调"
@@ -1977,39 +1977,59 @@
       "name": "Villeroy & Boch 天际浴室柜与照明镜",
       "category": "定制家具",
       "brand": "Villeroy & Boch / 唯宝",
-      "model": "天际梳洗柜 970×540×460 mm（哑光黑烤漆）+ 天际照明镜 950×750×31 mm",
+      "model": "B63900RQ 天际梳洗柜 970×540×460 mm（哑光黑烤漆）+ B308L100 天际照明镜 950×750×31 mm",
       "stage": "ordered",
       "stageLabel": "已采购 / 待交付安装",
       "priority": "P0",
       "decisionDeadline": null,
       "urgencyReason": "已购设备尺寸直接约束台盆龙头、给排水、墙体固定以及镜前灯供电。",
       "progress": "已采购 / 待交付安装",
-      "nextAction": "向商家取得正式型号、安装图和接线说明；施工方按柜体 970×540×460 mm、镜子 950×750×31 mm 复核完成面定位、固定基层、给排水、龙头接口、镜子电源及检修空间",
+      "nextAction": "施工方依据两份官方安装图复核完成面定位、固定基层、给排水、龙头接口及镜子 220–240V 电源；到货时核对包装货号并按实物复尺",
       "drawingAudit": {
-        "status": "missing",
-        "label": "已定产品 / 待安装图",
-        "note": "已购 Villeroy & Boch 天际梳洗柜和照明镜，现有尺寸信息但尚无正式安装图、给排水定位图和镜子接线说明。",
-        "nextAction": "向商家取得柜体与镜子的正式型号、安装尺寸图、固定节点、给排水定位及照明接线说明，并交施工方复核。"
+        "status": "complete",
+        "label": "官网安装图已归档",
+        "note": "已确认 Villeroy & Boch 天际梳洗柜 B63900RQ 与照明镜 B308L100；两份官方系列安装 PDF 已归档，包含固定孔位、安装标高和镜子 220–240V L／N／PE 接线。",
+        "nextAction": "施工前按 B639.... 与 B308L1.. 对应行放线，到货时核对包装货号并复尺；另核对镜子功率、控制方式和防护等级。"
       },
       "technical": [
         {
           "source": "04-assets/fixtures/villeroy-boch-skyline-vanity-mirror.md",
           "sections": [
             {
+              "title": "官方安装资料",
+              "points": [
+                "B63900RQ 天际梳洗柜官方安装说明",
+                "B308L100 天际照明镜官方安装说明",
+                "B63900RQ 官方产品页",
+                "B308L100 官方产品页"
+              ]
+            },
+            {
               "title": "施工协调",
               "points": [
-                "以上尺寸按用户提供的商品信息记录；放线和安装仍应以正式型号安装图及到货实测为准。",
+                "以上尺寸已与唯宝官网精确规格核对；放线和安装以官方安装图、完成面基准及到货实测共同确认为准。",
                 "在墙砖和柜体安装前，按完成面标明柜体、台盆、龙头、镜子中心线和上下边界，复核与门、洁具及通行空间的关系。",
-                "向商家取得柜体挂装／落地方式、挂件孔位、墙体承重要求和固定节点；必要时在封墙或贴砖前补足可靠基层。",
+                "柜体为挂墙安装；按官方图采用 4 处 Ø8 mm 固定，并在封墙或贴砖前确认可靠承重基层。紧固件最终选型须适配现场墙体材料。",
                 "复核冷热水口、排水口及存水弯与两个抽屉的避让，保证阀门、接头和排水可以检修，不占用抽屉运行空间。",
-                "确认镜子照明的电压、功率、进线位置、接地、控制方式和防护要求；湿区电气施工及保护措施由持证电工按正式资料实施。",
+                "镜子按官方图采用 2 处 Ø8 mm 固定，接入 220–240V 火线、零线和保护地线；功率、控制方式和防护等级需再核对铭牌／随箱资料。湿区电气施工及保护措施由持证电工实施。",
                 "安装后检查柜体水平、抽屉顺畅及防碰，完成台盆／墙面密封和通水检漏，并测试镜子照明及控制。"
               ]
             }
           ]
         }
       ],
-      "assets": []
+      "assets": [
+        {
+          "title": "唯宝天际 B63900RQ 梳洗柜官方安装说明",
+          "href": "https://yinxinghuan.github.io/homeos-project-progress/technical/villeroy-boch-skyline-b63900rq-technical-guide.pdf",
+          "type": "pdf"
+        },
+        {
+          "title": "唯宝天际 B308L100 照明镜官方安装说明",
+          "href": "https://yinxinghuan.github.io/homeos-project-progress/technical/villeroy-boch-skyline-b308l100-technical-guide.pdf",
+          "type": "pdf"
+        }
+      ]
     },
     {
       "id": "kitchen-ceiling",

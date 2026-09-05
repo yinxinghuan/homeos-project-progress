@@ -110,6 +110,10 @@ const safeAssets = {
     'source/media/2026-08-31-liudianban-q5-2-weld-cutout.jpg',
   ],
   refrigerator: ['source/manuals/hitachi/hitachi-r-fbf570nsc-user-manual.pdf'],
+  'bathroom-vanity': [
+    'source/manuals/villeroy-boch/villeroy-boch-skyline-b63900rq-technical-guide.pdf',
+    'source/manuals/villeroy-boch/villeroy-boch-skyline-b308l100-technical-guide.pdf',
+  ],
   'bathroom-heater': ['source/media/2026-09-01-aupu-mr009m-installation-service.png'],
   'kitchen-cabinetry': [
     'source/media/2026-08-30-cabinet-maker-electrical-elevation-01.png',
@@ -136,6 +140,8 @@ const assetTitleOverrides = {
   '2026-09-02-ceiling-light-point-layout.pdf': '全屋天花灯位图',
   '2026-09-02-electrical-panel-circuit-note.jpg': '现场手写配电箱回路配置',
   'hitachi-r-fbf570nsc-user-manual.pdf': '日立 R-FBF570NSC 官方使用说明书',
+  'villeroy-boch-skyline-b63900rq-technical-guide.pdf': '唯宝天际 B63900RQ 梳洗柜官方安装说明',
+  'villeroy-boch-skyline-b308l100-technical-guide.pdf': '唯宝天际 B308L100 照明镜官方安装说明',
 };
 
 const blocked = /¥|￥|\bCNY\b|\bprices?\b|\bpayments?\b|\bpaid\b|\binvoices?\b|\bcosts?\b|\bfees?\b|\bcharges?\b|chargeable|surcharges?|\bdeposits?\b|\bbalances?\b|\bquotations?\b|\baddress\b|\bphone\b|金额|价格|付款|支付|已付|待付|定金(?!貂)|预付款|余款|期款|款项|付款比例|全款|付清|实付|报价|收费|费用|地址|电话|姓名|客户|账户|合同编号|订单编号|销售单号|发票/i;
