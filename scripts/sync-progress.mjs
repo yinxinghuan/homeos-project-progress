@@ -20,6 +20,7 @@ const detailSources = {
   'grohe-shower': ['04-assets/fixtures/grohe-26810000-thermostatic-shower.md'],
   'grohe-kitchen-faucet': ['04-assets/fixtures/grohe-31874-kitchen-faucet.md'],
   'grohe-smart-toilet': ['04-assets/fixtures/grohe-39932sh0-smart-toilet.md'],
+  'bathroom-vanity': ['04-assets/fixtures/villeroy-boch-skyline-vanity-mirror.md'],
   'wall-paint': ['02-renovation/WALL_PAINT.md', '07-references/ceiling-exposed-concrete-finish.md'],
   'kitchen-cabinetry': ['02-renovation/KITCHEN_CABINETRY.md'],
   terrazzo: ['02-renovation/TERRAZZO.md', 'decisions/0004-bathtub-terrazzo-interface.md'],
