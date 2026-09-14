@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-09-06T14:08:00+08:00",
+  "updatedAt": "2026-09-14T16:30:00+08:00",
   "project": {
     "title": "HomeOS 工程进度",
     "phase": "装修执行与设备协调"
@@ -260,7 +260,7 @@
       "assets": [
         {
           "title": "厨房与卫生间排砖施工图（公开脱敏版）",
-          "href": "https://yinxinghuan.github.io/homeos-project-progress/technical/2026-08-29-lijing-tile-layout-redacted.pdf",
+          "href": "https://yinxinghuan.github.io/homeos-project-progress/technical/2026-09-11-lijing-tile-layout-redacted.pdf",
           "type": "pdf"
         }
       ]
@@ -382,8 +382,16 @@
           "source": "04-assets/fixtures/grohe-26810000-thermostatic-shower.md",
           "sections": [
             {
-              "title": "Official Installation Data",
+              "title": "现场安装速查（2026-09-09 核图，水口标高待现场确认）",
               "points": [
+                "已购型号为高仪 GROHE 26810000。按标准固定长度立管方案预留，不能把手持花洒滑座升降理解为顶喷可伸缩调高。",
+                "单独尺寸图标注进水连接中心至上支架基准为 1016 mm；水平顶喷出水面在图中近似同高。弯管最高点再高 117 mm，即约高于进水中心 1133 mm。顶喷出水面高度按约值校核，不代替实物尺寸。",
+                "冷热水中心距目标 150 mm，图示偏心接头调节范围为 150 ± 15 mm；墙内供水连接 G1/2。面对墙面左热右冷，按最终瓷砖完成面定位。",
+                "水口中心标高 = 实际站立面标高 + 目标顶喷净高 − 约 1016 mm。若站在浴缸内淋浴，实际站立面是安装后的浴缸内底，不是浴室地面，也不是浴缸上沿。",
+                "通用安装说明书 PDF 第 3 页（印刷页 2）要求结合人头与顶喷及顶棚检查空间，标准短立管示意进水中心以上至顶棚至少 1200 mm；此数值不是水口距地高度。",
+                "通用说明书还显示不同立管方案、另购加长或缩短配件（48 514 / 48 515），不表示本次供货含可伸缩立管；具体适配和供货须商家书面确认。",
+                "图纸差异：单独尺寸图上支架基准 1016 mm，而通用说明书 PDF 第 5 页（印刷页 4）短立管安装孔距为 989 mm。不得混用这两个数提前打上固定孔，必须以到货对应版本说明书和实物放样确定。",
+                "明天定水口前还需确认最高使用者身高、是否站浴缸内淋浴、安装后浴缸内底标高及石膏吊顶完成面标高。上下空间、龙头操作及浴缸下出水位置须同时校核。",
                 "Official product description: exposed wall-mounted thermostatic shower system with lower outlet.",
                 "Supply centre spacing: 150 ± 15 mm; S-connectors are included/specified.",
                 "Connection: G 1/2.",
@@ -577,13 +585,13 @@
       "category": "饰面材料",
       "brand": "Tikkurila / 芬琳漆",
       "model": null,
-      "stage": "confirmed",
-      "stageLabel": "已确定 / 推进中",
+      "stage": "ordered",
+      "stageLabel": "已采购 / 待交付安装",
       "priority": null,
       "decisionDeadline": null,
       "urgencyReason": null,
-      "progress": "已确定 / 推进中",
-      "nextAction": "取得清晰电子明细并确认颜色、数量和送货",
+      "progress": "已采购 / 待交付安装",
+      "nextAction": "取得清晰电子明细并确认准确产品、颜色、数量和送货",
       "drawingAudit": {
         "status": "partial",
         "label": "饰面范围图已有",
@@ -689,6 +697,16 @@
                 "Before shipment, remeasure the finished bay, left/right obstructions, four-door and lower-drawer operation, front aisle, lift, entry door, corridor turns and kitchen access. Obtain the packaged size and gross weight from the seller.",
                 "Detailed appliance record: 04-assets/appliances/hitachi-r-fbf570nsc-refrigerator.md."
               ]
+            },
+            {
+              "title": "Cabinet and Utility Brief",
+              "points": [
+                "Appliance: 六点半 Y6 range hood；Current confirmed cabinet input: Selected stainless-steel variable-frequency option, 26 m³/min / 1280 Pa; main width 998 mm; hood box 430 W × 313 D mm; cabinet reserve at least 450 W × 330 D mm; diameter-250 ceiling duct hole; hood-to-cooktop 300-400 mm; burner center no more than 260 mm from finished rear wall；Items that must remain pending: Electrical rating/socket position, signed ceiling-hole center coordinates, 563/888 height datum, material discrepancy, and installer-approved elevation",
+                "Appliance: 六点半 Q5-2 two-burner gas cooktop；Current confirmed cabinet input: Selected welded sentinel/timer two-burner natural-gas option; working product 813 × 480 mm; reserve about 823 × 490 mm; opening 743 × 370 mm, R11.2; 2 × diameter-26 control holes at 120 mm spacing and 50 mm setback; 5 mm stainless-steel countertop；Items that must remain pending: Final 12T nameplate/SKU, signed CAD/shop drawing, weldable flange/interface, gas inlet, power/ignition, heat loads, ventilation, underside access and service/removal strategy; never substitute the 950 × 370 three-hole Q5-HJ drawing",
+                "Appliance: Siemens SJ435S00JC / SJ435S01JC dishwasher；Current confirmed cabinet input: Selected but not ordered; merchant listing 598 W × 573 D × 775 H mm; earlier body reference 598 W × 550 D × 775 H mm; opening 600-608 W × at least 575 D × 780-835 H mm; services in adjacent sink cabinet；Items that must remain pending: Lock final S00JC/S01JC suffix, then verify door system, rated load, hose lengths, drain high loop, exact service-hole positions and installer-approved elevation against that official sheet",
+                "Appliance: Bosch HBC84H500W built-in microwave oven；Current confirmed cabinet input: Selected but not ordered; 45 L; front 595 W × 454 H mm; body 558 W × 550 D mm; overall depth 570 mm; cabinet depth at least 550 mm；Items that must remain pending: Official opening width/tolerance, ventilation, rear-panel treatment, connected load, circuit, socket/junction position and door swing",
+                "Appliance: Central purifier + central softener；Current confirmed cabinet input: Each unit 330 W × 383 D × 535 H mm; combined cabinet clear width at least 800 mm and preferably 1000 mm; do not place directly under sink; 3/4-inch water connections; water points 300-500 mm above finished floor; nearby PVC 50 drain at no more than 200 mm above finished floor; power within 1 m；Items that must remain pending: Exact models, true service clearances, whether width is clear/internal or module width, installer-approved pipe centres, power/socket details, drain and backflow details, bypass/isolation valves, leak protection, and maintenance/removal route"
+              ]
             }
           ]
         }
@@ -789,14 +807,14 @@
       "name": "水磨石板",
       "category": "饰面材料",
       "brand": "待补充",
-      "model": "方案待出",
-      "stage": "confirmed",
-      "stageLabel": "已确定 / 推进中",
+      "model": "水磨石定制方案（2026-09-10供应商图）",
+      "stage": "ordered",
+      "stageLabel": "已采购 / 待交付安装",
       "priority": null,
       "decisionDeadline": null,
       "urgencyReason": null,
-      "progress": "已确定 / 推进中",
-      "nextAction": "具体安排由项目负责人另行确认",
+      "progress": "已采购 / 待交付安装",
+      "nextAction": "补齐浴缸前脸、置物台及检修门深化尺寸，试装确认净检修空间后再开料；确认加工交付与安装安排；公开图片先脱敏",
       "drawingAudit": {
         "status": "missing",
         "label": "深化施工图未出",
@@ -829,12 +847,12 @@
       "brand": "施工方",
       "model": null,
       "stage": "confirmed",
-      "stageLabel": "已确定 / 推进中",
+      "stageLabel": "水电改造已完成",
       "priority": null,
       "decisionDeadline": null,
       "urgencyReason": null,
-      "progress": "已确定 / 推进中",
-      "nextAction": "具体安排由项目负责人另行确认",
+      "progress": "水电改造阶段已完成；30份现场及厂家资料已归档；伟星管道服务结果为合格。",
+      "nextAction": "现场沟通时可直接查看隐蔽管线照片、试压曲线与脱敏厂家凭证；后续补充取得的检测或签字资料。",
       "drawingAudit": {
         "status": "partial",
         "label": "点位图已归档，隐蔽／竣工图待补",
@@ -852,6 +870,21 @@
                 "Ceiling light-position drawing received on 2026-09-02: 2026-09-02-ceiling-light-point-layout.pdf.",
                 "Both are one-page A4 CAD exports. They show the plan and point annotations, but the visible sheets do not include a revision number, issue date, legend, designer/contractor signature or owner approval field.",
                 "Treat them as the current coordination issue, not as an as-built record. Before chasing and concealment, mark corrections, identify every point and circuit, confirm finished-surface datums, then obtain signed/revision-controlled issue sheets."
+              ]
+            }
+          ]
+        },
+        {
+          "source": "02-renovation/WATER_ELECTRICAL_ACCEPTANCE_2026-09-10.md",
+          "sections": [
+            {
+              "title": "水电验收完成与现场资料",
+              "points": [
+                "2026-09-14，业主确认水电改造阶段已完成。",
+                "共归档30份现场及厂家资料，可用于施工现场查阅隐蔽管线走向与本次服务记录。",
+                "伟星管道服务结果为“合格”，日期为2026-09-09。",
+                "公开工程版展示经审查的现场照片、智能试压曲线及明确标注的脱敏凭证；原始凭证保存在加密内部采购版。",
+                "厂家管道服务凭证不单独替代电气测试记录或整体验收签字资料；后续取得的资料继续补充归档。"
               ]
             }
           ]
@@ -956,6 +989,156 @@
           "title": "现场手写配电箱回路配置",
           "href": "technical/2026-09-02-electrical-panel-circuit-note.jpg",
           "type": "image"
+        },
+        {
+          "title": "水电隐蔽管线现场留底 01",
+          "href": "technical/01-ccb916e2a299c52559d17b98c5517af5.jpg",
+          "type": "image"
+        },
+        {
+          "title": "水电隐蔽管线现场留底 02",
+          "href": "technical/02-cc59f0b48d8723b9d90963a99d6832d0.jpg",
+          "type": "image"
+        },
+        {
+          "title": "水电隐蔽管线现场留底 03",
+          "href": "technical/03-d2ed274cc86a04162b76737a20d5bad3.jpg",
+          "type": "image"
+        },
+        {
+          "title": "水电隐蔽管线现场留底 04",
+          "href": "technical/04-636a3ffc12c0dca6f14c7419530d7758.jpg",
+          "type": "image"
+        },
+        {
+          "title": "水电隐蔽管线现场留底 05",
+          "href": "technical/05-877f934ea94ae59f46a531c98cfdebde.jpg",
+          "type": "image"
+        },
+        {
+          "title": "水电隐蔽管线现场留底 06",
+          "href": "technical/06-ddbd37a867276d55c7cbd3f2d0a0163c.jpg",
+          "type": "image"
+        },
+        {
+          "title": "水电隐蔽管线现场留底 07",
+          "href": "technical/07-f45c4e1a8350bc04e8b75be39b5be69e.jpg",
+          "type": "image"
+        },
+        {
+          "title": "水电隐蔽管线现场留底 08",
+          "href": "technical/08-775286090b714cf986046fcc4a6555cd.jpg",
+          "type": "image"
+        },
+        {
+          "title": "水电隐蔽管线现场留底 09",
+          "href": "technical/09-2dfc8930c8074356a27d6ca6933dc173.jpg",
+          "type": "image"
+        },
+        {
+          "title": "水电隐蔽管线现场留底 10",
+          "href": "technical/10-70e05eb4985782fa99c3d288a60f69d6.jpg",
+          "type": "image"
+        },
+        {
+          "title": "水电隐蔽管线现场留底 11",
+          "href": "technical/11-7de13eed3ebea1e859fe512bec9f5b2d.jpg",
+          "type": "image"
+        },
+        {
+          "title": "水电隐蔽管线现场留底 12",
+          "href": "technical/12-5ddd1cc437417effc3ad6169bd1f2bf3.jpg",
+          "type": "image"
+        },
+        {
+          "title": "水电隐蔽管线现场留底 13",
+          "href": "technical/13-2f452fb806ecfc967e7734a0a3391bb2.jpg",
+          "type": "image"
+        },
+        {
+          "title": "水电隐蔽管线现场留底 14",
+          "href": "technical/14-bdf80b9175f2fa0be949be1c7d1fb218.jpg",
+          "type": "image"
+        },
+        {
+          "title": "水电隐蔽管线现场留底 15",
+          "href": "technical/15-a8c505228228f038f3240a32580fb469.jpg",
+          "type": "image"
+        },
+        {
+          "title": "水电隐蔽管线现场留底 16",
+          "href": "technical/16-38cd09a8fafff1221bb3f50dbfc1c0a4.jpg",
+          "type": "image"
+        },
+        {
+          "title": "水电隐蔽管线现场留底 17",
+          "href": "technical/17-9df6266af7733b518ebc849dea511bff.jpg",
+          "type": "image"
+        },
+        {
+          "title": "水电隐蔽管线现场留底 18",
+          "href": "technical/18-dde0762a790bbb6b21e5e5a8396ece36.jpg",
+          "type": "image"
+        },
+        {
+          "title": "水电隐蔽管线现场留底 19",
+          "href": "technical/19-3cd224dc90f3bcc2222e541c4f938296.jpg",
+          "type": "image"
+        },
+        {
+          "title": "水电隐蔽管线现场留底 20",
+          "href": "technical/20-805e02e6ec38ed01089acf4128ce2d3f.jpg",
+          "type": "image"
+        },
+        {
+          "title": "水电隐蔽管线现场留底 21",
+          "href": "technical/21-cc03c5f2604f3b6e0818804940ba26b6.jpg",
+          "type": "image"
+        },
+        {
+          "title": "水电隐蔽管线现场留底 22",
+          "href": "technical/22-8396c8420a2adf669e5b22d41ee15e8a.jpg",
+          "type": "image"
+        },
+        {
+          "title": "水电隐蔽管线现场留底 23",
+          "href": "technical/23-28ee0765708e42dc67de799566df9394.jpg",
+          "type": "image"
+        },
+        {
+          "title": "水电隐蔽管线现场留底 24",
+          "href": "technical/24-d767c933340bf9ef441835ff70139535.jpg",
+          "type": "image"
+        },
+        {
+          "title": "水电隐蔽管线现场留底 25",
+          "href": "technical/25-6cf343f3c5601f0de357af00f8973d28.jpg",
+          "type": "image"
+        },
+        {
+          "title": "水电隐蔽管线现场留底 26",
+          "href": "technical/26-933ebe012a60ac1f33045d09fef50b3f.jpg",
+          "type": "image"
+        },
+        {
+          "title": "智能试压曲线留底",
+          "href": "technical/28-pressure-curve-warranty-private.jpg",
+          "type": "image"
+        },
+        {
+          "title": "水路试压服务记录（脱敏展示图，原件见加密档案）",
+          "href": "technical/27-pressure-service-redacted-display.png",
+          "type": "image"
+        },
+        {
+          "title": "伟星管道服务合格凭证（脱敏展示图，原件见加密档案）",
+          "href": "technical/29-vasen-service-result-redacted-display.png",
+          "type": "image"
+        },
+        {
+          "title": "金貂线缆产品保障卡（脱敏展示图，原件见加密档案）",
+          "href": "technical/30-lighting-star-warranty-redacted-display.png",
+          "type": "image"
         }
       ]
     },
@@ -982,6 +1165,17 @@
         {
           "source": "04-assets/fixtures/toto-pay1320p-bathtub.md",
           "sections": [
+            {
+              "title": "Official Product Data",
+              "points": [
+                "Attribute: External size；Confirmed value: 1350 W × 750 D × 470 H mm",
+                "Attribute: Full-water capacity；Confirmed value: 146 L",
+                "Attribute: Material；Confirmed value: Acrylic / 压克力",
+                "Attribute: Apron；Confirmed value: None",
+                "Attribute: Bottom；Confirmed value: Anti-slip texture",
+                "Attribute: Drain fitting；Confirmed value: Bare-tub official specification treats drainage as separate and recommends DB505R-1A/1B; the purchased marketplace package instead states DB601S-1B + QCHRG"
+              ]
+            },
             {
               "title": "Delivery Acceptance",
               "points": [
@@ -1388,6 +1582,14 @@
           "source": "04-assets/appliances/built-in-dishwasher-598.md",
           "sections": [
             {
+              "title": "Product Dimensions",
+              "points": [
+                "Element: Product width；Dimension: 598；Notes: Printed across the top of the machine.",
+                "Element: Product depth；Dimension: 550 body reference; 573 listing envelope；Notes: The earlier installation image prints 550 on the body; the selected merchant listing prints 598 × 573 × 775 mm. Treat 573 mm as the procurement/delivery envelope and use the final suffix's official drawing for cabinet release.",
+                "Element: Product height；Dimension: 775；Notes: Printed on the front elevation."
+              ]
+            },
+            {
               "title": "Water, Drain, and Electrical Coordination",
               "points": [
                 "One 10 A three-pin power socket.",
@@ -1478,6 +1680,27 @@
           "source": "04-assets/appliances/built-in-oven-595x454.md",
           "sections": [
             {
+              "title": "Product Dimensions",
+              "points": [
+                "Element: Front fascia width；Dimension: 595；Notes: Overall visible front width.",
+                "Element: Overall product height；Dimension: 454；Notes: Overall visible height.",
+                "Element: Main body width；Dimension: 558；Notes: Width behind the front fascia.",
+                "Element: Main body depth；Dimension: 550；Notes: Cabinet-embedded body depth shown on the top/side of the product.",
+                "Element: Overall depth；Dimension: 570；Notes: Includes the front projection / fascia shown in the product drawing."
+              ]
+            },
+            {
+              "title": "Installation-Section Values",
+              "points": [
+                "Requirement / datum: Cabinet internal depth；Value: at least 550；Interpretation / caution: Printed as 最小550.",
+                "Requirement / datum: Cabinet opening / body-zone height；Value: 450；Interpretation / caution: Shown against the cabinet cavity in the side section.",
+                "Requirement / datum: Overall front height；Value: 454；Interpretation / caution: Creates the shown 4 mm fascia overlap relationship.",
+                "Requirement / datum: Front projection；Value: 20.5；Interpretation / caution: Shown at the cabinet-front / fascia relationship; exact finished-panel datum must be confirmed.",
+                "Requirement / datum: Fascia overlap；Value: 4；Interpretation / caution: Shown vertically at the top/right of the section.",
+                "Requirement / datum: Minimum clearance / ventilation gap；Value: 9；Interpretation / caution: Diagram marks 最小9; exact rear/bottom datum must be confirmed from the model manual."
+              ]
+            },
+            {
               "title": "Remaining Inputs Before Cabinet Freeze",
               "points": [
                 "Door swing depth and required aisle clearance when fully open.",
@@ -1535,6 +1758,20 @@
           "source": "04-assets/appliances/liudianban-y6-range-hood.md",
           "sections": [
             {
+              "title": "Product Dimensions",
+              "points": [
+                "Element: Main hood width；Dimension: 998；Interpretation / caution: Net product width. If integrated with wall cabinets, source recommends allowance of at least 10 mm. It does not specify whether this is total or per side; cabinet supplier must confirm.",
+                "Element: Main front section height；Dimension: 370；Interpretation / caution: Front drawing labels 338 + 32.",
+                "Element: Lower edge / panel thickness；Dimension: 32；Interpretation / caution: Shown at the lower edge of the front view.",
+                "Element: Upper flue-box width；Dimension: 430；Interpretation / caution: Centered over the 998 mm hood; front drawing also shows 282 mm on each side.",
+                "Element: Upper flue-box depth；Dimension: 313；Interpretation / caution: Side drawing divides this as 125 + 188.",
+                "Element: Front-drawing upper vertical label；Dimension: 563；Interpretation / caution: Datum differs from the side-view overall dimension; do not add this directly to 370 without installer confirmation.",
+                "Element: Side-elevation overall height；Dimension: 888；Interpretation / caution: Use as the source's explicit overall side-view height, subject to physical/install confirmation.",
+                "Element: Lower side offset label；Dimension: 49；Interpretation / caution: Datum is not sufficiently clear in the supplied image; retain for installer verification.",
+                "Element: Outer skin thickness；Dimension: 10；Interpretation / caution: Marked 皮垫厚 10mm in the side detail."
+              ]
+            },
+            {
               "title": "Cabinet and Ceiling Coordination",
               "points": [
                 "Main hood width: 998 mm; merchant drawing states that integrated cabinetry should retain at least 10 mm allowance, with allocation per side still to confirm.",
@@ -1543,14 +1780,27 @@
                 "Product exhaust outlet: diameter 185 mm; public-flue opening: diameter 180 mm; confirm the transition and backdraft valve.",
                 "Kitchen-window hard clearance: the duct, elbow, backdraft valve, connectors, supports and flexible sections must remain outside the actual sash space in both inward side-opening and top-inward-tilt modes.",
                 "Before permanent fixing, operate the installed sash fully in both modes and have the window installer and range-hood installer jointly mark and approve the duct route onsite.",
-                "Do not set out from a verbal left/right description. Use the signed window drawing with the interior viewing direction, hinge side and handle/free-edge side explicitly identified."
+                "Do not set out from a verbal left/right description. Use the signed window drawing with the interior viewing direction, hinge side and handle/free-edge side explicitly identified.",
+                "Requirement: Hood box occupied space；Value: 313 D × 430 W；Notes: Source wording: Y6箱体占用空间为313*430.",
+                "Requirement: Cabinet reserved clear space；Value: at least 450 W × 330 D；Notes: Source wording: 吊柜预留空间需要≥450*330.",
+                "Requirement: Ceiling duct pass-through；Value: diameter 250；Notes: Drawing marks φ250 within a 430 × 313 mm box. Visible offsets include 151, 29 and 51 mm; their orientation/datum must be verified from seller CAD before drilling.",
+                "Requirement: Exhaust outlet diameter；Value: 185；Notes: Product outlet specification.",
+                "Requirement: Public-flue exhaust hole；Value: diameter 180；Notes: Installation-preparation requirement. Distinct from the product's 185 mm outlet.",
+                "Requirement: Hanger plate to ceiling；Value: at least 150；Notes: Red installation constraint in elevation.",
+                "Requirement: Hanging-foot center relationship；Value: at least 200；Notes: Drawing shows this value but its full datum is not sufficiently explicit; installer must set out onsite.",
+                "Requirement: Other installation offset；Value: 120；Notes: Shown beside the upper body in the installation elevation; confirm datum onsite."
               ]
             },
             {
               "title": "Performance Data",
               "points": [
                 "Selected variable-frequency option: boost airflow 26 m³/min and maximum static pressure 1280 Pa.",
-                "Earlier merchant data also states 56 dB(A) and Grade 1 energy efficiency; confirm these on the final order/nameplate."
+                "Earlier merchant data also states 56 dB(A) and Grade 1 energy efficiency; confirm these on the final order/nameplate.",
+                "Specification: Boost airflow；Value: 26 m³/min",
+                "Specification: Maximum static pressure；Value: 1280 Pa",
+                "Specification: Noise；Value: 56 dB(A)",
+                "Specification: Energy efficiency；Value: Grade 1",
+                "Specification: Hood face-panel material；Value: Aluminum alloy"
               ]
             },
             {
@@ -1596,22 +1846,22 @@
       ],
       "assets": [
         {
-          "title": "liudianban y6 range hood installation",
+          "title": "六点半 Y6 安装总览示意图（商家原图）",
           "href": "technical/2026-08-24-liudianban-y6-range-hood-installation.jpg",
           "type": "image"
         },
         {
-          "title": "liudianban y6 dimensions",
+          "title": "六点半 Y6 机身尺寸图（商家原图）",
           "href": "technical/2026-08-31-liudianban-y6-dimensions.jpg",
           "type": "image"
         },
         {
-          "title": "liudianban y6 installation",
+          "title": "六点半 Y6 挂装与灶面距离示意图（商家原图）",
           "href": "technical/2026-08-31-liudianban-y6-installation.jpg",
           "type": "image"
         },
         {
-          "title": "liudianban y6 ceiling cutout",
+          "title": "六点半 Y6 吊顶排烟孔示意图（定位待签字）",
           "href": "technical/2026-08-31-liudianban-y6-ceiling-cutout.jpg",
           "type": "image"
         }
@@ -1646,7 +1896,14 @@
                 "Working product envelope: 813 W × 480 D mm; merchant labels indicate reserve approximately 823 W × 490 D mm.",
                 "Working countertop opening: 743 W × 370 D mm with R11.2 corners.",
                 "Working control pattern: two diameter-26 holes, 120 mm center spacing and 50 mm centerline setback from the shown long-edge datum.",
-                "Fabrication rule: transfer the original drawing to the stainless-steel fabricator and obtain a signed CAD/shop drawing before cutting or welding."
+                "Fabrication rule: transfer the original drawing to the stainless-steel fabricator and obtain a signed CAD/shop drawing before cutting or welding.",
+                "Requirement: Product plan size；Working value: 813 W × 480 D mm；Source / caution: Merchant Q5-2 product drawing; labels indicate reserve approximately 823 W × 490 D mm",
+                "Requirement: Countertop opening；Working value: 743 W × 370 D mm；Source / caution: Merchant Q5-2 welded-cutout drawing",
+                "Requirement: Opening corner radius；Working value: R11.2；Source / caution: Merchant Q5-2 welded-cutout drawing",
+                "Requirement: Control holes；Working value: 2 × diameter 26 mm；Source / caution: Merchant Q5-2 welded-cutout drawing",
+                "Requirement: Control-hole center spacing；Working value: 120 mm；Source / caution: Merchant Q5-2 welded-cutout drawing",
+                "Requirement: Control-hole centerline setback；Working value: 50 mm；Source / caution: Shown from the long-edge datum on the merchant drawing; fabricator to verify orientation",
+                "Requirement: Two-burner cabinet length；Working value: greater than 830 mm；Source / caution: Earlier applicable two-burner cabinet reference"
               ]
             },
             {
@@ -1707,17 +1964,17 @@
       ],
       "assets": [
         {
-          "title": "two burner cooktop cabinet reference",
+          "title": "双眼灶柜体预留参考示意图",
           "href": "technical/2026-08-24-two-burner-cooktop-cabinet-reference.jpg",
           "type": "image"
         },
         {
-          "title": "liudianban q5 2 product drawing",
+          "title": "六点半 Q5-2 双眼灶产品尺寸与预留图",
           "href": "technical/2026-08-31-liudianban-q5-2-product-drawing.jpg",
           "type": "image"
         },
         {
-          "title": "liudianban q5 2 weld cutout",
+          "title": "六点半 Q5-2 双眼灶台面开孔与焊接示意图（加工待签字）",
           "href": "technical/2026-08-31-liudianban-q5-2-weld-cutout.jpg",
           "type": "image"
         }
@@ -1746,6 +2003,19 @@
         {
           "source": "04-assets/appliances/hitachi-r-fbf570nsc-refrigerator.md",
           "sections": [
+            {
+              "title": "官方尺寸与容量",
+              "points": [
+                "项目: 机身宽度；官方参数: 900 mm；工程含义: 仅为产品本体，不是橱柜最小净宽。",
+                "项目: 机身深度；官方参数: 720 mm；工程含义: 不含前方开门、通行和检修操作空间。",
+                "项目: 机身高度；官方参数: 1840 mm；工程含义: 不含顶部散热间隙。",
+                "项目: 总容积；官方参数: 573 L；工程含义: 冷藏、冷冻和变温容积之和。",
+                "项目: 冷藏室；官方参数: 378 L；工程含义: 上部冷藏区。",
+                "项目: 冷冻室；官方参数: 99 L；工程含义: 下部冷冻区。",
+                "项目: 变温室；官方参数: 96 L；工程含义: 可选择冷冻或温和冷冻。",
+                "项目: 门数；官方参数: 4 门；工程含义: 需同时复核左右开门、相邻墙柜和抽屉拉出空间。"
+              ]
+            },
             {
               "title": "安装与橱柜预留",
               "points": [
@@ -1783,6 +2053,16 @@
                 "Keep an accessible dedicated grounded socket where the plug is not crushed behind the refrigerator. No fixed water inlet or drain is required; the automatic ice maker uses a manually filled internal tank.",
                 "Before shipment, remeasure the finished bay, left/right obstructions, four-door and lower-drawer operation, front aisle, lift, entry door, corridor turns and kitchen access. Obtain the packaged size and gross weight from the seller.",
                 "Detailed appliance record: 04-assets/appliances/hitachi-r-fbf570nsc-refrigerator.md."
+              ]
+            },
+            {
+              "title": "Cabinet and Utility Brief",
+              "points": [
+                "Appliance: 六点半 Y6 range hood；Current confirmed cabinet input: Selected stainless-steel variable-frequency option, 26 m³/min / 1280 Pa; main width 998 mm; hood box 430 W × 313 D mm; cabinet reserve at least 450 W × 330 D mm; diameter-250 ceiling duct hole; hood-to-cooktop 300-400 mm; burner center no more than 260 mm from finished rear wall；Items that must remain pending: Electrical rating/socket position, signed ceiling-hole center coordinates, 563/888 height datum, material discrepancy, and installer-approved elevation",
+                "Appliance: 六点半 Q5-2 two-burner gas cooktop；Current confirmed cabinet input: Selected welded sentinel/timer two-burner natural-gas option; working product 813 × 480 mm; reserve about 823 × 490 mm; opening 743 × 370 mm, R11.2; 2 × diameter-26 control holes at 120 mm spacing and 50 mm setback; 5 mm stainless-steel countertop；Items that must remain pending: Final 12T nameplate/SKU, signed CAD/shop drawing, weldable flange/interface, gas inlet, power/ignition, heat loads, ventilation, underside access and service/removal strategy; never substitute the 950 × 370 three-hole Q5-HJ drawing",
+                "Appliance: Siemens SJ435S00JC / SJ435S01JC dishwasher；Current confirmed cabinet input: Selected but not ordered; merchant listing 598 W × 573 D × 775 H mm; earlier body reference 598 W × 550 D × 775 H mm; opening 600-608 W × at least 575 D × 780-835 H mm; services in adjacent sink cabinet；Items that must remain pending: Lock final S00JC/S01JC suffix, then verify door system, rated load, hose lengths, drain high loop, exact service-hole positions and installer-approved elevation against that official sheet",
+                "Appliance: Bosch HBC84H500W built-in microwave oven；Current confirmed cabinet input: Selected but not ordered; 45 L; front 595 W × 454 H mm; body 558 W × 550 D mm; overall depth 570 mm; cabinet depth at least 550 mm；Items that must remain pending: Official opening width/tolerance, ventilation, rear-panel treatment, connected load, circuit, socket/junction position and door swing",
+                "Appliance: Central purifier + central softener；Current confirmed cabinet input: Each unit 330 W × 383 D × 535 H mm; combined cabinet clear width at least 800 mm and preferably 1000 mm; do not place directly under sink; 3/4-inch water connections; water points 300-500 mm above finished floor; nearby PVC 50 drain at no more than 200 mm above finished floor; power within 1 m；Items that must remain pending: Exact models, true service clearances, whether width is clear/internal or module width, installer-approved pipe centres, power/socket details, drain and backflow details, bypass/isolation valves, leak protection, and maintenance/removal route"
               ]
             }
           ]
@@ -1918,8 +2198,8 @@
       "priority": "P0",
       "decisionDeadline": "2026-09-01",
       "urgencyReason": "水电放线前必须冻结灯位、回路和控制关系；装饰灯具本体可后续购买。",
-      "progress": "P0｜灯具均未购买；当前先定灯位和控制",
-      "nextAction": "8 月 31 日 16:30 联合确认会上完成灯位、回路、控制、预留和基础负载清单；9 月 1 日前定稿，具体灯具按后续窗口下单",
+      "progress": "2026-09-10｜未购买；已建立交互选型页，方案C初配10件轨道模块（8可调＋2泛光）与8个独立灯位；浴霸及灯带另计，非采购定案",
+      "nextAction": "具体安排由项目负责人另行确认",
       "drawingAudit": {
         "status": "partial",
         "label": "天花灯位图已归档",
@@ -1937,6 +2217,14 @@
                 "The one-page A4 plan records ceiling light positions and several plan dimensions. It is the current coordination issue for setting-out.",
                 "The visible sheet does not include a revision/date, legend, fixture schedule, circuit/switch relationship, mounting detail, load, colour temperature or approval block.",
                 "Before wiring or ceiling closure, number every light point and bind it to a switch/control circuit. Confirm how points in the exposed-concrete ceiling are fixed and wired without undermining the selected bare-ceiling finish, and coordinate kitchen/bathroom points with suspended-ceiling modules, access and the bathroom heater."
+              ]
+            },
+            {
+              "title": "2026-09-10 灯位补充及方案 B",
+              "points": [
+                "业主确认：入户门口1个灯位、厨房内部2个灯位；网页编号E1、K1、K2，坐标仅示意，灯型待选。",
+                "业主偏好：避免太亮和均匀平光。网页方案B取消原8件泛光初配，保留6件局部可调灯，L-H横轨新增H1/H2两件暂定可调射灯。家具位置未核定，配灯为建议，不是施工定案。",
+                "当前清单：8件轨道模块＋8个独立灯位，另1台浴霸及2处灯带；泛光补充0–2件须现场试灯后再定，未计入初配。"
               ]
             }
           ]
@@ -2078,6 +2366,16 @@
           "source": "04-assets/appliances/aupu-mr009m-bathroom-heater.md",
           "sections": [
             {
+              "title": "已确认的安装尺寸",
+              "points": [
+                "项目: 面板/整机外廓；尺寸 / 要求: 约 600 × 300 mm；证据与置信度: 网络产品文章明确写整机 300×600 mm；与产品图和标准双模块外形相符。购买及吊顶下料前仍以实物/正式图纸复核",
+                "项目: 吊顶开孔；尺寸 / 要求: 605 × 305 mm；证据与置信度: 用户提供的 MR009M 安装服务图；网络产品介绍亦给出相同开孔值",
+                "项目: 集成吊顶内高度；尺寸 / 要求: ≥140 mm；证据与置信度: 用户提供的 MR009M 安装服务图",
+                "项目: 石膏板 / 大板吊顶内高度；尺寸 / 要求: ≥165 mm；证据与置信度: 用户提供的 MR009M 安装服务图",
+                "项目: 适配吊顶；尺寸 / 要求: 集成吊顶、石膏顶/大板吊顶；宣传资料称兼容铝扣板、石膏顶、奥普 MAX 蜂窝大板；证据与置信度: 产品安装服务图与网络产品介绍"
+              ]
+            },
+            {
               "title": "安装与吊顶协调摘要",
               "points": [
                 "MR009M 是风暖浴霸与换气／排风一体机，同一主机承担取暖和排风功能。",
@@ -2184,7 +2482,7 @@
     "source": "02-renovation/CONSTRUCTION_PLAN.md",
     "trackingSource": "02-renovation/CONSTRUCTION_PROGRESS.md",
     "actualStatus": "recorded",
-    "actualCount": 9,
+    "actualCount": 10,
     "phases": [
       {
         "name": "准备与拆除",
@@ -2382,7 +2680,11 @@
         "linkedItemIds": [
           "construction"
         ],
-        "actual": null,
+        "actual": {
+          "status": "completed",
+          "confirmedDate": "2026-09-14",
+          "note": "业主确认水电改造阶段已完成；30份留底已归档，伟星管道服务结果为“合格”。厂家管道凭证不单独替代电气测试或整体验收签字资料。"
+        },
         "ranges": [
           {
             "start": "2026-09-10",

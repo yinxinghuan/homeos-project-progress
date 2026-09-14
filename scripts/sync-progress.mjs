@@ -1,4 +1,4 @@
-import { chmod, copyFile, mkdir, readFile, writeFile } from 'node:fs/promises';
+import { chmod, copyFile, mkdir, readFile, readdir, writeFile } from 'node:fs/promises';
 import { basename, dirname, extname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -11,6 +11,15 @@ const publicTechnicalBase = 'https://yinxinghuan.github.io/homeos-project-progre
 
 const procurement = JSON.parse(await readFile(resolve(homeRoot, '06-records', 'procurement.json'), 'utf8'));
 const documentAudit = JSON.parse(await readFile(resolve(homeRoot, '06-records', 'INSTALLATION_DOCUMENT_AUDIT.json'), 'utf8'));
+const acceptanceMediaDir = 'source/media/2026-09-10-water-electrical-acceptance';
+const acceptanceMediaFiles = (await readdir(resolve(homeRoot, acceptanceMediaDir))).sort();
+const publicAcceptanceAssets = [
+  ...acceptanceMediaFiles.filter((fileName) => /^(?:0[1-9]|1\d|2[0-6])-/.test(fileName)).map((fileName) => `${acceptanceMediaDir}/${fileName}`),
+  `${acceptanceMediaDir}/28-pressure-curve-warranty-private.jpg`,
+  `${acceptanceMediaDir}/public/27-pressure-service-redacted-display.png`,
+  `${acceptanceMediaDir}/public/29-vasen-service-result-redacted-display.png`,
+  `${acceptanceMediaDir}/public/30-lighting-star-warranty-redacted-display.png`,
+];
 
 const detailSources = {
   windows: ['02-renovation/WINDOWS.md'],
@@ -24,7 +33,7 @@ const detailSources = {
   'wall-paint': ['02-renovation/WALL_PAINT.md', '07-references/ceiling-exposed-concrete-finish.md'],
   'kitchen-cabinetry': ['02-renovation/KITCHEN_CABINETRY.md'],
   terrazzo: ['02-renovation/TERRAZZO.md', 'decisions/0004-bathtub-terrazzo-interface.md'],
-  construction: ['02-renovation/WATER_ELECTRICAL_WALL_CONTRACT.md', '03-systems/electrical.md', '03-systems/plumbing.md', '04-assets/fixtures/abb-electrical-distribution-board.md'],
+  construction: ['02-renovation/WATER_ELECTRICAL_WALL_CONTRACT.md', '02-renovation/WATER_ELECTRICAL_ACCEPTANCE_2026-09-10.md', '03-systems/electrical.md', '03-systems/plumbing.md', '04-assets/fixtures/abb-electrical-distribution-board.md'],
   'electrical-distribution-board': ['04-assets/fixtures/abb-electrical-distribution-board.md'],
   bathtub: ['04-assets/fixtures/toto-pay1320p-bathtub.md', 'decisions/0003-bathroom-bathtub-selection.md', 'decisions/0004-bathtub-terrazzo-interface.md'],
   flooring: ['02-renovation/FLOORING.md'],
@@ -49,7 +58,7 @@ const safeAssets = {
     'output/images/2026-08-27-window-order-drawing-redacted.png',
     'output/pdf/2026-08-27-window-order-drawing-redacted.pdf',
   ],
-  tiles: ['source/plans/2026-08-29-lijing-tile-layout-redacted.pdf'],
+  tiles: ['source/plans/2026-09-11-lijing-tile-layout-redacted.pdf'],
   'water-system': [
     'source/media/2026-08-26-central-purifier-softener-installation-requirements.jpeg',
     'source/media/2026-08-26-central-water-treatment-cabinet-clearance-reference.jpeg',
@@ -74,6 +83,7 @@ const safeAssets = {
     'source/plans/2026-09-02-socket-point-layout.pdf',
     'source/plans/2026-09-02-ceiling-light-point-layout.pdf',
     'source/media/2026-09-02-electrical-panel-circuit-note.jpg',
+    ...publicAcceptanceAssets,
   ],
   bathtub: [
     'source/manuals/toto/toto-pay1320-1323-product-specification.pdf',
@@ -131,9 +141,20 @@ const safeAssets = {
 };
 
 const assetTitleOverrides = {
+  '27-pressure-service-redacted-display.png': '水路试压服务记录（脱敏展示图，原件见加密档案）',
+  '28-pressure-curve-warranty-private.jpg': '智能试压曲线留底',
+  '29-vasen-service-result-redacted-display.png': '伟星管道服务合格凭证（脱敏展示图，原件见加密档案）',
+  '30-lighting-star-warranty-redacted-display.png': '金貂线缆产品保障卡（脱敏展示图，原件见加密档案）',
+  '2026-08-24-liudianban-y6-range-hood-installation.jpg': '六点半 Y6 安装总览示意图（商家原图）',
+  '2026-08-31-liudianban-y6-dimensions.jpg': '六点半 Y6 机身尺寸图（商家原图）',
+  '2026-08-31-liudianban-y6-installation.jpg': '六点半 Y6 挂装与灶面距离示意图（商家原图）',
+  '2026-08-31-liudianban-y6-ceiling-cutout.jpg': '六点半 Y6 吊顶排烟孔示意图（定位待签字）',
+  '2026-08-31-liudianban-q5-2-product-drawing.jpg': '六点半 Q5-2 双眼灶产品尺寸与预留图',
+  '2026-08-31-liudianban-q5-2-weld-cutout.jpg': '六点半 Q5-2 双眼灶台面开孔与焊接示意图（加工待签字）',
+  '2026-08-24-two-burner-cooktop-cabinet-reference.jpg': '双眼灶柜体预留参考示意图',
   '2026-08-27-window-order-drawing-redacted.png': '伊博莱全屋窗户方案图（公开脱敏预览）',
   '2026-08-27-window-order-drawing-redacted.pdf': '伊博莱全屋窗户方案图（公开脱敏 PDF）',
-  '2026-08-29-lijing-tile-layout-redacted.pdf': '厨房与卫生间排砖施工图（公开脱敏版）',
+  '2026-09-11-lijing-tile-layout-redacted.pdf': '厨房与卫生间排砖施工图（公开脱敏版）',
   '2026-09-01-aupu-mr009m-installation-service.png': '奥普 MR009M 安装服务图',
   '2026-09-02-rinnai-rux-v1615sffua-a-e-official-catalogue-extract.pdf': '林内 RUX-V1615SFFUA(A)-E 官方型号页',
   '2026-09-02-socket-point-layout.pdf': '全屋插座点位图',
@@ -143,6 +164,12 @@ const assetTitleOverrides = {
   'villeroy-boch-skyline-b63900rq-technical-guide.pdf': '唯宝天际 B63900RQ 梳洗柜官方安装说明',
   'villeroy-boch-skyline-b308l100-technical-guide.pdf': '唯宝天际 B308L100 照明镜官方安装说明',
 };
+
+function assetTitle(fileName) {
+  const sitePhoto = fileName.match(/^(\d{2})-/);
+  if (sitePhoto && Number(sitePhoto[1]) <= 26) return `水电隐蔽管线现场留底 ${sitePhoto[1]}`;
+  return assetTitleOverrides[fileName] ?? clean(fileName.replace(/\.[^.]+$/, '').replace(/^\d{4}-\d{2}-\d{2}-/, '').replaceAll('-', ' '));
+}
 
 const blocked = /¥|￥|\bCNY\b|\bprices?\b|\bpayments?\b|\bpaid\b|\binvoices?\b|\bcosts?\b|\bfees?\b|\bcharges?\b|chargeable|surcharges?|\bdeposits?\b|\bbalances?\b|\bquotations?\b|\baddress\b|\bphone\b|金额|价格|付款|支付|已付|待付|定金(?!貂)|预付款|余款|期款|款项|付款比例|全款|付清|实付|报价|收费|费用|地址|电话|姓名|客户|账户|合同编号|订单编号|销售单号|发票/i;
 const technicalHeading = /安装|尺寸|规格|技术|留位|开孔|接口|水电|排水|供电|通风|协调|验收|到货|施工|要求|条件|配置|阀门|防冻|冬季|变压器|点位|插座|开关|回路|灯位|product data|dimension|installation|acceptance|hold point|requirement|coordination|utility|clearance|cutout|fabrication|performance|valve|freeze|winter|transformer|before|point-position|socket|switch|circuit|light-position/i;
@@ -163,15 +190,26 @@ function parseTechnical(content) {
   const lines = content.split(/\r?\n/);
   const sections = [];
   let current = null;
+  let tableHeaders = null;
 
   for (const line of lines) {
     const heading = line.match(/^#{2,4}\s+(.+)$/);
     if (heading) {
+      tableHeaders = null;
       if (current?.points.length) sections.push(current);
       const title = clean(heading[1]);
       current = technicalHeading.test(title) ? { title: blocked.test(title) ? '技术与现场要点' : title, points: [] } : null;
       continue;
     }
+    if (current && /^\s*\|/.test(line)) {
+      const cells = line.trim().replace(/^\||\|$/g, '').split('|').map(clean);
+      if (cells.every((cell) => /^:?-+:?$/.test(cell))) continue;
+      if (!tableHeaders) { tableHeaders = cells; continue; }
+      const point = cells.map((cell, index) => `${tableHeaders[index] ?? ''}: ${cell}`).join('；');
+      if (!blocked.test(point)) current.points.push(point);
+      continue;
+    }
+    tableHeaders = null;
     const bullet = line.match(/^\s*[-*]\s+(.+)$/);
     if (current && bullet) {
       const point = clean(bullet[1]);
@@ -357,12 +395,13 @@ for (const sourceItem of procurement.items) {
       await chmod(destination, 0o644);
     }
     assets.push({
-      title: assetTitleOverrides[fileName] ?? clean(fileName.replace(/\.[^.]+$/, '').replace(/^\d{4}-\d{2}-\d{2}-/, '').replaceAll('-', ' ')),
+      title: assetTitle(fileName),
       href: usePublicTechnicalBase ? `${publicTechnicalBase}/${encodeURIComponent(fileName)}` : `technical/${encodeURIComponent(fileName)}`,
       type: extname(fileName).toLowerCase() === '.pdf' ? 'pdf' : 'image',
     });
   }
 
+  const constructionComplete = sourceItem.id === 'construction';
   items.push({
     id: sourceItem.id,
     name: sourceItem.name,
@@ -370,12 +409,12 @@ for (const sourceItem of procurement.items) {
     brand: sourceItem.brand ?? null,
     model: sourceItem.model && !blocked.test(sourceItem.model) ? sourceItem.model : null,
     stage,
-    stageLabel: sourceItem.status === 'delivered_install_pending' ? '已到货 / 待安装' : sourceItem.status === 'installation_in_progress' ? '施工中' : stageLabels[stage],
+    stageLabel: constructionComplete ? '水电改造已完成' : sourceItem.status === 'delivered_install_pending' ? '已到货 / 待安装' : sourceItem.status === 'installation_in_progress' ? '施工中' : stageLabels[stage],
     priority: sourceItem.priority ?? null,
     decisionDeadline: sourceItem.decisionDeadline ?? null,
     urgencyReason: sourceItem.urgencyReason && !blocked.test(sourceItem.urgencyReason) ? sourceItem.urgencyReason : null,
-    progress: blocked.test(sourceItem.progress) ? stageLabels[stage] : sourceItem.progress,
-    nextAction: blocked.test(sourceItem.nextAction) ? '具体安排由项目负责人另行确认' : sourceItem.nextAction,
+    progress: constructionComplete ? '水电改造阶段已完成；30份现场及厂家资料已归档；伟星管道服务结果为合格。' : blocked.test(sourceItem.progress) ? stageLabels[stage] : sourceItem.progress,
+    nextAction: constructionComplete ? '现场沟通时可直接查看隐蔽管线照片、试压曲线与脱敏厂家凭证；后续补充取得的检测或签字资料。' : blocked.test(sourceItem.nextAction) ? '具体安排由项目负责人另行确认' : sourceItem.nextAction,
     drawingAudit: documentAudit.items[sourceItem.id] ?? null,
     technical,
     assets,
