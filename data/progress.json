@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-09-14T16:30:00+08:00",
+  "updatedAt": "2026-09-22T21:25:00+08:00",
   "project": {
     "title": "HomeOS 工程进度",
     "phase": "装修执行与设备协调"
@@ -1272,12 +1272,12 @@
       "category": "饰面材料",
       "brand": "芬特",
       "model": "人字拼",
-      "stage": "confirmed",
-      "stageLabel": "已确定 / 推进中",
+      "stage": "ordered",
+      "stageLabel": "已采购 / 待交付安装",
       "priority": null,
       "decisionDeadline": null,
       "urgencyReason": null,
-      "progress": "已确定 / 推进中",
+      "progress": "已采购 / 待交付安装",
       "nextAction": "具体安排由项目负责人另行确认",
       "drawingAudit": {
         "status": "missing",
@@ -2104,13 +2104,13 @@
       "category": "电气",
       "brand": null,
       "model": null,
-      "stage": "planning",
-      "stageLabel": "待选型",
+      "stage": "ordered",
+      "stageLabel": "已采购 / 待交付安装",
       "priority": "P0",
       "decisionDeadline": "2026-09-01",
       "urgencyReason": "水电放线和开槽前必须冻结点位、底盒和控制逻辑；面板本体不必现在购买。",
-      "progress": "P0｜未购买；点位联合确认会议及插座点位图已完成，强弱电开槽布线已经开始；正式签字版回路映射和开关控制逻辑仍待冻结",
-      "nextAction": "在相关点位开槽完成前现场核对 450 / 600 / 1200 / 2200 mm 标注、横向基准、用途、回路、底盒和未标注点位，形成签字交底；系列颜色和面板本体可后续确定",
+      "progress": "已采购 / 待交付安装",
+      "nextAction": "核对品牌、系列、颜色、各面板额定参数、网线面板/模块具体构成及实收数量；按点位图逐一安装验收，确认接线、接地、极性、开关控制和面板平整度，并保留余料",
       "drawingAudit": {
         "status": "partial",
         "label": "插座图及现场回路草案已归档",
@@ -2231,6 +2231,11 @@
         }
       ],
       "assets": [
+        {
+          "title": "交互灯位与灯具选型",
+          "href": "lighting-study/",
+          "type": "html"
+        },
         {
           "title": "全屋天花灯位图",
           "href": "https://yinxinghuan.github.io/homeos-project-progress/technical/2026-09-02-ceiling-light-point-layout.pdf",
@@ -2435,13 +2440,13 @@
       "category": "门窗",
       "brand": null,
       "model": null,
-      "stage": "planning",
-      "stageLabel": "待选型",
+      "stage": "confirmed",
+      "stageLabel": "已确定 / 推进中",
       "priority": "P2",
       "decisionDeadline": "2026-09-18",
       "urgencyReason": "计划 9 月 20—21 日定制，需在墙地完成面条件明确后复测门洞。",
-      "progress": "P2｜未购买；等待完成面条件后复测",
-      "nextAction": "9 月 18 日前复测两个门洞并确定门套、材质、隔音、五金、开启方向、收口和安装",
+      "progress": "已确定 / 推进中",
+      "nextAction": "具体安排由项目负责人另行确认",
       "drawingAudit": {
         "status": "pending_selection",
         "label": "待选型后补图",

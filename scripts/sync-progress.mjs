@@ -7,6 +7,7 @@ const siteRoot = resolve(scriptDir, '..');
 const homeRoot = resolve(siteRoot, '..');
 const dataDir = resolve(siteRoot, 'data');
 const publicDocsDir = resolve(siteRoot, 'public', 'technical');
+const publicLightingDir = resolve(siteRoot, 'public', 'lighting-study');
 const publicTechnicalBase = 'https://yinxinghuan.github.io/homeos-project-progress/technical';
 
 const procurement = JSON.parse(await readFile(resolve(homeRoot, '06-records', 'procurement.json'), 'utf8'));
@@ -371,6 +372,19 @@ const stageLabels = {
 
 await mkdir(dataDir, { recursive: true });
 await mkdir(publicDocsDir, { recursive: true });
+await mkdir(publicLightingDir, { recursive: true });
+
+const lightingSourceDir = resolve(homeRoot, '01-house', 'lighting-study');
+const lightingIndex = (await readFile(resolve(lightingSourceDir, 'index.html'), 'utf8'))
+  .replace(
+    '<div class="header-actions">',
+    '<div class="header-actions"><a class="coordination-back" href="../" aria-label="返回施工协调工程总表">← 工程总表</a>',
+  )
+  .replace('href="source-plan.pdf"', 'href="../technical/2026-09-02-ceiling-light-point-layout.pdf"');
+await writeFile(resolve(publicLightingDir, 'index.html'), lightingIndex);
+await Promise.all(['app.js', 'style.css', 'original-plan.png'].map((fileName) =>
+  copyFile(resolve(lightingSourceDir, fileName), resolve(publicLightingDir, fileName)),
+));
 
 const items = [];
 for (const sourceItem of procurement.items) {
@@ -383,6 +397,13 @@ for (const sourceItem of procurement.items) {
   }
 
   const assets = [];
+  if (sourceItem.id === 'lighting') {
+    assets.push({
+      title: '交互灯位与灯具选型',
+      href: 'lighting-study/',
+      type: 'html',
+    });
+  }
   for (const relativePath of safeAssets[sourceItem.id] ?? []) {
     const fileName = basename(relativePath);
     const usePublicTechnicalBase = relativePath.startsWith('source/manuals/') || (

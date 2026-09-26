@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>灯具选型图 · HomeOS</title><link rel="stylesheet" href="style.css?v=C2"></head>
+<body>
+<header class="header"><a class="brand" href="#" aria-label="返回全屋灯位总览"><span class="brand-icon">⌂</span> HomeOS <span class="brand-divider">/</span> 灯光</a><div class="header-actions"><a class="coordination-back" href="../" aria-label="返回施工协调工程总表">← 工程总表</a><span class="draft"><i></i>选型草案</span><button id="download">下载灯具清单</button><button id="print" aria-label="打印灯位方案">打印</button></div></header>
+<div class="intro"><div><h1>少一点泛光，留下明暗。</h1><p>泛光保留2件：客餐厅L3、主卧M5，配合局部照明。</p></div><div class="revision">方案 C · 综合复核 / 试灯初配 <span>2026.09.10</span></div></div>
+<div class="notice"><span class="notice-symbol">i</span><p><strong>综合复核：少量环境补光，按任务分区调光。</strong> 走廊3灯均布，马桶与面池各1灯，浴缸处1台浴霸。标记为位置示意，不作施工放线。</p></div>
+<main class="workspace">
+<aside class="rooms"><h2>查看空间</h2><nav aria-label="房间筛选" id="room-nav"></nav><div class="counts"><strong>18 <small>件照明灯具</small></strong><div><span><b>2</b>泛光初配</span><span><b>8</b>轨道可调灯</span></div><p>6条磁吸轨道 · 浴霸1台 · 灯带2处</p></div><div class="layer-list"><h2>图纸图层</h2><label><input id="lights-toggle" type="checkbox" checked>轨道建议灯具 <span class="layer-dot blue"></span></label><label><input id="fixed-toggle" type="checkbox" checked>独立灯位 / 浴霸 <span class="layer-dot purple"></span></label><label><input id="strip-toggle" type="checkbox" checked>内藏灯带 <span class="layer-dot green"></span></label><label><input id="original-toggle" type="checkbox">原图对照</label></div><a class="source-link" href="../technical/2026-09-02-ceiling-light-point-layout.pdf" target="_blank" rel="noopener">查看原始 PDF ↗</a><p class="source-note">2026年9月2日天花灯位图<br>简图省略部分非选型构件。</p></aside>
+<section class="drawing-panel" aria-label="交互式灯位图"><div class="drawing-head"><div><h2 id="map-title">全屋灯位</h2><span id="map-subtitle">点击编号，查看灯具建议</span></div><button id="reset">全图</button></div><div class="legend"><span><i class="legend-wide"></i>泛光模块</span><span><i class="legend-spot"></i>射灯 / 可调灯候选</span><span><i class="legend-fixed"></i>独立灯位 · 灯型待选</span><span><i class="legend-heater"></i>浴霸</span><span><i class="legend-strip"></i>内藏灯带</span><span><i class="legend-track"></i>原图轨道</span></div><div class="map-wrap"><svg id="plan" viewBox="290 300 810 1280" role="group" aria-label="按原图描摹的户型及可点击灯具标记">
+<defs><pattern id="wardrobe-pattern" width="48" height="80" patternUnits="userSpaceOnUse"><rect width="48" height="80" fill="#e8edf0"/><path d="M0 0L48 80M48 0L0 80" stroke="#c5ced5" stroke-width="1"/></pattern></defs>
+<g id="schematic">
+<path d="M332 343H799V477H1052V1558H742V883H525V735H449V745H333Z" fill="white"/>
+<path class="room-fill" data-room="living" d="M490 350H790V873H543V727H490Z"/>
+<path class="room-fill" data-room="secondary" d="M812 505H1040V765H812Z"/>
+<path class="room-fill" data-room="master" d="M808 1082H1040V1546H808Z"/>
+<path d="M340 350H478V727H447V742H340Z" fill="#f1f3f3"/>
+<path class="room-fill" data-room="bathroom" d="M905 779H1040V1058H905Z"/><path class="room-fill" data-room="corridor" d="M810 779H888V1058H810Z"/>
+<g class="walls"><path d="M323 547V334H808V468H1062V1566H733V873H525V727H449M323 547V744H353M449 735H534V882H750M808 468V761M807 774H891V1076H750M899 774H1040M1052 1067H802M799 334V573"/><path d="M340 350H789M340 350V570M340 570V719M807 486H1043M1043 486V760M1043 775V1058M1043 1084V1547M755 1547H1043M755 1084V1448M1043 1058H906V788M750 890V1040"/></g>
+<g class="windows"><path d="M377 343H457M560 343H724M838 477H992M812 1557H998"/></g>
+<path d="M352 726A95 95 0 0 0 447 821L447 726" fill="none" stroke="#ccd4db" stroke-width="2"/>
+<g class="cabinet"><path d="M751 1081H805V1446H751Z" fill="url(#wardrobe-pattern)" stroke="#c4cdd5" stroke-width="2"/><path d="M751 890H805V1055H751Z" fill="url(#wardrobe-pattern)" stroke="#c4cdd5" stroke-width="2"/></g>
+<g class="room-labels"><text x="665" y="510" text-anchor="middle">客餐厅</text><text class="room-meta" x="665" y="536" text-anchor="middle">水泥裸顶</text><text x="935" y="619" text-anchor="middle">次卧</text><text class="room-meta" x="935" y="645" text-anchor="middle">约7.9㎡</text><text x="926" y="1270" text-anchor="middle">主卧</text><text class="room-meta" x="926" y="1296" text-anchor="middle">本体约12.1㎡</text><text x="408" y="467" text-anchor="middle">厨房</text><text x="971" y="790" text-anchor="middle" class="small-label">卫生间</text><text x="865" y="1050" text-anchor="middle" class="small-label">走廊</text><text x="777" y="1270" text-anchor="middle" class="small-label" transform="rotate(-90 777 1270)">主卧衣柜 · 原图位置</text><text x="404" y="791" class="small-label">入户</text><text x="926" y="1530" text-anchor="middle" class="small-label">阳台</text></g>
+<g class="other-points"><rect x="662.0" y="482.0" width="6" height="6"/><rect x="922.0" y="617.0" width="6" height="6"/><rect x="922.0" y="1271.0" width="6" height="6"/><rect x="923.0" y="1495.0" width="6" height="6"/></g>
+
+</g>
+<image id="original-image" href="original-plan.png" x="290" y="300" width="810" height="1280" style="display:none"/>
+<g id="tracks"></g><g id="strips"></g><g id="modules"></g><g id="fixed-fixtures"></g>
+<g class="north"><path d="M1000 385V330M989 345L1000 330L1011 345"/><text x="1000" y="316" text-anchor="middle">北</text></g>
+</svg></div><p class="map-foot">形状区分选型类别，不代表实物比例。柜前可调灯仍可在射灯与格栅之间选择；位置非施工坐标。</p></section>
+<aside class="details" aria-live="polite"><div id="detail-content"></div></aside>
+</main>
+<section class="schedule" id="assessment"><div class="section-heading"><div><h2>按你的生活方式，重新评估</h2><p>日常偏暗、有明暗层次；用餐、取衣、做饭时，所需位置仍要看得清楚。方案 C 是试灯初配，不能作为最终采购定案。</p></div><span class="schedule-tag">少量环境光＋局部任务光＋分组调光</span></div><div class="basis"><div><h3>这次判断的依据</h3><p>已确认6条磁吸轨道、2处灯带与独立灯位数量；主卧有衣柜，客厅与主卧有裸顶。家具档案尚缺沙发、餐桌、床与书桌的最终坐标，柜体分格和完成面净高也待核。因此不按面积或轨道长度机械填灯；先分配照明任务，再试样调整数量和亮度。</p></div><div><h3>需要纠正的两点</h3><p>泛光不等于平光，柔和环境光也不一定来自顶面的泛光模块；照亮一部分墙面或有遮光的落地灯，同样可作为候选。射灯越多也不代表越有层次：没有照射目标时，只会增加光斑和眩光风险。裸顶的反射效果不能按白顶估算。</p></div></div><div class="table-scroll"><table><thead><tr><th>空间 / 初配</th><th>重新评估</th><th>日常使用与下一步</th></tr></thead><tbody>
+<tr><td>客餐厅纵轨<br>L2、L5可调灯＋L3泛光</td><td>L3先保留1件，补局部光斑之间的环境亮度。L2、L5需要各自有墙面、家具或活动区目标，不能默认朝地面直打。</td><td>日常将L3调暗，局部灯按需开。若泛光发光面仍刺眼，优先调整落点或换成墙面反射补光；不能只靠降功率解决。</td></tr>
+<tr><td>L-H横轨<br>H1、H2可调灯</td><td>暂按两个照明目标初配2盏。只有核对餐桌位置、尺寸后，才能判断是否适合覆盖桌面；目前不将横轨等同餐桌轨道。</td><td>用餐时桌面成为较亮区域，周边保留低亮度环境光。若没有两个目标，可减灯；配光和间距以桌面实测为准。</td></tr>
+<tr><td>主卧<br>M1–M3柜前灯＋M5泛光</td><td>柜前3盏是分段初估，须按柜门分格判断是否都需要。M5先保留1件环境补光；柜前灯不能替代卧室环境光。</td><td>休息时柜灯关闭，M5低亮度使用并避开枕头视线。若坐卧仍能直视刺眼发光面，可改用有遮光的床边灯或反射光；阅读灯另按床位设计。</td></tr>
+<tr><td>次卧<br>S2可调灯＋B2灯带</td><td>先试现有灯带能否提供舒适环境光，再决定是否需要轨道泛光。灯带有标注，不等于输出一定够用。</td><td>日常低亮灯带配局部灯；若用于办公，书桌单独补任务灯。试灯偏暗时允许补环境光，不把“零泛光”当硬性要求。</td></tr>
+<tr><td>入户 / 走廊<br>E1＋C1–C3，共4灯位</td><td>保留确认的数量。优先考虑遮光良好、柔和衔接的照明，灯型尚未定，不全部默认窄光束射灯。</td><td>入户与走廊建议分别控制；夜间降低亮度，仍能辨清通道及柜门，不追求连续强烈光斑。</td></tr>
+<tr><td>厨房<br>K1、K2，共2灯位</td><td>保留2个顶灯位，需对照水槽、灶台和备餐台判断覆盖。顶灯不能保证身体遮挡后的操作台照明。</td><td>做饭时任务区域亮度优先。若有吊柜，评估柜下工作灯；现有B1内藏灯带尚未确认照射操作台，不能当作已解决。新增工作灯未计入当前清单。</td></tr>
+<tr><td>卫生间<br>W1、W2＋W3浴霸</td><td>马桶、面池各1灯位及浴缸浴霸保留。面池上方顶光可能在脸上产生阴影，需要结合镜子评估正面补光。</td><td>面池使用、夜间如厕及浴霸建议分开控制；镜前补光是否新增待核，当前未计入。湿区安装条件按最终产品与施工资料核对。</td></tr>
+</tbody></table></div><div class="basis"><div><h3>调光比少装几盏更关键</h3><p>建议至少区分客厅环境补光、客厅局部灯、L-H、主卧柜灯、主卧环境光、灯带和各功能区。它们是控制目标，不代表现有线路已支持。同一磁吸轨道能否按模块分组，须选定驱动、控制器和灯具后确认。样灯要试最低亮度、闪烁、突跳、噪声与关灯状态。</p></div><div><h3>什么时候才算定案</h3><p>用实际家具位置核对照射目标，再拿样灯测试坐姿、躺卧和操作台效果。网页的光通量是额定选型目标，不是日常开启亮度；没有配光文件、净高和材质数据，不能承诺照度达标。2件泛光是当前试灯起点，数量和实现方式都可调整。</p></div></div><p class="source-note">方法参考：<a href="https://www.lutron.com/us/en/articles/layered-lighting-tips" target="_blank" rel="noopener">Lutron：环境、任务与重点照明分层</a> · <a href="https://www.erco.com/en_us/designing-with-light/living/" target="_blank" rel="noopener">ERCO：住宅照明与场景</a>。以上具体配置是结合你家资料的初步判断，并非品牌提供的本户型设计。</p></section>
+<section class="schedule"><div class="section-heading"><div><h2>一张清单，对照选灯</h2><p>初配8盏轨道可调灯＋2件泛光＋8个独立灯位，另计1台浴霸。L-H新增H1、H2两盏；泛光暂保留L3、M5各1件，日常调暗，数量随现场试灯调整。</p></div><span class="schedule-tag">轨道参数为目标值；浴霸型号已选</span></div><div class="table-scroll"><table><thead><tr><th>轨道 / 位置</th><th>建议灯具</th><th>整灯光通量合计</th><th>选型重点</th></tr></thead><tbody id="schedule-body"></tbody></table></div><div class="basis"><div><h3>数量如何估算</h3><p>按任务初配：客厅纵轨各1盏、横轨2盏，主卧衣柜3盏、次卧1盏；另在客厅左轨、主卧右轨各保留1件泛光，补充环境亮度。数量不按轨道填满，也不以全屋均匀照亮为目标。客餐厅按16–19㎡粗估；主卧按3.19×3.79m、次卧按2.58×3.05m估算。尚未核定完成面净高，未做光度模拟。</p></div><div><h3>下单前确认什么</h3><p>确定家具摆位与实际净高，核对整灯流明、配光及低亮度表现；确认同系统轨道、电源与控制兼容。主卧需躺卧试灯，电视侧检查反光。L-H按餐桌实际位置再核；阅读、办公和厨房操作面照明单独校核。</p></div></div></section>
+<footer>HomeOS · 灯具选型研究 <span>原图轨道 / 建议模块 / 已补L-H配灯、厨房与入户</span></footer><div id="toast" role="status"></div>
+<script src="app.js?v=C2"></script>
+</body></html>

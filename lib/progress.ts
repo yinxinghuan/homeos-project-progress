@@ -17,7 +17,7 @@ export type ProgressItem = {
   nextAction: string;
   drawingAudit: { status: 'complete' | 'partial' | 'missing' | 'pending_selection'; label: string; note: string; nextAction: string } | null;
   technical: { source: string; sections: TechnicalSection[] }[];
-  assets: { title: string; href: string; type: 'pdf' | 'image' }[];
+  assets: { title: string; href: string; type: 'pdf' | 'image' | 'html' }[];
 };
 export type TimelineRange = { start: string; end: string; label: string };
 export type TimelineActual = { status: 'not_started' | 'scheduled' | 'in_progress' | 'completed' | 'blocked'; confirmedDate: string | null; note: string | null };
