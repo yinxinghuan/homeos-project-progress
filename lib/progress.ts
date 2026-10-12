@@ -1,6 +1,6 @@
 import progressData from '@/data/progress.json';
 
-export type Stage = 'ordered' | 'confirmed' | 'selected' | 'coordination' | 'planning';
+export type Stage = 'completed' | 'ordered' | 'confirmed' | 'selected' | 'coordination' | 'planning';
 export type TechnicalSection = { title: string; points: string[] };
 export type ProgressItem = {
   id: string;
@@ -32,6 +32,7 @@ export const data = progressData as {
 };
 
 export const stageColors: Record<Stage, { dot: string; fill: string; text: string }> = {
+  completed: { dot: '#24705a', fill: '#dcefe7', text: '#245848' },
   ordered: { dot: '#2c6a58', fill: '#e5f0eb', text: '#315d50' },
   confirmed: { dot: '#2d5f8b', fill: '#e5edf5', text: '#355f81' },
   selected: { dot: '#7b6b42', fill: '#f0ecdf', text: '#6c5d36' },

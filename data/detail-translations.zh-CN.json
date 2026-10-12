@@ -404,5 +404,22 @@
   "Requirement: Control holes；Working value: 2 × diameter 26 mm；Source / caution: Merchant Q5-2 welded-cutout drawing": "要求：控制旋钮孔；工作值：2 × 直径 26 mm；来源／注意：商家 Q5-2 焊接开孔图。",
   "Requirement: Control-hole center spacing；Working value: 120 mm；Source / caution: Merchant Q5-2 welded-cutout drawing": "要求：控制孔中心距；工作值：120 mm；来源／注意：商家 Q5-2 焊接开孔图。",
   "Requirement: Control-hole centerline setback；Working value: 50 mm；Source / caution: Shown from the long-edge datum on the merchant drawing; fabricator to verify orientation": "要求：控制孔中心线退距；工作值：50 mm；来源／注意：商家图中从长边基准标注，制作方须核实方向。",
-  "Requirement: Two-burner cabinet length；Working value: greater than 830 mm；Source / caution: Earlier applicable two-burner cabinet reference": "要求：双灶柜长度；工作值：大于 830 mm；来源／注意：此前适用的双灶柜参考图。"
+  "Requirement: Two-burner cabinet length；Working value: greater than 830 mm；Source / caution: Earlier applicable two-burner cabinet reference": "要求：双灶柜长度；工作值：大于 830 mm；来源／注意：此前适用的双灶柜参考图。",
+  "Post-Installation Acceptance": "安装后验收",
+  "Verify frame anchorage/grouting and perimeter sealing are complete, without visible movement, cracking or unsealed gaps.": "检查门框固定、灌浆及周边密封是否完整，不应有明显松动、开裂或未封闭缝隙。",
+  "Check the door leaf for dents and scratches; confirm even gaps, smooth opening/closing, no rubbing, reliable latch/lock operation and complete key/card handover.": "检查门扇有无凹陷和划伤；确认缝隙均匀、启闭顺畅、无剐蹭，锁舌与锁具工作可靠，并完整交接钥匙／门卡。",
+  "Record the installed lock body/cylinder identification, spare keys, warranty contact and any concealed service access.": "记录已安装锁体／锁芯标识、备用钥匙、质保联系人及任何隐蔽检修位置。",
+  "Photograph the completed interior/exterior faces and frame junctions, and obtain the installation acceptance/warranty record.": "拍摄安装完成后的门内外立面及门框交接处，并取得安装验收／质保记录。",
+  "Inspect all four frames and glass units for scratches, dents, cracks, contamination and colour/finish inconsistency.": "检查4樘窗框及玻璃单元是否存在划伤、凹陷、裂纹、污染以及颜色／表面处理不一致。",
+  "Check frame plumb, level and diagonal consistency; verify the frame is stable and all visible fixing/sealing work is complete.": "检查窗框垂直度、水平度和对角线一致性；确认窗框稳固，所有可见固定与密封施工完整。",
+  "Operate every opening sash through both inward side-opening and top-inward-tilt modes; confirm smooth hardware operation, reliable locking, even gaps and no rubbing.": "逐樘操作开启扇的内平开和内倒两种模式；确认五金顺畅、锁闭可靠、缝隙均匀且无剐蹭。",
+  "Verify glazing labels/configuration, pressure beads/seals, original high-transparency insect screens, handles and concealed hinges against the order.": "按订单核对玻璃标签／配置、压条与密封、原厂高透纱窗、执手及隐藏合页。",
+  "Confirm exterior perimeter sealant, drainage holes and sill drainage remain clear; perform or retain a controlled water-spray/leak check where practical.": "确认外侧周边密封胶完整、排水孔及窗台排水通畅；条件允许时进行并留存可控淋水／渗漏检查。",
+  "Re-operate the installed kitchen sash in both modes before fixing the range-hood duct route; ensure the entire duct/elbow/backdraft-valve assembly remains outside the sash envelope and service path.": "固定烟机风管路线前，再次操作已安装厨房窗扇的两种开启模式；确保风管、弯头和止回阀整体避开窗扇包络及检修通道。",
+  "Record the actual installation date, installer, acceptance result, defects/rectification, warranty start and final production/as-built drawing.": "记录实际安装日期、安装单位、验收结果、缺陷／整改、质保起始日期及最终生产图／竣工图。",
+  "Installation Site Photos": "安装现场照片",
+  "2026-10-12-window-installation-kitchen-overview.jpg: tiled construction-area overview showing the installed narrow two-part window in place, with protective film retained.": "2026-10-12-window-installation-kitchen-overview.jpg：铺贴施工区域全景，可见窄幅两段式窗体已安装就位，保护膜仍保留。",
+  "2026-10-12-window-installation-room-overview.jpg: room-side overview showing an installed fixed-plus-opening window assembly, perimeter foam/seal zone and protective film.": "2026-10-12-window-installation-room-overview.jpg：房间侧全景，可见固定扇＋开启扇窗体已安装，以及周边发泡／密封区域和保护膜。",
+  "2026-10-12-window-installation-frame-hardware-detail.jpg: close view of the red 85ES frame, black sealing/hardware zone and handle area.": "2026-10-12-window-installation-frame-hardware-detail.jpg：红色85ES窗框、黑色密封／五金区域及执手位置近景。",
+  "These photos establish visible installation progress only. They do not by themselves verify frame plumb/level, concealed anchorage, complete perimeter sealing, drainage, water tightness, glazing configuration or full opening/locking performance.": "这些照片仅能证明可见安装进度，不能单独确认窗框垂直／水平、隐蔽锚固、周边完整密封、排水、水密性、玻璃配置或完整启闭／锁闭性能。"
 }

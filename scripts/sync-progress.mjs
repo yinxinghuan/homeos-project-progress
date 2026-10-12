@@ -23,6 +23,7 @@ const publicAcceptanceAssets = [
 ];
 
 const detailSources = {
+  'entry-door': ['04-assets/entry-door.md'],
   windows: ['02-renovation/WINDOWS.md'],
   'water-system': ['03-systems/water-treatment.md', '03-systems/plumbing.md'],
   tiles: ['02-renovation/TILE_LAYOUT.md'],
@@ -142,6 +143,9 @@ const safeAssets = {
 };
 
 const assetTitleOverrides = {
+  '2026-10-12-window-installation-kitchen-overview.jpg': '窗户安装现场留底｜施工区域全景',
+  '2026-10-12-window-installation-room-overview.jpg': '窗户安装现场留底｜房间窗体全景',
+  '2026-10-12-window-installation-frame-hardware-detail.jpg': '窗户安装现场留底｜85ES 窗框与五金近景',
   '27-pressure-service-redacted-display.png': '水路试压服务记录（脱敏展示图，原件见加密档案）',
   '28-pressure-curve-warranty-private.jpg': '智能试压曲线留底',
   '29-vasen-service-result-redacted-display.png': '伟星管道服务合格凭证（脱敏展示图，原件见加密档案）',
@@ -199,7 +203,7 @@ function parseTechnical(content) {
       tableHeaders = null;
       if (current?.points.length) sections.push(current);
       const title = clean(heading[1]);
-      current = technicalHeading.test(title) ? { title: blocked.test(title) ? '技术与现场要点' : title, points: [] } : null;
+      current = title === 'Installation Site Photos' ? null : technicalHeading.test(title) ? { title: blocked.test(title) ? '技术与现场要点' : title, points: [] } : null;
       continue;
     }
     if (current && /^\s*\|/.test(line)) {
@@ -222,6 +226,7 @@ function parseTechnical(content) {
 }
 
 function stageFor(status) {
+  if (status === 'installed') return 'completed';
   if (['paid_full', 'paid_full_in_transit', 'delivered_install_pending', 'product_paid_install_pending'].includes(status)) return 'ordered';
   if (status === 'installation_in_progress') return 'confirmed';
   if (['deposit_paid', 'deposit_paid_total_unknown', 'installment_paid'].includes(status)) return 'confirmed';
@@ -363,6 +368,7 @@ function buildTimeline(content, trackingContent) {
 }
 
 const stageLabels = {
+  completed: '已安装完成',
   ordered: '已采购 / 待交付安装',
   confirmed: '已确定 / 推进中',
   selected: '型号或方向已定',

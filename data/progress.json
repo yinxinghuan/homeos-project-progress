@@ -1,11 +1,15 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-09-22T21:25:00+08:00",
+  "updatedAt": "2026-10-12T11:37:16+08:00",
   "project": {
     "title": "HomeOS 工程进度",
     "phase": "装修执行与设备协调"
   },
   "stages": [
+    {
+      "id": "completed",
+      "label": "已安装完成"
+    },
     {
       "id": "ordered",
       "label": "已采购 / 待交付安装"
@@ -34,20 +38,35 @@
       "category": "门窗",
       "brand": "德盾",
       "model": "待补充",
-      "stage": "ordered",
-      "stageLabel": "已采购 / 待交付安装",
+      "stage": "completed",
+      "stageLabel": "已安装完成",
       "priority": null,
       "decisionDeadline": null,
       "urgencyReason": null,
-      "progress": "已采购 / 待交付安装",
-      "nextAction": "补充具体型号、购买日期并跟进入户门到货与安装安排",
+      "progress": "已安装完成",
+      "nextAction": "补充具体型号、购买日期和实际安装日期；完成门框固定/灌浆/密封、启闭、锁体锁芯、门缝、外观及钥匙交接验收，并归档质保资料",
       "drawingAudit": {
         "status": "missing",
-        "label": "缺少定型施工图",
-        "note": "正在备货，但精确型号、门洞固定节点和锁具安装资料尚未归档。",
-        "nextAction": "安装前取得型号、门洞／固定节点图和锁具说明。"
+        "label": "已安装，定型与验收资料仍缺",
+        "note": "业主于2026-10-12确认入户门已安装，但精确型号、门洞固定节点、锁具资料、实际安装日期和验收记录尚未归档。",
+        "nextAction": "补齐型号、锁具说明、完成面照片、固定／灌浆／密封与启闭验收、实际安装日期及质保资料。"
       },
-      "technical": [],
+      "technical": [
+        {
+          "source": "04-assets/entry-door.md",
+          "sections": [
+            {
+              "title": "Post-Installation Acceptance",
+              "points": [
+                "Verify frame anchorage/grouting and perimeter sealing are complete, without visible movement, cracking or unsealed gaps.",
+                "Check the door leaf for dents and scratches; confirm even gaps, smooth opening/closing, no rubbing, reliable latch/lock operation and complete key/card handover.",
+                "Record the installed lock body/cylinder identification, spare keys, warranty contact and any concealed service access.",
+                "Photograph the completed interior/exterior faces and frame junctions, and obtain the installation acceptance/warranty record."
+              ]
+            }
+          ]
+        }
+      ],
       "assets": []
     },
     {
@@ -56,23 +75,35 @@
       "category": "门窗",
       "brand": "伊博莱门窗",
       "model": "85ES 框扇平齐系列",
-      "stage": "ordered",
-      "stageLabel": "已采购 / 待交付安装",
+      "stage": "completed",
+      "stageLabel": "已安装完成",
       "priority": null,
       "decisionDeadline": null,
       "urgencyReason": null,
-      "progress": "正在备货及定制生产，尚未交付安装",
-      "nextAction": "跟进生产完成时间并确认送货与安装日期",
+      "progress": "已安装完成",
+      "nextAction": "补充实际安装日期；逐樘完成外观、垂直水平、启闭/内倒、五金、玻璃、纱窗、排水孔、内外密封和渗漏检查，复核厨房窗扇与烟机风管避让，并归档验收及质保资料",
       "drawingAudit": {
         "status": "complete",
-        "label": "定制图已归档",
-        "note": "窗户订单图已归档，可用于生产与洞口协调。",
-        "nextAction": "交付时保留最终生产图、安装验收和质保资料。"
+        "label": "定制图已归档，安装已完成",
+        "note": "窗户订单图已归档；业主于2026-10-12确认全屋4樘窗户已安装。实际安装日期、逐樘验收和质保资料仍待归档。",
+        "nextAction": "完成外观、框体、启闭／内倒、五金、玻璃、纱窗、排水、密封和渗漏检查；复核厨房窗扇与烟机风管避让并归档验收／质保。"
       },
       "technical": [
         {
           "source": "02-renovation/WINDOWS.md",
           "sections": [
+            {
+              "title": "Post-Installation Acceptance",
+              "points": [
+                "Inspect all four frames and glass units for scratches, dents, cracks, contamination and colour/finish inconsistency.",
+                "Check frame plumb, level and diagonal consistency; verify the frame is stable and all visible fixing/sealing work is complete.",
+                "Operate every opening sash through both inward side-opening and top-inward-tilt modes; confirm smooth hardware operation, reliable locking, even gaps and no rubbing.",
+                "Verify glazing labels/configuration, pressure beads/seals, original high-transparency insect screens, handles and concealed hinges against the order.",
+                "Confirm exterior perimeter sealant, drainage holes and sill drainage remain clear; perform or retain a controlled water-spray/leak check where practical.",
+                "Re-operate the installed kitchen sash in both modes before fixing the range-hood duct route; ensure the entire duct/elbow/backdraft-valve assembly remains outside the sash envelope and service path.",
+                "Record the actual installation date, installer, acceptance result, defects/rectification, warranty start and final production/as-built drawing."
+              ]
+            },
             {
               "title": "Opening Directions and Dimensions",
               "points": [
@@ -2919,9 +2950,9 @@
           "windows"
         ],
         "actual": {
-          "status": "in_progress",
-          "confirmedDate": "2026-08-30",
-          "note": "伊博莱全屋窗户正在备货及定制生产，尚未交付安装。"
+          "status": "completed",
+          "confirmedDate": "2026-10-12",
+          "note": "业主确认伊博莱全屋4樘窗户均已安装完毕，并补充3张现场安装留底；实际安装日期待补，逐樘验收、厨房窗扇与烟机风管避让复核及质保资料仍待归档。"
         },
         "ranges": [
           {
@@ -2943,9 +2974,9 @@
           "entry-door"
         ],
         "actual": {
-          "status": "in_progress",
-          "confirmedDate": "2026-08-30",
-          "note": "德盾入户门正在备货，尚未安装。"
+          "status": "completed",
+          "confirmedDate": "2026-10-12",
+          "note": "业主确认德盾入户门已经安装完毕；实际安装日期、门框／锁具验收、缺陷整改及质保资料仍待归档。"
         },
         "ranges": [
           {
