@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-12T11:37:16+08:00",
+  "updatedAt": "2026-10-21T00:59:59+08:00",
   "project": {
     "title": "HomeOS 工程进度",
     "phase": "装修执行与设备协调"
@@ -734,7 +734,7 @@
               "points": [
                 "Appliance: 六点半 Y6 range hood；Current confirmed cabinet input: Selected stainless-steel variable-frequency option, 26 m³/min / 1280 Pa; main width 998 mm; hood box 430 W × 313 D mm; cabinet reserve at least 450 W × 330 D mm; diameter-250 ceiling duct hole; hood-to-cooktop 300-400 mm; burner center no more than 260 mm from finished rear wall；Items that must remain pending: Electrical rating/socket position, signed ceiling-hole center coordinates, 563/888 height datum, material discrepancy, and installer-approved elevation",
                 "Appliance: 六点半 Q5-2 two-burner gas cooktop；Current confirmed cabinet input: Selected welded sentinel/timer two-burner natural-gas option; working product 813 × 480 mm; reserve about 823 × 490 mm; opening 743 × 370 mm, R11.2; 2 × diameter-26 control holes at 120 mm spacing and 50 mm setback; 5 mm stainless-steel countertop；Items that must remain pending: Final 12T nameplate/SKU, signed CAD/shop drawing, weldable flange/interface, gas inlet, power/ignition, heat loads, ventilation, underside access and service/removal strategy; never substitute the 950 × 370 three-hole Q5-HJ drawing",
-                "Appliance: Siemens SJ435S00JC / SJ435S01JC dishwasher；Current confirmed cabinet input: Selected but not ordered; merchant listing 598 W × 573 D × 775 H mm; earlier body reference 598 W × 550 D × 775 H mm; opening 600-608 W × at least 575 D × 780-835 H mm; services in adjacent sink cabinet；Items that must remain pending: Lock final S00JC/S01JC suffix, then verify door system, rated load, hose lengths, drain high loop, exact service-hole positions and installer-approved elevation against that official sheet",
+                "Appliance: 西门子S23 SE53ES23KC洗碗机；Current confirmed cabinet input: 已购，含门板；整机598宽×573深×700高mm；净宽600–608、净深≥575、安装高度705–760mm；相邻水槽柜内连接；Items that must remain pending: 橱柜厂商已获知换款，2026-10-21计划最终定稿；原775mm高方案停用，按官方图复核75mm高度差、承托固定、随货门板、踢脚避让、收口、进排水和可检修插座；到货核对铭牌修订号",
                 "Appliance: Bosch HBC84H500W built-in microwave oven；Current confirmed cabinet input: Selected but not ordered; 45 L; front 595 W × 454 H mm; body 558 W × 550 D mm; overall depth 570 mm; cabinet depth at least 550 mm；Items that must remain pending: Official opening width/tolerance, ventilation, rear-panel treatment, connected load, circuit, socket/junction position and door swing",
                 "Appliance: Central purifier + central softener；Current confirmed cabinet input: Each unit 330 W × 383 D × 535 H mm; combined cabinet clear width at least 800 mm and preferably 1000 mm; do not place directly under sink; 3/4-inch water connections; water points 300-500 mm above finished floor; nearby PVC 50 drain at no more than 200 mm above finished floor; power within 1 m；Items that must remain pending: Exact models, true service clearances, whether width is clear/internal or module width, installer-approved pipe centres, power/socket details, drain and backflow details, bypass/isolation valves, leak protection, and maintenance/removal route"
               ]
@@ -1594,66 +1594,77 @@
       "name": "洗碗机",
       "category": "厨房电器",
       "brand": "Siemens / 西门子",
-      "model": "SJ435S00JC / SJ435S01JC",
-      "stage": "selected",
-      "stageLabel": "型号或方向已定",
+      "model": "SE53ES23KC / S23，14套，含门板",
+      "stage": "ordered",
+      "stageLabel": "已采购 / 待交付安装",
       "priority": "P0",
-      "decisionDeadline": "2026-09-01",
-      "urgencyReason": "9 月 2—3 日橱柜点位交底前必须锁定最终后缀、柜体开口、进排水与插座。",
-      "progress": "P0｜型号系列已选、未下单；最终后缀未锁定",
-      "nextAction": "两后缀共用的官方安装图已归档；8 月 31 日 16:30 联合确认会上锁定最终后缀，并据图完成柜体、进排水和插座交底；9 月 1 日前定稿",
+      "decisionDeadline": "2026-10-21",
+      "urgencyReason": "橱柜最终定稿前按新款官方安装图确认承托高度、门板、收口与水电接口。",
+      "progress": "已采购 / 待交付安装",
+      "nextAction": "按SE53ES23KC官方图确认净宽600–608×净深≥575×安装高705–760mm；相对旧方案复核75mm高度差、承托固定、随货门板与收口，归档橱柜签字图；到货核对铭牌E-Nr修订号，安排交付安装与验收",
       "drawingAudit": {
         "status": "complete",
-        "label": "安装资料完整",
-        "note": "共享安装图、用户手册及两个候选后缀规格均已归档。",
-        "nextAction": "下单前锁定最终后缀并按图释放柜体与水电。"
+        "label": "S23官方安装资料完整",
+        "note": "当前SE53ES23KC官方安装图和使用手册已归档；整机598×573×700mm，净宽600–608、净深≥575、安装高度705–760mm。",
+        "nextAction": "2026-10-21橱柜定稿复核75mm高度差、承托固定、随货门板与收口；到货核对铭牌E-Nr修订号并按随货图验收。"
       },
       "technical": [
         {
           "source": "04-assets/appliances/built-in-dishwasher-598.md",
           "sections": [
             {
-              "title": "Product Dimensions",
+              "title": "尺寸与安装要求",
               "points": [
-                "Element: Product width；Dimension: 598；Notes: Printed across the top of the machine.",
-                "Element: Product depth；Dimension: 550 body reference; 573 listing envelope；Notes: The earlier installation image prints 550 on the body; the selected merchant listing prints 598 × 573 × 775 mm. Treat 573 mm as the procurement/delivery envelope and use the final suffix's official drawing for cabinet release.",
-                "Element: Product height；Dimension: 775；Notes: Printed on the front elevation."
+                "项目: 整机外形；当前尺寸或要求: 598 × 573 × 700；施工说明: 深573含前部突出；不能与柜内净深混淆。",
+                "项目: 柜内净宽；当前尺寸或要求: 600–608；施工说明: 官方安装图标示600，最大608。",
+                "项目: 柜内净深；当前尺寸或要求: ≥575；施工说明: 官网参数表单项写550，但官方安装图明确为≥575；施工采用安装图。",
+                "项目: 标准安装高度；当前尺寸或要求: 705–760；施工说明: 官网参数；从实际承托面量至台面下或相应安装上边界。",
+                "项目: 底脚调节；当前尺寸或要求: 0–60；施工说明: 按官方图调平并固定，不以超范围调脚填补旧洞口。",
+                "项目: 开门90°总深度；当前尺寸或要求: 1055；施工说明: 从机器后部计算，核对对面柜体与过道。",
+                "项目: 电源线；当前尺寸或要求: 175cm；施工说明: 留相邻柜可检修电源，不夹压。",
+                "项目: 进水管与排水管；当前尺寸或要求: 分别150cm、190cm；施工说明: 相邻水槽柜内连接，按实际管路长度及安装图复核。"
               ]
             },
             {
-              "title": "Water, Drain, and Electrical Coordination",
+              "title": "橱柜协调与验收",
               "points": [
-                "One 10 A three-pin power socket.",
-                "Dishwasher water-inlet connection / inlet hose.",
-                "Dishwasher drain hose.",
-                "Drain tee connection below the sink."
+                "当前制作依据为SE53ES23KC，不再使用原775mm高机型的柜体方案。",
+                "原方案净宽600–608、净深≥575与新图一致；安装高度从780–835改为705–760，整体相差75mm。",
+                "橱柜厂商与安装方需确认稳定承托面标高、固定、收口、门板与踢脚避让、检修和整机拆换；约75mm的标高调整只是方案复核依据，不能自行垫高后直接施工。",
+                "本机为半嵌式；核对已包含的黑色门板尺寸与配件，不把旧款不锈钢面板方案套用到新款。",
+                "原定水槽相邻位置不因“灶下款”名称改变。若改装灶下，另按官方图确认灶底至机顶≥50mm、燃气灶通风面积≥100cm²及隔热附件。",
+                "到货核对型号、实际铭牌E-Nr修订号、门板和全部配件；按随货修订版安装图与现场完成面复核。",
+                "安装后检查调平与固定、门板启闭和自动开门、进排水试漏、接地及首次完整洗涤运行，并归档验收与质保。"
               ]
             },
             {
-              "title": "Remaining Inputs Before Cabinet Freeze / Order",
+              "title": "水电技术要求",
               "points": [
-                "Final order suffix: SJ435S00JC or SJ435S01JC.",
-                "Whether the unit is fully integrated, semi-integrated, or uses its own front panel.",
-                "Door-panel dimensions, weight, hinge system, and toe-kick clearance.",
-                "Required countertop steam/moisture protection strip.",
-                "For S01JC, confirm rated voltage and connected power; for either suffix, confirm cord length, plug exit and exact socket position.",
-                "Final hose reach and the exact accessible valve/tee positions; thread, pressure and maximum drain rise are now confirmed by the official installation sheet.",
-                "Required side, top, rear, and ventilation clearances.",
-                "Whether the adjustable-height range assumes the finished floor continues underneath the dishwasher.",
-                "Installer-approved cabinet elevation and service-hole position."
+                "官方手册：220V、50Hz、额定2000W；保险装置10–16A，插座及回路由安装方按铭牌和现场条件复核。",
+                "进水G3/4，水压0.05–1.0MPa，冷水最高25℃，进水流量最低10L/min。",
+                "接口保留在相邻水槽柜内；管路穿孔约100×50mm并保护边缘，禁止折弯、夹压；排水高度与走向按官方图确认。"
               ]
             },
             {
-              "title": "Cabinet and Installation Checklist",
+              "title": "功能配置与技术数据",
               "points": [
-                "Reserve opening 600-608 W × at least 575 D × 780-835 H mm.",
-                "Keep the appliance immediately adjacent to the sink cabinet so inlet, drain, and power remain serviceable.",
-                "Provide a 10 A three-pin socket in the sink cabinet; the official S00JC rating is 10 A / 2400 W, and S01JC still requires suffix-specific confirmation.",
-                "Provide a dedicated accessible water shutoff valve.",
-                "Provide a dishwasher drain branch / tee and confirm backflow and high-loop requirements with the exact model installer.",
-                "Finish cabinet service holes with smooth edges or protective sleeves.",
-                "Confirm that the open appliance door clears the opposite cabinets and circulation aisle.",
-                "The common official installation drawing can now govern the cabinet/service zone, but do not order the appliance or close inaccessible services until the final commercial suffix is recorded."
+                "容量14套，上下两层碗篮，无第三层碗篮。",
+                "官网烘干系统为热循环系统＋智能烘干；说明书确认烘干阶段自动开门，启用条件视程序与设置而定。",
+                "程序包括超净洗、日常洗、节能洗、超快洗、自定义；29分钟超快洗针对半载轻污，流程不含烘干。",
+                "支持加强除菌、Home Connect晶御智能远程控制与监控；官网当前标题标注已接入米家App，实际能力按铭牌修订及App支持核对。",
+                "水效1级；标准工作周期耗电0.760kWh、耗水9.7L；噪声48dB(A)，实际消耗随程序、装载和环境变化。",
+                "无通风储存功能；洗涤剂检测不等于洗涤液自动定量投放，按手册每次添加洗涤剂。"
+              ]
+            },
+            {
+              "title": "官方安装资料",
+              "points": [
+                "官方安装图9002079706 B",
+                "官方使用说明书9002018005 A",
+                "安装尺寸图摘录",
+                "官方资料核查索引",
+                "官网产品页：https://www.siemens-home.bsh-group.cn/productlist/product-detail.html?vib=SE53ES23KC",
+                "官网售后返回/01、/19、/22、/25、/28、/32修订号；当前产品页资料对应/32，实际随货修订号待到货核对。"
               ]
             }
           ]
@@ -1661,28 +1672,23 @@
       ],
       "assets": [
         {
-          "title": "built in dishwasher installation reference",
-          "href": "technical/2026-08-24-built-in-dishwasher-installation-reference.jpg",
+          "title": "西门子S23 SE53ES23KC 官方产品图（随货门板以本次套餐为准）",
+          "href": "https://yinxinghuan.github.io/homeos-project-progress/technical/siemens-se53es23kc-official-product.webp",
           "type": "image"
         },
         {
-          "title": "siemens sj435s00jc sj435s01jc installation",
-          "href": "https://yinxinghuan.github.io/homeos-project-progress/technical/siemens-sj435s00jc-sj435s01jc-installation.pdf",
+          "title": "西门子S23 官方安装尺寸图摘录",
+          "href": "https://yinxinghuan.github.io/homeos-project-progress/technical/installation-dimensions-excerpt.png",
+          "type": "image"
+        },
+        {
+          "title": "西门子S23 SE53ES23KC 官方安装图",
+          "href": "https://yinxinghuan.github.io/homeos-project-progress/technical/siemens-se53es23kc-installation-9002079706-B.pdf",
           "type": "pdf"
         },
         {
-          "title": "siemens sj435s00jc sj435s01jc user manual",
-          "href": "https://yinxinghuan.github.io/homeos-project-progress/technical/siemens-sj435s00jc-sj435s01jc-user-manual.pdf",
-          "type": "pdf"
-        },
-        {
-          "title": "siemens sj435s00jc product specification",
-          "href": "https://yinxinghuan.github.io/homeos-project-progress/technical/siemens-sj435s00jc-product-specification.pdf",
-          "type": "pdf"
-        },
-        {
-          "title": "siemens sj435s01jc product specification",
-          "href": "https://yinxinghuan.github.io/homeos-project-progress/technical/siemens-sj435s01jc-product-specification.pdf",
+          "title": "西门子S23 SE53ES23KC 官方使用说明书",
+          "href": "https://yinxinghuan.github.io/homeos-project-progress/technical/siemens-se53es23kc-user-manual-9002018005-A.pdf",
           "type": "pdf"
         }
       ]
@@ -2091,7 +2097,7 @@
               "points": [
                 "Appliance: 六点半 Y6 range hood；Current confirmed cabinet input: Selected stainless-steel variable-frequency option, 26 m³/min / 1280 Pa; main width 998 mm; hood box 430 W × 313 D mm; cabinet reserve at least 450 W × 330 D mm; diameter-250 ceiling duct hole; hood-to-cooktop 300-400 mm; burner center no more than 260 mm from finished rear wall；Items that must remain pending: Electrical rating/socket position, signed ceiling-hole center coordinates, 563/888 height datum, material discrepancy, and installer-approved elevation",
                 "Appliance: 六点半 Q5-2 two-burner gas cooktop；Current confirmed cabinet input: Selected welded sentinel/timer two-burner natural-gas option; working product 813 × 480 mm; reserve about 823 × 490 mm; opening 743 × 370 mm, R11.2; 2 × diameter-26 control holes at 120 mm spacing and 50 mm setback; 5 mm stainless-steel countertop；Items that must remain pending: Final 12T nameplate/SKU, signed CAD/shop drawing, weldable flange/interface, gas inlet, power/ignition, heat loads, ventilation, underside access and service/removal strategy; never substitute the 950 × 370 three-hole Q5-HJ drawing",
-                "Appliance: Siemens SJ435S00JC / SJ435S01JC dishwasher；Current confirmed cabinet input: Selected but not ordered; merchant listing 598 W × 573 D × 775 H mm; earlier body reference 598 W × 550 D × 775 H mm; opening 600-608 W × at least 575 D × 780-835 H mm; services in adjacent sink cabinet；Items that must remain pending: Lock final S00JC/S01JC suffix, then verify door system, rated load, hose lengths, drain high loop, exact service-hole positions and installer-approved elevation against that official sheet",
+                "Appliance: 西门子S23 SE53ES23KC洗碗机；Current confirmed cabinet input: 已购，含门板；整机598宽×573深×700高mm；净宽600–608、净深≥575、安装高度705–760mm；相邻水槽柜内连接；Items that must remain pending: 橱柜厂商已获知换款，2026-10-21计划最终定稿；原775mm高方案停用，按官方图复核75mm高度差、承托固定、随货门板、踢脚避让、收口、进排水和可检修插座；到货核对铭牌修订号",
                 "Appliance: Bosch HBC84H500W built-in microwave oven；Current confirmed cabinet input: Selected but not ordered; 45 L; front 595 W × 454 H mm; body 558 W × 550 D mm; overall depth 570 mm; cabinet depth at least 550 mm；Items that must remain pending: Official opening width/tolerance, ventilation, rear-panel treatment, connected load, circuit, socket/junction position and door swing",
                 "Appliance: Central purifier + central softener；Current confirmed cabinet input: Each unit 330 W × 383 D × 535 H mm; combined cabinet clear width at least 800 mm and preferably 1000 mm; do not place directly under sink; 3/4-inch water connections; water points 300-500 mm above finished floor; nearby PVC 50 drain at no more than 200 mm above finished floor; power within 1 m；Items that must remain pending: Exact models, true service clearances, whether width is clear/internal or module width, installer-approved pipe centres, power/socket details, drain and backflow details, bypass/isolation valves, leak protection, and maintenance/removal route"
               ]

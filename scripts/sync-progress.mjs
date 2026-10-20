@@ -99,11 +99,10 @@ const safeAssets = {
     'source/manuals/grohe/grohe-31919SD0-installation.pdf',
   ],
   dishwasher: [
-    'source/media/2026-08-24-built-in-dishwasher-installation-reference.jpg',
-    'source/manuals/siemens/siemens-sj435s00jc-sj435s01jc-installation.pdf',
-    'source/manuals/siemens/siemens-sj435s00jc-sj435s01jc-user-manual.pdf',
-    'source/manuals/siemens/siemens-sj435s00jc-product-specification.pdf',
-    'source/manuals/siemens/siemens-sj435s01jc-product-specification.pdf',
+    'source/manuals/siemens/se53es23kc/siemens-se53es23kc-official-product.webp',
+    'source/manuals/siemens/se53es23kc/installation-dimensions-excerpt.png',
+    'source/manuals/siemens/se53es23kc/siemens-se53es23kc-installation-9002079706-B.pdf',
+    'source/manuals/siemens/se53es23kc/siemens-se53es23kc-user-manual-9002018005-A.pdf',
   ],
   oven: [
     'source/media/2026-08-24-built-in-oven-dimension-reference.jpg',
@@ -143,6 +142,11 @@ const safeAssets = {
 };
 
 const assetTitleOverrides = {
+  'siemens-se53es23kc-official-product.webp': '西门子S23 SE53ES23KC 官方产品图（随货门板以本次套餐为准）',
+  'installation-dimensions-excerpt.png': '西门子S23 官方安装尺寸图摘录',
+  'siemens-se53es23kc-installation-9002079706-B.pdf': '西门子S23 SE53ES23KC 官方安装图',
+  'siemens-se53es23kc-user-manual-9002018005-A.pdf': '西门子S23 SE53ES23KC 官方使用说明书',
+
   '2026-10-12-window-installation-kitchen-overview.jpg': '窗户安装现场留底｜施工区域全景',
   '2026-10-12-window-installation-room-overview.jpg': '窗户安装现场留底｜房间窗体全景',
   '2026-10-12-window-installation-frame-hardware-detail.jpg': '窗户安装现场留底｜85ES 窗框与五金近景',
@@ -415,12 +419,12 @@ for (const sourceItem of procurement.items) {
     const usePublicTechnicalBase = relativePath.startsWith('source/manuals/') || (
       extname(fileName).toLowerCase() === '.pdf' && !relativePath.startsWith('output/pdf/')
     );
-    if (!usePublicTechnicalBase) {
-      const destination = resolve(publicDocsDir, fileName);
-      await chmod(destination, 0o644).catch(() => {});
-      await copyFile(resolve(homeRoot, relativePath), destination);
-      await chmod(destination, 0o644);
-    }
+    // Every allowlisted attachment must exist in the published technical directory,
+    // including manufacturer manuals linked by their canonical public URL.
+    const destination = resolve(publicDocsDir, fileName);
+    await chmod(destination, 0o644).catch(() => {});
+    await copyFile(resolve(homeRoot, relativePath), destination);
+    await chmod(destination, 0o644);
     assets.push({
       title: assetTitle(fileName),
       href: usePublicTechnicalBase ? `${publicTechnicalBase}/${encodeURIComponent(fileName)}` : `technical/${encodeURIComponent(fileName)}`,
