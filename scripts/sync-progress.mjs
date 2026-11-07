@@ -56,11 +56,12 @@ const detailSources = {
 };
 
 const safeAssets = {
+  terrazzo: ['output/images/2026-11-07-bathroom-terrazzo-tile-progress.jpg'],
   windows: [
     'output/images/2026-08-27-window-order-drawing-redacted.png',
     'output/pdf/2026-08-27-window-order-drawing-redacted.pdf',
   ],
-  tiles: ['source/plans/2026-09-11-lijing-tile-layout-redacted.pdf'],
+  tiles: ['output/images/2026-11-07-bathroom-terrazzo-tile-progress.jpg', 'source/plans/2026-09-11-lijing-tile-layout-redacted.pdf'],
   'water-system': [
     'source/media/2026-08-26-central-purifier-softener-installation-requirements.jpeg',
     'source/media/2026-08-26-central-water-treatment-cabinet-clearance-reference.jpeg',
@@ -80,14 +81,14 @@ const safeAssets = {
     'source/media/2026-08-30-grohe-igina-light-39932-39947-dimension-sheet.png',
     'source/manuals/grohe/grohe-39947SH0-product-specification.pdf',
   ],
-  'wall-paint': ['source/media/2026-08-31-ceiling-finish-scope-red-markup.jpg'],
+  'wall-paint': ['output/images/2026-11-07-room-wall-ceiling-progress.jpg', 'source/media/2026-08-31-ceiling-finish-scope-red-markup.jpg'],
   construction: [
     'source/plans/2026-09-02-socket-point-layout.pdf',
     'source/plans/2026-09-02-ceiling-light-point-layout.pdf',
     'source/media/2026-09-02-electrical-panel-circuit-note.jpg',
     ...publicAcceptanceAssets,
   ],
-  bathtub: [
+  bathtub: ['output/images/2026-11-07-bathroom-terrazzo-tile-progress.jpg', 
     'source/manuals/toto/toto-pay1320-1323-product-specification.pdf',
     'source/manuals/toto/toto-nte210-bathtub-installation.pdf',
     'source/manuals/toto/toto-nte211r-bathtub-user-manual.pdf',
@@ -142,6 +143,11 @@ const safeAssets = {
 };
 
 const assetTitleOverrides = {
+  '2026-11-07-window-terrazzo-sill-private.jpg': '窗台水磨石安装现场（内部原图）',
+  '2026-11-07-bathroom-terrazzo-tile-progress.jpg': '卫生间水磨石与墙砖施工现场｜浴缸位尚为空',
+  '2026-11-07-room-wall-ceiling-progress.jpg': '房间白色墙面与水泥外观顶面施工现场',
+  '2026-11-07-kitchen-tile-progress-private.jpg': '厨房马赛克与灰色墙砖铺贴现场（内部原图）',
+
   'siemens-se53es23kc-official-product.webp': '西门子S23 SE53ES23KC 官方产品图（随货门板以本次套餐为准）',
   'installation-dimensions-excerpt.png': '西门子S23 官方安装尺寸图摘录',
   'siemens-se53es23kc-installation-9002079706-B.pdf': '西门子S23 SE53ES23KC 官方安装图',
@@ -227,6 +233,15 @@ function parseTechnical(content) {
   }
   if (current?.points.length) sections.push(current);
   return sections.filter((section) => section.points.length > 0);
+}
+
+function publicDrawingAudit(audit) {
+  if (!audit) return null;
+  return Object.fromEntries(Object.entries(audit).map(([key, value]) => {
+    if (typeof value !== 'string' || !blocked.test(value)) return [key, value];
+    const safe = value.split(/[；;，,。]/).filter((part) => part.trim() && !blocked.test(part)).join('；');
+    return [key, safe || '技术与现场信息待补充'];
+  }));
 }
 
 function stageFor(status) {
@@ -446,7 +461,7 @@ for (const sourceItem of procurement.items) {
     urgencyReason: sourceItem.urgencyReason && !blocked.test(sourceItem.urgencyReason) ? sourceItem.urgencyReason : null,
     progress: constructionComplete ? '水电改造阶段已完成；30份现场及厂家资料已归档；伟星管道服务结果为合格。' : blocked.test(sourceItem.progress) ? stageLabels[stage] : sourceItem.progress,
     nextAction: constructionComplete ? '现场沟通时可直接查看隐蔽管线照片、试压曲线与脱敏厂家凭证；后续补充取得的检测或签字资料。' : blocked.test(sourceItem.nextAction) ? '具体安排由项目负责人另行确认' : sourceItem.nextAction,
-    drawingAudit: documentAudit.items[sourceItem.id] ?? null,
+    drawingAudit: publicDrawingAudit(documentAudit.items[sourceItem.id]),
     technical,
     assets,
   });

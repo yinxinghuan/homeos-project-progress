@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-21T00:59:59+08:00",
+  "updatedAt": "2026-11-07T19:08:53+08:00",
   "project": {
     "title": "HomeOS 工程进度",
     "phase": "装修执行与设备协调"
@@ -92,6 +92,14 @@
         {
           "source": "02-renovation/WINDOWS.md",
           "sections": [
+            {
+              "title": "2026-11-07 现场施工进度",
+              "points": [
+                "2026-11-07补充窗台现场照片：所摄窗体已在位、保护膜保留，窗下水磨石窗台板已落位；不改变2026-10-12业主确认全屋4樘窗户安装完成的记录。",
+                "此照片不确认全部窗台施工、窗边最终密封、排水或逐樘功能验收；窗户具体房间及实际施工日期待补。",
+                "原图含窗外建筑环境，仅内部归档：source/media/2026-11-07-window-terrazzo-sill-private.jpg。"
+              ]
+            },
             {
               "title": "Post-Installation Acceptance",
               "points": [
@@ -258,13 +266,13 @@
       "category": "饰面材料",
       "brand": "美联天地建材市场销售单（具体品牌待核）",
       "model": "卫生间与厨房排砖方案",
-      "stage": "ordered",
-      "stageLabel": "已采购 / 待交付安装",
+      "stage": "confirmed",
+      "stageLabel": "施工中",
       "priority": null,
       "decisionDeadline": null,
       "urgencyReason": null,
-      "progress": "已采购 / 待交付安装",
-      "nextAction": "核对包装标签、产品编码、送货数量及退补货规则",
+      "progress": "2026-11-07照片可见厨卫所摄墙面已铺贴，厨房为中段条形马赛克与上下灰色墙砖；全部铺贴、美缝、收口及验收待确认",
+      "nextAction": "核对实际完成范围、产品批次及余料；完成美缝、收口和瓦工验收，并按厨房完成面安排橱柜复尺",
       "drawingAudit": {
         "status": "partial",
         "label": "排砖施工图已有",
@@ -275,6 +283,14 @@
         {
           "source": "02-renovation/TILE_LAYOUT.md",
           "sections": [
+            {
+              "title": "2026-11-07 现场施工进度",
+              "points": [
+                "2026-11-07收到业主现场照片：卫生间所摄墙面条形马赛克已铺贴；厨房所摄墙面中段条形马赛克及上下大规格灰色墙砖已铺贴，可见底盒、预留线与管线。",
+                "仅确认所摄墙面及卫生间局部水磨石地面可见进展；厨房地面、全屋找平、全部铺贴、美缝、收口、空鼓及瓦工验收未确认。",
+                "厨房照片未见该处橱柜及台面；后续协调完成面复尺、底盒与柜体避让。实际施工日期待补。"
+              ]
+            },
             {
               "title": "Before Final Order / Delivery",
               "points": [
@@ -289,6 +305,11 @@
         }
       ],
       "assets": [
+        {
+          "title": "卫生间水磨石与墙砖施工现场｜浴缸位尚为空",
+          "href": "technical/2026-11-07-bathroom-terrazzo-tile-progress.jpg",
+          "type": "image"
+        },
         {
           "title": "厨房与卫生间排砖施工图（公开脱敏版）",
           "href": "https://yinxinghuan.github.io/homeos-project-progress/technical/2026-09-11-lijing-tile-layout-redacted.pdf",
@@ -616,13 +637,13 @@
       "category": "饰面材料",
       "brand": "Tikkurila / 芬琳漆",
       "model": null,
-      "stage": "ordered",
-      "stageLabel": "已采购 / 待交付安装",
+      "stage": "confirmed",
+      "stageLabel": "施工中",
       "priority": null,
       "decisionDeadline": null,
       "urgencyReason": null,
-      "progress": "已采购 / 待交付安装",
-      "nextAction": "取得清晰电子明细并确认准确产品、颜色、数量和送货",
+      "progress": "2026-11-07照片可见所摄房间墙面及门洞边呈白色完成面外观，顶面保留水泥外观；具体涂装工序及全屋完成范围待确认",
+      "nextAction": "核对腻子、底漆、面漆与裸顶罩面漆实际完成情况、产品及批次，检查阴阳角、洞口和收口，安排后续安装后的补漆",
       "drawingAudit": {
         "status": "partial",
         "label": "饰面范围图已有",
@@ -633,6 +654,14 @@
         {
           "source": "02-renovation/WALL_PAINT.md",
           "sections": [
+            {
+              "title": "2026-11-07 现场施工进度",
+              "points": [
+                "2026-11-07收到房间现场照片：所摄墙面与门洞边呈连续白色完成面外观，顶面保留水泥外观；多处开关插座底盒及临时灯可见。",
+                "照片不能区分白色面为腻子、底漆还是面漆，也不能确认涂刷遍数、产品批次、裸顶罩面漆及全屋完工范围；当前记录为墙顶面施工有进展，待核对实际工序和收口验收。",
+                "灰色地面仅记为施工面，未见石晶地板铺装；不由照片推定含水率、平整度或地板安装条件合格。实际拍摄和施工日期待补。"
+              ]
+            },
             {
               "title": "Confirmed Ceiling and Beam Finish Scope / 施工范围",
               "points": [
@@ -688,6 +717,11 @@
         }
       ],
       "assets": [
+        {
+          "title": "房间白色墙面与水泥外观顶面施工现场",
+          "href": "technical/2026-11-07-room-wall-ceiling-progress.jpg",
+          "type": "image"
+        },
         {
           "title": "ceiling finish scope red markup",
           "href": "technical/2026-08-31-ceiling-finish-scope-red-markup.jpg",
@@ -839,13 +873,13 @@
       "category": "饰面材料",
       "brand": "待补充",
       "model": "水磨石定制方案（2026-09-10供应商图）",
-      "stage": "ordered",
-      "stageLabel": "已采购 / 待交付安装",
+      "stage": "confirmed",
+      "stageLabel": "施工中",
       "priority": null,
       "decisionDeadline": null,
       "urgencyReason": null,
-      "progress": "已采购 / 待交付安装",
-      "nextAction": "补齐浴缸前脸、置物台及检修门深化尺寸，试装确认净检修空间后再开料；确认加工交付与安装安排；公开图片先脱敏",
+      "progress": "2026-11-07照片可见所摄窗台板及卫生间局部地面、浴缸位台沿、前脸和背侧立面水磨石已落位；浴缸位为空，整体安装、收口及验收待确认",
+      "nextAction": "核对全部完成范围、分缝与收口；浴缸安装前复核放入路径、独立承重、柔性缝、检修净开口与可拆盖板，完成防水及试漏资料核对",
       "drawingAudit": {
         "status": "missing",
         "label": "深化施工图未出",
@@ -856,6 +890,14 @@
         {
           "source": "02-renovation/TERRAZZO.md",
           "sections": [
+            {
+              "title": "2026-11-07 现场施工进度",
+              "points": [
+                "业主于2026-11-07补充现场照片：所摄窗下水磨石窗台板已落位，卫生间所摄地面、浴缸位台沿、前脸及背侧立面已见水磨石饰面；原“加工、到货及安装待确认”仅保留为历史状态，当前记为局部安装可见、整体收口及验收待确认。",
+                "浴缸位在照片中为空，前脸已有检修开口；不据此认定浴缸安装、满水试漏、防水／闭水或检修通道验收通过。后续按既定方案A复核浴缸放入路径、独立承重、柔性缝、检修净开口及可拆盖板。",
+                "资料收到日期不等于实际施工日期；照片未覆盖厨房水磨石及其余窗台，未据此扩大完成范围。"
+              ]
+            },
             {
               "title": "推荐方案的施工控制点",
               "points": [
@@ -869,7 +911,13 @@
           ]
         }
       ],
-      "assets": []
+      "assets": [
+        {
+          "title": "卫生间水磨石与墙砖施工现场｜浴缸位尚为空",
+          "href": "technical/2026-11-07-bathroom-terrazzo-tile-progress.jpg",
+          "type": "image"
+        }
+      ]
     },
     {
       "id": "construction",
@@ -1184,8 +1232,8 @@
       "priority": null,
       "decisionDeadline": null,
       "urgencyReason": null,
-      "progress": "已到货，等待水电改造完成及卫生间防水/闭水验收后联系师傅安装",
-      "nextAction": "先核对到货型号、外观及 DB601S-1B + QCHRG 配件；水电与防水验收后试放并安装浴缸、连接排水、满水试漏，再施工周边瓷砖和水磨石收口",
+      "progress": "已到货；2026-11-07卫生间照片中浴缸位为空，周边水磨石饰面已施工并留有检修开口，浴缸安装仍待确认",
+      "nextAction": "水电阶段已确认完成；核对防水及闭水结果、到货型号与排水配件；结合已施工饰面复核放入路径、独立支撑、柔性缝及检修空间，再安排安装和满水试漏",
       "drawingAudit": {
         "status": "partial",
         "label": "浴缸已到货，排水待核",
@@ -1196,6 +1244,14 @@
         {
           "source": "04-assets/fixtures/toto-pay1320p-bathtub.md",
           "sections": [
+            {
+              "title": "2026-11-07 现场施工进度",
+              "points": [
+                "2026-11-07收到卫生间现场照片：浴缸位尚为空，未见浴缸本体；周边水磨石台沿、前脸及背侧立面已可见，前脸留有检修开口。",
+                "维持浴缸已到货、安装待确认状态；水电阶段已于2026-09-14确认完成，当前仍需核对卫生间防水／闭水、浴缸放入路径和安装／排水满水试漏条件。",
+                "相邻饰面已施工，安装前应现场复核既定方案A的独立承重、缸沿柔性平接及检修净开口，确认排水件与工具可实际进出；不据照片认定既有节点或试漏合格。"
+              ]
+            },
             {
               "title": "Official Product Data",
               "points": [
@@ -1270,6 +1326,11 @@
         }
       ],
       "assets": [
+        {
+          "title": "卫生间水磨石与墙砖施工现场｜浴缸位尚为空",
+          "href": "technical/2026-11-07-bathroom-terrazzo-tile-progress.jpg",
+          "type": "image"
+        },
         {
           "title": "toto pay1320 1323 product specification",
           "href": "https://yinxinghuan.github.io/homeos-project-progress/technical/toto-pay1320-1323-product-specification.pdf",
@@ -2228,25 +2289,49 @@
       "id": "lighting",
       "name": "全屋灯具",
       "category": "电气",
-      "brand": null,
-      "model": null,
-      "stage": "planning",
-      "stageLabel": "待选型",
+      "brand": "待核对包装品牌",
+      "model": "明装小磁吸轨道及全屋灯具、灯带配套",
+      "stage": "ordered",
+      "stageLabel": "已采购 / 待交付安装",
       "priority": "P0",
-      "decisionDeadline": "2026-09-01",
-      "urgencyReason": "水电放线前必须冻结灯位、回路和控制关系；装饰灯具本体可后续购买。",
-      "progress": "2026-09-10｜未购买；已建立交互选型页，方案C初配10件轨道模块（8可调＋2泛光）与8个独立灯位；浴霸及灯带另计，非采购定案",
-      "nextAction": "具体安排由项目负责人另行确认",
+      "decisionDeadline": null,
+      "urgencyReason": null,
+      "progress": "2026-11-07已订购灯具、16米明装磁吸轨道、3.8米灯带及配套电源；商家预计10–12天交付，到货与安装待确认。旧方案C保留作历史设计初配，具体灯位分配待复核",
+      "nextAction": "到货核对完整型号、数量及色温；分别确认磁吸轨道电压与电源功率、24V灯带负载、驱动检修及调光兼容，并按实际家具和回路逐点分配安装验收",
       "drawingAudit": {
         "status": "partial",
-        "label": "天花灯位图已归档",
-        "note": "天花灯位图已收到；灯具尚未选择，灯位编号、开关控制、回路、负载及裸顶／吊顶安装节点仍待确认。",
-        "nextAction": "逐点绑定控制回路并协调裸顶走线、厨卫吊顶和浴霸，再补灯具安装资料。"
+        "label": "灯具订购清单已收到，精确型号与安装资料待补",
+        "note": "灯位图和灯具订购清单已收到；磁吸轨道16米、轨道灯模块7件、独立灯具13件及灯带配套，完整型号、轨道电压、驱动功率、安装节点和逐点控制关系仍待核对。",
+        "nextAction": "到货核对型号与数量，补正式安装说明，核对裸顶固定、吊顶开孔、驱动散热检修与分组控制，再按实际家具位置试灯。"
       },
       "technical": [
         {
           "source": "03-systems/lighting.md",
           "sections": [
+            {
+              "title": "2026-11-07 灯具订购与安装协调",
+              "points": [
+                "本次全屋灯具、磁吸轨道、灯带与配套电源已订购；替代此前“全部灯具未购买”的现状记录。商家预计10–12天交付，实际到货、安装及验收待确认。",
+                "原方案C为历史设计初配，不能直接作为本次采购数量、到货清点或施工定位依据；本次灯具逐点分配及控制关系仍需确认。",
+                "灯具／配件: 黑色明装小磁吸轨道；数量: 16米；可辨规格与用途: 明装、黑色；待核安装信息: 品牌系列、分段长度、安装支撑、触点与额定电压",
+                "灯具／配件: 磁吸射灯头；数量: 5件；可辨规格与用途: 12W、3500K（按手写暂录）；待核安装信息: 精确型号、光束角、与轨道及驱动适配",
+                "灯具／配件: 折叠小格栅；数量: 2件；可辨规格与用途: 12W、3500K（按手写暂录）；待核安装信息: 精确型号、控制与调光协议",
+                "灯具／配件: 轨道直接；数量: 2件；可辨规格与用途: 直连配件；待核安装信息: 型号、接点及端部绝缘配套",
+                "灯具／配件: 磁吸一体电源；数量: 5件；可辨规格与用途: 具体电压和功率待核；待核安装信息: 每路负载、驱动余量、检修位置和控制逻辑",
+                "灯具／配件: 灯带；数量: 3.8米；可辨规格与用途: 24V、3000K；待核安装信息: 功率／米、裁剪长度、供电压降及散热安装",
+                "灯具／配件: 三角槽；数量: 6件；可辨规格与用途: 手写16×6；待核安装信息: 规格单位、每件长度、转角及扩散罩",
+                "灯具／配件: 灯带电源；数量: 2件；可辨规格与用途: 24V、60W；待核安装信息: 两路负载分配、散热、可拆检修及调光兼容",
+                "灯具／配件: 客厅双头方形明装灯；数量: 1件；可辨规格与用途: 全黑、2×10W、3500K、36°；待核安装信息: 点位、固定方式与眩光控制",
+                "灯具／配件: 主卧床头明装灯；数量: 2件；可辨规格与用途: 全黑、10W、3500K、36°；待核安装信息: 型号、床位及开关控制",
+                "灯具／配件: 厨房灯；数量: 3件；可辨规格与用途: 白＋哑黑、10W、3500K、36°；待核安装信息: 完整型号、分配位置及柜体避让",
+                "灯具／配件: 门厅＋厨房灯；数量: 4件；可辨规格与用途: 白、12W、3500K、50°；待核安装信息: 手写灯型、安装方式及4件具体分配",
+                "灯具／配件: 阿姨卧室灯；数量: 3件；可辨规格与用途: 白＋哑黑、3500K；待核安装信息: 手写型号及功率待核，房间编号待对应",
+                "灯带24V不代表磁吸轨道也是24V；两套系统的电压、功率及控制分别以到货标签与安装说明核验。",
+                "订单中出现3组厨房／门厅相关灯具，不能直接相加绑定旧图中的K1、K2、E1；安装前按实际灯位、用途和开关回路逐一分配。",
+                "裸顶与吊顶安装仍需核对固定基面、走线、驱动散热和检修；厨卫灯具另补防护等级、开孔或明装底座尺寸及正式说明书。",
+                "灯带3000K与多数灯具暂录3500K，安装前分组试灯，核对低亮度、眩光、频闪及控制效果，不从单据推定支持调光。"
+              ]
+            },
             {
               "title": "Ceiling Light-Position Drawing",
               "points": [
@@ -2282,22 +2367,22 @@
     },
     {
       "id": "washing-machine",
-      "name": "洗衣机",
+      "name": "海尔云溪75DW洗烘套装",
       "category": "家电",
-      "brand": null,
-      "model": null,
-      "stage": "planning",
-      "stageLabel": "待选型",
+      "brand": "Haier / 海尔",
+      "model": "XQG100-BLEG75DWU1 + GA100-STQ75DWU1，冰雪白10+10kg",
+      "stage": "ordered",
+      "stageLabel": "已采购 / 待交付安装",
       "priority": "P0",
-      "decisionDeadline": "2026-09-01",
-      "urgencyReason": "水电施工前必须确定机身包络、开门、进排水、地漏和插座；机器可后续购买。",
-      "progress": "P0｜未购买；安装边界与水电条件未冻结",
-      "nextAction": "8 月 31 日 16:30 联合确认会上确定类型、目标尺寸、开门方向、进排水、地漏与插座位置；9 月 1 日前定稿，机器可后续下单",
+      "decisionDeadline": "2026-10-21",
+      "urgencyReason": "已购买设备；过道柜下料前按官方图及海尔叠放连接件核实净空、水电和过道通行。",
+      "progress": "已采购 / 待交付安装",
+      "nextAction": "具体安排由项目负责人另行确认",
       "drawingAudit": {
-        "status": "pending_selection",
-        "label": "待选型后补图",
-        "note": "型号尚未确定。",
-        "nextAction": "选型后归档尺寸、给排水、电源和门体净空。"
+        "status": "partial",
+        "label": "单台官方安装图已归档，叠放深化待确认",
+        "note": "两型号官方H5、安装间隙和尺寸图已归档；净宽推算≥625；4页柜厂交底已生成；尚缺本组合连接件安装总高/定位和现场完成面",
+        "nextAction": "交柜厂及海尔安装方核对叠放连接件、总高总深、管线与检修；回传最终突出量及过道净宽"
       },
       "technical": [],
       "assets": []
@@ -2524,7 +2609,7 @@
     "source": "02-renovation/CONSTRUCTION_PLAN.md",
     "trackingSource": "02-renovation/CONSTRUCTION_PROGRESS.md",
     "actualStatus": "recorded",
-    "actualCount": 10,
+    "actualCount": 16,
     "phases": [
       {
         "name": "准备与拆除",
@@ -2772,7 +2857,11 @@
           "construction",
           "tiles"
         ],
-        "actual": null,
+        "actual": {
+          "status": "in_progress",
+          "confirmedDate": "2026-11-07",
+          "note": "厨房所摄墙面马赛克及灰色墙砖、卫生间所摄墙砖及局部水磨石地面已铺设；仅记录局部可见进度，全屋找平、全部铺贴、美缝及瓦工验收待确认。"
+        },
         "ranges": [
           {
             "start": "2026-09-14",
@@ -2883,7 +2972,11 @@
           "wall-paint",
           "construction"
         ],
-        "actual": null,
+        "actual": {
+          "status": "in_progress",
+          "confirmedDate": "2026-11-07",
+          "note": "所摄墙面及门洞边呈白色完成面外观，顶面保留水泥外观；腻子、底漆、面漆遍数、罩面漆及全屋完成范围仍待确认。"
+        },
         "ranges": [
           {
             "start": "2026-10-14",
@@ -3003,7 +3096,11 @@
         "linkedItemIds": [
           "tiles"
         ],
-        "actual": null,
+        "actual": {
+          "status": "in_progress",
+          "confirmedDate": "2026-11-07",
+          "note": "厨卫所摄墙面已见铺贴，卫生间局部地面已见水磨石饰面；未确认全部铺贴、美缝、收口及验收完成。"
+        },
         "ranges": [
           {
             "start": "2026-09-02",
@@ -3083,7 +3180,11 @@
         "linkedItemIds": [
           "terrazzo"
         ],
-        "actual": null,
+        "actual": {
+          "status": "in_progress",
+          "confirmedDate": "2026-11-07",
+          "note": "所摄窗下水磨石窗台板已落位；其他窗台安装及全部收口验收待确认。"
+        },
         "ranges": [
           {
             "start": "2026-09-10",
@@ -3125,7 +3226,11 @@
         "linkedItemIds": [
           "wall-paint"
         ],
-        "actual": null,
+        "actual": {
+          "status": "in_progress",
+          "confirmedDate": "2026-11-07",
+          "note": "所摄墙面已呈白色，具体涂装工序及全屋完工范围待确认，未记录为全部面漆完成。"
+        },
         "ranges": [
           {
             "start": "2026-09-10",
@@ -3141,7 +3246,11 @@
           "lighting",
           "switches"
         ],
-        "actual": null,
+        "actual": {
+          "status": "in_progress",
+          "confirmedDate": "2026-11-07",
+          "note": "灯具、轨道、灯带及电源已订购，预计10–12天交付；开关插座此前已购，现场照片仍见底盒及临时灯；灯具交付和整体安装验收待确认。"
+        },
         "ranges": [
           {
             "start": "2026-09-10",
