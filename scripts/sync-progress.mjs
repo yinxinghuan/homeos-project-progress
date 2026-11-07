@@ -23,6 +23,15 @@ const publicAcceptanceAssets = [
 ];
 
 const detailSources = {
+  'washing-machine': ['04-assets/appliances/haier-yunxi-75dw-washer-dryer.md'],
+  'tolomeo-pendant': ['04-assets/fixtures/tolomeo-style-pendant.md'],
+  'grohe-basin-faucets': ['04-assets/fixtures/grohe-23455-basin-faucets.md'],
+  'folding-chairs': ['04-assets/furniture/folding-chairs.md'],
+  'swing-arm-wall-lights': ['04-assets/fixtures/swing-arm-wall-lights.md'],
+  'sofa': ['04-assets/furniture/obsidian-sofa.md'],
+  'dining-table': ['04-assets/furniture/robin-folding-dining-table.md'],
+  'bed': ['04-assets/furniture/yuanshi-u264b17-bed.md'],
+
   'entry-door': ['04-assets/entry-door.md'],
   windows: ['02-renovation/WINDOWS.md'],
   'water-system': ['03-systems/water-treatment.md', '03-systems/plumbing.md'],

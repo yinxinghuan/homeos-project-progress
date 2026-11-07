@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-07T19:39:25+08:00",
+  "updatedAt": "2026-11-07T19:54:00+08:00",
   "project": {
     "title": "HomeOS 工程进度",
     "phase": "装修执行与设备协调"
@@ -2351,6 +2351,14 @@
               ]
             },
             {
+              "title": "2026-11-07补充灯具订单与安装协调",
+              "points": [
+                "另购Tolomeo款短臂吊灯1盏、银色接电摇臂壁灯2盏；与此前十里河灯具及磁吸轨道订单分开，不替换原有清单。",
+                "吊灯固定、悬挂／摆臂活动范围、电源及光源参数待补；壁灯商家标注米家APP，协议、调光和底座固定仍需核实。",
+                "图片3和4中的壁灯为同一笔2盏订单，清点时只记2盏。具体安装房间及与既有灯位控制的关系待确认。"
+              ]
+            },
+            {
               "title": "Ceiling Light-Position Drawing",
               "points": [
                 "Received 2026-09-02: 2026-09-02-ceiling-light-point-layout.pdf.",
@@ -2395,14 +2403,27 @@
       "decisionDeadline": "2026-10-21",
       "urgencyReason": "已购买设备；过道柜下料前按官方图及海尔叠放连接件核实净空、水电和过道通行。",
       "progress": "已采购 / 待交付安装",
-      "nextAction": "具体安排由项目负责人另行确认",
+      "nextAction": "核对11月11日配送预约与实收，保留订单及安装交底；叠放总高、连接件、柜体突出量与过道净宽仍需海尔安装方复核",
       "drawingAudit": {
         "status": "partial",
         "label": "单台官方安装图已归档，叠放深化待确认",
         "note": "两型号官方H5、安装间隙和尺寸图已归档；净宽推算≥625；4页柜厂交底已生成；尚缺本组合连接件安装总高/定位和现场完成面",
         "nextAction": "交柜厂及海尔安装方核对叠放连接件、总高总深、管线与检修；回传最终突出量及过道净宽"
       },
-      "technical": [],
+      "technical": [
+        {
+          "source": "04-assets/appliances/haier-yunxi-75dw-washer-dryer.md",
+          "sections": [
+            {
+              "title": "官方尺寸（mm）",
+              "points": [
+                "设备: 洗衣机；W: 595；D: 537；D1: 556；D2: 1047；D3: 537；H: 850",
+                "设备: 干衣机；W: 595；D: 558；D1: 577；D2: 1068；D3: 558；H: 850"
+              ]
+            }
+          ]
+        }
+      ],
       "assets": []
     },
     {
@@ -2428,6 +2449,13 @@
         {
           "source": "04-assets/fixtures/villeroy-boch-skyline-vanity-mirror.md",
           "sections": [
+            {
+              "title": "2026-11-07面盆龙头与安装协调",
+              "points": [
+                "收到高仪斯达面盆龙头及提拉下水器2只的订单；前缀23455，完整后缀及两只安装位置待核。",
+                "不由采购数量认定本柜盆需装两只，安装前核对孔径、出水高度、连杆及抽屉避让。"
+              ]
+            },
             {
               "title": "官方安装资料",
               "points": [
@@ -2616,6 +2644,259 @@
         "nextAction": "补齐最终型号及正式安装说明，核对现场尺寸、接口、固定与检修条件，再安排交付安装验收。"
       },
       "technical": [],
+      "assets": []
+    },
+    {
+      "id": "tolomeo-pendant",
+      "name": "Tolomeo款摇臂吊灯",
+      "category": "灯具",
+      "brand": "壹所灯舍 YISUO（店铺）",
+      "model": "短臂版，页面标示6063精工铝臂；精确尺寸及电气参数待补",
+      "stage": "ordered",
+      "stageLabel": "已采购 / 待交付安装",
+      "priority": null,
+      "decisionDeadline": null,
+      "urgencyReason": null,
+      "progress": "已购买；订单截图已归档，交付及安装状态待确认",
+      "nextAction": "吊灯按店售Tolomeo款记录，不据商品标题认定为设计品牌原厂产品。；截图预售提示12月20日23:59前发货；实际交付、灯体尺寸、吊装固定、电源、灯头和光源配置待核。",
+      "drawingAudit": {
+        "status": "partial",
+        "label": "订单配置已归档，安装规格待核",
+        "note": "短臂版，页面标示6063精工铝臂；精确尺寸及电气参数待补",
+        "nextAction": "核对完整型号、现场尺寸、配置及正式安装说明；确认实际交付和安装验收。"
+      },
+      "technical": [
+        {
+          "source": "04-assets/fixtures/tolomeo-style-pendant.md",
+          "sections": [
+            {
+              "title": "安装与交付协调",
+              "points": [
+                "数量1盏，短臂版；页面标示6063精工铝臂。",
+                "吊灯按店售Tolomeo款记录，不据商品标题认定为设计品牌原厂产品。",
+                "截图预售提示12月20日23:59前发货；实际交付、灯体尺寸、吊装固定、电源、灯头和光源配置待核。"
+              ]
+            }
+          ]
+        }
+      ],
+      "assets": []
+    },
+    {
+      "id": "grohe-basin-faucets",
+      "name": "高仪斯达面盆龙头及提拉下水器（2只）",
+      "category": "卫浴",
+      "brand": "GROHE / 高仪",
+      "model": "斯达面盆龙头，型号前缀23455；完整后缀待核",
+      "stage": "ordered",
+      "stageLabel": "已采购 / 待交付安装",
+      "priority": null,
+      "decisionDeadline": null,
+      "urgencyReason": null,
+      "progress": "已购2只；页面显示交易成功，实际到货、安装及验收待确认",
+      "nextAction": "两只龙头的具体安装位置待确认，不推定唯宝柜盆需安装两只；需核对抽屉、连杆行程与检修避让。；页面显示交易成功，只表示交易流程状态，不据此认定已安装或安装验收通过。",
+      "drawingAudit": {
+        "status": "partial",
+        "label": "订单配置已归档，安装规格待核",
+        "note": "斯达面盆龙头，型号前缀23455；完整后缀待核",
+        "nextAction": "核对完整型号、现场尺寸、配置及正式安装说明；确认实际交付和安装验收。"
+      },
+      "technical": [
+        {
+          "source": "04-assets/fixtures/grohe-23455-basin-faucets.md",
+          "sections": [
+            {
+              "title": "安装与交付协调",
+              "points": [
+                "数量2只，斯达面盆龙头，标题含带提拉下水器；型号前缀23455，完整后缀以订单／包装为准。",
+                "核对龙头孔径、台面厚度、出水高度／伸出量、冷热软管及提拉杆与下水器配套。",
+                "两只龙头的具体安装位置待确认，不推定唯宝柜盆需安装两只；需核对抽屉、连杆行程与检修避让。",
+                "页面显示交易成功，只表示交易流程状态，不据此认定已安装或安装验收通过。"
+              ]
+            }
+          ]
+        }
+      ],
+      "assets": []
+    },
+    {
+      "id": "folding-chairs",
+      "name": "折叠餐椅（4把）",
+      "category": "家具",
+      "brand": "木人张家具（店铺）",
+      "model": "樱桃色：实木款2把、蓝色绒布1把、红色绒布1把",
+      "stage": "ordered",
+      "stageLabel": "已采购 / 待交付安装",
+      "priority": null,
+      "decisionDeadline": null,
+      "urgencyReason": null,
+      "progress": "已购4把樱桃色折叠椅：实木2把、蓝色绒布及红色绒布各1把；实际交付待核",
+      "nextAction": "完整规格、坐高、展开／折叠尺寸和承重待商家资料或实物核对。；交付后核对铰链与锁定、脚垫、面料颜色和外观；餐桌座高配合及收纳位置待核。",
+      "drawingAudit": {
+        "status": "partial",
+        "label": "订单配置已归档，安装规格待核",
+        "note": "樱桃色：实木款2把、蓝色绒布1把、红色绒布1把",
+        "nextAction": "核对完整型号、现场尺寸、配置及正式安装说明；确认实际交付和安装验收。"
+      },
+      "technical": [
+        {
+          "source": "04-assets/furniture/folding-chairs.md",
+          "sections": [
+            {
+              "title": "安装与交付协调",
+              "points": [
+                "共4把樱桃色折叠餐椅：实木款2把、蓝色绒布1把、红色绒布1把。",
+                "完整规格、坐高、展开／折叠尺寸和承重待商家资料或实物核对。",
+                "交付后核对铰链与锁定、脚垫、面料颜色和外观；餐桌座高配合及收纳位置待核。"
+              ]
+            }
+          ]
+        }
+      ],
+      "assets": []
+    },
+    {
+      "id": "swing-arm-wall-lights",
+      "name": "工业风摇臂壁灯（2盏）",
+      "category": "灯具",
+      "brand": "一盏灯的故事（店铺）",
+      "model": "中古银色；接电款，商家标注已接入米家APP",
+      "stage": "ordered",
+      "stageLabel": "已采购 / 待交付安装",
+      "priority": null,
+      "decisionDeadline": null,
+      "urgencyReason": null,
+      "progress": "已购2盏中古银色接电款；商家标注米家APP，协议及实际交付安装待核",
+      "nextAction": "商家标注已接入米家APP，协议、网络、调光、灯头与电气规格仍需实物核对。；安装前复核支臂活动范围、底座固定、床头／家具避让、出线方式和供电。",
+      "drawingAudit": {
+        "status": "partial",
+        "label": "订单配置已归档，安装规格待核",
+        "note": "中古银色；接电款，商家标注已接入米家APP",
+        "nextAction": "核对完整型号、现场尺寸、配置及正式安装说明；确认实际交付和安装验收。"
+      },
+      "technical": [
+        {
+          "source": "04-assets/fixtures/swing-arm-wall-lights.md",
+          "sections": [
+            {
+              "title": "安装与交付协调",
+              "points": [
+                "数量2盏，中古银色摇臂壁灯，接电款。",
+                "商家标注已接入米家APP，协议、网络、调光、灯头与电气规格仍需实物核对。",
+                "安装前复核支臂活动范围、底座固定、床头／家具避让、出线方式和供电。"
+              ]
+            }
+          ]
+        }
+      ],
+      "assets": []
+    },
+    {
+      "id": "sofa",
+      "name": "黑曜系列双人沙发",
+      "category": "家具",
+      "brand": "玉珀兰家具品牌店（店铺）",
+      "model": "接触面进口油蜡皮；2.2米双人款（截断选项待核完整配置）",
+      "stage": "ordered",
+      "stageLabel": "已采购 / 待交付安装",
+      "priority": null,
+      "decisionDeadline": null,
+      "urgencyReason": null,
+      "progress": "已购买；订单截图已归档，交付及安装状态待确认",
+      "nextAction": "截图提示11月30日23:59前发货，并标注送装一体；实际交付预约待核。；补齐深度、高度、包装尺寸及搬运路径，核对与电视柜、通道和灯具的关系。",
+      "drawingAudit": {
+        "status": "partial",
+        "label": "订单配置已归档，安装规格待核",
+        "note": "接触面进口油蜡皮；2.2米双人款（截断选项待核完整配置）",
+        "nextAction": "核对完整型号、现场尺寸、配置及正式安装说明；确认实际交付和安装验收。"
+      },
+      "technical": [
+        {
+          "source": "04-assets/furniture/obsidian-sofa.md",
+          "sections": [
+            {
+              "title": "安装与交付协调",
+              "points": [
+                "2.2米双人款；选项显示接触面进口油蜡皮，完整配置及颜色待核。",
+                "截图提示11月30日23:59前发货，并标注送装一体；实际交付预约待核。",
+                "补齐深度、高度、包装尺寸及搬运路径，核对与电视柜、通道和灯具的关系。"
+              ]
+            }
+          ]
+        }
+      ],
+      "assets": []
+    },
+    {
+      "id": "dining-table",
+      "name": "罗宾折叠餐桌",
+      "category": "家具",
+      "brand": "小万家具",
+      "model": "月光白；实木折叠餐桌，展开及收拢尺寸待核",
+      "stage": "ordered",
+      "stageLabel": "已采购 / 待交付安装",
+      "priority": null,
+      "decisionDeadline": null,
+      "urgencyReason": null,
+      "progress": "已购买；订单截图已归档，交付及安装状态待确认",
+      "nextAction": "截图提示11月19日23:15前发货；实际交付待核。；展开／收拢尺寸、台面高度、铰链锁定和桌腿净空待核，与4把折叠椅协调座高及通道。",
+      "drawingAudit": {
+        "status": "partial",
+        "label": "订单配置已归档，安装规格待核",
+        "note": "月光白；实木折叠餐桌，展开及收拢尺寸待核",
+        "nextAction": "核对完整型号、现场尺寸、配置及正式安装说明；确认实际交付和安装验收。"
+      },
+      "technical": [
+        {
+          "source": "04-assets/furniture/robin-folding-dining-table.md",
+          "sections": [
+            {
+              "title": "安装与交付协调",
+              "points": [
+                "罗宾折叠餐桌，月光白，数量1张。",
+                "截图提示11月19日23:15前发货；实际交付待核。",
+                "展开／收拢尺寸、台面高度、铰链锁定和桌腿净空待核，与4把折叠椅协调座高及通道。"
+              ]
+            }
+          ]
+        }
+      ],
+      "assets": []
+    },
+    {
+      "id": "bed",
+      "name": "源氏木语实木床",
+      "category": "家具",
+      "brand": "源氏木语",
+      "model": "U264B17，无底板；选项可见1800，完整尺寸待核",
+      "stage": "ordered",
+      "stageLabel": "已采购 / 待交付安装",
+      "priority": null,
+      "decisionDeadline": null,
+      "urgencyReason": null,
+      "progress": "已购买；订单截图已归档，交付及安装状态待确认",
+      "nextAction": "数量1张；床垫规格、排骨架／支撑系统、床底净空、承重与墙面插座关系待核。；截图中的10月27日预售提示已是历史日期，不作为新的到货确认。",
+      "drawingAudit": {
+        "status": "partial",
+        "label": "订单配置已归档，安装规格待核",
+        "note": "U264B17，无底板；选项可见1800，完整尺寸待核",
+        "nextAction": "核对完整型号、现场尺寸、配置及正式安装说明；确认实际交付和安装验收。"
+      },
+      "technical": [
+        {
+          "source": "04-assets/furniture/yuanshi-u264b17-bed.md",
+          "sections": [
+            {
+              "title": "安装与交付协调",
+              "points": [
+                "型号U264B17，实木床，无底板选项；截图选项可辨1800，完整尺寸及配置待核。",
+                "数量1张；床垫规格、排骨架／支撑系统、床底净空、承重与墙面插座关系待核。",
+                "截图中的10月27日预售提示已是历史日期，不作为新的到货确认。"
+              ]
+            }
+          ]
+        }
+      ],
       "assets": []
     }
   ],
