@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-07T19:08:53+08:00",
+  "updatedAt": "2026-11-07T19:39:25+08:00",
   "project": {
     "title": "HomeOS 工程进度",
     "phase": "装修执行与设备协调"
@@ -434,6 +434,12 @@
           "source": "04-assets/fixtures/grohe-26810000-thermostatic-shower.md",
           "sections": [
             {
+              "title": "2026-11-07 采购与安装状态更新",
+              "points": [
+                "到货、安装预约及验收状态另行核对。"
+              ]
+            },
+            {
               "title": "现场安装速查（2026-09-09 核图，水口标高待现场确认）",
               "points": [
                 "已购型号为高仪 GROHE 26810000。按标准固定长度立管方案预留，不能把手持花洒滑座升降理解为顶喷可伸缩调高。",
@@ -494,7 +500,7 @@
       "decisionDeadline": null,
       "urgencyReason": null,
       "progress": "已采购 / 待交付安装",
-      "nextAction": "到货核对包装型号并预留独立净水龙头",
+      "nextAction": "具体安排由项目负责人另行确认",
       "drawingAudit": {
         "status": "complete",
         "label": "官方安装资料完整",
@@ -505,6 +511,12 @@
         {
           "source": "04-assets/fixtures/grohe-31874-kitchen-faucet.md",
           "sections": [
+            {
+              "title": "2026-11-07 采购与安装状态更新",
+              "points": [
+                "到货、安装预约及验收状态另行核对。"
+              ]
+            },
             {
               "title": "Official Product and Installation Data",
               "points": [
@@ -560,7 +572,7 @@
       "decisionDeadline": null,
       "urgencyReason": null,
       "progress": "已采购 / 待交付安装",
-      "nextAction": "到货核对 39947SH0，并扫描箱内精确安装说明；现有 39932 BIM 与 39933/39948 手册只作对照，未补档前不放行安装",
+      "nextAction": "具体安排由项目负责人另行确认",
       "drawingAudit": {
         "status": "partial",
         "label": "精确安装手册仍缺",
@@ -571,6 +583,12 @@
         {
           "source": "04-assets/fixtures/grohe-39932sh0-smart-toilet.md",
           "sections": [
+            {
+              "title": "2026-11-07 采购与安装状态更新",
+              "points": [
+                "到货、安装预约及验收状态另行核对。"
+              ]
+            },
             {
               "title": "39947SH0 Coordination Data",
               "points": [
@@ -735,12 +753,12 @@
       "category": "定制家具",
       "brand": "待补充",
       "model": "304 不锈钢 / 5 mm 台面方案",
-      "stage": "confirmed",
-      "stageLabel": "已确定 / 推进中",
+      "stage": "ordered",
+      "stageLabel": "已采购 / 待交付安装",
       "priority": null,
       "decisionDeadline": null,
       "urgencyReason": null,
-      "progress": "已确定 / 推进中",
+      "progress": "已采购 / 待交付安装",
       "nextAction": "具体安排由项目负责人另行确认",
       "drawingAudit": {
         "status": "partial",
@@ -795,12 +813,12 @@
       "category": "定制家具",
       "brand": "与厨房橱柜同一厂商",
       "model": "铝制定制，具体构造待深化",
-      "stage": "confirmed",
-      "stageLabel": "已确定 / 推进中",
+      "stage": "ordered",
+      "stageLabel": "已采购 / 待交付安装",
       "priority": null,
       "decisionDeadline": null,
       "urgencyReason": null,
-      "progress": "已确定 / 推进中",
+      "progress": "已采购 / 待交付安装",
       "nextAction": "具体安排由项目负责人另行确认",
       "drawingAudit": {
         "status": "missing",
@@ -834,12 +852,12 @@
       "category": "定制家具",
       "brand": "与厨房橱柜同一厂商",
       "model": "铝制定制，具体构造待深化",
-      "stage": "confirmed",
-      "stageLabel": "已确定 / 推进中",
+      "stage": "ordered",
+      "stageLabel": "已采购 / 待交付安装",
       "priority": null,
       "decisionDeadline": null,
       "urgencyReason": null,
-      "progress": "已确定 / 推进中",
+      "progress": "已采购 / 待交付安装",
       "nextAction": "具体安排由项目负责人另行确认",
       "drawingAudit": {
         "status": "missing",
@@ -1591,18 +1609,18 @@
       "category": "厨房设备",
       "brand": "GROHE / 高仪",
       "model": "K500 31919SD0",
-      "stage": "selected",
-      "stageLabel": "型号或方向已定",
+      "stage": "ordered",
+      "stageLabel": "已采购 / 待交付安装",
       "priority": "P0",
-      "decisionDeadline": "2026-09-01",
-      "urgencyReason": "方案已经确定；9 月 2—3 日橱柜点位交底前仍须把焊接节点、厨房龙头孔和直饮龙头孔落实到台面加工图。",
-      "progress": "P0｜GROHE K500 31919SD0 方案已定、未下单；水槽直接焊接于台面",
+      "decisionDeadline": null,
+      "urgencyReason": null,
+      "progress": "已采购 / 待交付安装",
       "nextAction": "具体安排由项目负责人另行确认",
       "drawingAudit": {
         "status": "partial",
-        "label": "产品图已有，焊接深化图待签",
-        "note": "K500 官方尺寸和标准安装资料已归档；直接焊接台面及双龙头孔属于非标准深化。",
-        "nextAction": "下单／开料前取得台面厂签字版焊接、开孔和检修图。"
+        "label": "最终型号及安装资料待核",
+        "note": "工程事项已确定；原选型技术资料保留供核，须对照最终订单及实物确认完整型号、规格和安装条件。到货与安装验收另行确认。",
+        "nextAction": "补齐最终型号及正式安装说明，核对现场尺寸、接口、固定与检修条件，再安排交付安装验收。"
       },
       "technical": [
         {
@@ -1760,18 +1778,18 @@
       "category": "厨房电器",
       "brand": "Bosch / 博世",
       "model": "HBC84H500W，45 L",
-      "stage": "selected",
-      "stageLabel": "型号或方向已定",
+      "stage": "ordered",
+      "stageLabel": "已采购 / 待交付安装",
       "priority": "P0",
-      "decisionDeadline": "2026-09-01",
-      "urgencyReason": "9 月 2—3 日橱柜点位交底前必须冻结开孔、供电、插座与散热条件。",
-      "progress": "P0｜型号已选、未下单；官方安装图已归档",
-      "nextAction": "8 月 31 日 16:30 联合确认会上按官方图锁定 560+8 × 450+2 × ≥550 mm 开口、无背板、≥50 cm² 底部通风及插座位置；9 月 1 日前定稿",
+      "decisionDeadline": null,
+      "urgencyReason": null,
+      "progress": "已采购 / 待交付安装",
+      "nextAction": "具体安排由项目负责人另行确认",
       "drawingAudit": {
         "status": "complete",
-        "label": "安装资料完整",
-        "note": "官方开孔、通风、电气和用户资料已归档。",
-        "nextAction": "按最终柜体完成面复核开孔。"
+        "label": "最终型号及安装资料待核",
+        "note": "工程事项已确定；原选型技术资料保留供核，须对照最终订单及实物确认完整型号、规格和安装条件。到货与安装验收另行确认。",
+        "nextAction": "补齐最终型号及正式安装说明，核对现场尺寸、接口、固定与检修条件，再安排交付安装验收。"
       },
       "technical": [
         {
@@ -1838,18 +1856,18 @@
       "category": "厨房电器",
       "brand": "六点半",
       "model": "Y6 不锈钢变频款｜26 m³/min｜1280 Pa",
-      "stage": "selected",
-      "stageLabel": "型号或方向已定",
+      "stage": "ordered",
+      "stageLabel": "已采购 / 待交付安装",
       "priority": "P0",
-      "decisionDeadline": "2026-09-01",
-      "urgencyReason": "9 月 2—3 日橱柜点位交底前必须确认机体包络、供电和排烟路径。",
-      "progress": "P0｜Y6 不锈钢变频款已选、未下单；商家安装图已归档，未找到厂家正式手册",
-      "nextAction": "按商家图复核 998 mm 机宽、430 × 313 mm 箱体、≥450 × 330 mm 吊柜留位、直径 250 mm 吊顶烟道孔及 300—400 mm 灶面净距；补电气参数和签字版开孔坐标",
+      "decisionDeadline": null,
+      "urgencyReason": null,
+      "progress": "已采购 / 待交付安装",
+      "nextAction": "具体安排由项目负责人另行确认",
       "drawingAudit": {
         "status": "partial",
-        "label": "商家图已有，签字图待补",
-        "note": "产品尺寸、安装示意和吊顶开孔参考已归档，但无可核验厂家手册。",
-        "nextAction": "取得签字版中心坐标、电气参数、风管转接和安装立面。"
+        "label": "最终型号及安装资料待核",
+        "note": "工程事项已确定；原选型技术资料保留供核，须对照最终订单及实物确认完整型号、规格和安装条件。到货与安装验收另行确认。",
+        "nextAction": "补齐最终型号及正式安装说明，核对现场尺寸、接口、固定与检修条件，再安排交付安装验收。"
       },
       "technical": [
         {
@@ -1971,18 +1989,18 @@
       "category": "厨房电器",
       "brand": "六点半",
       "model": "Q5-2 焊接双眼｜哨兵定时｜天然气",
-      "stage": "selected",
-      "stageLabel": "型号或方向已定",
+      "stage": "ordered",
+      "stageLabel": "已采购 / 待交付安装",
       "priority": "P0",
-      "decisionDeadline": "2026-09-01",
-      "urgencyReason": "9 月 2—3 日橱柜点位交底前必须确认台面焊接、燃气接口、检修与柜体尺寸。",
-      "progress": "P0｜选型与商家 Q5-2 开孔图已补充，未下单；未找到厂家正式安装文件",
-      "nextAction": "复核本体 813 × 480、预留约 823 × 490、开孔 743 × 370 / R11.2、2 个直径 26 控制孔（间距 120、退距 50）；确认最终 12T 铭牌、燃气/点火/通风/检修要求并取得签字 CAD 与焊接方案；不得使用 950 × 370 三孔图",
+      "decisionDeadline": null,
+      "urgencyReason": null,
+      "progress": "已采购 / 待交付安装",
+      "nextAction": "具体安排由项目负责人另行确认",
       "drawingAudit": {
         "status": "partial",
-        "label": "商家开孔图已有",
-        "note": "Q5-2 产品与开孔参考已归档，但燃气接口、通风和焊后检修方式仍未书面确认。",
-        "nextAction": "开孔焊接前取得 12T 铭牌和签字版 5 mm 不锈钢台面加工图。"
+        "label": "最终型号及安装资料待核",
+        "note": "工程事项已确定；原选型技术资料保留供核，须对照最终订单及实物确认完整型号、规格和安装条件。到货与安装验收另行确认。",
+        "nextAction": "补齐最终型号及正式安装说明，核对现场尺寸、接口、固定与检修条件，再安排交付安装验收。"
       },
       "technical": [
         {
@@ -2180,18 +2198,18 @@
       "category": "家电",
       "brand": null,
       "model": null,
-      "stage": "planning",
-      "stageLabel": "待选型",
+      "stage": "ordered",
+      "stageLabel": "已采购 / 待交付安装",
       "priority": "P0",
-      "decisionDeadline": "2026-09-01",
-      "urgencyReason": "水电开槽前需要确定空调电源、冷凝水、室内外机位置和穿墙孔，返工代价高。",
-      "progress": "P0｜未购买；点位与安装方案未冻结",
-      "nextAction": "8 月 31 日 16:30 联合确认会上确定各房间机型/匹数、内外机位置、冷凝水坡度、孔洞和独立回路；9 月 1 日前定稿，机器可后续下单",
+      "decisionDeadline": null,
+      "urgencyReason": null,
+      "progress": "已采购 / 待交付安装",
+      "nextAction": "具体安排由项目负责人另行确认",
       "drawingAudit": {
-        "status": "pending_selection",
-        "label": "待选型后补图",
-        "note": "型号和安装方案尚未确定。",
-        "nextAction": "选型后归档室内外机尺寸、孔位、冷凝水和电源图。"
+        "status": "partial",
+        "label": "最终型号及安装资料待核",
+        "note": "工程事项已确定；原选型技术资料保留供核，须对照最终订单及实物确认完整型号、规格和安装条件。到货与安装验收另行确认。",
+        "nextAction": "补齐最终型号及正式安装说明，核对现场尺寸、接口、固定与检修条件，再安排交付安装验收。"
       },
       "technical": [],
       "assets": []
@@ -2453,18 +2471,18 @@
       "category": "定制施工",
       "brand": null,
       "model": "石膏板吊顶；具体板材与系统待深化",
-      "stage": "selected",
-      "stageLabel": "型号或方向已定",
+      "stage": "ordered",
+      "stageLabel": "已采购 / 待交付安装",
       "priority": "P1",
-      "decisionDeadline": "2026-09-10",
-      "urgencyReason": "石膏板吊顶方向已定，封板前必须冻结防潮体系、标高、龙骨、检修口、灯具、烟机风管和热水器排烟关系。",
-      "progress": "型号或方向已定",
-      "nextAction": "确认耐水／防潮石膏板及轻钢龙骨系统、标高、检修口、灯位、烟机风管、热水器同轴烟管和可拆检修边界，取得签字版吊顶综合图后再封板",
+      "decisionDeadline": null,
+      "urgencyReason": null,
+      "progress": "已采购 / 待交付安装",
+      "nextAction": "具体安排由项目负责人另行确认",
       "drawingAudit": {
         "status": "partial",
-        "label": "石膏板方向已定，综合图待补",
-        "note": "厨房石膏板吊顶方向已确定，但耐水／防潮板材系统、轻钢龙骨、标高、检修口、灯位、烟机风管和热水器烟管综合图尚未归档。",
-        "nextAction": "封板前取得签字版吊顶综合图并确认完整材料系统和可拆检修边界。"
+        "label": "最终型号及安装资料待核",
+        "note": "工程事项已确定；原选型技术资料保留供核，须对照最终订单及实物确认完整型号、规格和安装条件。到货与安装验收另行确认。",
+        "nextAction": "补齐最终型号及正式安装说明，核对现场尺寸、接口、固定与检修条件，再安排交付安装验收。"
       },
       "technical": [],
       "assets": []
@@ -2475,18 +2493,18 @@
       "category": "卫浴电器",
       "brand": "AUPU / 奥普",
       "model": "MR009M",
-      "stage": "selected",
-      "stageLabel": "型号或方向已定",
+      "stage": "ordered",
+      "stageLabel": "已采购 / 待交付安装",
       "priority": "P1",
-      "decisionDeadline": "2026-09-10",
-      "urgencyReason": "浴室吊顶计划 9 月 10—11 日定制，开孔、吊顶内净高、供电和排风条件需要提前冻结。",
-      "progress": "型号或方向已定",
-      "nextAction": "购买前核验 MR009M 铭牌、序列号、CCC、成色、配件、质保和米家解绑；吊顶按 605 × 305 mm 开孔协调，集成吊顶内高度至少 140 mm，石膏/大板吊顶至少 165 mm，并向卖家或奥普补取正式安装说明以确认箱体实测尺寸、排风管径/方向、接线和检修要求",
+      "decisionDeadline": null,
+      "urgencyReason": null,
+      "progress": "已采购 / 待交付安装",
+      "nextAction": "具体安排由项目负责人另行确认",
       "drawingAudit": {
         "status": "partial",
-        "label": "开孔与净高已有，正式说明书待补",
-        "note": "MR009M 型号已定、未采购；现有产品图和网络资料可交叉确认 605×305 mm 开孔及吊顶内净高要求，但箱体实测尺寸、排风管径/方向、电气和检修条件尚无厂家正式安装文件。",
-        "nextAction": "购买和最终开孔前核验实物铭牌，并向卖家或奥普取得正式安装说明；确认箱体、排风、电气、固定、检修和湿区安装条件。"
+        "label": "最终型号及安装资料待核",
+        "note": "工程事项已确定；原选型技术资料保留供核，须对照最终订单及实物确认完整型号、规格和安装条件。到货与安装验收另行确认。",
+        "nextAction": "补齐最终型号及正式安装说明，核对现场尺寸、接口、固定与检修条件，再安排交付安装验收。"
       },
       "technical": [
         {
@@ -2540,18 +2558,18 @@
       "category": "定制施工",
       "brand": null,
       "model": "石膏板吊顶；湿区防潮系统待深化",
-      "stage": "selected",
-      "stageLabel": "型号或方向已定",
+      "stage": "ordered",
+      "stageLabel": "已采购 / 待交付安装",
       "priority": "P1",
-      "decisionDeadline": "2026-09-10",
-      "urgencyReason": "石膏板吊顶方向已定，需在封板前同步冻结湿区防潮体系、浴霸、排风、照明、龙骨和检修拆机条件。",
-      "progress": "型号或方向已定",
-      "nextAction": "按 MR009M 605 × 305 mm 开孔及石膏板吊顶内净高至少 165 mm 协调；确认耐水／防潮石膏板、轻钢龙骨、防霉涂层、排风路径、照明、检修口和整机可拆换方案，取得签字版综合图后再封板",
+      "decisionDeadline": null,
+      "urgencyReason": null,
+      "progress": "已采购 / 待交付安装",
+      "nextAction": "具体安排由项目负责人另行确认",
       "drawingAudit": {
         "status": "partial",
-        "label": "石膏板方向已定，湿区综合图待补",
-        "note": "卫生间石膏板吊顶方向已确定，浴霸为奥普 MR009M；湿区防潮系统、至少 165 mm 设备净高、开孔、排风、照明、龙骨和整机拆换方案尚未闭环。",
-        "nextAction": "封板前取得签字版湿区吊顶综合图，确认 MR009M 精确安装文件和完整可拆检修方案。"
+        "label": "最终型号及安装资料待核",
+        "note": "工程事项已确定；原选型技术资料保留供核，须对照最终订单及实物确认完整型号、规格和安装条件。到货与安装验收另行确认。",
+        "nextAction": "补齐最终型号及正式安装说明，核对现场尺寸、接口、固定与检修条件，再安排交付安装验收。"
       },
       "technical": [],
       "assets": []
@@ -2562,18 +2580,18 @@
       "category": "门窗",
       "brand": null,
       "model": null,
-      "stage": "confirmed",
-      "stageLabel": "已确定 / 推进中",
+      "stage": "ordered",
+      "stageLabel": "已采购 / 待交付安装",
       "priority": "P2",
-      "decisionDeadline": "2026-09-18",
-      "urgencyReason": "计划 9 月 20—21 日定制，需在墙地完成面条件明确后复测门洞。",
-      "progress": "已确定 / 推进中",
+      "decisionDeadline": null,
+      "urgencyReason": null,
+      "progress": "已采购 / 待交付安装",
       "nextAction": "具体安排由项目负责人另行确认",
       "drawingAudit": {
-        "status": "pending_selection",
-        "label": "待选型后补图",
-        "note": "两扇卧室门尚未选型。",
-        "nextAction": "测量后归档门洞、套线、开启方向和五金节点。"
+        "status": "partial",
+        "label": "最终型号及安装资料待核",
+        "note": "工程事项已确定；原选型技术资料保留供核，须对照最终订单及实物确认完整型号、规格和安装条件。到货与安装验收另行确认。",
+        "nextAction": "补齐最终型号及正式安装说明，核对现场尺寸、接口、固定与检修条件，再安排交付安装验收。"
       },
       "technical": [],
       "assets": []
@@ -2584,18 +2602,18 @@
       "category": "门窗",
       "brand": null,
       "model": "走廊侧外置滑轨门",
-      "stage": "selected",
-      "stageLabel": "型号或方向已定",
+      "stage": "ordered",
+      "stageLabel": "已采购 / 待交付安装",
       "priority": "P2",
-      "decisionDeadline": "2026-09-18",
-      "urgencyReason": "计划 9 月 20—21 日定制，需在完成面条件明确后确认外置滑轨的固定与收口。",
-      "progress": "P2｜外置滑轨形式已确定、未购买",
-      "nextAction": "9 月 18 日前确认完成面洞口、门扇材质、防潮、轨道承重、缓冲限位、锁具和墙体固定条件",
+      "decisionDeadline": null,
+      "urgencyReason": null,
+      "progress": "已采购 / 待交付安装",
+      "nextAction": "具体安排由项目负责人另行确认",
       "drawingAudit": {
-        "status": "pending_selection",
-        "label": "方向已定，图纸待补",
-        "note": "浴室门方向已确定，但精确产品和安装节点未确认。",
-        "nextAction": "确认产品后归档门洞、轨道／门槛、防水收口和五金节点。"
+        "status": "partial",
+        "label": "最终型号及安装资料待核",
+        "note": "工程事项已确定；原选型技术资料保留供核，须对照最终订单及实物确认完整型号、规格和安装条件。到货与安装验收另行确认。",
+        "nextAction": "补齐最终型号及正式安装说明，核对现场尺寸、接口、固定与检修条件，再安排交付安装验收。"
       },
       "technical": [],
       "assets": []
